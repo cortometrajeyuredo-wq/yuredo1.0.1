@@ -26,6 +26,7 @@
 - Nombres de variables: camelCase.
 - Nombres de funciones: camelCase.
 - Las variables y las funciones deben ser dicientes, es decir, su declaración debe indicar a que referiece o que dato almacena.
+- Todas las imegenes deben estar en formato webp.
 
 ## 7. Despliegue
 - Entorno de desarrollo: Docker.
