@@ -1,15 +1,21 @@
+/**
+ * @módulo SeccionYuredo
+ * @descripción Sección dedicada al proyecto transmedia Yuredo y su documental.
+ * @arquitectura src/page/Inicio/SeccionYuredo/index.tsx
+ */
+
 import styles from './SeccionYuredo.module.css';
 
 const SeccionYuredo = () => {
     return (
         <section className={styles.section3} id="yuredo">
-            {/* Background Image (Absolute) */}
+            {/* Fondo decorativo */}
             <img className={styles.bgImage} src="/static/img/fondo3.png" alt="" />
             <div className={styles.dianas}>
                 <img src="/static/img/dianas3.svg" alt="" />
             </div>
 
-            {/* Contenido Principal (Flexbox Overlay) */}
+            {/* Contenido Principal */}
             <div className={styles.mainContent}>
 
                 {/* Zona Superior: Estrellas Decorativas */}

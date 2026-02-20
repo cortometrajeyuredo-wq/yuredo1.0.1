@@ -1,34 +1,47 @@
+/**
+ * @módulo Encabezado
+ * @descripción Componente de cabecera que contiene el menú lateral y la navegación principal.
+ * @arquitectura src/components/Encabezado/index.tsx
+ */
+
 import React, { useState } from 'react';
 import styles from './Encabezado.module.css';
 import useInterfazStore from '@/store/useInterfazStore';
 import useAudioStore from '@/store/useAudioStore';
 
 const Encabezado = () => {
-    // Estado para controlar la visibilidad de los menús
-    const [isLeftMenuOpen, setIsLeftMenuOpen] = useState(false);
-    const [isRightMenuOpen, setIsRightMenuOpen] = useState(false);
+    // --- Estado Local ---
+    // Visibilidad de los menús laterales (izquierdo para SENA, derecho para navegación)
+    const [isMenuIzquierdoOpen, setIsMenuIzquierdoOpen] = useState(false);
+    const [isMenuDerechoOpen, setIsMenuDerechoOpen] = useState(false);
 
-    // Leer sección activa desde Zustand para ScrollSpy
+    // --- Estado Global (Zustand) ---
+    // Sección activa detectada por el ScrollSpy
     const seccionActiva = useInterfazStore((state) => state.seccionActiva);
-    // Abrir modal de audio
-    const openAudio = useAudioStore((state) => state.openAudio);
+    // Función para abrir el modal del reproductor de audio
+    const abrirAudio = useAudioStore((state) => state.openAudio);
 
-    const toggleMenus = () => {
-        setIsLeftMenuOpen(!isLeftMenuOpen);
-        setIsRightMenuOpen(!isRightMenuOpen);
+    // --- Acciones de Interfaz ---
+    const alternarMenus = () => {
+        setIsMenuIzquierdoOpen(!isMenuIzquierdoOpen);
+        setIsMenuDerechoOpen(!isMenuDerechoOpen);
     };
 
-    const closeLeftMenu = () => setIsLeftMenuOpen(false);
-    const closeRightMenu = () => setIsRightMenuOpen(false);
+    const cerrarMenuIzquierdo = () => setIsMenuIzquierdoOpen(false);
+    const cerrarMenuDerecho = () => setIsMenuDerechoOpen(false);
 
-    // Función para navegación con Scroll Suave
-    const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    /**
+     * Realiza un desplazamiento suave hacia la sección seleccionada.
+     * @param e Evento de clic
+     * @param id ID del elemento destino
+     */
+    const scrollHaciaSeccion = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
         e.preventDefault();
-        closeRightMenu();
+        cerrarMenuDerecho();
 
-        const element = document.getElementById(id);
-        if (element) {
-            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        const elemento = document.getElementById(id);
+        if (elemento) {
+            elemento.scrollIntoView({ behavior: 'smooth', block: 'start' });
             window.history.pushState(null, '', `#${id}`);
         } else {
             console.warn(`[Encabezado] Sección no encontrada: #${id}`);
@@ -39,15 +52,15 @@ const Encabezado = () => {
         <header className={styles.headerContainer}>
             {/* Botón Hamburguesa Fijo */}
             <div className={styles['btn-hamburger-container']}>
-                <button className={styles.hamburger} onClick={toggleMenus} aria-label="Abrir menú">
+                <button className={styles.hamburger} onClick={alternarMenus} aria-label="Abrir menú">
                     <span>☰</span>
                 </button>
             </div>
 
-            {/* Menú Izquierdo (SENA / Enlaces Externos) */}
-            <div className={`${styles['vertical-menu']} ${styles['left-menu']} ${isLeftMenuOpen ? styles.active : ''}`}>
+            {/* Menú Izquierdo: SENA / Enlaces Externos */}
+            <div className={`${styles['vertical-menu']} ${styles['left-menu']} ${isMenuIzquierdoOpen ? styles.active : ''}`}>
                 <div className={styles['cerrar-logo']}>
-                    <button className={styles['close-btn']} onClick={closeLeftMenu}>&times;</button>
+                    <button className={styles['close-btn']} onClick={cerrarMenuIzquierdo}>&times;</button>
                     <img src="/static/img/logo-sena.webp" alt="Logo SENA" />
                 </div>
                 <div className={styles['contendor-menu-left']}>
@@ -77,10 +90,10 @@ const Encabezado = () => {
                 </div>
             </div>
 
-            {/* Menú Derecho (Navegación Interna) */}
-            <div className={`${styles['vertical-menu']} ${styles['right-menu']} ${isRightMenuOpen ? styles.active : ''}`}>
+            {/* Menú Derecho: Navegación Interna */}
+            <div className={`${styles['vertical-menu']} ${styles['right-menu']} ${isMenuDerechoOpen ? styles.active : ''}`}>
                 <div className={styles['btn-cerrar-menu-right']}>
-                    <button className={styles['close-btn']} onClick={closeRightMenu}>&times;</button>
+                    <button className={styles['close-btn']} onClick={cerrarMenuDerecho}>&times;</button>
                 </div>
                 <div className={styles['contenedor-menu-right']}>
                     <ul>
@@ -88,7 +101,7 @@ const Encabezado = () => {
                             <a
                                 href="#inicio"
                                 className={seccionActiva === 'inicio' ? styles.active : ''}
-                                onClick={(e) => scrollToSection(e, 'inicio')}
+                                onClick={(e) => scrollHaciaSeccion(e, 'inicio')}
                             >
                                 Inicio
                             </a>
@@ -97,7 +110,7 @@ const Encabezado = () => {
                             <a
                                 href="#motmot"
                                 className={seccionActiva === 'motmot' ? styles.active : ''}
-                                onClick={(e) => scrollToSection(e, 'motmot')}
+                                onClick={(e) => scrollHaciaSeccion(e, 'motmot')}
                             >
                                 Mot Mot
                             </a>
@@ -106,7 +119,7 @@ const Encabezado = () => {
                             <a
                                 href="#yuredo"
                                 className={seccionActiva === 'yuredo' ? styles.active : ''}
-                                onClick={(e) => scrollToSection(e, 'yuredo')}
+                                onClick={(e) => scrollHaciaSeccion(e, 'yuredo')}
                             >
                                 Yuredo
                             </a>
@@ -115,7 +128,7 @@ const Encabezado = () => {
                             <a
                                 href="#etno"
                                 className={seccionActiva === 'etno' ? styles.active : ''}
-                                onClick={(e) => scrollToSection(e, 'etno')}
+                                onClick={(e) => scrollHaciaSeccion(e, 'etno')}
                             >
                                 Etno-ornitologia
                             </a>
@@ -124,7 +137,7 @@ const Encabezado = () => {
                             <a
                                 href="#museo"
                                 className={seccionActiva === 'museo' ? styles.active : ''}
-                                onClick={(e) => scrollToSection(e, 'museo')}
+                                onClick={(e) => scrollHaciaSeccion(e, 'museo')}
                             >
                                 Museo
                             </a>
@@ -133,7 +146,7 @@ const Encabezado = () => {
                             <a
                                 href="#equipo"
                                 className={seccionActiva === 'equipo' ? styles.active : ''}
-                                onClick={(e) => scrollToSection(e, 'equipo')}
+                                onClick={(e) => scrollHaciaSeccion(e, 'equipo')}
                             >
                                 Equipo
                             </a>
@@ -141,7 +154,7 @@ const Encabezado = () => {
                         <li className={styles['audio-controls']}>
                             <a
                                 id="openAudioModal"
-                                onClick={(e) => { e.preventDefault(); openAudio(); closeRightMenu(); }}
+                                onClick={(e) => { e.preventDefault(); abrirAudio(); cerrarMenuDerecho(); }}
                                 style={{ cursor: 'pointer' }}
                             >
                                 Reproducir

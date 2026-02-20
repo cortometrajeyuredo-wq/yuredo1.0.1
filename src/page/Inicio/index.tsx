@@ -1,9 +1,15 @@
-import SeccionInicio from '@/components/SeccionInicio';
-import SeccionMotMot from '@/components/SeccionMotMot';
-import SeccionYuredo from '@/components/SeccionYuredo';
-import SeccionEtno from '@/components/SeccionEtno';
-import SeccionMuseo from '@/components/SeccionMuseo';
-import SeccionEquipo from '@/components/SeccionEquipo';
+/**
+ * @módulo Inicio
+ * @descripción Página principal (Landing Page) que orquesta todas las secciones del proyecto.
+ * @arquitectura src/page/Inicio/index.tsx
+ */
+
+import SeccionInicio from './SeccionInicio';
+import SeccionMotMot from './SeccionMotMot';
+import SeccionYuredo from './SeccionYuredo';
+import SeccionEtno from './SeccionEtno';
+import SeccionMuseo from './SeccionMuseo';
+import SeccionEquipo from './SeccionEquipo';
 
 const Inicio = () => {
     return (
@@ -18,8 +24,5 @@ const Inicio = () => {
         </div>
     );
 };
-
-
-
 
 export default Inicio;

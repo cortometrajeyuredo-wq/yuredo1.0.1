@@ -1,3 +1,9 @@
+/**
+ * @módulo SocialFloat
+ * @descripción Botones flotantes de acceso rápido a las redes sociales del proyecto.
+ * @arquitectura src/components/SocialFloat/index.tsx
+ */
+
 import styles from './SocialFloat.module.css';
 
 const SocialFloat = () => {

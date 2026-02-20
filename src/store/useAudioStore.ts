@@ -1,13 +1,30 @@
+/**
+ * @módulo AudioStore
+ * @descripción Maneja el estado global del reproductor de audio.
+ * @arquitectura src/store/useAudioStore.ts
+ */
+
 import { create } from 'zustand';
 
+/**
+ * Define el estado y las acciones del reproductor de audio.
+ */
 interface AudioState {
+    /** Indica si el modal del reproductor está abierto */
     isOpen: boolean;
+    /** Indica si el audio se está reproduciendo actualmente */
     isPlaying: boolean;
+    /** Ruta del archivo de audio actual */
     currentTrack: string | null;
+    /** Abre el modal y opcionalmente cambia la pista */
     openAudio: (track?: string) => void;
+    /** Cierra el modal y detiene la reproducción */
     closeAudio: () => void;
+    /** Inicia la reproducción */
     play: () => void;
+    /** Pausa la reproducción */
     pause: () => void;
+    /** Alterna entre reproducir y pausar */
     toggle: () => void;
 }
 

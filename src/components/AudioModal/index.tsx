@@ -1,30 +1,42 @@
+/**
+ * @módulo AudioModal
+ * @descripción Interfaz del reproductor de audio con controles de play/pause y visualización de progreso.
+ * @arquitectura src/components/AudioModal/index.tsx
+ */
+
 import { useEffect, useRef, useCallback } from 'react';
 import styles from './AudioModal.module.css';
-import useAudioStore from '../store/useAudioStore';
-import useScrollLock from '../hooks/useScrollLock';
+import useAudioStore from '@/store/useAudioStore';
+import useBloqueoScroll from '@/hooks/useBloqueoScroll';
 
 const AudioModal = () => {
     const { isOpen, isPlaying, currentTrack, closeAudio, toggle } = useAudioStore();
     const audioRef = useRef<HTMLAudioElement | null>(null);
 
-    // Fix M3: Usar hook centralizado de scroll lock
-    useScrollLock(isOpen);
+    // --- Efectos y Hooks ---
 
-    // Sincronizar play/pause con el elemento <audio>
+    // Bloqueo de scroll cuando el modal está abierto para evitar navegación errática
+    useBloqueoScroll(isOpen);
+
+    /**
+     * Sincroniza el estado global 'isPlaying' con el elemento <audio> nativo.
+     */
     useEffect(() => {
         const audio = audioRef.current;
         if (!audio) return;
 
         if (isPlaying) {
             audio.play().catch(() => {
-                // Autoplay bloqueado por el navegador — no hacer nada
+                // Autoplay bloqueado por el navegador (requiere interacción previa)
             });
         } else {
             audio.pause();
         }
     }, [isPlaying]);
 
-    // Cambiar track cuando cambie currentTrack
+    /**
+     * Carga y reproduce una nueva pista cuando cambia en el store.
+     */
     useEffect(() => {
         const audio = audioRef.current;
         if (!audio || !currentTrack) return;
@@ -34,17 +46,19 @@ const AudioModal = () => {
         }
     }, [currentTrack]); // eslint-disable-line react-hooks/exhaustive-deps
 
-    // Cerrar con ESC
-    const handleKeyDown = useCallback((e: KeyboardEvent) => {
+    /**
+     * Manejador de eventos para cerrar el modal presionando la tecla Escape.
+     */
+    const manejarTecla = useCallback((e: KeyboardEvent) => {
         if (e.key === 'Escape' && isOpen) {
             closeAudio();
         }
     }, [isOpen, closeAudio]);
 
     useEffect(() => {
-        document.addEventListener('keydown', handleKeyDown);
-        return () => document.removeEventListener('keydown', handleKeyDown);
-    }, [handleKeyDown]);
+        document.addEventListener('keydown', manejarTecla);
+        return () => document.removeEventListener('keydown', manejarTecla);
+    }, [manejarTecla]);
 
     return (
         <>

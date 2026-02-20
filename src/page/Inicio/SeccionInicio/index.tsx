@@ -1,3 +1,9 @@
+/**
+ * @módulo SeccionInicio
+ * @descripción Sección de bienvenida con el título principal y el teaser animado del proyecto.
+ * @arquitectura src/page/Inicio/SeccionInicio/index.tsx
+ */
+
 import styles from './SeccionInicio.module.css';
 
 const SeccionInicio = () => {
@@ -14,7 +20,6 @@ const SeccionInicio = () => {
 
             <div className={styles['contenedor-section1_2']}>
                 <img src="/static/img/logo-yuredo.webp" alt="Logo Yuredo" />
-                {/* Nota: El botón hamburguesa se ha movido al componente Global Encabezado */}
             </div>
 
             <div className={styles['contenedor-section1_3']}>

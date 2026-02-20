@@ -1,3 +1,9 @@
+/* =======================================
+   ESTILOS GLOBALES — index.css
+   Arquitectura: Sistema de capas y animaciones compartidas.
+   Fuente: docs/arquitectura.md §8 Estilización
+   ======================================= */
+
 @import "tailwindcss";
 
 :root {
