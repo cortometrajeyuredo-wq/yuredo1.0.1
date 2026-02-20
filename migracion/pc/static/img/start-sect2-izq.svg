@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_2" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 304.17 122.34">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #d5e8f1;
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <g id="ELEMENTS">
+    <ellipse class="cls-1" cx="296.28" cy="2.28" rx="2.24" ry="2.35" transform="translate(119.49 240.05) rotate(-53.81)"/>
+    <ellipse class="cls-1" cx="233.18" cy="26.34" rx="2.24" ry="2.35" transform="translate(74.23 198.98) rotate(-53.81)"/>
+    <ellipse class="cls-1" cx="268.4" cy="68.02" rx="2.24" ry="2.35" transform="translate(55.02 244.47) rotate(-53.81)"/>
+    <ellipse class="cls-1" cx="160.01" cy="45.13" rx="2.24" ry="2.35" transform="translate(29.11 147.62) rotate(-53.81)"/>
+    <ellipse class="cls-1" cx="199.14" cy="74.47" rx="2.24" ry="2.35" transform="translate(21.45 191.21) rotate(-53.81)"/>
+    <ellipse class="cls-1" cx="301.86" cy="94.82" rx="2.24" ry="2.35" transform="translate(47.09 282.45) rotate(-53.81)"/>
+    <ellipse class="cls-1" cx="110.9" cy="91.3" rx="2.24" ry="2.35" transform="translate(-28.27 126.89) rotate(-53.81)"/>
+    <ellipse class="cls-1" cx="211.79" cy="38.87" rx="2.24" ry="2.35" transform="translate(55.37 186.84) rotate(-53.81)"/>
+    <ellipse class="cls-1" cx="149.18" cy="94.82" rx="2.24" ry="2.35" transform="translate(-15.43 159.23) rotate(-53.81)"/>
+    <ellipse class="cls-1" cx="30.88" cy="86.74" rx="2.24" ry="2.35" transform="translate(-57.36 60.44) rotate(-53.81)"/>
+    <ellipse class="cls-1" cx="2.31" cy="120.06" rx="2.24" ry="2.35" transform="translate(-95.95 51.03) rotate(-53.81)"/>
+    <ellipse class="cls-1" cx="126.36" cy="63.62" rx="2.24" ry="2.35" transform="translate(.4 128.03) rotate(-53.81)"/>
+    <ellipse class="cls-1" cx="68.25" cy="102.65" rx="2.24" ry="2.35" transform="translate(-54.89 97.12) rotate(-53.81)"/>
+    <ellipse class="cls-1" cx="74.7" cy="74.47" rx="2.24" ry="2.35" transform="translate(-29.51 90.79) rotate(-53.81)"/>
+  </g>
+</svg>

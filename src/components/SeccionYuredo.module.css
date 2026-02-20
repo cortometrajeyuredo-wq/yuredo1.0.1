@@ -1,0 +1,207 @@
+/* Variables migrads (Reference) */
+.section3 {
+    --gris: #cfe0da;
+    --azulOscuro: #16142f;
+    --azulMedio: #236476;
+    --verdeBiche: #7dad3f;
+    --verdeOscuro: #4a6c2f;
+    --naranja: #ff5d40;
+    --azul: #1f2350;
+    --verdeSena: #00bc00;
+    --blanco: white;
+
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: var(--azulOscuro);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bgImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.dianas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.dianas img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Main Flex Overlay */
+.mainContent {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Upper, Video, Bottom */
+    z-index: 1;
+    padding: 2vh 0;
+}
+
+/* Upper Region (Stars) */
+.upperDecor {
+    width: 100%;
+    height: 15vh;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+}
+
+.starTopLeft {
+    width: 35vw;
+    position: absolute;
+    top: -5vh;
+    left: 5vw;
+}
+
+.starTopRight {
+    width: 30vw;
+    position: absolute;
+    top: -5vh;
+    right: 5vw;
+}
+
+/* Middle Region (Video) */
+.videoRegion {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    gap: 2vw;
+}
+
+.decorLeft,
+.decorRight {
+    width: 15vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.decorLeft img {
+    width: 12vw;
+}
+
+.decorRight img {
+    width: 14vw;
+}
+
+.videoWrapper {
+    width: 55vw;
+    height: 31vw;
+    /* Aspect ratio approx 16:9 relative to width */
+    max-width: 800px;
+    max-height: 450px;
+    border-radius: 1.5vw;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    background-color: black;
+    z-index: 10;
+}
+
+.videoElement {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+/* Bottom Region (Controls) */
+.bottomControl {
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.btnContainer {
+    z-index: 20;
+    transition: transform 0.3s ease;
+}
+
+.btnContainer:hover {
+    transform: scale(1.1);
+}
+
+.btnContainer img {
+    width: 4vw;
+    min-width: 50px;
+    cursor: pointer;
+}
+
+.starBottomLeft {
+    position: absolute;
+    left: 20%;
+    bottom: 20%;
+    width: 20vw;
+    pointer-events: none;
+}
+
+.starBottomLeft img {
+    width: 100%;
+}
+
+.starBottomRight {
+    position: absolute;
+    right: 20%;
+    bottom: 20%;
+    width: 20vw;
+    pointer-events: none;
+}
+
+.starBottomRight img {
+    width: 100%;
+}
+
+/* Mobile Logic */
+@media (max-width: 768px) {
+    .videoRegion {
+        flex-direction: column;
+        gap: 2vh;
+    }
+
+    .videoWrapper {
+        width: 80vw;
+        height: 45vw;
+    }
+
+    .decorLeft,
+    .decorRight {
+        display: none;
+        /* Hide side decors on mobile to focus on video */
+    }
+
+    .starTopLeft,
+    .starTopRight {
+        width: 45vw;
+    }
+}

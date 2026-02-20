@@ -1,0 +1,8317 @@
+/* Media query para Samsung Galaxy Note10+ */
+@media only screen and (width: 412px) and (height: 869px) {
+
+    /* Estilos específicos para Galaxy Note10+ */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        
+       
+       
+    }
+
+    .section1 {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        width: 100%;
+        height: calc(100vh);
+        position: relative;
+        overflow: hidden;
+        flex-direction: column;
+    }
+
+    .section1 .dianas {
+        top: 0%;
+        width: 100%;
+        height: 75%;
+        position: relative;
+    }
+
+    .dianas img {
+        position: absolute;
+        margin-top: 0%;
+        width: 100%;
+        height: 45vw;
+    }
+
+    .section1 .contenedor-fondo1 {
+        width: 100%;
+        height: 30%;
+        position: relative;
+        bottom: 0;
+        z-index: 1000;
+    }
+
+    .section1 .contenedor-fondo1 img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+
+    .contenedor-logo {
+        top: 23%;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 15%;
+    }
+
+    .contenedor-logo img {
+        margin-top: -18%;
+        width: 52%;
+        height: auto;
+        position: relative;
+    }
+
+    .contenedor-logo h1 {
+        text-align: center;
+        font-size: 4.5vw;
+        font-weight: 600;
+        font-family: "Raleway";
+        font-style: italic;
+        margin-top: 1%;
+    }
+
+    .section1 .contenedor-video {
+        top: 20%;
+        position: absolute;
+        margin-top: 35%;
+        width: 100%;
+        height: 45%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .section1 .contenedor-video .vacio,
+    .section1 .contenedor-video .flor {
+        width: 15%;
+        height: 100%;
+        display: flex;
+    }
+
+    .section1 .contenedor-video .flor img {
+        position: absolute;
+        width: 20%;
+        height: auto;
+        right: 6%;
+        top: -3%;
+    }
+
+    .contenedor-video #videoPlayer {
+        margin-top: -26%;
+        width: 70%;
+        height: 65%;
+        border-radius: 15px;
+        overflow: hidden;
+        background-color: black;
+    }
+
+    .play {
+        width: 4vw;
+        height: 4vw;
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .play img {
+        opacity: 0.8;
+    }
+
+    #videoPlayer {
+        width: 60%;
+        height: 45%;
+    }
+
+    .contenedor-video #playBtn {
+        width: 20%;
+    }
+
+    .contenedor-fondo1 .imagenes {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .contendor-fondo1 .imagenes {
+        width: 100%;
+        height: 100%;
+    }
+
+    .contenedor-fondo1 .imagenes .nebulosa {
+        position: absolute;
+        width: 15vw;
+        height: auto;
+        margin-top: 37%;
+        left: 3%;
+        z-index: 500;
+    }
+
+    .contenedor-fondo1 .imagenes .logo-sena {
+        position: absolute;
+        width: 15vw;
+        height: auto;
+        margin-top: 40%;
+        right: 5%;
+    }
+
+    .contenedor-fondo1 .imagenes .start1 {
+        position: absolute;
+        width: 30vw;
+        height: 20vw;
+        margin-top: 38%;
+    }
+
+    .contenedor-fondo1 .imagenes .start2 {
+        position: absolute;
+        width: 50%;
+        height: 40%;
+        margin-top: 33vw;
+        left: 25%;
+    }
+
+    .contenedor-fondo1 .imagenes .start3 {
+        position: absolute;
+        width: 28vw;
+        height: 40vw;
+        margin-top: 10vw;
+        right: 0;
+    }
+
+    .section2 {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: calc(100vh);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .contenedor-fondo {
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 30%;
+        position: relative;
+    }
+
+    .contenedor-fondo .fondo2 {
+        top: 0%;
+        width: 100%;
+        height: 80%;
+        position: absolute;
+    }
+
+    .contenedor-fondo-bajo {
+        width: 100%;
+        height: 30%;
+        position: absolute;
+        left: 0;
+    }
+
+    .contenedor-fondo-bajo img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: -58%;
+        object-fit: cover;
+    }
+
+    .logo_white {
+        position: absolute;
+        width: auto;
+        width: 35vw;
+        margin-top: 23%;
+        margin-left: 3%;
+
+    }
+
+    .start1_2 {
+        position: absolute;
+        width: 38vw;
+        height: 35vw;
+        left: 0;
+        top: -15%;
+    }
+
+    .start2_2 {
+        position: absolute;
+        width: 45vw;
+        height: 38vw;
+        right: 30%;
+        top: -30%;
+    }
+
+    .start3_2 {
+        position: absolute;
+        width: 25vw;
+        height: 28vw;
+        right: 5%;
+        top: -15%;
+    }
+
+    .section2 .titulo {
+        position: relative;
+        top: -5%;
+        width: 100%;
+        height: 15%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .section2 .titulo span {
+        margin-left: 20%;
+        text-transform: none;
+        white-space: nowrap;
+        font-size: 8vw;
+        font-family: "Raleway";
+        font-optical-sizing: auto;
+        font-weight: bold;
+        font-style: italic;
+        position: absolute;
+        margin-top: 2%;
+    }
+
+    .section2 .titulo h4 {
+        position: absolute;
+        top: -3%;
+        margin-left: 20%;
+    }
+
+    .no-autocorrect {
+        -webkit-user-modify: read-only;
+        user-modify: read-only;
+    }
+
+    .bajo3 .texto {
+        position: absolute;
+        top: 0%;
+        left: 5%;
+        width: 100%;
+        height: 25%;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .textoMot {
+        margin-left: 5%;
+        margin-top: 270%;
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+    }
+
+    .motmottxt {
+        font-size: 3vw;
+        font-weight: 800;
+        color: black;
+        font-family: "Raleway";
+        font-optical-sizing: auto;
+        font-style: normal;
+    }
+
+    .descriMot {
+        font-size: 2.8vw;
+        font-weight: 500;
+        color: black;
+        font-family: "Raleway";
+        font-optical-sizing: auto;
+        font-style: normal;
+        text-align: justify;
+    }
+
+    .contenedor-central {
+        width: 100%;
+        height: 50vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        gap: 5px;
+    }
+
+    .contenedor-central .btnSaberMas {
+        width: 20%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    .contenedor-central .btnSaberMas .btnMas {
+        position: absolute;
+        margin-top: -85%;
+        margin-left: -1%;
+        width: 8vw;
+        height: 8vw;
+    }
+
+    .btnSaberMas .btnMas:hover {
+        transform: scale(1.1);
+    }
+
+    .contenedor-central .btnSaberMas .hojas {
+        position: absolute;
+        margin-top: -30%;
+        margin-left: 0%;
+        width: 18vw;
+        height: auto;
+    }
+
+    .derecho {
+        width: 20%;
+        height: 100%;
+        position: relative;
+    }
+
+    .colibriSect3 {
+        position: absolute;
+        right: -5%;
+        margin-top: -170%;
+        width: 70vw;
+        height: 62vw;
+    }
+
+    .izquierdo3 {
+        width: 5%;
+        height: 100%;
+    }
+
+
+    .derecho3 {
+        width: 5%;
+        height: 100%;
+    }
+
+    #prev,
+    #next {
+        position: absolute;
+        margin-top: -88%;
+        width: 15%;
+        height: 15%;
+        border: none;
+        background: none;
+        font-size: 8vw;
+        font-weight: bold;
+        cursor: pointer;
+        z-index: 500;
+    }
+
+    .contenedor-central #prev {
+        left: 5%;
+    }
+
+    .contenedor-central #next {
+        right: 5%;
+    }
+
+    .contenedor-central #prev:hover,
+    .contenedor-central #next:hover {
+        color: var(--gris);
+    }
+
+    .contenedor-central .slider {
+        margin-top: -98%;
+        width: 80%;
+        height: 60% !important;
+        display: flex;
+        border-radius: 5vw;
+        background-color: var(--verdeSena);
+    }
+
+    .contenedor-central .slider-central {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    #slider-img {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    .section3 {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+
+    }
+
+    .fondo-arriba-sect3 {
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 30%;
+        position: absolute;
+    }
+
+    .fondo-arriba-sect3 img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        margin-top: -21% !important;
+    }
+
+    .fondo-bajo-sect3 {
+        position: absolute !important;
+        width: 100%;
+        height: 100%;
+    }
+
+    .fondo-bajo-sect3 img {
+        position: absolute !important;
+        width: 100%;
+        height: 100%;
+        margin-top: 90% !important;
+    }
+
+    .logoWhite-sect3 {
+        position: absolute;
+        right: 7%;
+        width: 35vw !important;
+    }
+
+    .contenedor-sect3_1 {
+        width: 100%;
+        height: 35%;
+        display: flex;
+        position: absolute;
+    }
+
+    .start1_3 {
+        position: absolute !important;
+        width: 30vw !important;
+        height: 38vw !important;
+        left: 0;
+        transform: rotate(270deg) !important;
+    }
+
+    .start2_3 {
+        position: absolute !important;
+        width: 38vw !important;
+        height: 48vw !important;
+        top: 5%;
+        left: 42%;
+    }
+
+    .start3_3 {
+        position: absolute !important;
+        width: 35vw !important;
+        height: 48vw !important;
+        right: 5%;
+    }
+
+    .contenedor-sect3_1 img {
+        top: -10% !important;
+        position: absolute;
+        width: 90%;
+        height: 100%;
+        z-index: -5;
+    }
+
+    .contenedor-sect3_2 {
+        top: 6%;
+        margin-top: 48%;
+        width: 100%;
+        height: 40%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+    }
+
+    .contenedor-sect3_2 .contenedor-video2 {
+        margin-top: -15%;
+        width: 80%;
+        height: 70%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+    }
+
+    .contenedor-sect3_2 .contenedor-video2 .colibrisect3 {
+        width: 38vw;
+        height: 33vw;
+        position: relative;
+        margin-left: 75%;
+        margin-top: -55%;
+        z-index: 20;
+    }
+
+
+    .contenedor-sect3_3 .btnMas {
+        position: relative;
+        width: 7vw;
+        height: 7vw;
+        margin-left: -18vw;
+        top: -27vw;
+        z-index: 50;
+    }
+
+    .textSetc3 {
+        position: absolute;
+        top: 65% !important;
+        left: 10% !important;
+        width: 50%;
+        height: 25%;
+        display: flex;
+
+    }
+
+    .textSetc3 .titulo {
+        margin-top: 3% !important;
+        font-size: 3.5vw !important;
+        font-family: "Raleway";
+        font-weight: bold;
+    }
+
+    .textSetc3 p {
+        position: absolute;
+        font-size: 3vw;
+        font-family: "Raleway";
+        font-weight: 300;
+        text-align: justify;
+    }
+
+    .contenedor-sect3_2 .contenedor-video2 .btnMas:hover {
+        transform: scale(1.1);
+    }
+
+    .contenedor-video2 .videoPlayer {
+        position: absolute;
+        width: 65%;
+        height: 67%;
+        background-color: black;
+        border-radius: 5vw;
+    }
+
+    .contenedor-sect3_2 .play2 {
+        width: 18vw;
+        height: 18vw;
+        position: absolute;
+        z-index: 40;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .contenedor-sect3 .play2 img {
+        opacity: 0.8;
+    }
+
+    .contenedor-sect3_3 {
+        top: 40%;
+        margin-top: 48%;
+        width: 100%;
+        height: 30%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        position: absolute;
+    }
+
+    .contenedor-sect3_3 .florAmarilla {
+        width: 33%;
+        height: 33%;
+        margin-top: -84%;
+        margin-left: -55%;
+        position: absolute;
+        z-index: 10;
+    }
+
+    .contenedor-sect3_3 .ramas {
+        width: 42vw;
+        max-width: 100%;
+        height: auto;
+        margin-right: -58%;
+        margin-top: -18%;
+        position: absolute;
+    }
+
+    .logoWhite-sect3 {
+        display: none !important;
+    }
+
+    .section4 {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+
+    }
+
+    .fondoTop4 {
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 30%;
+        position: absolute;
+    }
+
+    .fondoTop4 img {
+        position: absolute !important;
+        width: 100%;
+        height: 100%;
+        top: -31% !important;
+    }
+
+    .fondoBottom4 {
+        width: 100%;
+        height: 30%;
+        position: relative !important;
+        left: 0;
+        top: 42%;
+    }
+
+    .fondoBottom4 img {
+        position: absolute !important;
+        width: 100%;
+        height: 100%;
+        top: 23% !important;
+        z-index: 1;
+    }
+
+    .yuredoBlack {
+        position: absolute;
+        left: 10%;
+        margin-top: 7% !important;
+        width: 32vw !important;
+    }
+
+    .arribaSect4 {
+        top: 0;
+        position: absolute;
+        width: 100%;
+        height: 23%;
+    }
+
+    .enredaderasSect4 {
+        position: absolute;
+        width: 100%;
+        height: 70vw;
+        z-index: -10 !important;
+        top: -6%;
+    }
+
+    .colibri img {
+        position: absolute;
+        margin-top: 23% !important;
+        width: 80%;
+    }
+
+    .start1_4 {
+        position: absolute;
+        width: 45% !important;
+        right: 38% !important;
+        left: 0%;
+        top: -20% !important;
+        z-index: 15;
+    }
+
+    .start2_4 {
+        position: absolute;
+        width: 45% !important;
+        right: 28% !important;
+        left: 25%;
+        top: -20% !important;
+
+    }
+
+    .start3_4 {
+        position: absolute;
+        width: 45% !important;
+        right: 28% !important;
+        right: 0% !important;
+        top: -20% !important;
+
+    }
+
+    .tituloSect4 {
+        position: absolute;
+        top: 23%;
+        width: 100%;
+        height: 7%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .tituloSect4 h2 {
+        margin-top: 21% !important;
+        font-size: 10vw;
+        font-family: "Raleway";
+        font-optical-sizing: auto;
+        font-weight: bold;
+        font-style: italic;
+    }
+
+    .sliderSect4_1 {
+        top: 30%;
+        position: absolute;
+        width: 100%;
+        height: 42%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+
+    }
+
+    #prevSect4,
+    #nextSect4 {
+        position: absolute;
+        top: 45%;
+        width: 15%;
+        height: 15%;
+        border: none;
+        background: none;
+        font-size: 8vw;
+        font-weight: bold;
+        cursor: pointer;
+        z-index: 500;
+    }
+
+    #prevSect4 {
+        left: -1%;
+    }
+
+    #nextSect4 {
+        right: -1%;
+    }
+
+    #prevSect4:hover,
+    #nextSect4:hover {
+        color: var(--gris);
+    }
+
+    .sliderSect4 {
+        position: absolute;
+        top: 12%;
+        width: 75% !important;
+        height: 75% !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5vw;
+        background-color: var(--verdeSena);
+    }
+    .slider-central4 {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #slider-imgSect4 {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 5vw;
+    }
+    .textoSect4 {
+        position: absolute;
+        top: 72%;
+        width: 100%;
+        height: 15%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        z-index: 1000;
+    }
+
+    .textoSect4 .txt {
+        margin-top: 8%;
+        padding-left: 5%;
+        padding-right: 5%;
+        text-align: justify;
+        font-size: 3vw;
+        font-weight: 300;
+        font-family: "Raleway";
+    }
+
+    .textoSect4 a {
+        width: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        text-decoration: none;
+    }
+
+    .textoSect4 a h6 {
+        position: absolute;
+        margin-top: -2%;
+        color: black;
+        font-size: 3vw;
+        font-family: "Raleway";
+        font-optical-sizing: auto;
+        font-weight: 200;
+        font-style: italic;
+        cursor: pointer;
+        z-index: 300;
+    }
+
+    .textoSect4 a h6:hover {
+        color: var(--gris);
+    }
+
+    .textoSect4 .btnMas {
+        position: absolute;
+        margin-top: -2%;
+        left: 20%;
+        width: 8vw;
+        height: 8vw;
+        margin-right: 5%;
+        cursor: pointer;
+        z-index: 300;
+    }
+
+    .textoSect4 a h6:hover {
+        color: var(--gris);
+    }
+
+    .textoSect4 .btnMas:hover {
+        transform: scale(1.1);
+    }
+
+    .estrellaSect4_1 {
+        position: relative;
+        width: 52% !important;
+        height: 15% !important;
+        top: 90%;
+        z-index: 500;
+
+
+    }
+
+    .estrellaSect4_2 {
+        position: relative;
+        width: 60% !important;
+        height: 13% !important;
+        right: -45%;
+        top: 70%;
+        z-index: 500;
+    }
+
+    .section5 {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+
+    }
+
+    .fondoTop5 {
+        top: 0% !important;
+        left: 0%;
+        width: 100%;
+        height: 30%;
+        position: absolute !important;
+    }
+
+    .fondoTop5 img {
+        top: -28% !important;
+        position: absolute !important;
+        width: 100%;
+        height: 100%;
+        margin-top: 0% !important;
+    }
+
+    .fondoBottom5 {
+        width: 100%;
+        height: 30%;
+        position: absolute !important;
+        top: 71% !important;
+        left: 0;
+    }
+
+    .fondoBottom5 img {
+        position: absolute !important;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        top: 62% !important;
+    }
+
+    .contendor5_1 {
+        top: 0;
+        position: absolute;
+        width: 100%;
+        height: 30%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contendor5_1 h2 {
+        text-align: center;
+        font-size: 10vw;
+        font-family: "Raleway";
+        font-optical-sizing: auto;
+        font-weight: bold;
+        font-style: italic;
+        position: absolute;
+        margin-top: 10%;
+    }
+
+    .contendor5_1 img {
+        top: 5%;
+        width: 100%;
+        position: absolute;
+        z-index: -1;
+    }
+
+    .sliderSect5_1 {
+        top: 30%;
+        position: absolute;
+        width: 100%;
+        height: 35%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .slider-central5{
+        width: 100%;
+        height: 100%;
+        margin-top: -4%;
+    }
+    .slider-central5{
+        width: 100%;
+        height: 100%;
+        margin-top: -4%;
+    }
+
+    .sliderSect5 {
+        margin-top: -25%;
+        width: 80% !important;
+        height: 95% !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5vw;
+       
+    }
+
+    #slider-imgSect5 {
+        
+        border-radius: 5vw;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    #prevSect5,
+    #nextSect5 {
+        position: absolute;
+        margin-top: -22%;
+        width: 15%;
+        height: 15%;
+        border: none;
+        background: none;
+        font-size: 8vw;
+        font-weight: bold;
+        cursor: pointer;
+        z-index: 500;
+    }
+
+    #prevSect5 {
+        left: -1% !important;
+    }
+
+    #nextSect5 {
+        right: -1% !important;
+    }
+
+    #prevSect5:hover,
+    #nextSect5:hover {
+        color: var(--gris);
+    }
+
+    .textoSect5 {
+        top: 70%;
+        margin-top: -20%;
+        position: absolute;
+        width: 100%;
+        height: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        
+    }
+
+    .textoSect5 h5 {
+        text-align: center;
+        top: 10%;
+        width: 90%;
+        font-size: 4vw;
+        font-family: "Raleway";
+        font-optical-sizing: auto;
+ 
+       
+        margin: 3%;
+    }
+
+    .textoSect5 .vacio {
+        width: 18%;
+    }
+
+    .hojasSect5 {
+        width: 18%;
+        height: 100%;
+    }
+
+    .hojasSect5 img {
+        position: absolute;
+        width: 52%;
+        height: auto;
+        right: -20%;
+    }
+
+    .btnSect5 {
+        position: relative;
+        width: 10%;
+        height: 10%;
+        top: 83%;
+        left: 19%;
+        cursor: pointer;
+        z-index: 2000;
+    }
+
+    .btnSect5:hover {
+        transform: scale(1.1);
+
+    }
+
+    .logoSect6 {
+        top: 0;
+        position: absolute;
+        width: 100%;
+        height: 13%;
+        display: flex;
+        align-items: center;
+    }
+
+    .section6 {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+
+    }
+
+    .fondoTop6 {
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 30%;
+        position: absolute;
+
+    }
+
+    .fondoTop6 img {
+        top: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        margin-top: -1%;
+    }
+
+    .fondoBottom6 {
+        width: 100%;
+        height: 30%;
+        display: flex;
+        flex-direction: row;
+        position: absolute !important;
+        bottom: 0;
+        left: 0;
+    }
+
+    .fondoBottom6 img {
+        position: absolute;
+        width: 70%;
+        height: auto;
+        display: flex !important;
+        flex-direction: row !important;
+        height: auto;
+        object-fit: cover;
+        top: 0% !important;
+    }
+
+    .fondoBottom6 .imgDerecha {
+        position: absolute !important;
+        width: 44vw;
+        height: auto;
+        right: 0% !important;
+        object-fit: cover;
+        margin-top: 22% !important;
+
+    }
+
+    .fondoBottom6 .imgLeft {
+        position: absolute !important;
+        margin-top: 32% !important;
+    }
+
+    .logoSect6 img {
+        margin-top: 14%;
+        margin-left: 3%;
+        position: absolute;
+        width: 9em;
+        height: auto;
+    }
+
+    .palmasSect6 {
+        top: 13%;
+        position: absolute;
+        width: 100%;
+        height: 20%;
+    }
+
+    .palmasSect6 img {
+        position: absolute;
+        width: 50%;
+        min-height: auto;
+        left: 0;
+        height: auto;
+        z-index: -1;
+    }
+
+    .sliderSect6_1 {
+        top: 33%;
+        position: absolute;
+        width: 100%;
+        height: 35%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sliderSect6 {
+        position: absolute;
+        top: -5%;
+        width: 80%;
+        height: 95% !important;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5vw;
+        background-color: var(--verdeSena);
+    }
+
+    .slider-central6 {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        border-radius: 5vw;
+        overflow: hidden;
+    }
+
+    #slider-imgSect6 {
+        position: relative;
+        display: flex;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: inherit;
+
+    }
+
+    #prevSect6,
+    #nextSect6 {
+        position: absolute;
+        margin-top: -10%;
+        width: 15%;
+        height: 15%;
+        border: none;
+        background: none;
+        font-size: 8vw;
+        font-weight: bold;
+        cursor: pointer;
+        z-index: 500;
+    }
+
+    #prevSect6 {
+        left: -2%;
+    }
+
+    #nextSect6 {
+        right: -2%;
+    }
+
+    #prevSect6:hover,
+    #nextSect6:hover {
+        color: var(--gris);
+    }
+
+    .textoSect6 {
+        top: 68%;
+        position: absolute;
+        width: 100%;
+        height: 30%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+
+    }
+
+    .textoSect6 h6 {
+        position: absolute !important;
+        font-size: 5vw !important;
+        font-weight: bold !important;
+        font-family: "Raleway";
+        font-style: italic;
+        margin-top: -6% !important;
+    }
+
+    .textoSect6 span {
+        top: 2% !important;
+        position: absolute !important;
+        font-size: 4vw !important;
+        font-weight: 500 !important;
+        font-family: "Raleway";
+        font-style: italic;
+
+    }
+
+    .textoSect6 a {
+        position: absolute;
+        text-decoration: none;
+        color: black;
+        font-size: 3.5vw !important;
+        font-weight: 700 !important;
+        font-family: "Raleway";
+        font-style: italic;
+        top: 10% !important;
+        z-index: 400;
+    }
+
+    .textoSect6 a:hover {
+        cursor: pointer !important;
+        text-decoration: underline;
+        color: var(--gris);
+        font-weight: 500;
+    }
+
+    .textoSect6 h2 {
+        position: absolute;
+        font-size: 10vw;
+        font-weight: bold;
+        font-family: "Raleway";
+        font-style: italic;
+        top: 32% !important;
+    }
+
+    .starSect6_3 {
+        position: absolute !important;
+        width: 65% !important;
+        height: 30% !important;
+        margin-top: 43% !important;
+        margin-left: 22% !important;
+    }
+
+    .starSect6_4 {
+        position: absolute !important;
+        margin-top: 15% !important;
+    }
+
+
+}
+
+/* Media query para Samsung Galaxy S8+ */
+@media only screen and (width: 360px) and (height: 740px) {
+    /* Estilos específicos para Galaxy S8+ */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      
+    }
+
+    .section1 {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        width: 100%;
+        height: calc(100vh);
+        position: relative;
+        overflow: hidden;
+        flex-direction: column;
+    }
+
+    .section1 .dianas {
+        top: 0%;
+        width: 100%;
+        height: 75%;
+        position: relative;
+    }
+
+    .dianas img {
+        position: absolute;
+        margin-top: 0%;
+        width: 100%;
+        height: 45vw;
+    }
+
+    .section1 .contenedor-fondo1 {
+        width: 100%;
+        height: 30%;
+        position: relative;
+        bottom: 0;
+        z-index: 1000;
+    }
+
+    .section1 .contenedor-fondo1 img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+
+    .contenedor-logo {
+        top: 23%;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 15%;
+    }
+
+    .contenedor-logo img {
+        margin-top: -18%;
+        width: 52%;
+        height: auto;
+        position: relative;
+    }
+
+    .contenedor-logo h1 {
+        text-align: center;
+        font-size: 4.5vw;
+        font-weight: 600;
+        font-family: "Raleway";
+        font-style: italic;
+        margin-top: 1%;
+    }
+
+    .section1 .contenedor-video {
+        top: 20%;
+        position: absolute;
+        margin-top: 35%;
+        width: 100%;
+        height: 45%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .section1 .contenedor-video .vacio,
+    .section1 .contenedor-video .flor {
+        width: 15%;
+        height: 100%;
+        display: flex;
+    }
+
+    .section1 .contenedor-video .flor img {
+        position: absolute;
+        width: 20%;
+        height: auto;
+        right: 6%;
+        top: -3%;
+    }
+
+    .contenedor-video #videoPlayer {
+        margin-top: -26%;
+        width: 70%;
+        height: 65%;
+        border-radius: 15px;
+        overflow: hidden;
+        background-color: black;
+    }
+
+    .play {
+        width: 4vw;
+        height: 4vw;
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .play img {
+        opacity: 0.8;
+    }
+
+    #videoPlayer {
+        width: 60%;
+        height: 45%;
+    }
+
+    .contenedor-video #playBtn {
+        width: 20%;
+    }
+
+    .contenedor-fondo1 .imagenes {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .contendor-fondo1 .imagenes {
+        width: 100%;
+        height: 100%;
+    }
+
+    .contenedor-fondo1 .imagenes .nebulosa {
+        position: absolute;
+        width: 15vw;
+        height: auto;
+        margin-top: 37%;
+        left: 3%;
+        z-index: 500;
+    }
+
+    .contenedor-fondo1 .imagenes .logo-sena {
+        position: absolute;
+        width: 15vw;
+        height: auto;
+        margin-top: 40%;
+        right: 5%;
+    }
+
+    .contenedor-fondo1 .imagenes .start1 {
+        position: absolute;
+        width: 30vw;
+        height: 20vw;
+        margin-top: 38%;
+    }
+
+    .contenedor-fondo1 .imagenes .start2 {
+        position: absolute;
+        width: 50%;
+        height: 40%;
+        margin-top: 33vw;
+        left: 25%;
+    }
+
+    .contenedor-fondo1 .imagenes .start3 {
+        position: absolute;
+        width: 28vw;
+        height: 40vw;
+        margin-top: 10vw;
+        right: 0;
+    }
+
+    .section2 {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: calc(100vh);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .contenedor-fondo {
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 30%;
+        position: relative;
+    }
+
+    .contenedor-fondo .fondo2 {
+        top: 0%;
+        width: 100%;
+        height: 80%;
+        position: absolute;
+    }
+
+    .contenedor-fondo-bajo {
+        width: 100%;
+        height: 30%;
+        position: absolute;
+        left: 0;
+    }
+
+    .contenedor-fondo-bajo img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: -58%;
+        object-fit: cover;
+    }
+
+    .logo_white {
+        position: absolute;
+        width: auto;
+        width: 35vw;
+        margin-top: 23%;
+        margin-left: 3%;
+
+    }
+
+    .start1_2 {
+        position: absolute;
+        width: 38vw;
+        height: 35vw;
+        left: 0;
+        top: -15%;
+    }
+
+    .start2_2 {
+        position: absolute;
+        width: 45vw;
+        height: 38vw;
+        right: 30%;
+        top: -30%;
+    }
+
+    .start3_2 {
+        position: absolute;
+        width: 25vw;
+        height: 28vw;
+        right: 5%;
+        top: -15%;
+    }
+
+    .section2 .titulo {
+        position: relative;
+        top: -5%;
+        width: 100%;
+        height: 15%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .section2 .titulo span {
+        margin-left: 20%;
+        text-transform: none;
+        white-space: nowrap;
+        font-size: 8vw;
+        font-family: "Raleway";
+        font-optical-sizing: auto;
+        font-weight: bold;
+        font-style: italic;
+        position: absolute;
+        margin-top: 2%;
+    }
+
+    .section2 .titulo h4 {
+        position: absolute;
+        top: -3%;
+        margin-left: 20%;
+    }
+
+    .no-autocorrect {
+        -webkit-user-modify: read-only;
+        user-modify: read-only;
+    }
+
+    .bajo3 .texto {
+        position: absolute;
+        top: 0%;
+        left: 5%;
+        width: 100%;
+        height: 25%;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .textoMot {
+        margin-left: 5%;
+        margin-top: 270%;
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+    }
+
+    .motmottxt {
+        font-size: 3vw;
+        font-weight: 800;
+        color: black;
+        font-family: "Raleway";
+        font-optical-sizing: auto;
+        font-style: normal;
+    }
+
+    .descriMot {
+        font-size: 2.8vw;
+        font-weight: 500;
+        color: black;
+        font-family: "Raleway";
+        font-optical-sizing: auto;
+        font-style: normal;
+        text-align: justify;
+    }
+
+    .contenedor-central {
+        width: 100%;
+        height: 50vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        gap: 5px;
+    }
+
+    .contenedor-central .btnSaberMas {
+        width: 20%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    .contenedor-central .btnSaberMas .btnMas {
+        position: absolute;
+        margin-top: -85%;
+        margin-left: -1%;
+        width: 8vw;
+        height: 8vw;
+    }
+
+    .btnSaberMas .btnMas:hover {
+        transform: scale(1.1);
+    }
+
+    .contenedor-central .btnSaberMas .hojas {
+        position: absolute;
+        margin-top: -30%;
+        margin-left: 0%;
+        width: 18vw;
+        height: auto;
+    }
+
+    .derecho {
+        width: 20%;
+        height: 100%;
+        position: relative;
+    }
+
+    .colibriSect3 {
+        position: absolute;
+        right: -5%;
+        margin-top: -170%;
+        width: 70vw;
+        height: 62vw;
+    }
+
+    .izquierdo3 {
+        width: 5%;
+        height: 100%;
+    }
+
+
+    .derecho3 {
+        width: 5%;
+        height: 100%;
+    }
+
+    #prev,
+    #next {
+        position: absolute;
+        margin-top: -88%;
+        width: 15%;
+        height: 15%;
+        border: none;
+        background: none;
+        font-size: 8vw;
+        font-weight: bold;
+        cursor: pointer;
+        z-index: 500;
+    }
+
+    .contenedor-central #prev {
+        left: 5%;
+    }
+
+    .contenedor-central #next {
+        right: 5%;
+    }
+
+    .contenedor-central #prev:hover,
+    .contenedor-central #next:hover {
+        color: var(--gris);
+    }
+
+    .contenedor-central .slider {
+        margin-top: -98%;
+        width: 80%;
+        height: 60% !important;
+        display: flex;
+        border-radius: 5vw;
+        background-color: var(--verdeSena);
+    }
+
+    .contenedor-central .slider-central {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    #slider-img {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    .section3 {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+
+    }
+
+    .fondo-arriba-sect3 {
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 30%;
+        position: absolute;
+    }
+
+    .fondo-arriba-sect3 img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        margin-top: -21% !important;
+    }
+
+    .fondo-bajo-sect3 {
+        position: absolute !important;
+        width: 100%;
+        height: 100%;
+    }
+
+    .fondo-bajo-sect3 img {
+        position: absolute !important;
+        width: 100%;
+        height: 100%;
+        margin-top: 90% !important;
+    }
+
+    .logoWhite-sect3 {
+        position: absolute;
+        right: 7%;
+        width: 35vw !important;
+    }
+
+    .contenedor-sect3_1 {
+        width: 100%;
+        height: 35%;
+        display: flex;
+        position: absolute;
+    }
+
+    .start1_3 {
+        position: absolute !important;
+        width: 30vw !important;
+        height: 38vw !important;
+        left: 0;
+        transform: rotate(270deg) !important;
+    }
+
+    .start2_3 {
+        position: absolute !important;
+        width: 38vw !important;
+        height: 48vw !important;
+        top: 5%;
+        left: 42%;
+    }
+
+    .start3_3 {
+        position: absolute !important;
+        width: 35vw !important;
+        height: 48vw !important;
+        right: 5%;
+    }
+
+    .contenedor-sect3_1 img {
+        top: -10% !important;
+        position: absolute;
+        width: 90%;
+        height: 100%;
+        z-index: -5;
+    }
+
+    .contenedor-sect3_2 {
+        top: 6%;
+        margin-top: 48%;
+        width: 100%;
+        height: 40%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+    }
+
+    .contenedor-sect3_2 .contenedor-video2 {
+        margin-top: -15%;
+        width: 80%;
+        height: 70%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+    }
+
+    .contenedor-sect3_2 .contenedor-video2 .colibrisect3 {
+        width: 38vw;
+        height: 33vw;
+        position: relative;
+        margin-left: 75%;
+        margin-top: -55%;
+        z-index: 20;
+    }
+
+
+    .contenedor-sect3_3 .btnMas {
+        position: relative;
+        width: 7vw;
+        height: 7vw;
+        margin-left: -18vw;
+        top: -27vw;
+        z-index: 50;
+    }
+
+    .textSetc3 {
+        position: absolute;
+        top: 65% !important;
+        left: 10% !important;
+        width: 50%;
+        height: 25%;
+        display: flex;
+
+    }
+
+    .textSetc3 .titulo {
+        margin-top: 3% !important;
+        font-size: 3.5vw !important;
+        font-family: "Raleway";
+        font-weight: bold;
+    }
+
+    .textSetc3 p {
+        position: absolute;
+        font-size: 3vw;
+        font-family: "Raleway";
+        font-weight: 300;
+        text-align: justify;
+    }
+
+    .contenedor-sect3_2 .contenedor-video2 .btnMas:hover {
+        transform: scale(1.1);
+    }
+
+    .contenedor-video2 .videoPlayer {
+        position: absolute;
+        width: 65%;
+        height: 67%;
+        background-color: black;
+        border-radius: 5vw;
+    }
+
+    .contenedor-sect3_2 .play2 {
+        width: 18vw;
+        height: 18vw;
+        position: absolute;
+        z-index: 40;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .contenedor-sect3 .play2 img {
+        opacity: 0.8;
+    }
+
+    .contenedor-sect3_3 {
+        top: 40%;
+        margin-top: 48%;
+        width: 100%;
+        height: 30%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        position: absolute;
+    }
+
+    .contenedor-sect3_3 .florAmarilla {
+        width: 33%;
+        height: 33%;
+        margin-top: -84%;
+        margin-left: -55%;
+        position: absolute;
+        z-index: 10;
+    }
+
+    .contenedor-sect3_3 .ramas {
+        width: 42vw;
+        max-width: 100%;
+        height: auto;
+        margin-right: -58%;
+        margin-top: -18%;
+        position: absolute;
+    }
+
+    .logoWhite-sect3 {
+        display: none !important;
+    }
+
+    .section4 {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+
+    }
+
+    .fondoTop4 {
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 30%;
+        position: absolute;
+    }
+
+    .fondoTop4 img {
+        position: absolute !important;
+        width: 100%;
+        height: 100%;
+        top: -31% !important;
+    }
+
+    .fondoBottom4 {
+        width: 100%;
+        height: 30%;
+        position: relative !important;
+        left: 0;
+        top: 42%;
+    }
+
+    .fondoBottom4 img {
+        position: absolute !important;
+        width: 100%;
+        height: 100%;
+        top: 23% !important;
+        z-index: 1;
+    }
+
+    .yuredoBlack {
+        position: absolute;
+        left: 10%;
+        margin-top: 7% !important;
+        width: 32vw !important;
+    }
+
+    .arribaSect4 {
+        top: 0;
+        position: absolute;
+        width: 100%;
+        height: 23%;
+    }
+
+    .enredaderasSect4 {
+        position: absolute;
+        width: 100%;
+        height: 70vw;
+        z-index: -10 !important;
+        top: -6%;
+    }
+
+    .colibri img {
+        position: absolute;
+        margin-top: 23% !important;
+        width: 80%;
+    }
+
+    .start1_4 {
+        position: absolute;
+        width: 45% !important;
+        right: 38% !important;
+        left: 0%;
+        top: -20% !important;
+        z-index: 15;
+    }
+
+    .start2_4 {
+        position: absolute;
+        width: 45% !important;
+        right: 28% !important;
+        left: 25%;
+        top: -20% !important;
+
+    }
+
+    .start3_4 {
+        position: absolute;
+        width: 45% !important;
+        right: 28% !important;
+        right: 0% !important;
+        top: -20% !important;
+
+    }
+
+    .tituloSect4 {
+        position: absolute;
+        top: 23%;
+        width: 100%;
+        height: 7%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .tituloSect4 h2 {
+        margin-top: 21% !important;
+        font-size: 10vw;
+        font-family: "Raleway";
+        font-optical-sizing: auto;
+        font-weight: bold;
+        font-style: italic;
+    }
+
+    .sliderSect4_1 {
+        top: 30%;
+        position: absolute;
+        width: 100%;
+        height: 42%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+
+    }
+
+    #prevSect4,
+    #nextSect4 {
+        position: absolute;
+        top: 45%;
+        width: 15%;
+        height: 15%;
+        border: none;
+        background: none;
+        font-size: 8vw;
+        font-weight: bold;
+        cursor: pointer;
+        z-index: 500;
+    }
+
+    #prevSect4 {
+        left: -1%;
+    }
+
+    #nextSect4 {
+        right: -1%;
+    }
+
+    #prevSect4:hover,
+    #nextSect4:hover {
+        color: var(--gris);
+    }
+
+    .sliderSect4 {
+        position: absolute;
+        top: 12%;
+        width: 75% !important;
+        height: 75% !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5vw;
+        background-color: var(--verdeSena);
+    }
+    .slider-central4 {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #slider-imgSect4 {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 5vw;
+    }
+    .textoSect4 {
+        position: absolute;
+        top: 72%;
+        width: 100%;
+        height: 15%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        z-index: 1000;
+    }
+
+    .textoSect4 .txt {
+        margin-top: 8%;
+        padding-left: 5%;
+        padding-right: 5%;
+        text-align: justify;
+        font-size: 3vw;
+        font-weight: 300;
+        font-family: "Raleway";
+    }
+
+    .textoSect4 a {
+        width: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        text-decoration: none;
+    }
+
+    .textoSect4 a h6 {
+        position: absolute;
+        margin-top: -2%;
+        color: black;
+        font-size: 3vw;
+        font-family: "Raleway";
+        font-optical-sizing: auto;
+        font-weight: 200;
+        font-style: italic;
+        cursor: pointer;
+        z-index: 300;
+    }
+
+    .textoSect4 a h6:hover {
+        color: var(--gris);
+    }
+
+    .textoSect4 .btnMas {
+        position: absolute;
+        margin-top: -2%;
+        left: 20%;
+        width: 8vw;
+        height: 8vw;
+        margin-right: 5%;
+        cursor: pointer;
+        z-index: 300;
+    }
+
+    .textoSect4 a h6:hover {
+        color: var(--gris);
+    }
+
+    .textoSect4 .btnMas:hover {
+        transform: scale(1.1);
+    }
+
+    .estrellaSect4_1 {
+        position: relative;
+        width: 52% !important;
+        height: 15% !important;
+        top: 90%;
+        z-index: 500;
+
+
+    }
+
+    .estrellaSect4_2 {
+        position: relative;
+        width: 60% !important;
+        height: 13% !important;
+        right: -45%;
+        top: 70%;
+        z-index: 500;
+    }
+
+    .section5 {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+
+    }
+
+    .fondoTop5 {
+        top: 0% !important;
+        left: 0%;
+        width: 100%;
+        height: 30%;
+        position: absolute !important;
+    }
+
+    .fondoTop5 img {
+        top: -28% !important;
+        position: absolute !important;
+        width: 100%;
+        height: 100%;
+        margin-top: 0% !important;
+    }
+
+    .fondoBottom5 {
+        width: 100%;
+        height: 30%;
+        position: absolute !important;
+        top: 71% !important;
+        left: 0;
+    }
+
+    .fondoBottom5 img {
+        position: absolute !important;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        top: 62% !important;
+    }
+
+    .contendor5_1 {
+        top: 0;
+        position: absolute;
+        width: 100%;
+        height: 30%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contendor5_1 h2 {
+        text-align: center;
+        font-size: 10vw;
+        font-family: "Raleway";
+        font-optical-sizing: auto;
+        font-weight: bold;
+        font-style: italic;
+        position: absolute;
+        margin-top: 10%;
+    }
+
+    .contendor5_1 img {
+        top: 5%;
+        width: 100%;
+        position: absolute;
+        z-index: -1;
+    }
+
+    .sliderSect5_1 {
+        top: 30%;
+        position: absolute;
+        width: 100%;
+        height: 35%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sliderSect5 {
+        margin-top: -25%;
+        width: 80% !important;
+        height: 95% !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5vw;
+   
+    }
+    .slider-central5{
+        width: 100%;
+        height: 100%;
+        margin-top: -4%;
+    }
+
+    #slider-imgSect5 {
+        object-fit: cover;
+        border-radius: 5vw;
+        width: 100%;
+        height: 100%;
+    }
+
+    #prevSect5,
+    #nextSect5 {
+        position: absolute;
+        margin-top: -22%;
+        width: 15%;
+        height: 15%;
+        border: none;
+        background: none;
+        font-size: 8vw;
+        font-weight: bold;
+        cursor: pointer;
+        z-index: 500;
+    }
+
+    #prevSect5 {
+        left: -1% !important;
+    }
+
+    #nextSect5 {
+        right: -1% !important;
+    }
+
+    #prevSect5:hover,
+    #nextSect5:hover {
+        color: var(--gris);
+    }
+
+    .textoSect5 {
+        top: 70%;
+        margin-top: -20%;
+        position: absolute;
+        width: 100%;
+        height: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        
+    }
+
+    .textoSect5 h5 {
+        text-align: center;
+        top: 10%;
+        width: 90%;
+        font-size: 4vw;
+        font-family: "Raleway";
+        font-optical-sizing: auto;
+       
+        margin: 3%;
+    }
+
+    .textoSect5 .vacio {
+        width: 18%;
+    }
+
+    .hojasSect5 {
+        width: 18%;
+        height: 100%;
+    }
+
+    .hojasSect5 img {
+        position: absolute;
+        width: 52%;
+        height: auto;
+        right: -20%;
+    }
+
+    .btnSect5 {
+        position: relative;
+        width: 10%;
+        height: 10%;
+        top: 83%;
+        left: 19%;
+        cursor: pointer;
+        z-index: 2000;
+    }
+
+    .btnSect5:hover {
+        transform: scale(1.1);
+
+    }
+
+    .logoSect6 {
+        top: 0;
+        position: absolute;
+        width: 100%;
+        height: 13%;
+        display: flex;
+        align-items: center;
+    }
+
+    .section6 {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+
+    }
+
+    .fondoTop6 {
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 30%;
+        position: absolute;
+
+    }
+
+    .fondoTop6 img {
+        top: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        margin-top: -1%;
+    }
+
+    .fondoBottom6 {
+        width: 100%;
+        height: 30%;
+        display: flex;
+        flex-direction: row;
+        position: absolute !important;
+        bottom: 0;
+        left: 0;
+    }
+
+    .fondoBottom6 img {
+        position: absolute;
+        width: 70%;
+        height: auto;
+        display: flex !important;
+        flex-direction: row !important;
+        height: auto;
+        object-fit: cover;
+        top: 0% !important;
+    }
+
+    .fondoBottom6 .imgDerecha {
+        position: absolute !important;
+        width: 44vw;
+        height: auto;
+        right: 0% !important;
+        object-fit: cover;
+        margin-top: 22% !important;
+
+    }
+
+    .fondoBottom6 .imgLeft {
+        position: absolute !important;
+        margin-top: 32% !important;
+    }
+
+    .logoSect6 img {
+        margin-top: 14%;
+        margin-left: 3%;
+        position: absolute;
+        width: 9em;
+        height: auto;
+    }
+
+    .palmasSect6 {
+        top: 13%;
+        position: absolute;
+        width: 100%;
+        height: 20%;
+    }
+
+    .palmasSect6 img {
+        position: absolute;
+        width: 50%;
+        min-height: auto;
+        left: 0;
+        height: auto;
+        z-index: -1;
+    }
+
+    .sliderSect6_1 {
+        top: 33%;
+        position: absolute;
+        width: 100%;
+        height: 35%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sliderSect6 {
+        position: absolute;
+        top: -5%;
+        width: 80%;
+        height: 95% !important;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5vw;
+        background-color: var(--verdeSena);
+    }
+
+    .slider-central6 {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        border-radius: 5vw;
+        overflow: hidden;
+    }
+
+    #slider-imgSect6 {
+        position: relative;
+        display: flex;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: inherit;
+
+    }
+
+    #prevSect6,
+    #nextSect6 {
+        position: absolute;
+        margin-top: -10%;
+        width: 15%;
+        height: 15%;
+        border: none;
+        background: none;
+        font-size: 8vw;
+        font-weight: bold;
+        cursor: pointer;
+        z-index: 500;
+    }
+
+    #prevSect6 {
+        left: -2%;
+    }
+
+    #nextSect6 {
+        right: -2%;
+    }
+
+    #prevSect6:hover,
+    #nextSect6:hover {
+        color: var(--gris);
+    }
+
+    .textoSect6 {
+        top: 68%;
+        position: absolute;
+        width: 100%;
+        height: 30%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+
+    }
+
+    .textoSect6 h6 {
+        position: absolute !important;
+        font-size: 5vw !important;
+        font-weight: bold !important;
+        font-family: "Raleway";
+        font-style: italic;
+        margin-top: -6% !important;
+    }
+
+    .textoSect6 span {
+        top: 2% !important;
+        position: absolute !important;
+        font-size: 4vw !important;
+        font-weight: 500 !important;
+        font-family: "Raleway";
+        font-style: italic;
+
+    }
+
+    .textoSect6 a {
+        position: absolute;
+        text-decoration: none;
+        color: black;
+        font-size: 3.5vw !important;
+        font-weight: 700 !important;
+        font-family: "Raleway";
+        font-style: italic;
+        top: 10% !important;
+        z-index: 400;
+    }
+
+    .textoSect6 a:hover {
+        cursor: pointer !important;
+        text-decoration: underline;
+        color: var(--gris);
+        font-weight: 500;
+    }
+
+    .textoSect6 h2 {
+        position: absolute;
+        font-size: 10vw;
+        font-weight: bold;
+        font-family: "Raleway";
+        font-style: italic;
+        top: 32% !important;
+    }
+
+    .starSect6_3 {
+        position: absolute !important;
+        width: 65% !important;
+        height: 30% !important;
+        margin-top: 43% !important;
+        margin-left: 22% !important;
+    }
+
+    .starSect6_4 {
+        position: absolute !important;
+        margin-top: 15% !important;
+    }
+
+}
+
+/* Media query para Samsung Galaxy Note 20 */
+@media only screen and (width: 412px) and (height: 915px) {
+    /* Estilos específicos para Galaxy Note 20 */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+       
+    }
+
+    .section1 {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        width: 100%;
+        height: calc(100vh);
+        position: relative;
+        overflow: hidden;
+        flex-direction: column;
+    }
+
+    .section1 .dianas {
+        top: 0%;
+        width: 100%;
+        height: 75%;
+        position: relative;
+    }
+
+    .dianas img {
+        position: absolute;
+        margin-top: 0%;
+        width: 100%;
+        height: 45vw;
+    }
+
+    .section1 .contenedor-fondo1 {
+        width: 100%;
+        height: 30%;
+        position: relative;
+        bottom: 0;
+        z-index: 1000;
+    }
+
+    .section1 .contenedor-fondo1 img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+
+    .contenedor-logo {
+        top: 23%;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 15%;
+    }
+
+    .contenedor-logo img {
+        margin-top: -18%;
+        width: 52%;
+        height: auto;
+        position: relative;
+    }
+
+    .contenedor-logo h1 {
+        text-align: center;
+        font-size: 4.5vw;
+        font-weight: 600;
+        font-family: "Raleway";
+        font-style: italic;
+        margin-top: 1%;
+    }
+
+    .section1 .contenedor-video {
+        top: 20%;
+        position: absolute;
+        margin-top: 35%;
+        width: 100%;
+        height: 45%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .section1 .contenedor-video .vacio,
+    .section1 .contenedor-video .flor {
+        width: 15%;
+        height: 100%;
+        display: flex;
+    }
+
+    .section1 .contenedor-video .flor img {
+        position: absolute;
+        width: 20%;
+        height: auto;
+        right: 6%;
+        top: -3%;
+    }
+
+    .contenedor-video #videoPlayer {
+        margin-top: -26%;
+        width: 70%;
+        height: 65%;
+        border-radius: 15px;
+        overflow: hidden;
+        background-color: black;
+    }
+
+    .play {
+        width: 4vw;
+        height: 4vw;
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .play img {
+        opacity: 0.8;
+    }
+
+    #videoPlayer {
+        width: 60%;
+        height: 45%;
+    }
+
+    .contenedor-video #playBtn {
+        width: 20%;
+    }
+
+    .contenedor-fondo1 .imagenes {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .contendor-fondo1 .imagenes {
+        width: 100%;
+        height: 100%;
+    }
+
+    .contenedor-fondo1 .imagenes .nebulosa {
+        position: absolute;
+        width: 15vw;
+        height: auto;
+        margin-top: 37%;
+        left: 3%;
+        z-index: 500;
+    }
+
+    .contenedor-fondo1 .imagenes .logo-sena {
+        position: absolute;
+        width: 15vw;
+        height: auto;
+        margin-top: 40%;
+        right: 5%;
+    }
+
+    .contenedor-fondo1 .imagenes .start1 {
+        position: absolute;
+        width: 30vw;
+        height: 20vw;
+        margin-top: 38%;
+    }
+
+    .contenedor-fondo1 .imagenes .start2 {
+        position: absolute;
+        width: 50%;
+        height: 40%;
+        margin-top: 33vw;
+        left: 25%;
+    }
+
+    .contenedor-fondo1 .imagenes .start3 {
+        position: absolute;
+        width: 28vw;
+        height: 40vw;
+        margin-top: 10vw;
+        right: 0;
+    }
+
+    .section2 {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: calc(100vh);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .contenedor-fondo {
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 30%;
+        position: relative;
+    }
+
+    .contenedor-fondo .fondo2 {
+        top: 0%;
+        width: 100%;
+        height: 80%;
+        position: absolute;
+    }
+
+    .contenedor-fondo-bajo {
+        width: 100%;
+        height: 30%;
+        position: absolute;
+        left: 0;
+    }
+
+    .contenedor-fondo-bajo img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: -58%;
+        object-fit: cover;
+    }
+
+    .logo_white {
+        position: absolute;
+        width: auto;
+        width: 35vw;
+        margin-top: 23%;
+        margin-left: 3%;
+
+    }
+
+    .start1_2 {
+        position: absolute;
+        width: 38vw;
+        height: 35vw;
+        left: 0;
+        top: -15%;
+    }
+
+    .start2_2 {
+        position: absolute;
+        width: 45vw;
+        height: 38vw;
+        right: 30%;
+        top: -30%;
+    }
+
+    .start3_2 {
+        position: absolute;
+        width: 25vw;
+        height: 28vw;
+        right: 5%;
+        top: -15%;
+    }
+
+    .section2 .titulo {
+        position: relative;
+        top: -5%;
+        width: 100%;
+        height: 15%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .section2 .titulo span {
+        margin-left: 20%;
+        text-transform: none;
+        white-space: nowrap;
+        font-size: 8vw;
+        font-family: "Raleway";
+        font-optical-sizing: auto;
+        font-weight: bold;
+        font-style: italic;
+        position: absolute;
+        margin-top: 2%;
+    }
+
+    .section2 .titulo h4 {
+        position: absolute;
+        top: -3%;
+        margin-left: 20%;
+    }
+
+    .no-autocorrect {
+        -webkit-user-modify: read-only;
+        user-modify: read-only;
+    }
+
+    .bajo3 .texto {
+        position: absolute;
+        top: 0%;
+        left: 5%;
+        width: 100%;
+        height: 25%;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .textoMot {
+        margin-left: 5%;
+        margin-top: 270%;
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+    }
+
+    .motmottxt {
+        font-size: 3vw;
+        font-weight: 800;
+        color: black;
+        font-family: "Raleway";
+        font-optical-sizing: auto;
+        font-style: normal;
+    }
+
+    .descriMot {
+        font-size: 2.8vw;
+        font-weight: 500;
+        color: black;
+        font-family: "Raleway";
+        font-optical-sizing: auto;
+        font-style: normal;
+        text-align: justify;
+    }
+
+    .contenedor-central {
+        width: 100%;
+        height: 50vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        gap: 5px;
+    }
+
+    .contenedor-central .btnSaberMas {
+        width: 20%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    .contenedor-central .btnSaberMas .btnMas {
+        position: absolute;
+        margin-top: -85%;
+        margin-left: -1%;
+        width: 8vw;
+        height: 8vw;
+    }
+
+    .btnSaberMas .btnMas:hover {
+        transform: scale(1.1);
+    }
+
+    .contenedor-central .btnSaberMas .hojas {
+        position: absolute;
+        margin-top: -30%;
+        margin-left: 0%;
+        width: 18vw;
+        height: auto;
+    }
+
+    .derecho {
+        width: 20%;
+        height: 100%;
+        position: relative;
+    }
+
+    .colibriSect3 {
+        position: absolute;
+        right: -5%;
+        margin-top: -170%;
+        width: 70vw;
+        height: 62vw;
+    }
+
+    .izquierdo3 {
+        width: 5%;
+        height: 100%;
+    }
+
+
+    .derecho3 {
+        width: 5%;
+        height: 100%;
+    }
+
+    #prev,
+    #next {
+        position: absolute;
+        margin-top: -88%;
+        width: 15%;
+        height: 15%;
+        border: none;
+        background: none;
+        font-size: 8vw;
+        font-weight: bold;
+        cursor: pointer;
+        z-index: 500;
+    }
+
+    .contenedor-central #prev {
+        left: 5%;
+    }
+
+    .contenedor-central #next {
+        right: 5%;
+    }
+
+    .contenedor-central #prev:hover,
+    .contenedor-central #next:hover {
+        color: var(--gris);
+    }
+
+    .contenedor-central .slider {
+        margin-top: -98%;
+        width: 80%;
+        height: 60% !important;
+        display: flex;
+        border-radius: 5vw;
+        background-color: var(--verdeSena);
+    }
+
+    .contenedor-central .slider-central {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    #slider-img {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    .section3 {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+
+    }
+
+    .fondo-arriba-sect3 {
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 30%;
+        position: absolute;
+    }
+
+    .fondo-arriba-sect3 img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        margin-top: -21% !important;
+    }
+
+    .fondo-bajo-sect3 {
+        position: absolute !important;
+        width: 100%;
+        height: 100%;
+    }
+
+    .fondo-bajo-sect3 img {
+        position: absolute !important;
+        width: 100%;
+        height: 100%;
+        margin-top: 96% !important;
+    }
+
+    .logoWhite-sect3 {
+        position: absolute;
+        right: 7%;
+        width: 35vw !important;
+    }
+
+    .contenedor-sect3_1 {
+        width: 100%;
+        height: 35%;
+        display: flex;
+        position: absolute;
+    }
+
+    .start1_3 {
+        position: absolute !important;
+        width: 30vw !important;
+        height: 38vw !important;
+        left: 0;
+        transform: rotate(270deg) !important;
+    }
+
+    .start2_3 {
+        position: absolute !important;
+        width: 38vw !important;
+        height: 48vw !important;
+        top: 5%;
+        left: 42%;
+    }
+
+    .start3_3 {
+        position: absolute !important;
+        width: 35vw !important;
+        height: 48vw !important;
+        right: 5%;
+    }
+
+    .contenedor-sect3_1 img {
+        top: -10% !important;
+        position: absolute;
+        width: 90%;
+        height: 100%;
+        z-index: -5;
+    }
+
+    .contenedor-sect3_2 {
+        top: 6%;
+        margin-top: 48%;
+        width: 100%;
+        height: 40%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+    }
+
+    .contenedor-sect3_2 .contenedor-video2 {
+        margin-top: -15%;
+        width: 80%;
+        height: 70%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+    }
+
+    .contenedor-sect3_2 .contenedor-video2 .colibrisect3 {
+        width: 38vw;
+        height: 33vw;
+        position: relative;
+        margin-left: 75%;
+        margin-top: -55%;
+        z-index: 20;
+    }
+
+
+    .contenedor-sect3_3 .btnMas {
+        position: relative;
+        width: 7vw;
+        height: 7vw;
+        margin-left: -18vw;
+        top: -27vw;
+        z-index: 50;
+    }
+
+    .textSetc3 {
+        position: absolute;
+        top: 65% !important;
+        left: 10% !important;
+        width: 50%;
+        height: 25%;
+        display: flex;
+
+    }
+
+    .textSetc3 .titulo {
+        margin-top: 3% !important;
+        font-size: 3.5vw !important;
+        font-family: "Raleway";
+        font-weight: bold;
+    }
+
+    .textSetc3 p {
+        position: absolute;
+        font-size: 3vw;
+        font-family: "Raleway";
+        font-weight: 300;
+        text-align: justify;
+    }
+
+    .contenedor-sect3_2 .contenedor-video2 .btnMas:hover {
+        transform: scale(1.1);
+    }
+
+    .contenedor-video2 .videoPlayer {
+        position: absolute;
+        width: 65%;
+        height: 67%;
+        background-color: black;
+        border-radius: 5vw;
+    }
+
+    .contenedor-sect3_2 .play2 {
+        width: 18vw;
+        height: 18vw;
+        position: absolute;
+        z-index: 40;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .contenedor-sect3 .play2 img {
+        opacity: 0.8;
+    }
+
+    .contenedor-sect3_3 {
+        top: 40%;
+        margin-top: 48%;
+        width: 100%;
+        height: 30%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        position: absolute;
+    }
+
+    .contenedor-sect3_3 .florAmarilla {
+        width: 33%;
+        height: 33%;
+        margin-top: -84%;
+        margin-left: -55%;
+        position: absolute;
+        z-index: 10;
+    }
+
+    .contenedor-sect3_3 .ramas {
+        width: 42vw;
+        max-width: 100%;
+        height: auto;
+        margin-right: -58%;
+        margin-top: -18%;
+        position: absolute;
+    }
+
+    .logoWhite-sect3 {
+        display: none !important;
+    }
+
+    .section4 {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+
+    }
+
+    .fondoTop4 {
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 30%;
+        position: absolute;
+    }
+
+    .fondoTop4 img {
+        position: absolute !important;
+        width: 100%;
+        height: 100%;
+        top: -31% !important;
+    }
+
+    .fondoBottom4 {
+        width: 100%;
+        height: 30%;
+        position: relative !important;
+        left: 0;
+        top: 42%;
+    }
+
+    .fondoBottom4 img {
+        position: absolute !important;
+        width: 100%;
+        height: 100%;
+        top: 23% !important;
+        z-index: 1;
+    }
+
+    .yuredoBlack {
+        position: absolute;
+        left: 10%;
+        margin-top: 7% !important;
+        width: 32vw !important;
+    }
+
+    .arribaSect4 {
+        top: 0;
+        position: absolute;
+        width: 100%;
+        height: 23%;
+    }
+
+    .enredaderasSect4 {
+        position: absolute;
+        width: 100%;
+        height: 70vw;
+        z-index: -10 !important;
+        top: -6%;
+    }
+
+    .colibri img {
+        position: absolute;
+        margin-top: 23% !important;
+        width: 80%;
+    }
+
+    .start1_4 {
+        position: absolute;
+        width: 45% !important;
+        right: 38% !important;
+        left: 0%;
+        top: -20% !important;
+        z-index: 15;
+    }
+
+    .start2_4 {
+        position: absolute;
+        width: 45% !important;
+        right: 28% !important;
+        left: 25%;
+        top: -20% !important;
+
+    }
+
+    .start3_4 {
+        position: absolute;
+        width: 45% !important;
+        right: 28% !important;
+        right: 0% !important;
+        top: -20% !important;
+
+    }
+
+    .tituloSect4 {
+        position: absolute;
+        top: 23%;
+        width: 100%;
+        height: 7%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .tituloSect4 h2 {
+        margin-top: 21% !important;
+        font-size: 10vw;
+        font-family: "Raleway";
+        font-optical-sizing: auto;
+        font-weight: bold;
+        font-style: italic;
+    }
+
+    .sliderSect4_1 {
+        top: 30%;
+        position: absolute;
+        width: 100%;
+        height: 42%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+
+    }
+
+    #prevSect4,
+    #nextSect4 {
+        position: absolute;
+        top: 45%;
+        width: 15%;
+        height: 15%;
+        border: none;
+        background: none;
+        font-size: 8vw;
+        font-weight: bold;
+        cursor: pointer;
+        z-index: 500;
+    }
+
+    #prevSect4 {
+        left: -1%;
+    }
+
+    #nextSect4 {
+        right: -1%;
+    }
+
+    #prevSect4:hover,
+    #nextSect4:hover {
+        color: var(--gris);
+    }
+
+    .sliderSect4 {
+        position: absolute;
+        top: 12%;
+        width: 75% !important;
+        height: 75% !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5vw;
+        background-color: var(--verdeSena);
+    }
+
+    .textoSect4 {
+        position: absolute;
+        top: 72%;
+        width: 100%;
+        height: 15%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .textoSect4 .txt {
+        margin-top: 8%;
+        padding-left: 5%;
+        padding-right: 5%;
+        text-align: justify;
+        font-size: 3vw;
+        font-weight: 300;
+        font-family: "Raleway";
+    }
+
+    .textoSect4 a {
+        width: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        text-decoration: none;
+    }
+
+    .textoSect4 a h6 {
+        position: absolute;
+        margin-top: -2%;
+        color: black;
+        font-size: 3vw;
+        font-family: "Raleway";
+        font-optical-sizing: auto;
+        font-weight: 200;
+        font-style: italic;
+        cursor: pointer;
+        z-index: 300;
+    }
+
+    .textoSect4 a h6:hover {
+        color: var(--gris);
+    }
+
+    .textoSect4 .btnMas {
+        position: absolute;
+        margin-top: -2%;
+        left: 20%;
+        width: 8vw;
+        height: 8vw;
+        margin-right: 5%;
+        cursor: pointer;
+        z-index: 300;
+    }
+
+    .textoSect4 a h6:hover {
+        color: var(--gris);
+    }
+
+    .textoSect4 .btnMas:hover {
+        transform: scale(1.1);
+    }
+
+    .estrellaSect4_1 {
+        position: relative;
+        width: 52% !important;
+        height: 15% !important;
+        top: 90%;
+        z-index: 500;
+
+
+    }
+
+    .estrellaSect4_2 {
+        position: relative;
+        width: 60% !important;
+        height: 13% !important;
+        right: -45%;
+        top: 70%;
+        z-index: 500;
+    }
+
+    .section5 {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+
+    }
+
+    .fondoTop5 {
+        top: 0% !important;
+        left: 0%;
+        width: 100%;
+        height: 30%;
+        position: absolute !important;
+    }
+
+    .fondoTop5 img {
+        top: -28% !important;
+        position: absolute !important;
+        width: 100%;
+        height: 100%;
+        margin-top: 0% !important;
+    }
+
+    .fondoBottom5 {
+        width: 100%;
+        height: 30%;
+        position: absolute !important;
+        top: 71% !important;
+        left: 0;
+    }
+
+    .fondoBottom5 img {
+        position: absolute !important;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        top: 62% !important;
+    }
+
+    .contendor5_1 {
+        top: 0;
+        position: absolute;
+        width: 100%;
+        height: 30%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contendor5_1 h2 {
+        text-align: center;
+        font-size: 10vw;
+        font-family: "Raleway";
+        font-optical-sizing: auto;
+        font-weight: bold;
+        font-style: italic;
+        position: absolute;
+        margin-top: 10%;
+    }
+
+    .contendor5_1 img {
+        top: 5%;
+        width: 100%;
+        position: absolute;
+        z-index: -1;
+    }
+
+    .sliderSect5_1 {
+        top: 30%;
+        position: absolute;
+        width: 100%;
+        height: 35%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .slider-central5{
+        width: 100%;
+        height: 100%;
+        margin-top: -4%;
+    }
+
+    .sliderSect5 {
+        margin-top: -25%;
+        width: 80% !important;
+        height: 95% !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5vw;
+        
+    }
+
+    #slider-imgSect5 {
+        border-radius: 5vw;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    #prevSect5,
+    #nextSect5 {
+        position: absolute;
+        margin-top: -22%;
+        width: 15%;
+        height: 15%;
+        border: none;
+        background: none;
+        font-size: 8vw;
+        font-weight: bold;
+        cursor: pointer;
+        z-index: 500;
+    }
+
+    #prevSect5 {
+        left: -1% !important;
+    }
+
+    #nextSect5 {
+        right: -1% !important;
+    }
+
+    #prevSect5:hover,
+    #nextSect5:hover {
+        color: var(--gris);
+    }
+
+    .textoSect5 {
+        top: 70%;
+        margin-top: -20%;
+        position: absolute;
+        width: 100%;
+        height: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        
+    }
+
+    .textoSect5 h5 {
+        text-align: center;
+        top: 10%;
+        width: 90%;
+        font-size: 4vw;
+        font-family: "Raleway";
+        font-optical-sizing: auto;
+       
+        margin: 3%;
+    }
+
+    .textoSect5 .vacio {
+        width: 18%;
+    }
+
+    .hojasSect5 {
+        width: 18%;
+        height: 100%;
+    }
+
+    .hojasSect5 img {
+        position: absolute;
+        width: 52%;
+        height: auto;
+        right: -20%;
+    }
+
+    .btnSect5 {
+        position: relative;
+        width: 10%;
+        height: 10%;
+        top: 83%;
+        left: 19%;
+        cursor: pointer;
+        z-index: 2000;
+    }
+
+    .btnSect5:hover {
+        transform: scale(1.1);
+
+    }
+
+    .logoSect6 {
+        top: 0;
+        position: absolute;
+        width: 100%;
+        height: 13%;
+        display: flex;
+        align-items: center;
+    }
+
+    .section6 {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+
+    }
+
+    .fondoTop6 {
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 30%;
+        position: absolute;
+
+    }
+
+    .fondoTop6 img {
+        top: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        margin-top: -1%;
+    }
+
+    .fondoBottom6 {
+        width: 100%;
+        height: 30%;
+        display: flex;
+        flex-direction: row;
+        position: absolute !important;
+        bottom: 0;
+        left: 0;
+    }
+
+    .fondoBottom6 img {
+        position: absolute;
+        width: 70%;
+        height: auto;
+        display: flex !important;
+        flex-direction: row !important;
+        height: auto;
+        object-fit: cover;
+        top: 0% !important;
+    }
+
+    .fondoBottom6 .imgDerecha {
+        position: absolute !important;
+        width: 44vw;
+        height: auto;
+        right: 0% !important;
+        object-fit: cover;
+        margin-top: 25.5% !important;
+
+    }
+
+    .fondoBottom6 .imgLeft {
+        position: absolute !important;
+        margin-top: 36% !important;
+    }
+
+    .logoSect6 img {
+        margin-top: 14%;
+        margin-left: 3%;
+        position: absolute;
+        width: 9em;
+        height: auto;
+    }
+
+    .palmasSect6 {
+        top: 13%;
+        position: absolute;
+        width: 100%;
+        height: 20%;
+    }
+
+    .palmasSect6 img {
+        position: absolute;
+        width: 50%;
+        min-height: auto;
+        left: 0;
+        height: auto;
+        z-index: -1;
+    }
+
+    .sliderSect6_1 {
+        top: 33%;
+        position: absolute;
+        width: 100%;
+        height: 35%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sliderSect6 {
+        position: absolute;
+        top: -5%;
+        width: 80%;
+        height: 95% !important;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5vw;
+        background-color: var(--verdeSena);
+    }
+
+    .slider-central6 {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        border-radius: 5vw;
+        overflow: hidden;
+    }
+
+    #slider-imgSect6 {
+        position: relative;
+        display: flex;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: inherit;
+
+    }
+
+    #prevSect6,
+    #nextSect6 {
+        position: absolute;
+        margin-top: -10%;
+        width: 15%;
+        height: 15%;
+        border: none;
+        background: none;
+        font-size: 8vw;
+        font-weight: bold;
+        cursor: pointer;
+        z-index: 500;
+    }
+
+    #prevSect6 {
+        left: -2%;
+    }
+
+    #nextSect6 {
+        right: -2%;
+    }
+
+    #prevSect6:hover,
+    #nextSect6:hover {
+        color: var(--gris);
+    }
+
+    .textoSect6 {
+        top: 68%;
+        position: absolute;
+        width: 100%;
+        height: 30%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+
+    }
+
+    .textoSect6 h6 {
+        position: absolute !important;
+        font-size: 5vw !important;
+        font-weight: bold !important;
+        font-family: "Raleway";
+        font-style: italic;
+        margin-top: -6% !important;
+    }
+
+    .textoSect6 span {
+        top: 2% !important;
+        position: absolute !important;
+        font-size: 4vw !important;
+        font-weight: 500 !important;
+        font-family: "Raleway";
+        font-style: italic;
+
+    }
+
+    .textoSect6 a {
+        position: absolute;
+        text-decoration: none;
+        color: black;
+        font-size: 3.5vw !important;
+        font-weight: 700 !important;
+        font-family: "Raleway";
+        font-style: italic;
+        top: 10% !important;
+        z-index: 400;
+    }
+
+    .textoSect6 a:hover {
+        cursor: pointer !important;
+        text-decoration: underline;
+        color: var(--gris);
+        font-weight: 500;
+    }
+
+    .textoSect6 h2 {
+        position: absolute;
+        font-size: 10vw;
+        font-weight: bold;
+        font-family: "Raleway";
+        font-style: italic;
+        top: 32% !important;
+    }
+
+    .starSect6_3 {
+        position: absolute !important;
+        width: 65% !important;
+        height: 30% !important;
+        margin-top: 43% !important;
+        margin-left: 22% !important;
+    }
+
+    .starSect6_4 {
+        position: absolute !important;
+        margin-top: 15% !important;
+    }
+
+
+}
+
+/* Media query para Samsung Galaxy S23 */
+@media only screen and (width: 393px) and (height: 851px) {
+    /* Estilos específicos para Galaxy S23 */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+       
+    }
+
+    .section1 {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        width: 100%;
+        height: calc(100vh);
+        position: relative;
+        overflow: hidden;
+        flex-direction: column;
+    }
+
+    .section1 .dianas {
+        top: 0%;
+        width: 100%;
+        height: 75%;
+        position: relative;
+    }
+
+    .dianas img {
+        position: absolute;
+        margin-top: 0%;
+        width: 100%;
+        height: 45vw;
+    }
+
+    .section1 .contenedor-fondo1 {
+        width: 100%;
+        height: 30%;
+        position: relative;
+        bottom: 0;
+        z-index: 1000;
+    }
+
+    .section1 .contenedor-fondo1 img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+
+    .contenedor-logo {
+        top: 23%;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 15%;
+    }
+
+    .contenedor-logo img {
+        margin-top: -18%;
+        width: 52%;
+        height: auto;
+        position: relative;
+    }
+
+    .contenedor-logo h1 {
+        text-align: center;
+        font-size: 4.5vw;
+        font-weight: 600;
+        font-family: "Raleway";
+        font-style: italic;
+        margin-top: 1%;
+    }
+
+    .section1 .contenedor-video {
+        top: 20%;
+        position: absolute;
+        margin-top: 35%;
+        width: 100%;
+        height: 45%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .section1 .contenedor-video .vacio,
+    .section1 .contenedor-video .flor {
+        width: 15%;
+        height: 100%;
+        display: flex;
+    }
+
+    .section1 .contenedor-video .flor img {
+        position: absolute;
+        width: 20%;
+        height: auto;
+        right: 6%;
+        top: -3%;
+    }
+
+    .contenedor-video #videoPlayer {
+        margin-top: -26%;
+        width: 70%;
+        height: 65%;
+        border-radius: 15px;
+        overflow: hidden;
+        background-color: black;
+    }
+
+    .play {
+        width: 4vw;
+        height: 4vw;
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .play img {
+        opacity: 0.8;
+    }
+
+    #videoPlayer {
+        width: 60%;
+        height: 45%;
+    }
+
+    .contenedor-video #playBtn {
+        width: 20%;
+    }
+
+    .contenedor-fondo1 .imagenes {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .contendor-fondo1 .imagenes {
+        width: 100%;
+        height: 100%;
+    }
+
+    .contenedor-fondo1 .imagenes .nebulosa {
+        position: absolute;
+        width: 15vw;
+        height: auto;
+        margin-top: 37%;
+        left: 3%;
+        z-index: 500;
+    }
+
+    .contenedor-fondo1 .imagenes .logo-sena {
+        position: absolute;
+        width: 15vw;
+        height: auto;
+        margin-top: 40%;
+        right: 5%;
+    }
+
+    .contenedor-fondo1 .imagenes .start1 {
+        position: absolute;
+        width: 30vw;
+        height: 20vw;
+        margin-top: 38%;
+    }
+
+    .contenedor-fondo1 .imagenes .start2 {
+        position: absolute;
+        width: 50%;
+        height: 40%;
+        margin-top: 33vw;
+        left: 25%;
+    }
+
+    .contenedor-fondo1 .imagenes .start3 {
+        position: absolute;
+        width: 28vw;
+        height: 40vw;
+        margin-top: 10vw;
+        right: 0;
+    }
+
+    .section2 {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: calc(100vh);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .contenedor-fondo {
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 30%;
+        position: relative;
+    }
+
+    .contenedor-fondo .fondo2 {
+        top: 0%;
+        width: 100%;
+        height: 80%;
+        position: absolute;
+    }
+
+    .contenedor-fondo-bajo {
+        width: 100%;
+        height: 30%;
+        position: absolute;
+        left: 0;
+    }
+
+    .contenedor-fondo-bajo img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: -58%;
+        object-fit: cover;
+    }
+
+    .logo_white {
+        position: absolute;
+        width: auto;
+        width: 35vw;
+        margin-top: 23%;
+        margin-left: 3%;
+
+    }
+
+    .start1_2 {
+        position: absolute;
+        width: 38vw;
+        height: 35vw;
+        left: 0;
+        top: -15%;
+    }
+
+    .start2_2 {
+        position: absolute;
+        width: 45vw;
+        height: 38vw;
+        right: 30%;
+        top: -30%;
+    }
+
+    .start3_2 {
+        position: absolute;
+        width: 25vw;
+        height: 28vw;
+        right: 5%;
+        top: -15%;
+    }
+
+    .section2 .titulo {
+        position: relative;
+        top: -5%;
+        width: 100%;
+        height: 15%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .section2 .titulo span {
+        margin-left: 20%;
+        text-transform: none;
+        white-space: nowrap;
+        font-size: 8vw;
+        font-family: "Raleway";
+        font-optical-sizing: auto;
+        font-weight: bold;
+        font-style: italic;
+        position: absolute;
+        margin-top: 2%;
+    }
+
+    .section2 .titulo h4 {
+        position: absolute;
+        top: -3%;
+        margin-left: 20%;
+    }
+
+    .no-autocorrect {
+        -webkit-user-modify: read-only;
+        user-modify: read-only;
+    }
+
+    .bajo3 .texto {
+        position: absolute;
+        top: 0%;
+        left: 5%;
+        width: 100%;
+        height: 25%;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .textoMot {
+        margin-left: 5%;
+        margin-top: 270%;
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+    }
+
+    .motmottxt {
+        font-size: 3vw;
+        font-weight: 800;
+        color: black;
+        font-family: "Raleway";
+        font-optical-sizing: auto;
+        font-style: normal;
+    }
+
+    .descriMot {
+        font-size: 2.8vw;
+        font-weight: 500;
+        color: black;
+        font-family: "Raleway";
+        font-optical-sizing: auto;
+        font-style: normal;
+        text-align: justify;
+    }
+
+    .contenedor-central {
+        width: 100%;
+        height: 50vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        gap: 5px;
+    }
+
+    .contenedor-central .btnSaberMas {
+        width: 20%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    .contenedor-central .btnSaberMas .btnMas {
+        position: absolute;
+        margin-top: -85%;
+        margin-left: -1%;
+        width: 8vw;
+        height: 8vw;
+    }
+
+    .btnSaberMas .btnMas:hover {
+        transform: scale(1.1);
+    }
+
+    .contenedor-central .btnSaberMas .hojas {
+        position: absolute;
+        margin-top: -30%;
+        margin-left: 0%;
+        width: 18vw;
+        height: auto;
+    }
+
+    .derecho {
+        width: 20%;
+        height: 100%;
+        position: relative;
+    }
+
+    .colibriSect3 {
+        position: absolute;
+        right: -5%;
+        margin-top: -170%;
+        width: 70vw;
+        height: 62vw;
+    }
+
+    .izquierdo3 {
+        width: 5%;
+        height: 100%;
+    }
+
+
+    .derecho3 {
+        width: 5%;
+        height: 100%;
+    }
+
+    #prev,
+    #next {
+        position: absolute;
+        margin-top: -88%;
+        width: 15%;
+        height: 15%;
+        border: none;
+        background: none;
+        font-size: 8vw;
+        font-weight: bold;
+        cursor: pointer;
+        z-index: 500;
+    }
+
+    .contenedor-central #prev {
+        left: 5%;
+    }
+
+    .contenedor-central #next {
+        right: 5%;
+    }
+
+    .contenedor-central #prev:hover,
+    .contenedor-central #next:hover {
+        color: var(--gris);
+    }
+
+    .contenedor-central .slider {
+        margin-top: -98%;
+        width: 80%;
+        height: 60% !important;
+        display: flex;
+        border-radius: 5vw;
+        background-color: var(--verdeSena);
+    }
+
+    .contenedor-central .slider-central {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    #slider-img {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    .section3 {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+
+    }
+
+    .fondo-arriba-sect3 {
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 30%;
+        position: absolute;
+    }
+
+    .fondo-arriba-sect3 img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        margin-top: -21% !important;
+    }
+
+    .fondo-bajo-sect3 {
+        position: absolute !important;
+        width: 100%;
+        height: 100%;
+    }
+
+    .fondo-bajo-sect3 img {
+        position: absolute !important;
+        width: 100%;
+        height: 100%;
+        margin-top: 96% !important;
+    }
+
+    .logoWhite-sect3 {
+        position: absolute;
+        right: 7%;
+        width: 35vw !important;
+    }
+
+    .contenedor-sect3_1 {
+        width: 100%;
+        height: 35%;
+        display: flex;
+        position: absolute;
+    }
+
+    .start1_3 {
+        position: absolute !important;
+        width: 30vw !important;
+        height: 38vw !important;
+        left: 0;
+        transform: rotate(270deg) !important;
+    }
+
+    .start2_3 {
+        position: absolute !important;
+        width: 38vw !important;
+        height: 48vw !important;
+        top: 5%;
+        left: 42%;
+    }
+
+    .start3_3 {
+        position: absolute !important;
+        width: 35vw !important;
+        height: 48vw !important;
+        right: 5%;
+    }
+
+    .contenedor-sect3_1 img {
+        top: -10% !important;
+        position: absolute;
+        width: 90%;
+        height: 100%;
+        z-index: -5;
+    }
+
+    .contenedor-sect3_2 {
+        top: 6%;
+        margin-top: 48%;
+        width: 100%;
+        height: 40%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+    }
+
+    .contenedor-sect3_2 .contenedor-video2 {
+        margin-top: -15%;
+        width: 80%;
+        height: 70%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+    }
+
+    .contenedor-sect3_2 .contenedor-video2 .colibrisect3 {
+        width: 38vw;
+        height: 33vw;
+        position: relative;
+        margin-left: 75%;
+        margin-top: -55%;
+        z-index: 20;
+    }
+
+
+    .contenedor-sect3_3 .btnMas {
+        position: relative;
+        width: 7vw;
+        height: 7vw;
+        margin-left: -18vw;
+        top: -27vw;
+        z-index: 50;
+    }
+
+    .textSetc3 {
+        position: absolute;
+        top: 65% !important;
+        left: 10% !important;
+        width: 50%;
+        height: 25%;
+        display: flex;
+
+    }
+
+    .textSetc3 .titulo {
+        margin-top: 3% !important;
+        font-size: 3.5vw !important;
+        font-family: "Raleway";
+        font-weight: bold;
+    }
+
+    .textSetc3 p {
+        position: absolute;
+        font-size: 3vw;
+        font-family: "Raleway";
+        font-weight: 300;
+        text-align: justify;
+    }
+
+    .contenedor-sect3_2 .contenedor-video2 .btnMas:hover {
+        transform: scale(1.1);
+    }
+
+    .contenedor-video2 .videoPlayer {
+        position: absolute;
+        width: 65%;
+        height: 67%;
+        background-color: black;
+        border-radius: 5vw;
+    }
+
+    .contenedor-sect3_2 .play2 {
+        width: 18vw;
+        height: 18vw;
+        position: absolute;
+        z-index: 40;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .contenedor-sect3 .play2 img {
+        opacity: 0.8;
+    }
+
+    .contenedor-sect3_3 {
+        top: 40%;
+        margin-top: 48%;
+        width: 100%;
+        height: 30%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        position: absolute;
+    }
+
+    .contenedor-sect3_3 .florAmarilla {
+        width: 33%;
+        height: 33%;
+        margin-top: -84%;
+        margin-left: -55%;
+        position: absolute;
+        z-index: 10;
+    }
+
+    .contenedor-sect3_3 .ramas {
+        width: 42vw;
+        max-width: 100%;
+        height: auto;
+        margin-right: -58%;
+        margin-top: -18%;
+        position: absolute;
+    }
+
+    .logoWhite-sect3 {
+        display: none !important;
+    }
+
+    .section4 {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+
+    }
+
+    .fondoTop4 {
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 30%;
+        position: absolute;
+    }
+
+    .fondoTop4 img {
+        position: absolute !important;
+        width: 100%;
+        height: 100%;
+        top: -31% !important;
+    }
+
+    .fondoBottom4 {
+        width: 100%;
+        height: 30%;
+        position: relative !important;
+        left: 0;
+        top: 42%;
+    }
+
+    .fondoBottom4 img {
+        position: absolute !important;
+        width: 100%;
+        height: 100%;
+        top: 23% !important;
+        z-index: 1;
+    }
+
+    .yuredoBlack {
+        position: absolute;
+        left: 10%;
+        margin-top: 7% !important;
+        width: 32vw !important;
+    }
+
+    .arribaSect4 {
+        top: 0;
+        position: absolute;
+        width: 100%;
+        height: 23%;
+    }
+
+    .enredaderasSect4 {
+        position: absolute;
+        width: 100%;
+        height: 70vw;
+        z-index: -10 !important;
+        top: -6%;
+    }
+
+    .colibri img {
+        position: absolute;
+        margin-top: 23% !important;
+        width: 80%;
+    }
+
+    .start1_4 {
+        position: absolute;
+        width: 45% !important;
+        right: 38% !important;
+        left: 0%;
+        top: -20% !important;
+        z-index: 15;
+    }
+
+    .start2_4 {
+        position: absolute;
+        width: 45% !important;
+        right: 28% !important;
+        left: 25%;
+        top: -20% !important;
+
+    }
+
+    .start3_4 {
+        position: absolute;
+        width: 45% !important;
+        right: 28% !important;
+        right: 0% !important;
+        top: -20% !important;
+
+    }
+
+    .tituloSect4 {
+        position: absolute;
+        top: 23%;
+        width: 100%;
+        height: 7%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .tituloSect4 h2 {
+        margin-top: 21% !important;
+        font-size: 10vw;
+        font-family: "Raleway";
+        font-optical-sizing: auto;
+        font-weight: bold;
+        font-style: italic;
+    }
+
+    .sliderSect4_1 {
+        top: 30%;
+        position: absolute;
+        width: 100%;
+        height: 42%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+
+    }
+
+    #prevSect4,
+    #nextSect4 {
+        position: absolute;
+        top: 45%;
+        width: 15%;
+        height: 15%;
+        border: none;
+        background: none;
+        font-size: 8vw;
+        font-weight: bold;
+        cursor: pointer;
+        z-index: 500;
+    }
+
+    #prevSect4 {
+        left: -1%;
+    }
+
+    #nextSect4 {
+        right: -1%;
+    }
+
+    #prevSect4:hover,
+    #nextSect4:hover {
+        color: var(--gris);
+    }
+
+    .sliderSect4 {
+        position: absolute;
+        top: 12%;
+        width: 75% !important;
+        height: 75% !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5vw;
+        background-color: var(--verdeSena);
+    }
+
+    .textoSect4 {
+        position: absolute;
+        top: 72%;
+        width: 100%;
+        height: 15%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .textoSect4 .txt {
+        margin-top: 8%;
+        padding-left: 5%;
+        padding-right: 5%;
+        text-align: justify;
+        font-size: 3vw;
+        font-weight: 300;
+        font-family: "Raleway";
+    }
+
+    .textoSect4 a {
+        width: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        text-decoration: none;
+    }
+
+    .textoSect4 a h6 {
+        position: absolute;
+        margin-top: -2%;
+        color: black;
+        font-size: 3vw;
+        font-family: "Raleway";
+        font-optical-sizing: auto;
+        font-weight: 200;
+        font-style: italic;
+        cursor: pointer;
+        z-index: 300;
+    }
+
+    .textoSect4 a h6:hover {
+        color: var(--gris);
+    }
+
+    .textoSect4 .btnMas {
+        position: absolute;
+        margin-top: -2%;
+        left: 20%;
+        width: 8vw;
+        height: 8vw;
+        margin-right: 5%;
+        cursor: pointer;
+        z-index: 300;
+    }
+
+    .textoSect4 a h6:hover {
+        color: var(--gris);
+    }
+
+    .textoSect4 .btnMas:hover {
+        transform: scale(1.1);
+    }
+
+    .estrellaSect4_1 {
+        position: relative;
+        width: 52% !important;
+        height: 15% !important;
+        top: 90%;
+        z-index: 500;
+
+
+    }
+
+    .estrellaSect4_2 {
+        position: relative;
+        width: 60% !important;
+        height: 13% !important;
+        right: -45%;
+        top: 70%;
+        z-index: 500;
+    }
+
+    .section5 {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+
+    }
+
+    .fondoTop5 {
+        top: 0% !important;
+        left: 0%;
+        width: 100%;
+        height: 30%;
+        position: absolute !important;
+    }
+
+    .fondoTop5 img {
+        top: -28% !important;
+        position: absolute !important;
+        width: 100%;
+        height: 100%;
+        margin-top: 0% !important;
+    }
+
+    .fondoBottom5 {
+        width: 100%;
+        height: 30%;
+        position: absolute !important;
+        top: 71% !important;
+        left: 0;
+    }
+
+    .fondoBottom5 img {
+        position: absolute !important;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        top: 62% !important;
+    }
+
+    .contendor5_1 {
+        top: 0;
+        position: absolute;
+        width: 100%;
+        height: 30%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contendor5_1 h2 {
+        text-align: center;
+        font-size: 10vw;
+        font-family: "Raleway";
+        font-optical-sizing: auto;
+        font-weight: bold;
+        font-style: italic;
+        position: absolute;
+        margin-top: 10%;
+    }
+
+    .contendor5_1 img {
+        top: 5%;
+        width: 100%;
+        position: absolute;
+        z-index: -1;
+    }
+
+    .sliderSect5_1 {
+        top: 30%;
+        position: absolute;
+        width: 100%;
+        height: 35%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sliderSect5 {
+        margin-top: -25%;
+        width: 80% !important;
+        height: 95% !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5vw;
+       
+    }
+    .slider-central5{
+        width: 100%;
+        height: 100%;
+        margin-top: -4%;
+    }
+
+    #slider-imgSect5 {
+        border-radius: 5vw;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    #prevSect5,
+    #nextSect5 {
+        position: absolute;
+        margin-top: -22%;
+        width: 15%;
+        height: 15%;
+        border: none;
+        background: none;
+        font-size: 8vw;
+        font-weight: bold;
+        cursor: pointer;
+        z-index: 500;
+    }
+
+    #prevSect5 {
+        left: -1% !important;
+    }
+
+    #nextSect5 {
+        right: -1% !important;
+    }
+
+    #prevSect5:hover,
+    #nextSect5:hover {
+        color: var(--gris);
+    }
+
+    .textoSect5 {
+        top: 70%;
+        margin-top: -20%;
+        position: absolute;
+        width: 100%;
+        height: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        
+    }
+
+    .textoSect5 h5 {
+        text-align: center;
+        top: 10%;
+        width: 90%;
+        font-size: 4vw;
+        font-family: "Raleway";
+        font-optical-sizing: auto;
+        
+        margin: 3%;
+    }
+
+    .textoSect5 .vacio {
+        width: 18%;
+    }
+
+    .hojasSect5 {
+        width: 18%;
+        height: 100%;
+    }
+
+    .hojasSect5 img {
+        position: absolute;
+        width: 52%;
+        height: auto;
+        right: -20%;
+    }
+
+    .btnSect5 {
+        position: relative;
+        width: 10%;
+        height: 10%;
+        top: 83%;
+        left: 19%;
+        cursor: pointer;
+        z-index: 2000;
+    }
+
+    .btnSect5:hover {
+        transform: scale(1.1);
+
+    }
+
+    .logoSect6 {
+        top: 0;
+        position: absolute;
+        width: 100%;
+        height: 13%;
+        display: flex;
+        align-items: center;
+    }
+
+    .section6 {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+
+    }
+
+    .fondoTop6 {
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 30%;
+        position: absolute;
+
+    }
+
+    .fondoTop6 img {
+        top: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        margin-top: -1%;
+    }
+
+    .fondoBottom6 {
+        width: 100%;
+        height: 30%;
+        display: flex;
+        flex-direction: row;
+        position: absolute !important;
+        bottom: 0;
+        left: 0;
+    }
+
+    .fondoBottom6 img {
+        position: absolute;
+        width: 70%;
+        height: auto;
+        display: flex !important;
+        flex-direction: row !important;
+        height: auto;
+        object-fit: cover;
+        top: 0% !important;
+    }
+
+    .fondoBottom6 .imgDerecha {
+        position: absolute !important;
+        width: 44vw;
+        height: auto;
+        right: 0% !important;
+        object-fit: cover;
+        margin-top: 25.5% !important;
+
+    }
+
+    .fondoBottom6 .imgLeft {
+        position: absolute !important;
+        margin-top: 36% !important;
+    }
+
+    .logoSect6 img {
+        margin-top: 14%;
+        margin-left: 3%;
+        position: absolute;
+        width: 9em;
+        height: auto;
+    }
+
+    .palmasSect6 {
+        top: 13%;
+        position: absolute;
+        width: 100%;
+        height: 20%;
+    }
+
+    .palmasSect6 img {
+        position: absolute;
+        width: 50%;
+        min-height: auto;
+        left: 0;
+        height: auto;
+        z-index: -1;
+    }
+
+    .sliderSect6_1 {
+        top: 33%;
+        position: absolute;
+        width: 100%;
+        height: 35%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sliderSect6 {
+        position: absolute;
+        top: -5%;
+        width: 80%;
+        height: 95% !important;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5vw;
+        background-color: var(--verdeSena);
+    }
+
+    .slider-central6 {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        border-radius: 5vw;
+        overflow: hidden;
+    }
+
+    #slider-imgSect6 {
+        position: relative;
+        display: flex;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: inherit;
+
+    }
+
+    #prevSect6,
+    #nextSect6 {
+        position: absolute;
+        margin-top: -10%;
+        width: 15%;
+        height: 15%;
+        border: none;
+        background: none;
+        font-size: 8vw;
+        font-weight: bold;
+        cursor: pointer;
+        z-index: 500;
+    }
+
+    #prevSect6 {
+        left: -2%;
+    }
+
+    #nextSect6 {
+        right: -2%;
+    }
+
+    #prevSect6:hover,
+    #nextSect6:hover {
+        color: var(--gris);
+    }
+
+    .textoSect6 {
+        top: 68%;
+        position: absolute;
+        width: 100%;
+        height: 30%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+
+    }
+
+    .textoSect6 h6 {
+        position: absolute !important;
+        font-size: 5vw !important;
+        font-weight: bold !important;
+        font-family: "Raleway";
+        font-style: italic;
+        margin-top: -6% !important;
+    }
+
+    .textoSect6 span {
+        top: 2% !important;
+        position: absolute !important;
+        font-size: 4vw !important;
+        font-weight: 500 !important;
+        font-family: "Raleway";
+        font-style: italic;
+
+    }
+
+    .textoSect6 a {
+        position: absolute;
+        text-decoration: none;
+        color: black;
+        font-size: 3.5vw !important;
+        font-weight: 700 !important;
+        font-family: "Raleway";
+        font-style: italic;
+        top: 10% !important;
+        z-index: 400;
+    }
+
+    .textoSect6 a:hover {
+        cursor: pointer !important;
+        text-decoration: underline;
+        color: var(--gris);
+        font-weight: 500;
+    }
+
+    .textoSect6 h2 {
+        position: absolute;
+        font-size: 10vw;
+        font-weight: bold;
+        font-family: "Raleway";
+        font-style: italic;
+        top: 32% !important;
+    }
+
+    .starSect6_3 {
+        position: absolute !important;
+        width: 65% !important;
+        height: 30% !important;
+        margin-top: 43% !important;
+        margin-left: 22% !important;
+    }
+
+    .starSect6_4 {
+        position: absolute !important;
+        margin-top: 15% !important;
+    }
+
+
+}
+
+/* Media query para Samsung Galaxy S23 Ultra */
+@media only screen and (width: 412px) and (height: 915px) {
+    /* Estilos específicos para Galaxy S23 Ultra */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+       
+    }
+
+    .section1 {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        width: 100%;
+        height: calc(100vh);
+        position: relative;
+        overflow: hidden;
+        flex-direction: column;
+    }
+
+    .section1 .dianas {
+        top: 0%;
+        width: 100%;
+        height: 75%;
+        position: relative;
+    }
+
+    .dianas img {
+        position: absolute;
+        margin-top: 0%;
+        width: 100%;
+        height: 45vw;
+    }
+
+    .section1 .contenedor-fondo1 {
+        width: 100%;
+        height: 30%;
+        position: relative;
+        bottom: 0;
+        z-index: 1000;
+    }
+
+    .section1 .contenedor-fondo1 img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+
+    .contenedor-logo {
+        top: 23%;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 15%;
+    }
+
+    .contenedor-logo img {
+        margin-top: -18%;
+        width: 52%;
+        height: auto;
+        position: relative;
+    }
+
+    .contenedor-logo h1 {
+        text-align: center;
+        font-size: 4.5vw;
+        font-weight: 600;
+        font-family: "Raleway";
+        font-style: italic;
+        margin-top: 1%;
+    }
+
+    .section1 .contenedor-video {
+        top: 20%;
+        position: absolute;
+        margin-top: 35%;
+        width: 100%;
+        height: 45%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .section1 .contenedor-video .vacio,
+    .section1 .contenedor-video .flor {
+        width: 15%;
+        height: 100%;
+        display: flex;
+    }
+
+    .section1 .contenedor-video .flor img {
+        position: absolute;
+        width: 20%;
+        height: auto;
+        right: 6%;
+        top: -3%;
+    }
+
+    .contenedor-video #videoPlayer {
+        margin-top: -26%;
+        width: 70%;
+        height: 65%;
+        border-radius: 15px;
+        overflow: hidden;
+        background-color: black;
+    }
+
+    .play {
+        width: 4vw;
+        height: 4vw;
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .play img {
+        opacity: 0.8;
+    }
+
+    #videoPlayer {
+        width: 60%;
+        height: 45%;
+    }
+
+    .contenedor-video #playBtn {
+        width: 20%;
+    }
+
+    .contenedor-fondo1 .imagenes {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .contendor-fondo1 .imagenes {
+        width: 100%;
+        height: 100%;
+    }
+
+    .contenedor-fondo1 .imagenes .nebulosa {
+        position: absolute;
+        width: 15vw;
+        height: auto;
+        margin-top: 37%;
+        left: 3%;
+        z-index: 500;
+    }
+
+    .contenedor-fondo1 .imagenes .logo-sena {
+        position: absolute;
+        width: 15vw;
+        height: auto;
+        margin-top: 40%;
+        right: 5%;
+    }
+
+    .contenedor-fondo1 .imagenes .start1 {
+        position: absolute;
+        width: 30vw;
+        height: 20vw;
+        margin-top: 38%;
+    }
+
+    .contenedor-fondo1 .imagenes .start2 {
+        position: absolute;
+        width: 50%;
+        height: 40%;
+        margin-top: 33vw;
+        left: 25%;
+    }
+
+    .contenedor-fondo1 .imagenes .start3 {
+        position: absolute;
+        width: 28vw;
+        height: 40vw;
+        margin-top: 10vw;
+        right: 0;
+    }
+
+    .section2 {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: calc(100vh);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .contenedor-fondo {
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 30%;
+        position: relative;
+    }
+
+    .contenedor-fondo .fondo2 {
+        top: 0%;
+        width: 100%;
+        height: 80%;
+        position: absolute;
+    }
+
+    .contenedor-fondo-bajo {
+        width: 100%;
+        height: 30%;
+        position: absolute;
+        left: 0;
+    }
+
+    .contenedor-fondo-bajo img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: -58%;
+        object-fit: cover;
+    }
+
+    .logo_white {
+        position: absolute;
+        width: auto;
+        width: 35vw;
+        margin-top: 23%;
+        margin-left: 3%;
+
+    }
+
+    .start1_2 {
+        position: absolute;
+        width: 38vw;
+        height: 35vw;
+        left: 0;
+        top: -15%;
+    }
+
+    .start2_2 {
+        position: absolute;
+        width: 45vw;
+        height: 38vw;
+        right: 30%;
+        top: -30%;
+    }
+
+    .start3_2 {
+        position: absolute;
+        width: 25vw;
+        height: 28vw;
+        right: 5%;
+        top: -15%;
+    }
+
+    .section2 .titulo {
+        position: relative;
+        top: -5%;
+        width: 100%;
+        height: 15%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .section2 .titulo span {
+        margin-left: 20%;
+        text-transform: none;
+        white-space: nowrap;
+        font-size: 8vw;
+        font-family: "Raleway";
+        font-optical-sizing: auto;
+        font-weight: bold;
+        font-style: italic;
+        position: absolute;
+        margin-top: 2%;
+    }
+
+    .section2 .titulo h4 {
+        position: absolute;
+        top: -3%;
+        margin-left: 20%;
+    }
+
+    .no-autocorrect {
+        -webkit-user-modify: read-only;
+        user-modify: read-only;
+    }
+
+    .bajo3 .texto {
+        position: absolute;
+        top: 0%;
+        left: 5%;
+        width: 100%;
+        height: 25%;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .textoMot {
+        margin-left: 5%;
+        margin-top: 270%;
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+    }
+
+    .motmottxt {
+        font-size: 3vw;
+        font-weight: 800;
+        color: black;
+        font-family: "Raleway";
+        font-optical-sizing: auto;
+        font-style: normal;
+    }
+
+    .descriMot {
+        font-size: 2.8vw;
+        font-weight: 500;
+        color: black;
+        font-family: "Raleway";
+        font-optical-sizing: auto;
+        font-style: normal;
+        text-align: justify;
+    }
+
+    .contenedor-central {
+        width: 100%;
+        height: 50vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        gap: 5px;
+    }
+
+    .contenedor-central .btnSaberMas {
+        width: 20%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    .contenedor-central .btnSaberMas .btnMas {
+        position: absolute;
+        margin-top: -85%;
+        margin-left: -1%;
+        width: 8vw;
+        height: 8vw;
+    }
+
+    .btnSaberMas .btnMas:hover {
+        transform: scale(1.1);
+    }
+
+    .contenedor-central .btnSaberMas .hojas {
+        position: absolute;
+        margin-top: -30%;
+        margin-left: 0%;
+        width: 18vw;
+        height: auto;
+    }
+
+    .derecho {
+        width: 20%;
+        height: 100%;
+        position: relative;
+    }
+
+    .colibriSect3 {
+        position: absolute;
+        right: -5%;
+        margin-top: -170%;
+        width: 70vw;
+        height: 62vw;
+    }
+
+    .izquierdo3 {
+        width: 5%;
+        height: 100%;
+    }
+
+
+    .derecho3 {
+        width: 5%;
+        height: 100%;
+    }
+
+    #prev,
+    #next {
+        position: absolute;
+        margin-top: -88%;
+        width: 15%;
+        height: 15%;
+        border: none;
+        background: none;
+        font-size: 8vw;
+        font-weight: bold;
+        cursor: pointer;
+        z-index: 500;
+    }
+
+    .contenedor-central #prev {
+        left: 5%;
+    }
+
+    .contenedor-central #next {
+        right: 5%;
+    }
+
+    .contenedor-central #prev:hover,
+    .contenedor-central #next:hover {
+        color: var(--gris);
+    }
+
+    .contenedor-central .slider {
+        margin-top: -98%;
+        width: 80%;
+        height: 60% !important;
+        display: flex;
+        border-radius: 5vw;
+        background-color: var(--verdeSena);
+    }
+
+    .contenedor-central .slider-central {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    #slider-img {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    .section3 {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+
+    }
+
+    .fondo-arriba-sect3 {
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 30%;
+        position: absolute;
+    }
+
+    .fondo-arriba-sect3 img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        margin-top: -21% !important;
+    }
+
+    .fondo-bajo-sect3 {
+        position: absolute !important;
+        width: 100%;
+        height: 100%;
+    }
+
+    .fondo-bajo-sect3 img {
+        position: absolute !important;
+        width: 100%;
+        height: 100%;
+        margin-top: 96% !important;
+    }
+
+    .logoWhite-sect3 {
+        position: absolute;
+        right: 7%;
+        width: 35vw !important;
+    }
+
+    .contenedor-sect3_1 {
+        width: 100%;
+        height: 35%;
+        display: flex;
+        position: absolute;
+    }
+
+    .start1_3 {
+        position: absolute !important;
+        width: 30vw !important;
+        height: 38vw !important;
+        left: 0;
+        transform: rotate(270deg) !important;
+    }
+
+    .start2_3 {
+        position: absolute !important;
+        width: 38vw !important;
+        height: 48vw !important;
+        top: 5%;
+        left: 42%;
+    }
+
+    .start3_3 {
+        position: absolute !important;
+        width: 35vw !important;
+        height: 48vw !important;
+        right: 5%;
+    }
+
+    .contenedor-sect3_1 img {
+        top: -10% !important;
+        position: absolute;
+        width: 90%;
+        height: 100%;
+        z-index: -5;
+    }
+
+    .contenedor-sect3_2 {
+        top: 6%;
+        margin-top: 48%;
+        width: 100%;
+        height: 40%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+    }
+
+    .contenedor-sect3_2 .contenedor-video2 {
+        margin-top: -15%;
+        width: 80%;
+        height: 70%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+    }
+
+    .contenedor-sect3_2 .contenedor-video2 .colibrisect3 {
+        width: 38vw;
+        height: 33vw;
+        position: relative;
+        margin-left: 75%;
+        margin-top: -55%;
+        z-index: 20;
+    }
+
+
+    .contenedor-sect3_3 .btnMas {
+        position: relative;
+        width: 7vw;
+        height: 7vw;
+        margin-left: -18vw;
+        top: -27vw;
+        z-index: 50;
+    }
+
+    .textSetc3 {
+        position: absolute;
+        top: 65% !important;
+        left: 10% !important;
+        width: 50%;
+        height: 25%;
+        display: flex;
+
+    }
+
+    .textSetc3 .titulo {
+        margin-top: 3% !important;
+        font-size: 3.5vw !important;
+        font-family: "Raleway";
+        font-weight: bold;
+    }
+
+    .textSetc3 p {
+        position: absolute;
+        font-size: 3vw;
+        font-family: "Raleway";
+        font-weight: 300;
+        text-align: justify;
+    }
+
+    .contenedor-sect3_2 .contenedor-video2 .btnMas:hover {
+        transform: scale(1.1);
+    }
+
+    .contenedor-video2 .videoPlayer {
+        position: absolute;
+        width: 65%;
+        height: 67%;
+        background-color: black;
+        border-radius: 5vw;
+    }
+
+    .contenedor-sect3_2 .play2 {
+        width: 18vw;
+        height: 18vw;
+        position: absolute;
+        z-index: 40;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .contenedor-sect3 .play2 img {
+        opacity: 0.8;
+    }
+
+    .contenedor-sect3_3 {
+        top: 40%;
+        margin-top: 48%;
+        width: 100%;
+        height: 30%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        position: absolute;
+    }
+
+    .contenedor-sect3_3 .florAmarilla {
+        width: 33%;
+        height: 33%;
+        margin-top: -84%;
+        margin-left: -55%;
+        position: absolute;
+        z-index: 10;
+    }
+
+    .contenedor-sect3_3 .ramas {
+        width: 42vw;
+        max-width: 100%;
+        height: auto;
+        margin-right: -58%;
+        margin-top: -18%;
+        position: absolute;
+    }
+
+    .logoWhite-sect3 {
+        display: none !important;
+    }
+
+    .section4 {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+
+    }
+
+    .fondoTop4 {
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 30%;
+        position: absolute;
+    }
+
+    .fondoTop4 img {
+        position: absolute !important;
+        width: 100%;
+        height: 100%;
+        top: -31% !important;
+    }
+
+    .fondoBottom4 {
+        width: 100%;
+        height: 30%;
+        position: relative !important;
+        left: 0;
+        top: 42%;
+    }
+
+    .fondoBottom4 img {
+        position: absolute !important;
+        width: 100%;
+        height: 100%;
+        top: 23% !important;
+        z-index: 1;
+    }
+
+    .yuredoBlack {
+        position: absolute;
+        left: 10%;
+        margin-top: 7% !important;
+        width: 32vw !important;
+    }
+
+    .arribaSect4 {
+        top: 0;
+        position: absolute;
+        width: 100%;
+        height: 23%;
+    }
+
+    .enredaderasSect4 {
+        position: absolute;
+        width: 100%;
+        height: 70vw;
+        z-index: -10 !important;
+        top: -6%;
+    }
+
+    .colibri img {
+        position: absolute;
+        margin-top: 23% !important;
+        width: 80%;
+    }
+
+    .start1_4 {
+        position: absolute;
+        width: 45% !important;
+        right: 38% !important;
+        left: 0%;
+        top: -20% !important;
+        z-index: 15;
+    }
+
+    .start2_4 {
+        position: absolute;
+        width: 45% !important;
+        right: 28% !important;
+        left: 25%;
+        top: -20% !important;
+
+    }
+
+    .start3_4 {
+        position: absolute;
+        width: 45% !important;
+        right: 28% !important;
+        right: 0% !important;
+        top: -20% !important;
+
+    }
+
+    .tituloSect4 {
+        position: absolute;
+        top: 23%;
+        width: 100%;
+        height: 7%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .tituloSect4 h2 {
+        margin-top: 21% !important;
+        font-size: 10vw;
+        font-family: "Raleway";
+        font-optical-sizing: auto;
+        font-weight: bold;
+        font-style: italic;
+    }
+
+    .sliderSect4_1 {
+        top: 30%;
+        position: absolute;
+        width: 100%;
+        height: 42%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+
+    }
+
+    #prevSect4,
+    #nextSect4 {
+        position: absolute;
+        top: 45%;
+        width: 15%;
+        height: 15%;
+        border: none;
+        background: none;
+        font-size: 8vw;
+        font-weight: bold;
+        cursor: pointer;
+        z-index: 500;
+    }
+
+    #prevSect4 {
+        left: -1%;
+    }
+
+    #nextSect4 {
+        right: -1%;
+    }
+
+    #prevSect4:hover,
+    #nextSect4:hover {
+        color: var(--gris);
+    }
+
+    .sliderSect4 {
+        position: absolute;
+        top: 12%;
+        width: 75% !important;
+        height: 75% !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5vw;
+        background-color: var(--verdeSena);
+    }
+
+    .textoSect4 {
+        position: absolute;
+        top: 72%;
+        width: 100%;
+        height: 15%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .textoSect4 .txt {
+        margin-top: 8%;
+        padding-left: 5%;
+        padding-right: 5%;
+        text-align: justify;
+        font-size: 3vw;
+        font-weight: 300;
+        font-family: "Raleway";
+    }
+
+    .textoSect4 a {
+        width: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        text-decoration: none;
+    }
+
+    .textoSect4 a h6 {
+        position: absolute;
+        margin-top: -2%;
+        color: black;
+        font-size: 3vw;
+        font-family: "Raleway";
+        font-optical-sizing: auto;
+        font-weight: 200;
+        font-style: italic;
+        cursor: pointer;
+        z-index: 300;
+    }
+
+    .textoSect4 a h6:hover {
+        color: var(--gris);
+    }
+
+    .textoSect4 .btnMas {
+        position: absolute;
+        margin-top: -2%;
+        left: 20%;
+        width: 8vw;
+        height: 8vw;
+        margin-right: 5%;
+        cursor: pointer;
+        z-index: 300;
+    }
+
+    .textoSect4 a h6:hover {
+        color: var(--gris);
+    }
+
+    .textoSect4 .btnMas:hover {
+        transform: scale(1.1);
+    }
+
+    .estrellaSect4_1 {
+        position: relative;
+        width: 52% !important;
+        height: 15% !important;
+        top: 90%;
+        z-index: 500;
+
+
+    }
+
+    .estrellaSect4_2 {
+        position: relative;
+        width: 60% !important;
+        height: 13% !important;
+        right: -45%;
+        top: 70%;
+        z-index: 500;
+    }
+
+    .section5 {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+
+    }
+
+    .fondoTop5 {
+        top: 0% !important;
+        left: 0%;
+        width: 100%;
+        height: 30%;
+        position: absolute !important;
+    }
+
+    .fondoTop5 img {
+        top: -28% !important;
+        position: absolute !important;
+        width: 100%;
+        height: 100%;
+        margin-top: 0% !important;
+    }
+
+    .fondoBottom5 {
+        width: 100%;
+        height: 30%;
+        position: absolute !important;
+        top: 71% !important;
+        left: 0;
+    }
+
+    .fondoBottom5 img {
+        position: absolute !important;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        top: 62% !important;
+    }
+
+    .contendor5_1 {
+        top: 0;
+        position: absolute;
+        width: 100%;
+        height: 30%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contendor5_1 h2 {
+        text-align: center;
+        font-size: 10vw;
+        font-family: "Raleway";
+        font-optical-sizing: auto;
+        font-weight: bold;
+        font-style: italic;
+        position: absolute;
+        margin-top: 10%;
+    }
+
+    .contendor5_1 img {
+        top: 5%;
+        width: 100%;
+        position: absolute;
+        z-index: -1;
+    }
+
+    .sliderSect5_1 {
+        top: 30%;
+        position: absolute;
+        width: 100%;
+        height: 35%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sliderSect5 {
+        margin-top: -25%;
+        width: 80% !important;
+        height: 95% !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5vw;
+        
+    }
+    .slider-central5{
+        width: 100%;
+        height: 100%;
+        margin-top: -4%;
+    }
+
+    #slider-imgSect5 {
+        border-radius: 5vw;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    #prevSect5,
+    #nextSect5 {
+        position: absolute;
+        margin-top: -22%;
+        width: 15%;
+        height: 15%;
+        border: none;
+        background: none;
+        font-size: 8vw;
+        font-weight: bold;
+        cursor: pointer;
+        z-index: 500;
+    }
+
+    #prevSect5 {
+        left: -1% !important;
+    }
+
+    #nextSect5 {
+        right: -1% !important;
+    }
+
+    #prevSect5:hover,
+    #nextSect5:hover {
+        color: var(--gris);
+    }
+
+    .textoSect5 {
+        top: 70%;
+        margin-top: -20%;
+        position: absolute;
+        width: 100%;
+        height: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        
+    }
+
+    .textoSect5 h5 {
+        text-align: center;
+        top: 10%;
+        width: 90%;
+        font-size: 4vw;
+        font-family: "Raleway";
+        font-optical-sizing: auto;
+        
+        margin: 3%;
+    }
+
+    .textoSect5 .vacio {
+        width: 18%;
+    }
+
+    .hojasSect5 {
+        width: 18%;
+        height: 100%;
+    }
+
+    .hojasSect5 img {
+        position: absolute;
+        width: 52%;
+        height: auto;
+        right: -20%;
+    }
+
+    .btnSect5 {
+        position: relative;
+        width: 10%;
+        height: 10%;
+        top: 83%;
+        left: 19%;
+        cursor: pointer;
+        z-index: 2000;
+    }
+
+    .btnSect5:hover {
+        transform: scale(1.1);
+
+    }
+
+    .logoSect6 {
+        top: 0;
+        position: absolute;
+        width: 100%;
+        height: 13%;
+        display: flex;
+        align-items: center;
+    }
+
+    .section6 {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+
+    }
+
+    .fondoTop6 {
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 30%;
+        position: absolute;
+
+    }
+
+    .fondoTop6 img {
+        top: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        margin-top: -1%;
+    }
+
+    .fondoBottom6 {
+        width: 100%;
+        height: 30%;
+        display: flex;
+        flex-direction: row;
+        position: absolute !important;
+        bottom: 0;
+        left: 0;
+    }
+
+    .fondoBottom6 img {
+        position: absolute;
+        width: 70%;
+        height: auto;
+        display: flex !important;
+        flex-direction: row !important;
+        height: auto;
+        object-fit: cover;
+        top: 0% !important;
+    }
+
+    .fondoBottom6 .imgDerecha {
+        position: absolute !important;
+        width: 44vw;
+        height: auto;
+        right: 0% !important;
+        object-fit: cover;
+        margin-top: 25.5% !important;
+
+    }
+
+    .fondoBottom6 .imgLeft {
+        position: absolute !important;
+        margin-top: 36% !important;
+    }
+
+    .logoSect6 img {
+        margin-top: 14%;
+        margin-left: 3%;
+        position: absolute;
+        width: 9em;
+        height: auto;
+    }
+
+    .palmasSect6 {
+        top: 13%;
+        position: absolute;
+        width: 100%;
+        height: 20%;
+    }
+
+    .palmasSect6 img {
+        position: absolute;
+        width: 50%;
+        min-height: auto;
+        left: 0;
+        height: auto;
+        z-index: -1;
+    }
+
+    .sliderSect6_1 {
+        top: 33%;
+        position: absolute;
+        width: 100%;
+        height: 35%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sliderSect6 {
+        position: absolute;
+        top: -5%;
+        width: 80%;
+        height: 95% !important;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5vw;
+        background-color: var(--verdeSena);
+    }
+
+    .slider-central6 {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        border-radius: 5vw;
+        overflow: hidden;
+    }
+
+    #slider-imgSect6 {
+        position: relative;
+        display: flex;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: inherit;
+
+    }
+
+    #prevSect6,
+    #nextSect6 {
+        position: absolute;
+        margin-top: -10%;
+        width: 15%;
+        height: 15%;
+        border: none;
+        background: none;
+        font-size: 8vw;
+        font-weight: bold;
+        cursor: pointer;
+        z-index: 500;
+    }
+
+    #prevSect6 {
+        left: -2%;
+    }
+
+    #nextSect6 {
+        right: -2%;
+    }
+
+    #prevSect6:hover,
+    #nextSect6:hover {
+        color: var(--gris);
+    }
+
+    .textoSect6 {
+        top: 68%;
+        position: absolute;
+        width: 100%;
+        height: 30%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+
+    }
+
+    .textoSect6 h6 {
+        position: absolute !important;
+        font-size: 5vw !important;
+        font-weight: bold !important;
+        font-family: "Raleway";
+        font-style: italic;
+        margin-top: -6% !important;
+    }
+
+    .textoSect6 span {
+        top: 2% !important;
+        position: absolute !important;
+        font-size: 4vw !important;
+        font-weight: 500 !important;
+        font-family: "Raleway";
+        font-style: italic;
+
+    }
+
+    .textoSect6 a {
+        position: absolute;
+        text-decoration: none;
+        color: black;
+        font-size: 3.5vw !important;
+        font-weight: 700 !important;
+        font-family: "Raleway";
+        font-style: italic;
+        top: 10% !important;
+        z-index: 400;
+    }
+
+    .textoSect6 a:hover {
+        cursor: pointer !important;
+        text-decoration: underline;
+        color: var(--gris);
+        font-weight: 500;
+    }
+
+    .textoSect6 h2 {
+        position: absolute;
+        font-size: 10vw;
+        font-weight: bold;
+        font-family: "Raleway";
+        font-style: italic;
+        top: 32% !important;
+    }
+
+    .starSect6_3 {
+        position: absolute !important;
+        width: 65% !important;
+        height: 30% !important;
+        margin-top: 43% !important;
+        margin-left: 22% !important;
+    }
+
+    .starSect6_4 {
+        position: absolute !important;
+        margin-top: 15% !important;
+    }
+
+
+}
+/* Media query para Samsung Galaxy S23 Ultra */
+@media only screen and (max-width: 540px) and (max-height: 1280px) {
+    /* Estilos específicos para Galaxy S23 Ultra */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+    }
+
+    .section1 {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        width: 100%;
+        height: calc(100vh);
+        position: relative;
+        overflow: hidden;
+        flex-direction: column;
+    }
+
+    .section1 .dianas {
+        top: 0%;
+        width: 100%;
+        height: 75%;
+        position: relative;
+    }
+
+    .dianas img {
+        position: absolute;
+        margin-top: 0%;
+        width: 100%;
+        height: 45vw;
+    }
+
+    .section1 .contenedor-fondo1 {
+        width: 100%;
+        height: 30%;
+        position: relative;
+        bottom: 0;
+        z-index: 1000;
+    }
+
+    .section1 .contenedor-fondo1 img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+
+    .contenedor-logo {
+        top: 23%;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 15%;
+    }
+
+    .contenedor-logo img {
+        margin-top: -18%;
+        width: 52%;
+        height: auto;
+        position: relative;
+    }
+
+    .contenedor-logo h1 {
+        text-align: center;
+        font-size: 4.5vw;
+        font-weight: 600;
+        font-family: "Raleway";
+        font-style: italic;
+        margin-top: 1%;
+    }
+
+    .section1 .contenedor-video {
+        top: 20%;
+        position: absolute;
+        margin-top: 35%;
+        width: 100%;
+        height: 45%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    .section1 .contenedor-video .vacio,
+    .section1 .contenedor-video .flor {
+        width: 15%;
+        height: 100%;
+        display: flex;
+    }
+
+    .section1 .contenedor-video .flor  {
+        position: absolute;
+        width: 20%;
+        height: auto;
+        right: 0%;
+        top: -10%;
+    }
+
+    .contenedor-video #videoPlayer {
+        margin-top: -26%;
+        width: 85%;
+        height: 75%;
+        border-radius: 15px;
+        overflow: hidden;
+        background-color: black;
+        object-fit: cover;
+    }
+
+    .play {
+        width: 4vw;
+        height: 4vw;
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .play img {
+        opacity: 0.8;
+    }
+
+    #videoPlayer {
+        width: 60%;
+        height: 45%;
+    }
+
+    .contenedor-video #playBtn {
+        width: 20%;
+    }
+
+    .contenedor-fondo1 .imagenes {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .contendor-fondo1 .imagenes {
+        width: 100%;
+        height: 100%;
+    }
+
+    .contenedor-fondo1 .imagenes .nebulosa {
+        position: absolute;
+        width: 15vw;
+        height: auto;
+        margin-top: 37%;
+        left: 3%;
+        z-index: 500;
+    }
+
+    .contenedor-fondo1 .imagenes .logo-sena {
+        position: absolute;
+        width: 15vw;
+        height: auto;
+        margin-top: 40%;
+        right: 5%;
+    }
+
+    .contenedor-fondo1 .imagenes .start1 {
+        position: absolute;
+        width: 30vw;
+        height: 20vw;
+        margin-top: 38%;
+    }
+
+    .contenedor-fondo1 .imagenes .start2 {
+        position: absolute;
+        width: 50%;
+        height: 40%;
+        margin-top: 33vw;
+        left: 25%;
+    }
+
+    .contenedor-fondo1 .imagenes .start3 {
+        position: absolute;
+        width: 28vw;
+        height: 40vw;
+        margin-top: 10vw;
+        right: 0;
+    }
+
+    .section2 {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: calc(100vh);
+        position: relative;
+        overflow: hidden;
+    }
+    
+
+    .contenedor-fondo {
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 30%;
+        position: relative;
+    }
+
+    .contenedor-fondo .fondo2 {
+        top: 0%;
+        width: 100%;
+        height: 80%;
+        position: absolute;
+    }
+
+    .contenedor-fondo-bajo {
+        width: 100%;
+        height: 30%;
+        position: absolute;
+        left: 0;
+    }
+
+    .contenedor-fondo-bajo img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: -58%;
+        object-fit: cover;
+    }
+
+    .logo_white {
+        position: absolute;
+        width: auto;
+        width: 35vw;
+        margin-top: 23%;
+        margin-left: 3%;
+
+    }
+
+    .start1_2 {
+        position: absolute;
+        width: 38vw;
+        height: 35vw;
+        left: 0;
+        top: -15%;
+    }
+
+    .start2_2 {
+        position: absolute;
+        width: 45vw;
+        height: 38vw;
+        right: 30%;
+        top: -30%;
+    }
+
+    .start3_2 {
+        position: absolute;
+        width: 25vw;
+        height: 28vw;
+        right: 5%;
+        top: -15%;
+    }
+
+    .section2 .titulo {
+        position: relative;
+        top: -5%;
+        width: 100%;
+        height: 15%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .section2 .titulo span {
+        margin-left: 20%;
+        text-transform: none;
+        white-space: nowrap;
+        font-size: 8vw;
+        font-family: "Raleway";
+        font-optical-sizing: auto;
+        font-weight: bold;
+        font-style: italic;
+        position: absolute;
+        margin-top: 2%;
+    }
+
+    .section2 .titulo h4 {
+        position: absolute;
+        top: -3%;
+        margin-left: 20%;
+    }
+
+    .no-autocorrect {
+        -webkit-user-modify: read-only;
+        user-modify: read-only;
+    }
+
+    .bajo3 .texto {
+        position: absolute;
+        top: 0%;
+        left: 5%;
+        width: 100%;
+        height: 25%;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .textoMot {
+        margin-left: 5%;
+        margin-top: 250%;
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        text-align: justify;
+        font-size: 4vw;
+        font-weight: 600;
+        color: black;
+        font-family: "Raleway";
+        font-optical-sizing: auto;
+        font-style: normal;
+       
+    }
+
+    .motmottxt {
+        font-size: 4vw;
+        font-weight: 800;
+        color: black;
+        font-family: "Raleway";
+        font-optical-sizing: auto;
+        font-style: normal;
+        
+    }
+
+    .descriMot {
+        font-size: 3.3vw;
+        font-weight: 500;
+        color: black;
+        font-family: "Raleway";
+        font-optical-sizing: auto;
+        font-style: normal;
+        text-align: justify;
+        
+    }
+
+    .contenedor-central {
+        width: 100%;
+        height: 50vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        gap: 5px;
+    }
+
+    .contenedor-central .btnSaberMas {
+        width: 20%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    .contenedor-central .btnSaberMas .btnMas {
+        position: absolute;
+        margin-top: -85%;
+        margin-left: -1%;
+        width: 8vw;
+        height: 8vw;
+    }
+
+    .btnSaberMas .btnMas:hover {
+        transform: scale(1.1);
+    }
+
+    .contenedor-central .btnSaberMas .hojas {
+        position: absolute;
+        margin-top: -30%;
+        margin-left: 0%;
+        width: 18vw;
+        height: auto;
+    }
+
+    .derecho {
+        width: 20%;
+        height: 100%;
+        position: relative;
+    }
+
+    .colibriSect3 {
+        position: absolute;
+        right: -5%;
+        margin-top: -170%;
+        width: 70vw;
+        height: 62vw;
+    }
+
+    .izquierdo3 {
+        width: 5%;
+        height: 100%;
+    }
+
+
+    .derecho3 {
+        width: 5%;
+        height: 100%;
+    }
+
+    #prev,
+    #next {
+        position: absolute;
+        margin-top: -88%;
+        width: 15%;
+        height: 15%;
+        border: none;
+        background: none;
+        font-size: 8vw;
+        font-weight: bold;
+        cursor: pointer;
+        z-index: 500;
+    }
+
+    .contenedor-central #prev {
+        left: 5%;
+    }
+
+    .contenedor-central #next {
+        right: 5%;
+    }
+
+    .contenedor-central #prev:hover,
+    .contenedor-central #next:hover {
+        color: var(--gris);
+    }
+
+    .contenedor-central .slider {
+        margin-top: -98%;
+        width: 80%;
+        height: 60% !important;
+        display: flex;
+        border-radius: 5vw;
+        background-color:black;
+    }
+
+    .contenedor-central .slider-central {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    #slider-img {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 5vw;
+    }
+
+
+    .section3 {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+
+    }
+
+    .fondo-arriba-sect3 {
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 30%;
+        position: absolute;
+    }
+
+    .fondo-arriba-sect3 img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        margin-top: -21% !important;
+    }
+
+    .fondo-bajo-sect3 {
+        position: absolute !important;
+        width: 100%;
+        height: 100%;
+    }
+
+    .fondo-bajo-sect3 img {
+        position: absolute !important;
+        width: 100%;
+        height: 100%;
+        margin-top: 84% !important;
+    }
+
+    .logoWhite-sect3 {
+        position: absolute;
+        right: 7%;
+        width: 35vw !important;
+    }
+
+    .contenedor-sect3_1 {
+        width: 100%;
+        height: 35%;
+        display: flex;
+        position: absolute;
+    }
+
+    .start1_3 {
+        position: absolute !important;
+        width: 30vw !important;
+        height: 38vw !important;
+        left: 0;
+        transform: rotate(270deg) !important;
+    }
+
+    .start2_3 {
+        position: absolute !important;
+        width: 38vw !important;
+        height: 48vw !important;
+        top: 5%;
+        left: 42%;
+    }
+
+    .start3_3 {
+        position: absolute !important;
+        width: 35vw !important;
+        height: 48vw !important;
+        right: 5%;
+    }
+
+    .contenedor-sect3_1 img {
+        top: -10% !important;
+        position: absolute;
+        width: 90%;
+        height: 100%;
+        z-index: -5;
+    }
+
+    .contenedor-sect3_2 {
+        top: 6%;
+        margin-top: 48%;
+        width: 100%;
+        height: 40%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+    }
+
+    .contenedor-sect3_2 .contenedor-video2 {
+        margin-top: -15%;
+        width: 80%;
+        height: 70%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+    }
+
+    .contenedor-sect3_2 .contenedor-video2 .colibrisect3 {
+        width: 38vw;
+        height: 33vw;
+        position: relative;
+        margin-left: 75%;
+        margin-top: -55%;
+        z-index: 20;
+    }
+
+
+    .contenedor-sect3_3 .btnMas {
+        position: relative;
+        width: 7vw;
+        height: 7vw;
+        margin-left: -18vw;
+        top: -27vw;
+        z-index: 50;
+    }
+
+    .textSetc3 {
+        position: absolute;
+        top: 65% !important;
+        left: 10% !important;
+        width: 50%;
+        height: 25%;
+        display: flex;
+
+    }
+
+    .textSetc3 .titulo {
+        margin-top: 3% !important;
+        font-size: 3.5vw !important;
+        font-family: "Raleway";
+        font-weight: bold;
+    }
+
+    .textSetc3 p {
+        position: absolute;
+        font-size: 3vw;
+        font-family: "Raleway";
+        font-weight: 300;
+        text-align: justify;
+    }
+
+    .contenedor-sect3_2 .contenedor-video2 .btnMas:hover {
+        transform: scale(1.1);
+    }
+
+    .contenedor-video2 .videoPlayer {
+        position: absolute;
+        width: 65%;
+        height: 67%;
+        object-fit: cover;
+        background-color: black;
+        border-radius: 5vw;
+    }
+
+    .contenedor-sect3_2 .play2 {
+        width: 18vw;
+        height: 18vw;
+        position: absolute;
+        z-index: 40;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .contenedor-sect3 .play2 img {
+        opacity: 0.8;
+    }
+
+    .contenedor-sect3_3 {
+        top: 40%;
+        margin-top: 48%;
+        width: 100%;
+        height: 30%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        position: absolute;
+    }
+
+    .contenedor-sect3_3 .florAmarilla {
+        width: 33%;
+        height: 33%;
+        margin-top: -130%;
+        margin-left: -70%;
+        position: absolute;
+        z-index: 10;
+    }
+
+    .contenedor-sect3_3 .ramas {
+        width: 42vw;
+        max-width: 100%;
+        height: auto;
+        margin-right: -58%;
+        margin-top: -18%;
+        position: absolute;
+    }
+
+    .logoWhite-sect3 {
+        display: none !important;
+    }
+
+    .section4 {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+
+    }
+
+    .fondoTop4 {
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 30%;
+        position: absolute;
+    }
+
+    .fondoTop4 img {
+        position: absolute !important;
+        width: 100%;
+        height: 100%;
+        top: -31% !important;
+    }
+
+    .fondoBottom4 {
+        width: 100%;
+        height: 30%;
+        position: relative !important;
+        left: 0;
+        top: 42%;
+    }
+
+    .fondoBottom4 img {
+        position: absolute !important;
+        width: 100%;
+        height: 100%;
+        top: 23% !important;
+        z-index: 1;
+    }
+
+    .yuredoBlack {
+        position: absolute;
+        left: 10%;
+        margin-top: 7% !important;
+        width: 32vw !important;
+    }
+
+    .arribaSect4 {
+        top: 0;
+        position: absolute;
+        width: 100%;
+        height: 23%;
+    }
+
+    .enredaderasSect4 {
+        position: absolute;
+        width: 100%;
+        height: 70vw;
+        z-index: -10 !important;
+        top: -6%;
+    }
+
+    .colibri img {
+        position: absolute;
+        top: 23% !important;
+        width: 80%;
+       
+    }
+
+    .start1_4 {
+        position: absolute;
+        width: 45% !important;
+        right: 38% !important;
+        left: 0%;
+        top: -20% !important;
+        z-index: 15;
+    }
+
+    .start2_4 {
+        position: absolute;
+        width: 45% !important;
+        right: 28% !important;
+        left: 25%;
+        top: -20% !important;
+
+    }
+
+    .start3_4 {
+        position: absolute;
+        width: 45% !important;
+        right: 28% !important;
+        right: 0% !important;
+        top: -20% !important;
+
+    }
+
+    .tituloSect4 {
+        position: absolute;
+        top: 20%;
+        width: 100%;
+        height: 7%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .tituloSect4 h2 {
+        margin-top: 21% !important;
+        font-size: 10vw;
+        font-family: "Raleway";
+        font-optical-sizing: auto;
+        font-weight: bold;
+        font-style: italic;
+    }
+
+    .sliderSect4_1 {
+        top: 30%;
+        position: absolute;
+        width: 100%;
+        height: 42%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+
+    }
+
+    #prevSect4,
+    #nextSect4 {
+        position: absolute;
+        top: 45%;
+        width: 15%;
+        height: 15%;
+        border: none;
+        background: none;
+        font-size: 8vw;
+        font-weight: bold;
+        cursor: pointer;
+        z-index: 500;
+    }
+
+    #prevSect4 {
+        left: -1%;
+    }
+
+    #nextSect4 {
+        right: -1%;
+    }
+
+    #prevSect4:hover,
+    #nextSect4:hover {
+        color: var(--gris);
+    }
+
+    .sliderSect4 {
+        position: absolute;
+        top: 12%;
+        width: 75% !important;
+        height: 75% !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5vw;
+        background-color: var(--verdeSena);
+    }
+    .slider-central4{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+    .slider-central4 img{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 5vw;
+    }
+
+    .textoSect4 {
+        position: absolute;
+        top: 72%;
+        width: 100%;
+        height: 15%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .textoSect4 .txt {
+        margin-top: 8%;
+        padding-left: 5%;
+        padding-right: 5%;
+        text-align: justify;
+        font-size: 3.7vw;
+        font-weight: 500;
+        font-family: "Raleway";
+    }
+
+    .textoSect4 a {
+        width: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        text-decoration: none;
+    }
+
+    .textoSect4 a h6 {
+        position: absolute;
+        margin-top: -2%;
+        margin-left: 12%;
+        color: black;
+        font-size: 3.2vw;
+        font-family: "Raleway";
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: italic;
+        cursor: pointer;
+        z-index: 300;
+    }
+
+    .textoSect4 a h6:hover {
+        color: var(--gris);
+    }
+
+    .textoSect4 .btnMas {
+        position: absolute;
+        margin-top: -2%;
+        left: 20%;
+        width: 8vw;
+        height: 8vw;
+        margin-right: 5%;
+        cursor: pointer;
+        z-index: 300;
+    }
+
+    .textoSect4 a h6:hover {
+        color: var(--gris);
+    }
+
+    .textoSect4 .btnMas:hover {
+        transform: scale(1.1);
+    }
+
+    .estrellaSect4_1 {
+        position: relative;
+        width: 52% !important;
+        height: 15% !important;
+        top: 90%;
+        z-index: 500;
+
+
+    }
+
+    .estrellaSect4_2 {
+        position: relative;
+        width: 60% !important;
+        height: 13% !important;
+        right: -45%;
+        top: 70%;
+        z-index: 500;
+    }
+
+    .section5 {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+
+    }
+
+    .fondoTop5 {
+        top: 0% !important;
+        left: 0%;
+        width: 100%;
+        height: 30%;
+        position: absolute !important;
+    }
+
+    .fondoTop5 img {
+        top: -28% !important;
+        position: absolute !important;
+        width: 100%;
+        height: 100%;
+        margin-top: 0% !important;
+    }
+
+    .fondoBottom5 {
+        width: 100%;
+        height: 30%;
+        position: absolute !important;
+        top: 71% !important;
+        left: 0;
+    }
+
+    .fondoBottom5 img {
+        position: absolute !important;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        top: 62% !important;
+    }
+
+    .contendor5_1 {
+        top: 0;
+        position: absolute;
+        width: 100%;
+        height: 30%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contendor5_1 h2 {
+        text-align: center;
+        font-size: 10vw;
+        font-family: "Raleway";
+        font-optical-sizing: auto;
+        font-weight: bold;
+        font-style: italic;
+        position: absolute;
+        margin-top: 10%;
+    }
+
+    .contendor5_1 img {
+        top: 5%;
+        width: 100%;
+        position: absolute;
+        z-index: -1;
+    }
+
+    .sliderSect5_1 {
+        top: 30%;
+        position: absolute;
+        width: 100%;
+        height: 35%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sliderSect5 {
+        margin-top: -25%;
+        width: 80% !important;
+        height: 95% !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5vw;
+        
+        
+    }
+    .slider-central5{
+        width: 100%;
+        height: 100%;
+        margin-top: -4%;
+    }
+
+    #slider-imgSect5 {
+        border-radius: 5vw;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    #prevSect5,
+    #nextSect5 {
+        position: absolute;
+        margin-top: -22%;
+        width: 15%;
+        height: 15%;
+        border: none;
+        background: none;
+        font-size: 8vw;
+        font-weight: bold;
+        cursor: pointer;
+        z-index: 500;
+    }
+
+    #prevSect5 {
+        left: -1% !important;
+    }
+
+    #nextSect5 {
+        right: -1% !important;
+    }
+
+    #prevSect5:hover,
+    #nextSect5:hover {
+        color: var(--gris);
+    }
+
+    .textoSect5 {
+        top: 70%;
+        margin-top: -20%;
+        position: absolute;
+        width: 100%;
+        height: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        
+    }
+
+    .textoSect5 h5 {
+        text-align: center;
+        top: 10%;
+        width: 90%;
+        font-size: 4vw;
+        font-family: "Raleway";
+        font-optical-sizing: auto;
+       
+        margin: 3%;
+    }
+
+    .textoSect5 .vacio {
+        width: 18%;
+    }
+
+    .hojasSect5 {
+        width: 18%;
+        height: 100%;
+    }
+
+    .hojasSect5 img {
+        position: absolute;
+        width: 52%;
+        height: auto;
+        right: -20%;
+    }
+
+    .btnSect5 {
+        position: relative;
+        width: 10%;
+        height: 10%;
+        top: 83%;
+        left: 19%;
+        cursor: pointer;
+        z-index: 2000;
+    }
+
+    .btnSect5:hover {
+        transform: scale(1.1);
+
+    }
+
+    .logoSect6 {
+        top: 0;
+        position: absolute;
+        width: 100%;
+        height: 13%;
+        display: flex;
+        align-items: center;
+    }
+
+    .section6 {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+
+    }
+
+    .fondoTop6 {
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 30%;
+        position: absolute;
+
+    }
+
+    .fondoTop6 img {
+        top: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        margin-top: -1%;
+    }
+
+    .fondoBottom6 {
+        width: 100%;
+        height: 30%;
+        display: flex;
+        flex-direction: row;
+        position: absolute !important;
+        bottom: 0;
+        left: 0;
+    }
+
+    .fondoBottom6 img {
+        position: absolute;
+        width: 70%;
+        height: auto;
+        display: flex !important;
+        flex-direction: row !important;
+        height: auto;
+        object-fit: cover;
+        top: 0% !important;
+    }
+
+    .fondoBottom6 .imgDerecha {
+        position: absolute !important;
+        width: 44vw;
+        height: auto;
+        right: 0% !important;
+        object-fit: cover;
+        margin-top: 20% !important;
+
+    }
+
+    .fondoBottom6 .imgLeft {
+        position: absolute !important;
+        margin-top: 30% !important;
+    }
+
+    .logoSect6 img {
+        margin-top: 14%;
+        margin-left: 3%;
+        position: absolute;
+        width: 9em;
+        height: auto;
+    }
+
+    .palmasSect6 {
+        top: 13%;
+        position: absolute;
+        width: 100%;
+        height: 20%;
+    }
+
+    .palmasSect6 img {
+        position: absolute;
+        width: 50%;
+        min-height: auto;
+        left: 0;
+        height: auto;
+        z-index: -1;
+    }
+
+    .sliderSect6_1 {
+        top: 33%;
+        position: absolute;
+        width: 100%;
+        height: 35%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sliderSect6 {
+        position: absolute;
+        top: -5%;
+        width: 80%;
+        height: 95% !important;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5vw;
+        background-color:rgba(9, 41, 9, 0.1);;
+        opacity: 1;
+        backdrop-filter: blur(35px); 
+        -webkit-backdrop-filter: blur(35px);
+    }
+
+    .slider-central6 {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        border-radius: 5vw;
+        overflow: hidden;
+    }
+
+    #slider-imgSect6 {
+        position: relative;
+        display: flex;
+        text-align: center;
+      
+        object-fit: cover;
+        border-radius: inherit;
+
+    }
+
+    #prevSect6,
+    #nextSect6 {
+        position: absolute;
+        margin-top: -10%;
+        width: 15%;
+        height: 15%;
+        border: none;
+        background: none;
+        font-size: 8vw;
+        font-weight: bold;
+        cursor: pointer;
+        z-index: 500;
+    }
+
+    #prevSect6 {
+        left: -2%;
+    }
+
+    #nextSect6 {
+        right: -2%;
+    }
+
+    #prevSect6:hover,
+    #nextSect6:hover {
+        color: var(--gris);
+    }
+
+    .textoSect6 {
+        top: 68%;
+        position: absolute;
+        width: 100%;
+        height: 30%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+     
+
+    }
+
+    .textoSect6 h6 {
+        text-align: center;
+        position: absolute !important;
+        font-size: 7vw !important;
+        font-weight: bold !important;
+        font-family: "Raleway";
+        font-style: italic;
+        margin-top: -6% !important;
+    }
+
+    .textoSect6 span {
+        top: 5% !important;
+        position: absolute !important;
+        font-size: 4.5vw !important;
+        font-weight: 500 !important;
+        font-family: "Raleway";
+        font-style: italic;
+        text-align: center;
+
+    }
+
+    .textoSect6 a {
+        position: absolute;
+        text-decoration: none;
+        color: black;
+        font-size: 3.5vw !important;
+        font-weight: 700 !important;
+        font-family: "Raleway";
+        font-style: italic;
+        top: 15% !important;
+        z-index: 400;
+        text-align: center;
+    }
+
+    .textoSect6 a:hover {
+        cursor: pointer !important;
+        text-decoration: underline;
+        color: var(--gris);
+        font-weight: 500;
+    }
+
+    .textoSect6 h2 {
+        position: absolute;
+        font-size: 10vw;
+        font-weight: bold;
+        font-family: "Raleway";
+        font-style: italic;
+        top: 32% !important;
+        left: 5%;
+    }
+
+    .starSect6_3 {
+        position: absolute !important;
+        width: 65% !important;
+        height: 30% !important;
+        margin-top: 43% !important;
+        margin-left: 22% !important;
+    }
+
+    .starSect6_4 {
+        position: absolute !important;
+        margin-top: 15% !important;
+    }
+
+
+}
+
+
+/* Samsung Galaxy S21 */
+@media (max-width: 480px) and (max-height: 1080px) {
+    /* Estilos específicos para Samsung Galaxy S21 */
+  }
+  /* Samsung Galaxy S22 */
+@media (max-width: 430px) and (max-height: 1080px) {
+    /* Estilos específicos para Samsung Galaxy S22 */
+  }
+  /* Samsung Galaxy S23 Plus */
+@media (max-width: 450px) and (max-height: 1200px) {
+    /* Estilos específicos para Samsung Galaxy S23 Plus */
+  }
+  /* Samsung Galaxy J7 Max */
+@media (max-width: 360px) and (max-height: 720px) {
+    /* Estilos específicos para Samsung Galaxy J7 Max */
+  }
+
+/* iPhone 5s */
+@media (max-width: 320px) and (max-height: 568px) {
+    /* Estilos específicos para iPhone 5s */
+  }
+  
+  /* iPhone 6 Plus, iPhone 6s Plus, iPhone 7 Plus, iPhone 8 Plus */
+  @media (max-width: 414px) and (max-height: 736px) {
+    /* Estilos específicos para iPhone 6 Plus, 6s Plus, 7 Plus, 8 Plus */
+  }
+  
+  /* iPhone 6, iPhone 6s, iPhone 7, iPhone 8 */
+  @media (max-width: 375px) and (max-height: 667px) {
+    /* Estilos específicos para iPhone 6, 6s, 7, 8 */
+  }
+/* iPhone X, iPhone Xs */
+@media (max-width: 375px) and (max-height: 812px) {
+    /* Estilos específicos para iPhone X, Xs */
+  }
+  
+  /* iPhone Xr, iPhone 11 */
+  @media (max-width: 414px) and (max-height: 896px) {
+    /* Estilos específicos para iPhone Xr, 11 */
+  }
+  
+  /* iPhone 11 Pro */
+  @media (max-width: 375px) and (max-height: 812px) {
+    /* Estilos específicos para iPhone 11 Pro */
+  }
+  
+  /* iPhone 11 Pro Max */
+  @media (max-width: 414px) and (max-height: 896px) {
+    /* Estilos específicos para iPhone 11 Pro Max */
+  }
+  
+  /* iPhone 12, iPhone 12 Pro */
+  @media (max-width: 390px) and (max-height: 844px) {
+    /* Estilos específicos para iPhone 12, 12 Pro */
+  }
+  
+  /* iPhone 12 Mini */
+  @media (max-width: 360px) and (max-height: 780px) {
+    /* Estilos específicos para iPhone 12 Mini */
+  }
+  
+  /* iPhone 12 Pro Max */
+  @media (max-width: 428px) and (max-height: 926px) {
+    /* Estilos específicos para iPhone 12 Pro Max */
+  }
+  
+  /* iPhone 13, iPhone 13 Pro */
+  @media (max-width: 390px) and (max-height: 844px) {
+    /* Estilos específicos para iPhone 13, 13 Pro */
+  }
+  
+  /* iPhone 13 Mini */
+  @media (max-width: 360px) and (max-height: 780px) {
+    /* Estilos específicos para iPhone 13 Mini */
+  }
+  
+  /* iPhone 13 Pro Max */
+  @media (max-width: 428px) and (max-height: 926px) {
+    /* Estilos específicos para iPhone 13 Pro Max */
+  }
+  
+  /* iPhone 14 */
+  @media (max-width: 390px) and (max-height: 844px) {
+    /* Estilos específicos para iPhone 14 */
+  }
+  
+  /* iPhone 14 Plus */
+  @media (max-width: 428px) and (max-height: 926px) {
+    /* Estilos específicos para iPhone 14 Plus */
+  }
+  
+  /* iPhone 14 Pro */
+  @media (max-width: 393px) and (max-height: 852px) {
+    /* Estilos específicos para iPhone 14 Pro */
+  }
+  
+  /* iPhone 14 Pro Max */
+  @media (max-width: 430px) and (max-height: 932px) {
+    /* Estilos específicos para iPhone 14 Pro Max */
+  }
+  
+  /* iPhone 15 */
+  @media (max-width: 390px) and (max-height: 844px) {
+    /* Estilos específicos para iPhone 15 */
+  }
+  
+  /* iPhone 15 Pro */
+  @media (max-width: 393px) and (max-height: 852px) {
+    /* Estilos específicos para iPhone 15 Pro */
+  }
+  
+  /* iPhone 15 Pro Max */
+  @media (max-width: 430px) and (max-height: 932px) {
+    /* Estilos específicos para iPhone 15 Pro Max */
+  }
+  
+  /* iPhone Xs Max */
+  @media (max-width: 414px) and (max-height: 896px) {
+    /* Estilos específicos para iPhone Xs Max */
+  }
+
+/* Google Pixel */
+@media (max-width: 411px) and (max-height: 731px) {
+    /* Estilos específicos para Google Pixel */
+  }
+  
+  /* Google Pixel 3 XL */
+  @media (max-width: 412px) and (max-height: 847px) {
+    /* Estilos específicos para Google Pixel 3 XL */
+  }
+  
+  /* Google Pixel 4 */
+  @media (max-width: 411px) and (max-height: 869px) {
+    /* Estilos específicos para Google Pixel 4 */
+  }
+  
+  /* Google Pixel 4 (segundo) */
+  @media (max-width: 411px) and (max-height: 869px) {
+    /* Estilos específicos para Google Pixel 4 (repetido por error, es el mismo) */
+  }
+  
+  /* Google Pixel 6 */
+  @media (max-width: 412px) and (max-height: 915px) {
+    /* Estilos específicos para Google Pixel 6 */
+  }
+  
+  /* Google Pixel 6 Pro */
+  @media (max-width: 412px) and (max-height: 915px) {
+    /* Estilos específicos para Google Pixel 6 Pro */
+  }
+  
+  /* Google Pixel 7 */
+  @media (max-width: 412px) and (max-height: 915px) {
+    /* Estilos específicos para Google Pixel 7 */
+  }
+  
+  /* Google Pixel 7 Pro */
+  @media (max-width: 412px) and (max-height: 926px) {
+    /* Estilos específicos para Google Pixel 7 Pro */
+  }
+  
+  /* Google Pixel XL */
+  @media (max-width: 411px) and (max-height: 823px) {
+    /* Estilos específicos para Google Pixel XL */
+  }
+  
+  /* OnePlus */
+  @media (max-width: 412px) and (max-height: 732px) {
+    /* Estilos específicos para OnePlus */
+  }
+  
+  /* OnePlus 5T */
+  @media (max-width: 412px) and (max-height: 822px) {
+    /* Estilos específicos para OnePlus 5T */
+  }
+  
+  /* OnePlus 6T */
+  @media (max-width: 412px) and (max-height: 844px) {
+    /* Estilos específicos para OnePlus 6T */
+  }
+  
+  /* OnePlus 9 */
+  @media (max-width: 412px) and (max-height: 915px) {
+    /* Estilos específicos para OnePlus 9 */
+  }
+  
+  /* OnePlus 9 Pro */
+  @media (max-width: 412px) and (max-height: 929px) {
+    /* Estilos específicos para OnePlus 9 Pro */
+  }
+  
+  /* OnePlus 10 */
+  @media (max-width: 412px) and (max-height: 919px) {
+    /* Estilos específicos para OnePlus 10 */
+  }
+  
+  /* Vivo V15 Pro */
+  @media (max-width: 410px) and (max-height: 800px) {
+    /* Estilos específicos para Vivo V15 Pro */
+  }
+  
+  /* Vivo VSS (presumiblemente "Vivo V5S") */
+  @media (max-width: 360px) and (max-height: 720px) {
+    /* Estilos específicos para Vivo V5S */
+  }
+  

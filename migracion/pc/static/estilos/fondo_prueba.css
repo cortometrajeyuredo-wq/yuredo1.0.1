@@ -1,0 +1,95 @@
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        background-color:transparent;
+    }
+    .section1,
+    .section2,
+    .section3,
+    .section4,
+    .section5,
+    .section6{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+    }
+    .section1 img,
+    .section2 img,
+    .section3 img,
+    .section4 img,
+    .section5 img,
+    .section6 img {
+        width: 100%;
+        height:100%;
+        z-index: -1;
+        position: relative;
+    }
+   
+    .section1{
+        z-index: 0;
+    }
+    .section2 {
+        margin-top: -2px;
+    }
+    .section5 {
+        margin-top: -0.6px;
+    }
+    .section6 {
+        margin-top: -2px;
+    }
+    .section1 .dianas{
+        position: absolute;
+        width: 100%;
+        z-index: -2;
+    }
+    .section2 .dianas{
+        position: relative;
+        width: 100%;
+        z-index: -3;
+    }
+    .section3 .dianas{
+        position: absolute;
+        width: 100%;
+        margin-top: 3%;
+        z-index: -5;
+    }
+    .section3 .estrellas{
+        position: absolute;
+        width: 100%;
+        margin-top: -11%;
+        z-index: 15000;
+    }
+    .section4 .dianas{
+        position: absolute;
+        width: 100%;
+        margin-top: 3%;
+        z-index: -3;
+    }
+    .section5 .dianas{
+        position: absolute;
+        width: 100%;
+        z-index: -1000;
+    }
+    .section5 img {
+        margin-top: -1%;
+    }
+    
+    .section6 .dianas{
+        position: absolute;
+        width: 100%;
+        margin-top:11.8% ;
+        z-index: 0;
+    }    
+
+
+
+

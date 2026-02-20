@@ -1,8 +1,16 @@
-import './App.css'
+import { Routes, Route } from 'react-router-dom';
+import Plantilla from '@/components/Plantilla';
+import Inicio from '@/page/Inicio';
 
 const App = () => {
   return (
-    <div className={``}>App</div>
-  )
-}
-export default App
+    <Routes>
+      <Route path="/" element={<Plantilla />}>
+        <Route index element={<Inicio />} />
+      </Route>
+    </Routes>
+  );
+};
+
+
+export default App;

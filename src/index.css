@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+:root {
+    --z-background: 0;
+    --z-decoration: 1;
+    --z-content: 10;
+    --z-header: 100;
+    --z-modal-overlay: 1000;
+    --z-modal-content: 2000;
+}
+
+/* Global Reset */
+html,
+body,
+#root {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+
+/* --- Animaciones Globales (Migración Legacy) --- */
+
+/* Animación de colores para Nebulosa y elementos SVG */
+@keyframes colorGroup {
+    0% {
+        fill: #51bbec;
+    }
+
+    25% {
+        fill: #2db1ee;
+    }
+
+    50% {
+        fill: #64eedc;
+    }
+
+    75% {
+        fill: #77eeda;
+    }
+
+    100% {
+        fill: #51bbec;
+    }
+}
+
+@keyframes colorChange {
+    0% {
+        fill: #d5e8f1;
+    }
+
+    25% {
+        fill: #a4dbf5;
+    }
+
+    50% {
+        fill: #77eeda;
+    }
+
+    75% {
+        fill: #64eedc;
+    }
+
+    100% {
+        fill: #51bbec;
+    }
+}
+
+/* Animación de entrada para contenidos de modales (Museo) */
+@keyframes animate {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+        filter: blur(33px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+/* Animación de barra de tiempo para Sliders/Modales */
+@keyframes runningTime {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+/* --- Clases de Utilidad para Animación --- */
+.animate-content {
+    animation: animate 1s ease-in-out forwards;
+}
+
+.running-time {
+    animation: runningTime 4s linear 1 forwards;
+}

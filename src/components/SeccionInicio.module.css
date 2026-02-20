@@ -1,0 +1,264 @@
+/* SeccionInicio.module.css */
+/* Estilos extraídos de contenedores_sect1.css y stilos_sect1.css */
+
+.section1 {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    position: relative;
+    z-index: 2;
+    /* Elevado para solapamiento */
+    overflow: visible;
+    /* Importante: Permitir overflow para unir con S2 */
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    display: block;
+    /* Asegurar bloque para evitar gaps */
+}
+
+/* Backgrounds */
+.fondo-bajo-sect1 {
+    position: relative;
+    /* Cambiado a relative para dictar altura */
+    display: block;
+    /* Eliminar gaps de inline */
+    width: 100%;
+    height: auto;
+    /* Altura automática proporcional */
+    object-fit: contain;
+    /* Mostrar toda la imagen */
+    z-index: -1;
+    /* Mantener detrás */
+}
+
+.dianas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.dianas img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* Layout Containers */
+.contenedor-section1_1,
+.contenedor-section1_2,
+.contenedor-section1_3,
+.contenedor-section1_4,
+.contenedor-section1_5,
+.contenedor-section1_6 {
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    /* Encima del fondo */
+}
+
+.contenedor-section1_1 {
+    top: 0;
+    height: 4%;
+}
+
+.contenedor-section1_2 {
+    top: 4%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor-section1_3 {
+    top: 14%;
+    height: 6%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor-section1_4 {
+    top: 20%;
+    height: 2%;
+}
+
+.contenedor-section1_5 {
+    top: 22%;
+    height: 63%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor-section1_6 {
+    top: 85%;
+    height: 25%;
+    display: flex;
+    flex-direction: row;
+    z-index: 1;
+    /* Detrás de algunos elementos */
+}
+
+
+/* Elements Styles */
+
+/* 1_2: Logo Yuredo */
+.contenedor-section1_2 img {
+    width: 16.4vw;
+    height: auto;
+    max-height: 100%;
+    z-index: 15;
+}
+
+/* 1_3: Titulo */
+.contenedor-section1_3 h2 {
+    font-size: 1.4vw;
+    font-family: 'Raleway', sans-serif;
+    color: #16142f;
+    text-align: center;
+    margin: 0;
+    font-weight: bold;
+    letter-spacing: 0.1vw;
+}
+
+/* 1_5: Video & Decor */
+.contenedor-izquierdo-sect1,
+.contenedor-derecho-sect1 {
+    width: 25%;
+    height: 100%;
+    position: relative;
+}
+
+.contenedor-central-sect1 {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.contenedor-central-sect1 video {
+    width: 48vw;
+    height: 30vw;
+    border-radius: 1.5vw;
+    overflow: hidden;
+    object-fit: cover;
+    background-color: black;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Decoración Derecha */
+.flor-sect1 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.flor-sect1 img {
+    width: 11.7vw;
+    height: 10.4vw;
+    position: absolute;
+    /* Ajustes visuales aproximados del CSS original */
+    left: -25%;
+    top: -7%;
+}
+
+.star {
+    position: absolute;
+    width: 70%;
+    right: 0;
+    bottom: 20%;
+}
+
+.star img {
+    width: 100%;
+}
+
+
+/* 1_6: Nebulosa */
+.nebulosa {
+    width: 15%;
+    height: 100%;
+    position: relative;
+}
+
+.nebulosa svg {
+    width: 9.5vw;
+    height: 6.6vw;
+    margin-left: 18%;
+    /* margin-top: -30%; ajuste visual */
+    position: absolute;
+    bottom: 20%;
+}
+
+/* Animaciones SVG Nebulosa */
+.purple,
+.yellow,
+.red,
+.blue {
+    fill: #2db1ee;
+    filter: drop-shadow(0 0 5px #2db1ee);
+    animation: colorGroup 5s infinite;
+}
+
+
+.contenedor-section1_6 .logo-sena {
+    width: 15%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-sena img {
+    width: 5.9vw;
+    height: 5.9vw;
+    margin-left: 35%;
+}
+
+.contenedor-section1_6 .star-bottom {
+    width: 70%;
+    height: 100%;
+    position: relative;
+}
+
+.star-bottom img {
+    position: absolute;
+    top: -55%;
+    left: -20%;
+    width: 120%;
+    height: 160%;
+}
+
+@keyframes colorGroup {
+    0% {
+        fill: #51bbec;
+    }
+
+    25% {
+        fill: #2db1ee;
+    }
+
+    50% {
+        fill: #a4dbf5;
+    }
+
+    75% {
+        fill: #77eeda;
+    }
+
+    100% {
+        fill: #51bbec;
+    }
+}

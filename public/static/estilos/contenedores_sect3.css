@@ -1,0 +1,19 @@
+.contenedor-section3_1,
+.contenedor-section3_2,
+.contenedor-section3_3 {
+    width: 100%;
+    position: absolute;
+    z-index: 1; 
+}
+ .contenedor-section3_1{
+    top: 0;
+    height: 20%; 
+ }
+ .contenedor-section3_2{
+    top: 20%;
+    height: 60%;
+ }
+ .contenedor-section3_3{
+    top: 80%;
+    height: 20%;
+ }

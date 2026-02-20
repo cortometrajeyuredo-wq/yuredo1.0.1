@@ -1,0 +1,7 @@
+/* Ocultar completamente el header y su contenido entre 1024px y 1366px **/
+@media screen and (min-width: 1024px) and (max-width: 1920px) {
+.contenedor-section1_1 button{
+    display: none;
+}
+ 
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_2" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1080 759.35">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#Degradado_sin_nombre_24);
+        stroke-width: 0px;
+      }
+    </style>
+    <linearGradient id="Degradado_sin_nombre_24" data-name="Degradado sin nombre 24" x1="0" y1="379.68" x2="1080" y2="379.68" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#332370"/>
+      <stop offset="0" stop-color="#16142f"/>
+    </linearGradient>
+  </defs>
+  <g id="elementos">
+    <path class="cls-1" d="M1004.99,0H0v61.35c0,169.21,534.37,116.1,629.15,99.29,257.44-45.67,462.79,574.45,450.31,598.71V0h-74.47Z"/>
+  </g>
+</svg>

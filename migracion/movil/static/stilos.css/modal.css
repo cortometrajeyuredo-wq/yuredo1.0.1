@@ -1,0 +1,604 @@
+@media screen and (max-width: 360px) and (max-height: 640px)
+{
+.section1 .my-popover{
+    top: 3%;
+    right: 3%;
+    position:fixed;
+    width: 10vw;
+    height: 10vw;
+    border: none;
+    background-color:var(--azulMedio);
+    border-radius: 5px;
+    z-index: 1500;
+}
+.section1 .my-popover span{
+    color: white;
+    font-size: 6vw;
+    font-weight: 900;
+}
+#my-popover{
+    display: none;
+    flex-direction: column;
+    border: none;
+    overflow: hidden;
+    width: 87%;
+    height: 94%;
+    border-radius: 5vw;
+    background-color: var(--verdeBiche);
+}
+#my-popover .boton{
+    position: absolutes;
+    margin-top: 5%;
+    margin-left: 85%;
+    background: none;
+    border: none;
+}
+#my-popover .boton span{
+   font-size: 7vw;
+   font-weight: 900;
+   color: white;
+}
+#my-popover .boton span:hover{
+    color: var(--gris);
+ }
+.link-texto{
+    width: 90%;
+    height: 70%;
+    background-color: var(--verdeBiche);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -5%;
+}
+.link-texto ul{
+    list-style: none;
+}
+.link-texto ul li{
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+.link-texto ul li a{
+   text-decoration: none;
+   color: white;
+   margin: 2.5vw;
+   font-size: 7vw;
+   font-weight: 300;
+   font-family: "Raleway";
+   font-style: italic;
+   text-align: center;
+}
+.link-texto ul li a:hover{
+    text-decoration:underline;
+    color: var(--gris);
+ }
+.link-logos{
+display: flex;
+width: 100%;
+height: 30%;
+text-align: center;
+justify-content:space-between;
+flex-direction: row;
+gap: 2%;
+}
+.link-logos .link{
+margin-top: 13%;
+flex-basis: 18.4%;
+
+height:20%;
+display: flex;
+align-items: center;
+justify-content:center;
+}
+.link img{
+}
+.link-hoja,
+.link-engranaje,
+.link-sena,
+.link-pluma,
+.link-corazon
+{
+    text-align: center;
+    width: 13vw;
+    height: 13vw;
+}
+.link img:hover{
+transform: scale(1.1);
+}
+}
+@media screen and (max-width: 412px) and (max-height: 846px)
+{
+   /*modal*/
+    
+.section1 .my-popover{
+    top: 3%;
+    right: 3%;
+    position:fixed;
+    width: 10vw;
+    height: 10vw;
+    border: none;
+    background-color:var(--azulMedio);
+    border-radius: 5px;
+    z-index: 1500;
+    cursor: pointer;
+}
+.section1 .my-popover span{
+    color: white;
+    font-size: 6vw;
+    font-weight: 900;
+}
+#my-popover{
+ position: fixed;
+    display: none;
+    top: 5%;
+    left: 5%;
+    display: none;
+    flex-direction: column;
+    border: none;
+    overflow: hidden;
+    width: 90%;
+    height: 90%;
+    border-radius: 5vw;
+    background-color:var(--verdeBiche);
+    z-index: 5000;
+    align-items: center;
+    justify-content: center;
+}
+#my-popover .boton{
+    position: relative;
+    margin-top: 5%;
+    margin-left: 85%;
+    background: none;
+    border: none;
+}
+#my-popover .boton span{
+   font-size: 7vw;
+   font-weight: 900;
+   color: white;
+}
+#my-popover .boton span:hover{
+    color: var(--gris);
+ }
+.link-texto{
+    width: 100%;
+    height: 70%;
+    background-color: var(--verdeBiche);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -5%;
+}
+.link-texto ul{
+    list-style: none;
+}
+.link-texto ul li{
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+.link-texto ul li a{
+   text-decoration: none;
+   color: white;
+   margin: 2.5vw;
+   font-size: 7vw;
+   font-weight: 300;
+   font-family: "Raleway";
+   font-style: italic;
+   text-align: center;
+}
+.link-texto ul li a:hover{
+    text-decoration:underline;
+    color: var(--gris);
+ }
+.link-logos{
+display: flex;
+width: 100%;
+height: 30%;
+text-align: center;
+justify-content:space-between;
+flex-direction: row;
+
+}
+.link-logos .link{
+margin-top: 13%;
+width: 20%;
+height:20%;
+display: flex;
+align-items: center;
+justify-content:center;
+}
+.link img{
+}
+.link-hoja,
+.link-engranaje,
+.link-sena,
+.link-pluma,
+.link-corazon
+{
+    text-align: center;
+    width: 2.7em;
+    height: 2.7em;
+}
+.link img:hover{
+transform: scale(1.1);
+} 
+}
+@media screen and (max-width: 412px) and (max-height: 869px)
+{
+   /*modal*/
+    
+.section1 .my-popover{
+    top: 3%;
+    right: 3%;
+    position:fixed;
+    width: 10vw;
+    height: 10vw;
+    border: none;
+    background-color:var(--azulMedio);
+    border-radius: 5px;
+    z-index: 1500;
+    cursor: pointer;
+}
+.section1 .my-popover span{
+    color: white;
+    font-size: 6vw;
+    font-weight: 900;
+}
+#my-popover{
+ position: fixed;
+    display: none;
+    top: 3%;
+    left: 5%;
+    display: none;
+    flex-direction: column;
+    border: none;
+    overflow: hidden;
+    width: 90%;
+    height: 90%;
+    border-radius: 5vw;
+    background-color:var(--verdeBiche);
+    z-index: 5000;
+    align-items: center;
+    justify-content: center;
+}
+#my-popover .boton{
+    position: relative;
+    margin-top: 5%;
+    margin-left: 85%;
+    background: none;
+    border: none;
+}
+#my-popover .boton span{
+   font-size: 7vw;
+   font-weight: 900;
+   color: white;
+}
+#my-popover .boton span:hover{
+    color: var(--gris);
+ }
+.link-texto{
+    width: 100%;
+    height: 70%;
+    background-color: var(--verdeBiche);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -5%;
+}
+.link-texto ul{
+    list-style: none;
+}
+.link-texto ul li{
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+.link-texto ul li a{
+   text-decoration: none;
+   color: white;
+   margin: 2.5vw;
+   font-size: 7vw;
+   font-weight: 300;
+   font-family: "Raleway";
+   font-style: italic;
+   text-align: center;
+}
+.link-texto ul li a:hover{
+    text-decoration:underline;
+    color: var(--gris);
+ }
+.link-logos{
+display: flex;
+width: 100%;
+height: 30%;
+text-align: center;
+justify-content:space-between;
+flex-direction: row;
+
+}
+.link-logos .link{
+margin-top: 13%;
+width: 20%;
+height:20%;
+display: flex;
+align-items: center;
+justify-content:center;
+}
+.link img{
+}
+.link-hoja,
+.link-engranaje,
+.link-sena,
+.link-pluma,
+.link-corazon
+{
+    text-align: center;
+    width: 2.7em;
+    height: 2.7em;
+}
+.link img:hover{
+transform: scale(1.1);
+} 
+}
+@media screen and (max-width: 360px) and (max-height: 800px)
+{
+.section1 .my-popover{
+    top: 3%;
+    right: 3%;
+    position:fixed;
+    width: 10vw;
+    height: 10vw;
+    border: none;
+    background-color:var(--azulMedio);
+    border-radius: 5px;
+    z-index: 1500;
+}
+.section1 .my-popover span{
+    color: white;
+    font-size: 6vw;
+    font-weight: 900;
+}
+#my-popover{
+    display: none;
+    flex-direction: column;
+    border: none;
+    overflow: hidden;
+    width: 87%;
+    height: 94%;
+    border-radius: 5vw;
+    background-color: var(--verdeBiche);
+}
+#my-popover .boton{
+    position: absolutes;
+    margin-top: 5%;
+    margin-left: 85%;
+    background: none;
+    border: none;
+}
+#my-popover .boton span{
+   font-size: 7vw;
+   font-weight: 900;
+   color: white;
+}
+#my-popover .boton span:hover{
+    color: var(--gris);
+ }
+.link-texto{
+    width: 90%;
+    height: 70%;
+    background-color: var(--verdeBiche);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -5%;
+}
+.link-texto ul{
+    list-style: none;
+}
+.link-texto ul li{
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+.link-texto ul li a{
+   text-decoration: none;
+   color: white;
+   margin: 2.5vw;
+   font-size: 7vw;
+   font-weight: 300;
+   font-family: "Raleway";
+   font-style: italic;
+   text-align: center;
+}
+.link-texto ul li a:hover{
+    text-decoration:underline;
+    color: var(--gris);
+ }
+.link-logos{
+display: flex;
+width: 100%;
+height: 30%;
+text-align: center;
+justify-content:space-between;
+flex-direction: row;
+gap: 2%;
+}
+.link-logos .link{
+margin-top: 13%;
+flex-basis: 18.4%;
+
+height:20%;
+display: flex;
+align-items: center;
+justify-content:center;
+}
+.link img{
+}
+.link-hoja,
+.link-engranaje,
+.link-sena,
+.link-pluma,
+.link-corazon
+{
+    text-align: center;
+    width: 13vw;
+    height: 13vw;
+}
+.link img:hover{
+transform: scale(1.1);
+}
+}
+@media screen and (max-width: 412px) and (max-height: 915px)
+{
+.section1 .my-popover{
+    top: 3%;
+    right: 3%;
+    position:fixed;
+    width: 10vw;
+    height: 10vw;
+    border: none;
+    background-color:var(--azulMedio);
+    border-radius: 5px;
+    z-index: 1500;
+}
+.section1 .my-popover span{
+    color: white;
+    font-size: 6vw;
+    font-weight: 900;
+}
+#my-popover{
+    display: none;
+    flex-direction: column;
+    border: none;
+    overflow: hidden;
+    width: 87%;
+    height: 94%;
+    border-radius: 5vw;
+    background-color: var(--verdeBiche);
+}
+#my-popover .boton{
+    position: absolutes;
+    margin-top: 5%;
+    margin-left: 85%;
+    background: none;
+    border: none;
+}
+#my-popover .boton span{
+   font-size: 7vw;
+   font-weight: 900;
+   color: white;
+}
+#my-popover .boton span:hover{
+    color: var(--gris);
+ }
+.link-texto{
+    width: 90%;
+    height: 70%;
+    background-color: var(--verdeBiche);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -5%;
+}
+.link-texto ul{
+    list-style: none;
+}
+.link-texto ul li{
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+.link-texto ul li a{
+   text-decoration: none;
+   color: white;
+   margin: 2.5vw;
+   font-size: 7vw;
+   font-weight: 300;
+   font-family: "Raleway";
+   font-style: italic;
+   text-align: center;
+}
+.link-texto ul li a:hover{
+    text-decoration:underline;
+    color: var(--gris);
+ }
+.link-logos{
+display: flex;
+width: 100%;
+height: 30%;
+text-align: center;
+justify-content:space-between;
+flex-direction: row;
+gap: 2%;
+}
+.link-logos .link{
+margin-top: 13%;
+flex-basis: 18.4%;
+
+height:20%;
+display: flex;
+align-items: center;
+justify-content:center;
+}
+.link img{
+}
+.link-hoja,
+.link-engranaje,
+.link-sena,
+.link-pluma,
+.link-corazon
+{
+    text-align: center;
+    width: 13vw;
+    height: 13vw;
+}
+.link img:hover{
+transform: scale(1.1);
+}
+}
+/*
+Samsung Galaxy Note 20 
+Samsung Galaxy Note 20 ultra
+galaxy J7 max
+galaxy note 9
+galaxy note 20
+galaxy note 20 ultra
+Samsung galaxy note 20 ultra
+Samsung galaxy note 23 plus
+iphone 11
+iphone 11 pro max
+iphone 12 pro max
+iphone 13 pro max
+iphone 14 plus
+iphone 14 pro max
+iphone 15 pro max
+iphone 6 plus
+iphone 6s plus
+iphone 7 plus
+iphone 8 plus
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

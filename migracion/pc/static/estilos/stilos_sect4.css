@@ -1,0 +1,352 @@
+/**/
+
+.contenedor-section4_1{
+    display: flex;
+    position: absolute;
+    flex-direction: row;
+}
+.contenedor-section4_1 .start-sect4-arriba{
+    width: 45%;
+    height: 100%;
+    display: flex;
+}
+.contenedor-section4_1 .start-sect4-arriba img{
+    width: 100vw;
+    height: 160%;
+    display: flex;
+    
+}
+.contenedor-section4_1 .btn-hamburger{
+    width: 10%;
+}
+.contenedor-section4_1 .btn-hamburger button{
+    margin-right: 20%;
+}
+
+.contenedor-section4_2{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.yuredo-logo-black{
+    width: 40%;
+    height: 100%;
+    display: flex;
+   flex-direction: row;
+    position: relative;
+}
+.yuredo-logo-black img{
+     width: 14.2vw;
+        height: 4vw;
+position: relative;
+margin-left: 3%;
+margin-top: -1%; 
+}
+.titulo-sect4{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.titulo-sect4 h3{
+    /*font-size: 6vw;
+    se le resta 0.7vw*/
+    font-size: 5.3vw;
+    font-family: "Raleway";
+    z-index: 1;
+    margin-left: 0%;
+    margin-top: 2%;
+    color: #16142f;
+}
+.contenedor-section4_3{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+   position: absolute;
+}
+.uno{
+    width: 20%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+   
+}
+.uno .uno1{
+    width: 100%;
+    height: 60%;
+}
+.uno .uno2{
+    width: 100%;
+    height: 40%;
+}
+.dos{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.dos1{
+    width: 100%;
+    height: 18%;
+}
+.dos2 {
+    width: 100%;
+    height:22%;
+ position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+}
+.uno1 img{
+    position: relative;
+    display: flex;
+    width: 4vw;
+    height: 3vw;
+    cursor: pointer;
+    z-index: 800;
+    top: 75%;
+    left: 30%;
+}
+a .btnMasSect4{
+    position: absolute;
+    top: 84%;
+    margin-left: 14%;
+    width: 4vw;
+    height: 3vw;
+    cursor: pointer;
+    z-index: 800;
+}
+a .btnMasSect4:hover{
+        transform: scale(1.1);
+}
+a {
+text-decoration: none;
+z-index: 7000;
+}
+.uno1 img:hover{
+    transform: scale(1.1);
+}
+.uno1 a{
+    text-decoration: none;
+    
+}
+.uno1 a h5{
+    margin-top: 98%;
+    margin-left: 30%;
+}
+.uno1 h5{
+    color:#16142f;
+    font-family: "Raleway";
+    font-size: 1vw;
+}
+.txtMasSect4{
+    color:white;
+    font-family: "Raleway";
+    font-size: 1vw;
+    margin-left: 15%;
+    margin-top: 65%;
+}
+.txtMasSect4:hover{
+    color: var(--gris);
+    text-decoration: underline;
+    cursor: pointer;
+    z-index: 10000;
+}
+.uno1 a h5:hover{
+    color: var(--azul);
+    text-decoration: underline;
+}
+.dos3{
+    width: 100%;
+    height: 50%;
+}
+.dos3 .texto{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.dos3 .texto h5{
+    padding: 10% 5% 5% 5%;
+    text-align: justify;
+    font-family: "Noto+Sans";
+    font-weight: 200;
+    font-size: 1.4vw;
+    color: #16142f;
+}
+.dos4{
+    width: 100%;
+    height: 16%;
+}
+.dos4 img{
+    position: relative;
+  margin-top: -18%;
+    width: 40vw;
+    height: 10vw;
+    margin-left: -15vw;  
+}
+.sect4-tres {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;   
+   position: relative;
+   overflow: hidden;
+   z-index: 150;
+   position: relative;
+}
+.sect4-tres-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   width: 100%;
+   height: 90%;
+    overflow: hidden;
+    top: 5%;
+    left: 0;
+    position: absolute;
+/* cursor: grab; */
+transition: transform 0.3s ease-in-out;
+z-index: 1500;
+text-align: center;
+color: var(--blanco);
+font-size: 2vw;
+}
+.sect4-slide{
+    min-width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sect4-slide .sect4-item1,
+.sect4-slide .sect4-item2,
+.sect4-slide .sect4-item3,
+.sect4-slide .sect4-item4
+{
+    background-color:var(--verdeSena);
+    margin-top: 5%;
+    margin-left: 7%;
+    width: 85%;
+    height: 90%;
+    z-index: 500;
+    display: block;
+    border-radius: 5%;
+    text-align: center;
+    display: flex;align-items: center;
+    justify-content: center;
+}
+.sect4-prev, .sect4-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    color:var(--azulOscuro);
+    border:none;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 2.5vw;
+    font-weight: bold;
+}
+.sect4-prev {
+    margin-left: -91%;
+    z-index: 10000;
+}
+.sect4-next {
+    margin-right: -90%;
+    z-index: 10000;
+}
+.sect4-txt{
+    height: 100%;
+    height: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 12%;
+    z-index: 850;
+}
+.sect4-txt h5{
+    text-align: center;
+    font-family: "Noto+Sans";
+    font-weight: 300;
+    
+}
+.star-sect4-centro{
+    width: 100%;
+    height: 15%;
+}
+.star-sect4-centro img{
+    position: relative;
+    margin-top: -18%;
+      width: 58vw;
+      height: 15vw;
+      margin-left: -15vw;
+      z-index: 15;
+}
+/******/
+.cuatro{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    
+}
+.cuatro .enlaces{
+   
+}
+.sect4-txt{
+    position: absolute;
+    top: -10%;
+    display: flex;
+    justify-content: center;
+    padding-right: 3%;
+    z-index: 1500;
+   
+
+}
+.sect4-txt h5{
+    text-align: justify;
+    font-family: "Noto+Sans";
+    font-weight: 200;
+    font-size: 1.4vw;
+    cursor: pointer;
+    z-index: 1500;
+   color: #16142f;
+}
+.cuatro .estrellas {
+    width: 100%;
+    height: 50%;
+    z-index: 2;
+  
+}
+.cuatro .estrellas img{
+    margin-top: 52%;
+    margin-left: -80%;
+    width: 35vw;
+    height: 16vw;
+  
+}
+.txt{
+    height: 50%;
+    font-size: 1.4vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    margin: 5%;
+   
+}
+.estrellas{
+    height: 50%;
+}

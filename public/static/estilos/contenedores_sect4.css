@@ -1,0 +1,22 @@
+.contenedor-section4_1,
+.contenedor-section4_2,
+.contenedor-section4_3,
+.contenedor-section4_4
+ {
+    width: 100%;
+    position: absolute;
+    z-index: 1; 
+}
+ .contenedor-section4_1{
+    top: 0;
+    height: 15%;
+ }
+ .contenedor-section4_2{
+    top: 15%;
+    height: 10%;
+ }
+ .contenedor-section4_3{
+    top: 25%;
+    height: 75%;
+
+ }

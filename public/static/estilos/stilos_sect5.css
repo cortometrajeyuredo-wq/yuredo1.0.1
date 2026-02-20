@@ -1,0 +1,259 @@
+.contenedor-section5_1 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.contenedor-section5_1 .estrellas-arriba-sect5 {
+    margin-right: -33%;
+    width: 65vw;
+    height: 12vw;
+    position: absolute;
+}
+
+.yuredo-logo-sect5 {
+    width: 50%;
+}
+
+.yuredo-logo-sect5 img {
+    width: 13.7vw;
+    height: 4vw;
+    position: relative;
+    margin-left: 6%;
+    margin-top: 8%;
+}
+
+.vacio-logo-sect5 {
+    width: 50%;
+}
+
+.contenedor-section5_2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.texto-sect5 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.texto-sect5 h2 {
+    margin-top: 0.5%;
+    font-size: 5.3vw;
+    font-family: 'Raleway';
+    margin-left: 20%;
+    color: #16142f;
+}
+
+.texto-sect5 h2 strong {
+    font-weight: 900;
+    font-size: 5.3vw;
+    font-family: 'Raleway';
+    margin-left: 20%;
+    color: #16142f;
+    
+}
+
+.contenedor-section5_3 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    overflow: hidden;
+    /* background-color: blueviolet; */
+}
+
+.contenedor-vacio-sect5 {
+    display: flex;
+    width: 25%;
+    height: 100%;
+}
+
+.contenedor-vacio-sect5 img {
+    margin-top: -60%;
+    height: 35vw;
+    width: 40vw;
+    z-index: 1;
+}
+
+.txt-sect5 {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.txt-sect5 h5 {
+    font-family: "Noto+Sans";
+    font-weight: 500;
+    font-size: 1.5vw;
+    text-align: justify;
+    padding: 2%;
+    color: #16142f;
+}
+
+.contenedor-sect5-slider {
+    width: 45%;
+    height: 100%;
+    margin-left: -8%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  /* background-color: aqua; */
+}
+.item2,.item3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2.5vw;
+
+}
+.placeholder{
+    margin-top: 30%;
+}
+
+.slider-sect5 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    /* align-items: center;
+    justify-content: center; */
+    left: 0%;
+    transition: transform 0.3s ease;
+    position: absolute;
+    cursor: pointer;
+    z-index: 1; 
+}
+
+.slide-sect5 {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.prev-sect5,
+.next-sect5 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    color: rgb(83, 81, 81);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000;
+    font-size: 2.5vw;
+    font-weight: bold;
+}
+
+.prev-sect5 {
+    left: -2%;
+}
+
+.next-sect5 {
+    right: 0;
+}
+
+.contenedor-section5_4 {
+    position: absolute;
+    width: 100%;
+    height: 25%;
+    display:flex;
+    flex-direction:row;
+}
+
+.izquierdo-sect5 {
+    width: 15%;
+    height: 100%;
+    position:absolute;
+    display: flex;
+    left: 0%;
+}
+
+.izquierdo-sect5 #Capa_1 {
+    transform: scaleX(-1);
+    margin-top: 6%;
+}
+
+.derecho-sect5 {
+    width: 13%;
+    height: 30%;
+    right: 2%;
+    position:absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+}
+.derecho-sect5 a{
+    margin-top: 15%;
+    width: 5vw;
+    height: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.derecho-sect5 a .btn-saber {
+    position: absolute;
+    text-align: center;
+    width: 3.3vw;
+    height: 3.3vw;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.derecho-sect5 .btn-saber:hover {
+    transform: scale(1.1);
+}
+
+.izquierdo-sect5 a img {
+    width: 8vw;
+    height: 4vw;
+    z-index: 2;
+}
+
+.izquierdo-sect5 a img:hover {
+    transform: scale(1.1);
+}
+
+.central-sect5_4 {
+    position: absolute;
+    width: 70%;
+    height: 100%;
+    left: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    /* background-color: chartreuse;  */
+}
+
+/*slider y modal 2*/
+
+
+/*fin*/
+.prev-central {
+    left: 17%;
+
+}
+
+.next-central {
+    right: 17%;
+}
+
+.corosel-item5.active {}
+
+
+.izquierdo-sect5 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}

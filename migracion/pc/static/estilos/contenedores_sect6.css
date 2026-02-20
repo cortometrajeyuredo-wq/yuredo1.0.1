@@ -1,0 +1,20 @@
+
+.contenedor-section6_1,
+.contenedor-section6_2
+ {
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+}
+.contenedor-section6_1 {
+    top: 0; /* Empieza en la parte superior */
+    height: 15%; /* Ocupa el 10% de la altura del contenedor */
+
+}
+.contenedor-section6_2 {
+    top: 15%; /* Empieza justo después de .contenedor-section6_1 */
+    height: 85%; /* Ocupa el 12% de la altura del contenedor */
+    flex-direction: row; 
+    display: flex;
+}
+

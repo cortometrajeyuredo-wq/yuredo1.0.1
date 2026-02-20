@@ -1,0 +1,345 @@
+/* =====================================================
+   SECCIÓN 4: ETNO-ORNITOLOGÍA
+   Layout: Flexbox column, fondo via CSS background
+   ===================================================== */
+
+.section4 {
+    --gris: #cfe0da;
+    --azulOscuro: #16142f;
+    --azulMedio: #236476;
+    --verdeBiche: #7dad3f;
+    --verdeOscuro: #4a6c2f;
+    --naranja: #ff5d40;
+    --azul: #1f2350;
+    --verdeSena: #00bc00;
+    --blanco: white;
+
+    position: relative;
+    width: 100%;
+    /* altura dinámica al contenido */
+    min-height: auto;
+    overflow: visible;
+    /* Allows S5 curve to overlap */
+
+    /* Fondo via CSS para no crear espacios fantasma */
+    background-image: url('/static/img/fondo4.png');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-color: var(--blanco);
+
+    font-family: 'Noto Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ----- Dianas decorativas absolutas ----- */
+.dianas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.dianas img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ----- Contenedor principal ----- */
+.mainContent {
+    position: relative;
+    width: 100%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    padding: 3vh 0 5vh 0;
+    gap: 2vh;
+}
+
+/* ----- Cabecera: decoración + título ----- */
+.headerRegion {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    padding: 0 5vw;
+}
+
+.topDecor {
+    width: 40vw;
+    flex-shrink: 0;
+}
+
+.titleWrapper {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 2vw;
+    padding-top: 1vh;
+}
+
+.titleWrapper h3 {
+    font-size: 5.3vw;
+    font-family: "Raleway", sans-serif;
+    color: var(--azulOscuro);
+    margin: 0;
+    line-height: 1;
+}
+
+/* ----- Grid central: 3 columnas ----- */
+.contentGrid {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: stretch;
+    /* Same height columns */
+    justify-content: center;
+    padding: 0 2vw;
+    gap: 1vw;
+}
+
+/* ----- Columna Izquierda ----- */
+.leftColumn {
+    width: 22%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2vw 1vw;
+    gap: 2vh;
+}
+
+.downloadSection {
+    text-align: center;
+}
+
+.downloadSection a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.downloadSection img {
+    width: 4vw;
+    transition: transform 0.3s ease;
+}
+
+.downloadSection img:hover {
+    transform: scale(1.1);
+}
+
+.downloadSection h5 {
+    font-size: 1vw;
+    font-family: "Raleway", sans-serif;
+    color: var(--azulOscuro);
+    margin-top: 0.5vh;
+}
+
+.introSection {
+    text-align: justify;
+}
+
+.introSection h5 {
+    font-size: 1.2vw;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 300;
+    color: var(--azulOscuro);
+    line-height: 1.5;
+}
+
+.starLeft {
+    width: 80%;
+    max-width: 200px;
+}
+
+/* ----- Columna Central (Slider) ----- */
+.centerColumn {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    gap: 1vh;
+}
+
+.sliderWrapper {
+    width: 90%;
+    aspect-ratio: 4/3;
+    /* respeta proporciones de imagen */
+    position: relative;
+    overflow: hidden;
+    border-radius: 1vw;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.sliderTrack {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    height: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.prevBtn,
+.nextBtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    width: 2.5vw;
+    height: 2.5vw;
+    min-width: 32px;
+    min-height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+}
+
+.prevBtn:hover,
+.nextBtn:hover {
+    background: white;
+}
+
+.prevBtn {
+    left: 1vw;
+}
+
+.nextBtn {
+    right: 1vw;
+}
+
+.starSlider {
+    width: 55%;
+    max-width: 200px;
+    margin-top: -2vh;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* ----- Columna Derecha (Texto dinámico) ----- */
+.rightColumn {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 2vw 1vw;
+    gap: 2vh;
+}
+
+.dynamicText {
+    min-height: 0;
+    /* Adapts to text content */
+}
+
+.dynamicText h5 {
+    font-size: 1.3vw;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 300;
+    color: var(--azulOscuro);
+    text-align: justify;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.starRight {
+    width: 80%;
+    max-width: 200px;
+    align-self: center;
+}
+
+/* ===================== MOBILE ===================== */
+@media (max-width: 1024px) {
+    .titleWrapper h3 {
+        font-size: 6vw;
+    }
+
+    .topDecor {
+        width: 50vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .section4 {
+        background-size: cover;
+    }
+
+    .headerRegion {
+        flex-direction: column;
+        align-items: center;
+        padding: 2vh 5vw;
+    }
+
+    .topDecor {
+        width: 70vw;
+    }
+
+    .titleWrapper {
+        padding-left: 0;
+        justify-content: center;
+    }
+
+    .titleWrapper h3 {
+        font-size: 9vw;
+        text-align: center;
+    }
+
+    .contentGrid {
+        flex-direction: column;
+        align-items: center;
+        gap: 4vh;
+    }
+
+    .leftColumn,
+    .centerColumn,
+    .rightColumn {
+        width: 90%;
+    }
+
+    .sliderWrapper {
+        width: 100%;
+        aspect-ratio: 4/3;
+    }
+
+    .introSection h5,
+    .dynamicText h5 {
+        font-size: 4vw;
+    }
+
+    .downloadSection h5 {
+        font-size: 3.5vw;
+    }
+
+    .downloadSection img {
+        width: 12vw;
+    }
+
+    .prevBtn,
+    .nextBtn {
+        width: 8vw;
+        height: 8vw;
+    }
+}

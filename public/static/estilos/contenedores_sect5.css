@@ -1,0 +1,27 @@
+.contenedor-section5_1,
+.contenedor-section5_2,
+.contenedor-section5_3,
+.contenedor-section5_4 {
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+}
+.contenedor-section5_1 {
+    top: 0;
+    height: 15%;
+   
+}
+.contenedor-section5_2 {
+   top: 15%;
+   height: 10%;
+}
+.contenedor-section5_3 {
+    top: 25%; /* Ajustado para coincidir con el final de section5_2 */
+    height: 50%;
+}
+.contenedor-section5_4 {
+    top: 75%; /* Ajustado para coincidir con el final de section5_3 */
+    height: 25%;
+    display: flex;
+   
+}

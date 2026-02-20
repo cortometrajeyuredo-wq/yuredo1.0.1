@@ -1,0 +1,344 @@
+/* SeccionEquipo.module.css */
+.section6 {
+    --verdeSena: #39a900;
+    --azulOscuro: #16142f;
+    --azulMedio: #004b85;
+    --naranja: #ff5d40;
+    --blanco: white;
+
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: var(--blanco);
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bgImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.dianas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.dianas img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Main Flex Overlay */
+.mainContent {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    padding: 2vh 0;
+}
+
+/* Title Region */
+.titleRegion {
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* Space between star and title */
+    padding: 0 5vw;
+}
+
+.starTop {
+    width: 70vw;
+    margin-top: -5vh;
+    margin-left: -5vw;
+    pointer-events: none;
+}
+
+.titleWrapper {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.titleWrapper h3 {
+    font-size: 5.3vw;
+    font-family: 'Raleway', sans-serif;
+    margin-right: 2vw;
+    color: var(--azulOscuro);
+    line-height: 1;
+}
+
+/* Slider Region */
+.sliderRegion {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+
+.decorLeft {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logoWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5vh;
+}
+
+.logoWrapper img {
+    width: 12vw;
+}
+
+.starLeft {
+    width: 30vw;
+    margin-left: 20%;
+}
+
+.sliderCentral {
+    flex: 1;
+    height: 90%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 3D Slider Logic */
+.sliderTrack3D {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    /* Fixed height for 3D area */
+    perspective: 1000px;
+}
+
+.sliderItem {
+    position: absolute;
+    width: 20vw;
+    height: 27vw;
+    /* Aspect ratio roughly 3:4 */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /* Default center */
+    transition: all 0.5s ease-in-out;
+    border-radius: 1vw;
+    background-color: rgba(9, 41, 9, 0.1);
+    backdrop-filter: blur(15px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.memberImg {
+    width: 90%;
+    height: 70%;
+    border-radius: 1vw;
+    overflow: hidden;
+    margin-top: 5%;
+}
+
+.memberImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.memberInfo {
+    text-align: center;
+    padding: 0.5vw;
+}
+
+.memberInfo strong {
+    font-size: 1.2vw;
+    color: var(--verdeSena);
+    display: block;
+}
+
+.memberInfo p {
+    font-size: 0.9vw;
+    color: var(--azulOscuro);
+    margin: 0.2vh 0;
+}
+
+.memberInfo a {
+    font-size: 0.8vw;
+    color: var(--azulMedio);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* States */
+.active {
+    opacity: 1;
+    z-index: 10;
+    transform: translate(-50%, -50%) scale(1.2);
+}
+
+.prev {
+    opacity: 0.6;
+    z-index: 5;
+    transform: translate(-150%, -50%) scale(0.8);
+}
+
+.next {
+    opacity: 0.6;
+    z-index: 5;
+    transform: translate(50%, -50%) scale(0.8);
+}
+
+.hidden {
+    opacity: 0;
+    z-index: 0;
+    transform: translate(-50%, -50%) scale(0);
+}
+
+/* Nav Buttons */
+.navPrev,
+.navNext {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 3vw;
+    color: var(--azulOscuro);
+    cursor: pointer;
+    z-index: 20;
+    transition: transform 0.2s;
+}
+
+.navPrev {
+    left: 0;
+}
+
+.navNext {
+    right: 0;
+}
+
+.navPrev:hover,
+.navNext:hover {
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* Right Decor */
+.decorRight {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.starRight {
+    width: 25vw;
+    margin-top: -10vh;
+    margin-right: -5vw;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .section6 {
+        height: auto;
+        min-height: auto;
+    }
+
+    .titleRegion {
+        height: 10vh;
+        padding-top: 2vh;
+    }
+
+    .titleWrapper h3 {
+        font-size: 6vw;
+    }
+
+    .sliderRegion {
+        flex-direction: column;
+        height: auto;
+        margin-top: 5vh;
+    }
+
+    .decorLeft,
+    .decorRight {
+        display: none;
+        /* Simplify for mobile, hide complex decor */
+    }
+
+    .sliderCentral {
+        width: 100%;
+        height: 60vh;
+    }
+
+    .sliderTrack3D {
+        height: 40vh;
+    }
+
+    .sliderItem {
+        width: 60vw;
+        height: 70vw;
+    }
+
+    .active {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    .prev {
+        transform: translate(-100%, -50%) scale(0.5);
+        opacity: 0;
+    }
+
+    /* Hide neighbors on small screens if too crowded */
+    .next {
+        transform: translate(0%, -50%) scale(0.5);
+        opacity: 0;
+    }
+
+    .navPrev,
+    .navNext {
+        font-size: 8vw;
+    }
+
+    .memberInfo strong {
+        font-size: 4vw;
+    }
+
+    .memberInfo p {
+        font-size: 3vw;
+    }
+
+    .memberInfo a {
+        font-size: 3vw;
+    }
+}

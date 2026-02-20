@@ -1,0 +1,34 @@
+.contenedor-section2_1,
+.contenedor-section2_2,
+.contenedor-section2_3,
+.contenedor-section2_4,
+.contenedor-section2_5
+ {
+    width: 100%;
+    position: absolute;
+    z-index: 1; 
+}
+ .contenedor-section2_1{
+    top: 0;
+    height: 15%;
+ }
+ .contenedor-section2_2{
+    top: 15%;
+    height: 10%;
+ }
+ .contenedor-section2_3{
+    top: 25%;
+    height: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+ .contenedor-section2_4 {
+    top: 30%;
+    height: 45%;
+   
+ }
+ .contenedor-section2_5{
+   height: 25%;
+ }
+ 

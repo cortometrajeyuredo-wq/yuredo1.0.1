@@ -1,0 +1,285 @@
+/**/
+@media screen and (min-width: 1024px) and (max-width: 1280px),
+screen and (min-width: 1281px) and (max-width: 1600px),
+screen and (min-width: 1601px) and (max-width: 1920px),
+screen and (min-width: 1921px) {
+    .section1{
+        z-index: 0;
+     
+    }
+.fondo-bajo-sect1{
+   z-index: 0;
+
+}
+
+.contenedor-section1_2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+/*logo*/
+.contenedor-section1_2 img{
+    width: 16.4vw;
+    height: 4.2vw;
+    text-align: center;
+    position: absolute;
+    z-index: 15;/*15*/
+    
+}
+
+.btn-hamburger {
+    position:fixed;
+   /* background-color:red; */
+    width: 100%;
+    height: 10vw;
+    z-index: -1;
+}
+.btn-hamburger .hamburger{
+    position:fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3vw;
+    height:3vw;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    z-index: 0;
+    background-color:var(--verdeSena) !important;
+}
+.btn-hamburger .hamburger span{
+   font-size: 2vw;
+   font-weight: 900;
+   border-radius: 2px;
+   z-index: 0;
+}
+.btn-hamburger .hamburger:hover{
+    background-color:var(--azulMedio) !important;
+}
+.btn-hamburger .hamburger span:hover{
+    color: var(--gris);
+}
+
+.contenedor-section1_3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.contenedor-section1_3 h2{
+    margin-top: -inherit;
+    font-size: 1.4vw;
+    font-family: "Raleway";
+    position: relative;
+    margin-top: -2vw;
+    word-spacing: 0.3vw;
+    text-align: center;
+    color:#16142f;
+}
+.contenedor-section1_5{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+}
+.contenedor-izquierdo-sect1{
+    width: 25%;
+    height: 100%;
+}
+/*video*/
+.contenedor-central-sect1 {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.contenedor-central-sect1 video {
+    width: 48vw;
+    height: 30vw;
+    border-radius: 1.5vw !important;
+    overflow: hidden;
+    object-fit: cover;
+    background-color: black; 
+}
+.play{
+    width: 11.8vw;
+    height: 11.8vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.play img{
+    opacity: 0.8;
+}
+.contenedor-derecho-sect1{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  
+}
+.flor-sect1 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 0;
+  
+    
+}
+.flor-sect1 img{
+    width: 11.7vw;
+    height: 10.4vw;
+    margin-left: -25%;
+    margin-top: -7%;
+    position: absolute;
+    z-index: 0 !important;
+ 
+}
+.start{
+
+    z-index: 0;
+}
+.start img{
+    z-index: 0;
+}
+.star img{
+    top: -10%;
+    color: #d5e8f1;
+    width: 100%;
+   
+}
+.contenedor-section1_6{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    flex-direction: row;
+    z-index: 0;
+}
+.logo-sena{
+    width: 15%;
+   height: 100%;
+   position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   z-index: 0;
+}
+.logo-sena img{
+    position: absolute;
+    width: 5.9vw;
+    height: 5.9vw;
+    margin-left: 35%;
+    z-index: 0;
+}
+.star{
+    width: 70%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
+}
+.star img{
+    top: -55%;
+    left: -20%;
+    text-align: center;
+    width: 120%;
+    height: 160%;
+    position: absolute;
+    z-index: 0;
+}
+.nebulosa{
+    width: 15%;
+    height: 100%;
+    z-index: 0;
+}
+#Capa_1{
+  width: 9.5vw;
+  height: 6.6vw;
+  margin-left: 18%;
+  margin-top:-30% ;
+  z-index: 50;
+  z-index: 0;
+}
+/*animacion nebulosa*/
+  .purple,.yellow, .red, .blue{
+    fill: #2db1ee;
+    animation: colorGroup 5s infinite;
+  }
+
+  @keyframes colorGroup {
+    100% {
+        fill: #d5e8f1;
+    }
+    25% {
+        fill: #a4dbf5;
+    
+    }
+    75% {
+        fill: #77eeda;
+    }
+    50% {
+        fill: #64eedc;
+    }
+    0% {
+        fill: #51bbec;
+    }
+   
+  50% {
+      fill: #a4dbf5;
+  }
+  75% {
+      fill: #77eeda;
+  }
+  25% {
+    fill: #2db1ee;
+  }
+  100% {
+      fill: #51bbec;
+  }
+  }
+  
+  /* Animación para cambiar de color de manera continua */
+  @keyframes colorChange {
+    0% {
+        fill: #d5e8f1;
+    }
+    25% {
+        fill: #a4dbf5;
+    }
+    50% {
+        fill: #77eeda;
+    }
+    75% {
+        fill: #64eedc;
+    }
+    100% {
+        fill: #51bbec;
+    }
+   
+  75% {
+      fill: #a4dbf5;
+  }
+  50% {
+      fill: #77eeda;
+  }
+  25% {
+      fill: #64eedc;
+  }
+  0% {
+      fill: #51bbec;
+  }
+  }
+}

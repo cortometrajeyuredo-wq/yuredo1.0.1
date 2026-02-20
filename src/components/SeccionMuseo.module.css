@@ -1,0 +1,575 @@
+/* =====================================================
+   SECCIÓN 5: MUSEO / PODCAST AVES VAUPÉS
+   Layout: Flexbox column, fondo via CSS background
+   Historia: Podcasts + video + colección de aves
+   ===================================================== */
+
+.section5 {
+    --gris: #cfe0da;
+    --azulOscuro: #16142f;
+    --azulMedio: #236476;
+    --verdeBiche: #7dad3f;
+    --verdeOscuro: #4a6c2f;
+    --naranja: #ff5d40;
+    --azul: #1f2350;
+    --verdeSena: #00bc00;
+    --blanco: white;
+
+    position: relative;
+    width: 100%;
+    min-height: auto;
+    /* driven by content */
+    overflow: visible;
+
+    /* Overlap S4 to merge backgrounds */
+    margin-top: -8vh;
+    z-index: 10;
+
+    /* Fondo via CSS - sin elementos img fantasma */
+    background-image: url('/static/img/fondo5.png');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-color: var(--blanco);
+
+    font-family: 'Noto Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* ----- Dianas decorativas absolutas ----- */
+.dianas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.dianas img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ----- Contenedor principal ----- */
+.mainContent {
+    position: relative;
+    width: 100%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    padding: 5vh 0 5vh 0;
+    gap: 3vh;
+}
+
+/* ----- Zona Superior: Logo + Título ----- */
+.topRegion {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5vw;
+}
+
+.logoWrapper {
+    width: 12vw;
+    flex-shrink: 0;
+}
+
+.logoWrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.titleWrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.titleWrapper h2 {
+    font-size: 5vw;
+    font-family: 'Raleway', sans-serif;
+    color: var(--azulOscuro);
+    margin: 0;
+    z-index: 2;
+    text-align: center;
+}
+
+.starTop {
+    position: absolute;
+    width: 50vw;
+    top: -5vh;
+    right: -10vw;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* ----- Zona Media: Podcast (Video + Texto) ----- */
+.podcastRegion {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    padding: 2vh 5vw;
+    gap: 5vw;
+}
+
+.decorativeLeft {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.decorativeLeft img {
+    width: 100%;
+    margin-left: -40%;
+}
+
+.podcastContent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    gap: 5vw;
+    z-index: 10;
+}
+
+.videoContainer {
+    width: 45%;
+    max-width: 560px;
+    aspect-ratio: 16/9;
+    background: black;
+    border-radius: 1vw;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    flex-shrink: 0;
+}
+
+.videoElement {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.podcastText {
+    flex: 1;
+    min-width: 0;
+}
+
+.podcastText h5 {
+    font-size: 1.4vw;
+    color: var(--azulOscuro);
+    text-align: justify;
+    font-weight: 500;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ----- Zona Inferior: Colección de Aves (Swiper) ----- */
+.collectionRegion {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 2vh 0 4vh 0;
+}
+
+.decorLeftBottom {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 14%;
+    display: flex;
+    align-items: flex-end;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.svgDecor {
+    width: 100%;
+    transform: scaleX(-1);
+    opacity: 0.8;
+}
+
+.birdSwiperContainer {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 5;
+}
+
+.swiperTrackWrapper {
+    flex: 1;
+    overflow: hidden;
+    border-radius: 0.5vw;
+}
+
+.swiperTrack {
+    display: flex;
+    height: 25vh;
+    min-height: 180px;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.birdSlide {
+    min-width: 25%;
+    /* 4 items visible at once */
+    height: 100%;
+    padding: 0 0.4vw;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.birdSlide:hover {
+    transform: scale(1.05);
+}
+
+.birdSlide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.7vw;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: block;
+}
+
+.swiperPrev,
+.swiperNext {
+    background: none;
+    border: none;
+    font-size: 2.5vw;
+    color: var(--azulOscuro);
+    cursor: pointer;
+    padding: 0 1vw;
+    z-index: 20;
+    transition: color 0.2s;
+    flex-shrink: 0;
+}
+
+.swiperPrev:hover,
+.swiperNext:hover {
+    color: var(--verdeBiche);
+}
+
+.spotifyLink {
+    position: absolute;
+    right: 4vw;
+    bottom: 3vh;
+    width: 4.5vw;
+    min-width: 40px;
+    transition: transform 0.2s;
+    z-index: 10;
+}
+
+.spotifyLink:hover {
+    transform: scale(1.1);
+}
+
+.spotifyLink img {
+    width: 100%;
+    display: block;
+}
+
+/* ===================== MODAL ===================== */
+.modal-sect5 {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(17, 10, 124, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-sect5.active {
+    display: flex;
+}
+
+.modal-content-sect5 {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    height: 90%;
+    text-align: center;
+    z-index: 10000;
+}
+
+.close-modal-sect5 {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 20px;
+    right: 15px;
+    font-size: 2.5vw;
+    border-radius: 50%;
+    width: 2.5vw;
+    height: 2.5vw;
+    min-width: 32px;
+    min-height: 32px;
+    background-color: var(--verdeBiche);
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    z-index: 9999;
+}
+
+.list {
+    width: 95%;
+    height: 95%;
+    overflow: hidden;
+    position: relative;
+    z-index: 30;
+}
+
+/* ----- Modal Item & Content ----- */
+.item {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 10%;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.content {
+    text-align: left;
+    max-width: 50%;
+    backdrop-filter: blur(8px);
+    background: rgba(10, 12, 11, 0.5);
+    border: 1px solid rgba(175, 174, 174, 0.3);
+    border-radius: 15px;
+    padding: 3%;
+}
+
+.title {
+    font-size: 4vw;
+    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 5px;
+}
+
+.topic {
+    font-size: 2vw;
+    color: var(--verdeBiche);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.des {
+    font-size: 1.2vw;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    text-align: justify;
+}
+
+.btn button {
+    background-color: var(--verdeBiche);
+    border: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.btn button:hover {
+    transform: scale(1.05);
+}
+
+.btn a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1vw;
+}
+
+/* ----- Animaciones de entrada al Modal ----- */
+.animate-content .title,
+.animate-content .topic,
+.animate-content .des,
+.animate-content .btn {
+    opacity: 0;
+    filter: blur(20px);
+    animation: animate_content_entry 0.8s ease-in-out forwards;
+}
+
+.animate-content .title {
+    animation-delay: 0.2s;
+}
+
+.animate-content .topic {
+    animation-delay: 0.4s;
+}
+
+.animate-content .des {
+    animation-delay: 0.6s;
+}
+
+.animate-content .btn {
+    animation-delay: 0.8s;
+}
+
+@keyframes animate_content_entry {
+    from {
+        opacity: 0;
+        filter: blur(33px);
+        transform: translate(0, 100px);
+    }
+
+    to {
+        opacity: 1;
+        filter: blur(0);
+        transform: translateY(0);
+    }
+}
+
+/* ===================== MOBILE ===================== */
+@media (max-width: 1024px) {
+    .titleWrapper h2 {
+        font-size: 6vw;
+    }
+
+    .podcastText h5 {
+        font-size: 2vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .section5 {
+        margin-top: -4vh;
+        background-size: cover;
+    }
+
+    .mainContent {
+        padding: 4vh 0;
+    }
+
+    .topRegion {
+        flex-direction: column;
+        gap: 1vh;
+        padding: 0 5vw;
+    }
+
+    .logoWrapper {
+        width: 30vw;
+    }
+
+    .titleWrapper h2 {
+        font-size: 8vw;
+    }
+
+    .podcastRegion {
+        flex-direction: column;
+        gap: 3vh;
+        padding: 2vh 5vw;
+    }
+
+    .podcastContent {
+        flex-direction: column;
+        width: 100%;
+        gap: 3vh;
+    }
+
+    .videoContainer {
+        width: 95%;
+        max-width: unset;
+    }
+
+    .podcastText {
+        width: 95%;
+    }
+
+    .podcastText h5 {
+        font-size: 4vw;
+    }
+
+    .decorativeLeft {
+        display: none;
+    }
+
+    .birdSwiperContainer {
+        width: 95%;
+    }
+
+    .swiperTrack {
+        height: 20vh;
+    }
+
+    .birdSlide {
+        min-width: 50%;
+        /* 2 visible on mobile */
+    }
+
+    .swiperPrev,
+    .swiperNext {
+        font-size: 6vw;
+    }
+
+    .spotifyLink {
+        right: 50%;
+        transform: translateX(50%);
+        bottom: 1vh;
+    }
+
+    .decorLeftBottom {
+        display: none;
+    }
+
+    /* Modal mobile */
+    .content {
+        max-width: 90%;
+    }
+
+    .title {
+        font-size: 6vw;
+    }
+
+    .topic {
+        font-size: 4vw;
+    }
+
+    .des {
+        font-size: 3.5vw;
+    }
+
+    .close-modal-sect5 {
+        font-size: 5vw;
+        width: 8vw;
+        height: 8vw;
+    }
+}
