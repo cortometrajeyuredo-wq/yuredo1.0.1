@@ -1,37 +1,20 @@
 /* SeccionInicio.module.css */
-/* Estilos extraídos de contenedores_sect1.css y stilos_sect1.css */
+/* Layout: Flexbox column — sin posicionamiento absoluto para evitar solapamiento */
 
 .section1 {
     width: 100%;
-    height: auto;
     min-height: 100vh;
     position: relative;
     z-index: 2;
-    /* Elevado para solapamiento */
-    overflow: visible;
-    /* Importante: Permitir overflow para unir con S2 */
-    background-color: white;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 0;
     padding: 0;
-    display: block;
-    /* Asegurar bloque para evitar gaps */
 }
 
-/* Backgrounds */
-.fondo-bajo-sect1 {
-    position: relative;
-    /* Cambiado a relative para dictar altura */
-    display: block;
-    /* Eliminar gaps de inline */
-    width: 100%;
-    height: auto;
-    /* Altura automática proporcional */
-    object-fit: contain;
-    /* Mostrar toda la imagen */
-    z-index: -1;
-    /* Mantener detrás */
-}
-
+/* --- Decoración de fondo (dianas) — pointer-events none, no afecta layout --- */
 .dianas {
     position: absolute;
     width: 100%;
@@ -48,157 +31,156 @@
     object-fit: cover;
 }
 
+/* Estrella generadas por JS - enviadas al fondo absoluto */
+.estrellasFondo {
+    z-index: 0;
+}
 
-/* Layout Containers */
-.contenedor-section1_1,
-.contenedor-section1_2,
-.contenedor-section1_3,
-.contenedor-section1_4,
-.contenedor-section1_5,
-.contenedor-section1_6 {
+/* --- Zona 1: Logo Yuredo --- */
+.zonaLogo {
     width: 100%;
-    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 4vh;
+    padding-bottom: 1vh;
     z-index: 2;
-    /* Encima del fondo */
+    position: relative;
 }
 
-.contenedor-section1_1 {
-    top: 0;
-    height: 4%;
-}
-
-.contenedor-section1_2 {
-    top: 4%;
-    height: 10%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.contenedor-section1_3 {
-    top: 14%;
-    height: 6%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.contenedor-section1_4 {
-    top: 20%;
-    height: 2%;
-}
-
-.contenedor-section1_5 {
-    top: 22%;
-    height: 63%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
-
-.contenedor-section1_6 {
-    top: 85%;
-    height: 25%;
-    display: flex;
-    flex-direction: row;
-    z-index: 1;
-    /* Detrás de algunos elementos */
-}
-
-
-/* Elements Styles */
-
-/* 1_2: Logo Yuredo */
-.contenedor-section1_2 img {
-    width: 16.4vw;
+.zonaLogo img {
+    width: clamp(120px, 16.4vw, 220px);
+    min-width: 120px;
     height: auto;
-    max-height: 100%;
-    z-index: 15;
 }
 
-/* 1_3: Titulo */
-.contenedor-section1_3 h2 {
-    font-size: 1.4vw;
+/* --- Zona 2: Título --- */
+.zonaTitulo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5vh 0;
+    z-index: 2;
+    position: relative;
+}
+
+.zonaTitulo h2 {
+    font-size: clamp(20px, 1.8vw, 32px);
     font-family: 'Raleway', sans-serif;
-    color: #16142f;
+    color: var(--color-fondo-oscuro);
     text-align: center;
     margin: 0;
-    font-weight: bold;
-    letter-spacing: 0.1vw;
+    font-weight: 800;
+    /* More premium weight */
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
 }
 
-/* 1_5: Video & Decor */
-.contenedor-izquierdo-sect1,
-.contenedor-derecho-sect1 {
-    width: 25%;
-    height: 100%;
+/* --- Zona 3: Video + decoración lateral --- */
+.zonaVideo {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2vh 0;
+    z-index: 2;
     position: relative;
+    box-sizing: border-box;
+    max-height: 60vh;
 }
 
-.contenedor-central-sect1 {
-    width: 50%;
-    height: 100%;
+.decorIzquierda {
+    width: 25%;
     display: flex;
     align-items: center;
+    justify-content: flex-start;
+    pointer-events: none;
+}
+
+.videoWrapper {
+    width: 50%;
+    display: flex;
     justify-content: center;
+    align-items: center;
     position: relative;
 }
 
-.contenedor-central-sect1 video {
-    width: 48vw;
-    height: 30vw;
-    border-radius: 1.5vw;
+.videoWrapper video,
+.videoWrapper :global(.contenedorVideo) video {
+    width: 100%;
+    max-width: 900px;
+    border-radius: 24px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
     overflow: hidden;
     object-fit: cover;
-    background-color: black;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
 }
 
-/* Decoración Derecha */
-.flor-sect1 {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
+.videoWrapper video:hover {
+    transform: scale(1.02);
 }
 
-.flor-sect1 img {
-    width: 11.7vw;
-    height: 10.4vw;
-    position: absolute;
-    /* Ajustes visuales aproximados del CSS original */
-    left: -25%;
-    top: -7%;
-}
-
-.star {
-    position: absolute;
-    width: 70%;
-    right: 0;
-    bottom: 20%;
-}
-
-.star img {
-    width: 100%;
-}
-
-
-/* 1_6: Nebulosa */
-.nebulosa {
-    width: 15%;
-    height: 100%;
+/* Decoraciones derechas - Restaurando la flor y estrella como original */
+.decorDerecha {
+    width: 25%;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+
+.florSect1 img {
+    width: clamp(90px, 11.7vw, 160px);
+    height: auto;
+    margin-bottom: -4vw;
+    /* Solapamiento de flor con estrella simulado */
+    z-index: 2;
+}
+
+.starDerecha {
+    position: relative;
+    width: 80%;
+    z-index: 1;
+}
+
+.starDerecha img {
+    width: 100%;
+    height: auto;
+}
+
+/* --- Zona 4: Footer (Nebulosa + Logo SENA + Estrella) --- */
+.zonaFooter {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 0 0 2vh 0;
+    z-index: 2;
+    position: relative;
+    min-height: 15vh;
+}
+
+.nebulosa {
+    width: 25%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-left: 5vw;
+    padding-bottom: 2vh;
 }
 
 .nebulosa svg {
-    width: 9.5vw;
-    height: 6.6vw;
-    margin-left: 18%;
-    /* margin-top: -30%; ajuste visual */
-    position: absolute;
-    bottom: 20%;
+    width: clamp(120px, 15vw, 220px);
+    height: auto;
+    min-width: 120px;
 }
 
 /* Animaciones SVG Nebulosa */
@@ -211,34 +193,82 @@
     animation: colorGroup 5s infinite;
 }
 
-
-.contenedor-section1_6 .logo-sena {
-    width: 15%;
-    height: 100%;
-    position: relative;
+.logoSena {
+    width: 20%;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-bottom: 3vh;
 }
 
-.logo-sena img {
-    width: 5.9vw;
-    height: 5.9vw;
-    margin-left: 35%;
+.logoSena img {
+    width: clamp(70px, 8vw, 120px);
+    min-width: 70px;
+    height: auto;
 }
 
-.contenedor-section1_6 .star-bottom {
-    width: 70%;
-    height: 100%;
-    position: relative;
+.starFooter {
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding-bottom: 0;
+    overflow: visible;
+    pointer-events: none;
 }
 
-.star-bottom img {
-    position: absolute;
-    top: -55%;
-    left: -20%;
-    width: 120%;
-    height: 160%;
+.starFooter img {
+    width: 65%;
+    height: auto;
+    margin-left: -5%;
+}
+
+@media (max-width: 768px) {
+    .zonaVideo {
+        flex-direction: column;
+        justify-content: center;
+        gap: 16px;
+        padding: 16px 0 24px 0;
+        max-height: none;
+    }
+
+    .decorIzquierda,
+    .decorDerecha {
+        display: none;
+    }
+
+    .videoWrapper {
+        width: min(920px, 92vw);
+    }
+
+    .zonaFooter {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        padding: 8px 0 24px 0;
+    }
+
+    .nebulosa {
+        width: 100%;
+        padding-left: 0;
+        padding-bottom: 0;
+    }
+
+    .logoSena {
+        width: 100%;
+        padding-bottom: 0;
+    }
+
+    .starFooter {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .starFooter img {
+        width: min(520px, 88vw);
+        margin-left: 0;
+    }
 }
 
 @keyframes colorGroup {

@@ -5,12 +5,16 @@
  */
 
 import styles from './SeccionYuredo.module.css';
+import EstrellasFondo from '@/components/EstrellasFondo';
+import VideoConPlay from '@/components/VideoConPlay';
 
 const SeccionYuredo = () => {
     return (
         <section className={styles.section3} id="yuredo">
-            {/* Fondo decorativo */}
-            <img className={styles.bgImage} src="/static/img/fondo3.png" alt="" />
+            {/* Estrellas de fondo dinámicas */}
+            <EstrellasFondo cantidad={40} leftMin={20} leftMax={90} className={styles.estrellasFondo} />
+
+            {/* Decoración: dianas (pointer-events: none) */}
             <div className={styles.dianas}>
                 <img src="/static/img/dianas3.svg" alt="" />
             </div>
@@ -19,7 +23,7 @@ const SeccionYuredo = () => {
             <div className={styles.mainContent}>
 
                 {/* Zona Superior: Estrellas Decorativas */}
-                <div className={styles.upperDecor}>
+                <div className={`${styles.upperDecor} reveal`}>
                     <img src="/static/img/start-3_1.svg" className={styles.starTopLeft} alt="" />
                     <img src="/static/img/start3_2.svg" className={styles.starTopRight} alt="" />
                 </div>
@@ -31,16 +35,11 @@ const SeccionYuredo = () => {
                     </div>
 
                     <div className={styles.videoWrapper}>
-                        <video
+                        <VideoConPlay
                             id="videoPlayerYuredo"
-                            preload="auto"
-                            controls
-                            playsInline
-                            className={styles.videoElement}
-                        >
-                            <source src="/static/video/Colombia Nativa.mp4" type="video/mp4" />
-                            Tu navegador no soporta la reproducción de videos.
-                        </video>
+                            src="/static/video/Colombia Nativa.mp4"
+                            claseVideo={styles.videoElement}
+                        />
                     </div>
 
                     <div className={styles.decorRight}>

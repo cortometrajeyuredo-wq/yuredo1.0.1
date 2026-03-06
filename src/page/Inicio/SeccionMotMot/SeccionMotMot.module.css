@@ -1,28 +1,18 @@
 .section2 {
     position: relative;
     width: 100%;
-    /* min-height: 100vh; */
-    /* Eliminar min-height forzado para fluidez */
-    overflow: visible;
-    /* Visible para evitar recortes */
-    background-color: transparent;
-    display: block;
-    /* Bloque para apilar */
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
     margin: 0;
     padding: 0;
 }
 
-.section2 img.imgFondo {
-    position: relative;
-    /* Relative para dictar altura */
-    display: block;
-    width: 100%;
-    height: auto;
-    /* Altura proporcional */
-    object-fit: contain;
-    z-index: -10;
-    margin: 0;
-    padding: 0;
+/* imgFondo eliminada — sin imagen de fondo */
+
+.estrellasFondo {
+    z-index: 0;
 }
 
 .dianas {
@@ -35,24 +25,23 @@
 
 .dianas img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
     top: -3%;
 }
 
-/* Main Overlay */
+/* Main Content — flujo normal, dicta la altura de .section2 */
 .mainContent {
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative;
     width: 100%;
-    height: 100%;
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     z-index: 1;
-    pointer-events: none;
-    /* Dejar pasar clicks al fondo si es necesario, pero reactivar en hijos */
+    padding: 4vh 0;
 }
 
 .mainContent>* {
@@ -70,36 +59,30 @@
     margin-bottom: 2vh;
 }
 
-.logoContainer,
-.logoImg {
-    display: none;
-}
-
+/* Decoraciones del Título */
 .estrellasHeader {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    pointer-events: none;
+    display: flex;
+    flex-direction: row;
+    gap: 3vw;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 400px;
+    margin-bottom: -1vh;
 }
 
 .estrella1 {
-    width: 42vw;
-    position: absolute;
-    top: -10%;
-    left: 0;
+    width: clamp(18px, 4vw, 44px);
+    height: auto;
 }
 
 .estrella2 {
-    width: 18vw;
-    position: absolute;
-    top: -15%;
-    left: 55%;
+    width: clamp(22px, 5vw, 52px);
+    height: auto;
+    margin-top: -2vw;
 }
 
 .estrella3 {
-    width: 38vw;
+    width: min(520px, 38vw);
     position: absolute;
     top: -15%;
     left: 65%;
@@ -112,20 +95,22 @@
 }
 
 .subtitle {
-    font-size: 2.2vw;
+    font-size: clamp(18px, 2.5vw, 28px);
     font-family: 'Raleway', sans-serif;
-    font-weight: 500;
-    color: #16142f;
+    font-weight: 600;
+    color: var(--color-primario);
     margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
 }
 
 .title {
-    font-size: 5.3vw;
+    font-size: clamp(40px, 6vw, 84px);
     font-family: 'Raleway', sans-serif;
-    color: #16142f;
-    font-weight: bold;
-    margin: -1vw 0 0 0;
-    /* Ligero ajuste negativo para cercanía visual, no hack */
+    color: var(--color-fondo-oscuro);
+    font-weight: 900;
+    margin: -0.5vw 0 0 0;
+    line-height: 1;
 }
 
 /* Interactive Region */
@@ -137,16 +122,17 @@
     justify-content: center;
     gap: 2vw;
     padding: 0 5vw;
+    flex-wrap: wrap;
 }
 
 .btnWrapper {
-    width: 10%;
+    flex: 0 0 auto;
     display: flex;
     justify-content: flex-end;
 }
 
 .btnWrapper img {
-    width: 4vw;
+    width: clamp(44px, 4vw, 64px);
     cursor: pointer;
     transition: transform 0.3s ease;
 }
@@ -156,8 +142,10 @@
 }
 
 .sliderWrapper {
-    width: 45%;
-    height: 35vw;
+    flex: 0 1 min(520px, 45vw);
+    width: min(520px, 45vw);
+    aspect-ratio: 1 / 1;
+    height: auto;
     position: relative;
     display: flex;
     align-items: center;
@@ -165,23 +153,27 @@
 }
 
 .textWrapper {
-    width: 25%;
+    flex: 1 1 320px;
+    width: auto;
+    max-width: 520px;
     text-align: justify;
 }
 
 .textWrapper h4 {
-    font-size: 1.4vw;
+    font-size: clamp(15px, 1.5vw, 19px);
     font-family: 'Noto Sans', sans-serif;
-    font-weight: 300;
-    color: #16142f;
-    line-height: 1.4;
+    font-weight: 400;
+    color: var(--color-fondo-oscuro);
+    line-height: 1.6;
     margin: 0;
+    border-left: 3px solid var(--color-secundario);
+    padding-left: 20px;
 }
 
 /* Slider Structure */
 .slider-container {
     position: relative;
-    width: 83%;
+    width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
@@ -191,10 +183,10 @@
 
 .slider-item {
     position: absolute;
-    width: 33vw;
-    height: 33vw;
+    width: 100%;
+    height: 100%;
     transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-    border-radius: 1vw;
+    border-radius: clamp(10px, 1vw, 16px);
     overflow: hidden;
     cursor: pointer;
     display: flex;
@@ -210,7 +202,13 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 1vw;
+    border-radius: 24px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;
+}
+
+.slider-item:hover img {
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.3);
 }
 
 /* Efectos del Slider 2D (Legacy) */
@@ -251,19 +249,19 @@
     background: none;
     border: none;
     color: #16142f;
-    font-size: 3vw;
+    font-size: clamp(28px, 3vw, 44px);
     font-weight: bold;
     cursor: pointer;
     z-index: 10;
-    padding: 1vw;
+    padding: 8px;
 }
 
 .control-prev {
-    left: -15%;
+    left: 6px;
 }
 
 .control-next {
-    right: -15%;
+    right: 6px;
 }
 
 
@@ -279,7 +277,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: var(--z-modal-overlay);
+    z-index: var(--z-modal-capa);
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
@@ -293,25 +291,28 @@
 
 .modal-content {
     position: relative;
-    width: 80%;
-    height: 80%;
+    width: min(960px, 92vw);
+    height: min(820px, 85vh);
     background: #fff;
     border-radius: 20px;
     padding: 20px;
     display: flex;
     flex-direction: column;
-    z-index: var(--z-modal-content);
+    z-index: var(--z-modal-contenido);
 }
 
 .close-btn {
     position: absolute;
-    top: -40px;
-    right: 0;
-    background: none;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.55);
     border: none;
     color: white;
     font-size: 35px;
     cursor: pointer;
+    border-radius: 10px;
+    width: 44px;
+    height: 44px;
 }
 
 /* Modal Slider Styles */
@@ -354,7 +355,7 @@
     color: white;
     border: none;
     padding: 10px;
-    font-size: 2.5vw;
+    font-size: clamp(28px, 2.5vw, 44px);
     font-weight: bold;
     cursor: pointer;
     z-index: 1001;
@@ -370,16 +371,32 @@
 
 
 @media (max-width: 1024px) {
-    .contenedor-slider-sect2 {
-        width: 70%;
+    .interactiveRegion {
+        flex-direction: column;
+        gap: 18px;
     }
 
-    .sect2-texto {
+    .btnWrapper {
+        justify-content: center;
+    }
+
+    .sliderWrapper {
+        width: min(520px, 86vw);
+    }
+
+    .textWrapper {
+        max-width: min(720px, 92vw);
+        text-align: left;
+    }
+}
+
+@media (max-width: 768px) {
+    .estrella3 {
         display: none;
     }
 
-    .slider-item {
-        width: 45vw;
-        height: 45vw;
+    .control-prev,
+    .control-next {
+        font-size: 40px;
     }
 }

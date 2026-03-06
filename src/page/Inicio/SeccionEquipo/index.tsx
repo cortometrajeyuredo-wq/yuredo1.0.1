@@ -1,6 +1,7 @@
 import styles from './SeccionEquipo.module.css';
 import useDeslizadorSimple from '@/hooks/useDeslizadorSimple';
 import { equipoYuredo } from '@/data/equipo';
+import EstrellasFondo from '@/components/EstrellasFondo';
 
 /**
  * @módulo SeccionEquipo
@@ -21,8 +22,10 @@ const SeccionEquipo = () => {
 
     return (
         <section className={styles.section6} id="equipo">
-            {/* Fondo decorativo */}
-            <img className={styles.bgImage} src="/static/img/fondo6.png" alt="" />
+            {/* Animación de Estrellas de fondo */}
+            <EstrellasFondo cantidad={50} leftMin={10} leftMax={90} className={styles.estrellasFondo} />
+
+            {/* Decoración: dianas */}
             <div className={styles.dianas}>
                 <img src="/static/img/dianas6.svg" alt="" />
             </div>
@@ -31,7 +34,7 @@ const SeccionEquipo = () => {
             <div className={styles.mainContent}>
 
                 {/* Zona Superior: Título y Decoración */}
-                <div className={styles.titleRegion}>
+                <div className={`${styles.titleRegion} reveal`}>
                     <img className={styles.starTop} src="/static/img/star-sect6-ariba.svg" alt="" />
                     <div className={styles.titleWrapper}>
                         <h3>Equipo</h3>
@@ -39,7 +42,7 @@ const SeccionEquipo = () => {
                 </div>
 
                 {/* Zona Central: Slider 3D del equipo */}
-                <div className={styles.sliderRegion}>
+                <div className={`${styles.sliderRegion} reveal reveal-delay-2`}>
 
                     {/* Lateral Izquierdo */}
                     <div className={styles.decorLeft}>
@@ -72,7 +75,7 @@ const SeccionEquipo = () => {
                                         <div className={styles.memberInfo}>
                                             <strong>{miembro.nombre}</strong>
                                             <p>{miembro.rol}</p>
-                                            <a href="#">Portafolio</a>
+                                            <span className={styles.portafolioPlaceholder}>Portafolio</span>
                                         </div>
                                     </div>
                                 );

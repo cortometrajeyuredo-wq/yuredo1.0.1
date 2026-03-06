@@ -1,5 +1,0 @@
-User-agent: *
-Disallow: /privado/
-Disallow: /test/
-
-Sitemap: https://www.tusitio.com/sitemap.xml

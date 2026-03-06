@@ -6,10 +6,11 @@
     /* Por defecto oculto, cambiar con clase activa o JS */
     position: fixed;
     z-index: 5000;
-    left: 1%;
-    top: 5%;
-    width: 24%;
-    height: 25%;
+    left: 12px;
+    top: 12px;
+    width: clamp(260px, 24vw, 380px);
+    height: auto;
+    min-height: 170px;
     background-color: rgba(255, 255, 255, 0.406);
     backdrop-filter: blur(8px);
     border-radius: 10px;
@@ -58,8 +59,7 @@
     color: #39a900;
     /* var(--verdeSena) */
     margin-left: 10%;
-    font-size: 1.5vw;
-    /* Aproximado */
+    font-size: clamp(16px, 1.5vw, 20px);
 }
 
 .audio-close {
@@ -76,14 +76,14 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    font-size: 2vw;
+    font-size: clamp(18px, 2vw, 26px);
     font-weight: 900;
     margin-right: 10%;
     background: #39a900;
     /* var(--verdeSena) */
     border-radius: 50%;
-    width: 2vw;
-    height: 2vw;
+    width: clamp(28px, 2vw, 36px);
+    height: clamp(28px, 2vw, 36px);
     margin-top: 0;
     margin-bottom: 0;
 }
@@ -100,16 +100,16 @@
 
 .texto h2 {
     margin: 0;
-    font-size: 1vw;
+    font-size: clamp(12px, 1vw, 14px);
 }
 
-.texto h2 a {
+.texto h2 span {
     text-decoration: none;
     color: black;
     cursor: pointer;
 }
 
-.texto h2 a:hover {
+.texto h2 span:hover {
     color: #39a900;
 }
 
@@ -126,8 +126,8 @@
 }
 
 .play-svg {
-    width: 4.5vw;
-    height: 4.5vw;
+    width: clamp(44px, 4.5vw, 72px);
+    height: clamp(44px, 4.5vw, 72px);
     cursor: pointer;
     z-index: 10;
 }
@@ -150,7 +150,7 @@
     align-items: center;
     justify-content: center;
     width: 70%;
-    height: 2.8vw;
+    height: clamp(28px, 2.8vw, 44px);
     border: solid 2px rgb(2, 2, 40);
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -192,7 +192,7 @@ progress::-webkit-progress-value {
     justify-content: center;
     flex-direction: column;
     width: 7%;
-    height: 2.8vw;
+    height: clamp(28px, 2.8vw, 44px);
     border: solid 2px black;
     cursor: pointer;
     position: relative;
@@ -205,4 +205,15 @@ progress::-webkit-progress-value {
     border-radius: 50%;
     background: black;
     margin-top: 8%;
+}
+
+@media (max-width: 768px) {
+    .audio-modal {
+        left: 12px;
+        right: 12px;
+        top: auto;
+        bottom: 12px;
+        width: auto;
+        border-radius: 14px;
+    }
 }

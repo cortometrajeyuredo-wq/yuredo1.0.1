@@ -1,29 +1,19 @@
 /* SeccionEquipo.module.css */
 .section6 {
-    --verdeSena: #39a900;
-    --azulOscuro: #16142f;
-    --azulMedio: #004b85;
-    --naranja: #ff5d40;
-    --blanco: white;
-
     position: relative;
     width: 100%;
     min-height: 100vh;
     overflow: hidden;
-    background-color: var(--blanco);
     font-family: 'Raleway', sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.bgImage {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+/* bgImage eliminada — sin imagen de fondo */
+
+/* Estrella generadas por JS - enviadas al fondo absoluto */
+.estrellasFondo {
     z-index: 0;
 }
 
@@ -81,11 +71,12 @@
 }
 
 .titleWrapper h3 {
-    font-size: 5.3vw;
+    font-size: clamp(40px, 6vw, 84px);
     font-family: 'Raleway', sans-serif;
     margin-right: 2vw;
-    color: var(--azulOscuro);
+    color: var(--color-fondo-oscuro);
     line-height: 1;
+    font-weight: 900;
 }
 
 /* Slider Region */
@@ -116,7 +107,7 @@
 }
 
 .logoWrapper img {
-    width: 12vw;
+    width: clamp(120px, 12vw, 220px);
 }
 
 .starLeft {
@@ -146,20 +137,19 @@
     position: absolute;
     width: 20vw;
     height: 27vw;
-    /* Aspect ratio roughly 3:4 */
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    /* Default center */
-    transition: all 0.5s ease-in-out;
-    border-radius: 1vw;
-    background-color: rgba(9, 41, 9, 0.1);
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
 
 .memberImg {
@@ -182,22 +172,25 @@
 }
 
 .memberInfo strong {
-    font-size: 1.2vw;
+    font-size: clamp(14px, 1.2vw, 18px);
     color: var(--verdeSena);
     display: block;
 }
 
 .memberInfo p {
-    font-size: 0.9vw;
+    font-size: clamp(12px, 0.9vw, 14px);
     color: var(--azulOscuro);
     margin: 0.2vh 0;
 }
 
-.memberInfo a {
-    font-size: 0.8vw;
+.portafolioPlaceholder {
+    display: inline-block;
+    font-size: clamp(12px, 0.8vw, 14px);
     color: var(--azulMedio);
     text-decoration: none;
     font-weight: bold;
+    opacity: 0.75;
+    cursor: default;
 }
 
 /* States */
@@ -338,7 +331,7 @@
         font-size: 3vw;
     }
 
-    .memberInfo a {
+    .portafolioPlaceholder {
         font-size: 3vw;
     }
 }

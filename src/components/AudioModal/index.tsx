@@ -44,7 +44,7 @@ const AudioModal = () => {
         if (isPlaying) {
             audio.play().catch(() => { });
         }
-    }, [currentTrack]); // eslint-disable-line react-hooks/exhaustive-deps
+    }, [currentTrack, isPlaying]);
 
     /**
      * Manejador de eventos para cerrar el modal presionando la tecla Escape.
@@ -93,9 +93,9 @@ const AudioModal = () => {
                     <div className={styles['player-audio']}>
                         <div className={styles.texto}>
                             <h2>
-                                <a href="#">Cubeo</a>
+                                <span>Cubeo</span>
                                 <strong>/</strong>
-                                <a href="#">Desano</a>
+                                <span>Desano</span>
                             </h2>
                         </div>
                     </div>

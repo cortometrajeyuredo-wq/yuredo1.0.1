@@ -1,33 +1,19 @@
 /* Variables migrads (Reference) */
 .section3 {
-    --gris: #cfe0da;
-    --azulOscuro: #16142f;
-    --azulMedio: #236476;
-    --verdeBiche: #7dad3f;
-    --verdeOscuro: #4a6c2f;
-    --naranja: #ff5d40;
-    --azul: #1f2350;
-    --verdeSena: #00bc00;
-    --blanco: white;
-
     position: relative;
     width: 100%;
     min-height: 100vh;
     overflow: hidden;
-    background-color: var(--azulOscuro);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.bgImage {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+/* bgImage eliminada — sin imagen de fondo */
+
+/* Estrella generadas por JS - enviadas al fondo absoluto */
+.estrellasFondo {
     z-index: 0;
 }
 
@@ -38,7 +24,7 @@
     top: 0;
     left: 0;
     pointer-events: none;
-    z-index: 0;
+    z-index: 1;
 }
 
 .dianas img {
@@ -114,16 +100,21 @@
 }
 
 .videoWrapper {
-    width: 55vw;
-    height: 31vw;
-    /* Aspect ratio approx 16:9 relative to width */
-    max-width: 800px;
-    max-height: 450px;
-    border-radius: 1.5vw;
+    width: min(900px, 60vw);
+    aspect-ratio: 16 / 9;
+    height: auto;
+    border-radius: 32px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    background-color: black;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    background-color: #000;
     z-index: 10;
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.videoWrapper:hover {
+    transform: scale(1.03);
+    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.5);
 }
 
 .videoElement {

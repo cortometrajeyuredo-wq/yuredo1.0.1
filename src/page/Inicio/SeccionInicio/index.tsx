@@ -5,54 +5,57 @@
  */
 
 import styles from './SeccionInicio.module.css';
+import EstrellasFondo from '@/components/EstrellasFondo';
+import VideoConPlay from '@/components/VideoConPlay';
 
 const SeccionInicio = () => {
     return (
         <section className={styles.section1} id="inicio">
-            {/* Fondos */}
-            <img className={styles['fondo-bajo-sect1']} src="/static/img/fondo1.png" alt="" />
+            {/* Animación de estrellas generadas por JS */}
+            <EstrellasFondo cantidad={80} className={styles.estrellasFondo} />
+
+            {/* Decoración: dianas (pointer-events: none) */}
             <div className={styles.dianas}>
                 <img src="/static/img/dianas.svg" alt="" />
             </div>
 
-            {/* Contenedores de Layout */}
-            <div className={styles['contenedor-section1_1']}></div>
-
-            <div className={styles['contenedor-section1_2']}>
+            {/* Zona 1: Logo Yuredo */}
+            <div className={`${styles.zonaLogo} reveal`}>
                 <img src="/static/img/logo-yuredo.webp" alt="Logo Yuredo" />
             </div>
 
-            <div className={styles['contenedor-section1_3']}>
+            {/* Zona 2: Título */}
+            <div className={`${styles.zonaTitulo} reveal reveal-delay-1`}>
                 <h2>El despertar de los Mimiwas</h2>
             </div>
 
-            <div className={styles['contenedor-section1_4']}></div>
+            {/* Zona 3: Video + decoración lateral */}
+            <div className={styles.zonaVideo}>
+                {/* Decoración izquierda (vacía — espacio reservado para responsividad) */}
+                <div className={styles.decorIzquierda} />
 
-            <div className={styles['contenedor-section1_5']}>
-                <div className={styles['contenedor-izquierdo-sect1']}>
-                    {/* Espacio izquierdo */}
+                {/* Video Player con botón play personalizado */}
+                <div className={`${styles.videoWrapper} reveal-scale reveal-delay-2`}>
+                    <VideoConPlay
+                        id="videoPlayer"
+                        src="/static/video/Teaser Yuredo 2024.mp4"
+                    />
                 </div>
 
-                <div className={styles['contenedor-central-sect1']}>
-                    {/* Video Player */}
-                    <video id="videoPlayer" preload="auto" controls>
-                        <source src="/static/video/Teaser Yuredo 2024.mp4" type="video/mp4" />
-                        Tu navegador no soporta el elemento de video.
-                    </video>
-                </div>
-
-                <div className={styles['contenedor-derecho-sect1']}>
-                    <div className={styles['flor-sect1']}>
+                {/* Decoración derecha: flor + estrella */}
+                <div className={styles.decorDerecha}>
+                    <div className={styles.florSect1}>
                         <img src="/static/img/flower-amarilla.png" alt="" />
                     </div>
-                    <div className={styles.star}>
+                    <div className={styles.starDerecha}>
                         <img src="/static/img/star-sect-derecho.svg" alt="" />
                     </div>
                 </div>
             </div>
 
-            <div className={styles['contenedor-section1_6']}>
-                <div className={styles.nebulosa}>
+            {/* Zona 4: Footer — Nebulosa, Logo SENA, Estrella decorativa */}
+            <div className={styles.zonaFooter}>
+                <div className={`${styles.nebulosa} reveal-left`}>
                     <svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 182.82 127.68">
                         <defs>
                             <filter id="outer-glow-1" filterUnits="userSpaceOnUse">
@@ -78,11 +81,11 @@ const SeccionInicio = () => {
                     </svg>
                 </div>
 
-                <div className={styles['logo-sena']}>
+                <div className={`${styles.logoSena} reveal`}>
                     <img src="/static/img/logo-sena.webp" alt="SENA" />
                 </div>
 
-                <div className={styles['star-bottom']}>
+                <div className={styles.starFooter}>
                     <img src="/static/img/star-sect1-bajo.svg" alt="" />
                 </div>
             </div>

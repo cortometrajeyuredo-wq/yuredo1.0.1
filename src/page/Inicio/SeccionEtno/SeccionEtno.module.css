@@ -16,17 +16,9 @@
 
     position: relative;
     width: 100%;
-    /* altura dinámica al contenido */
     min-height: auto;
-    overflow: visible;
-    /* Allows S5 curve to overlap */
-
-    /* Fondo via CSS para no crear espacios fantasma */
-    background-image: url('/static/img/fondo4.png');
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-color: var(--blanco);
+    overflow: hidden;
+    /* Cambiado a hidden para evitar scroll horizontal por dianas */
 
     font-family: 'Noto Sans', sans-serif;
     display: flex;
@@ -48,6 +40,12 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    opacity: 0.8;
+}
+
+/* Estrella generadas por JS - enviadas al fondo absoluto */
+.estrellasFondo {
+    z-index: 0;
 }
 
 /* ----- Contenedor principal ----- */
@@ -83,11 +81,12 @@
 }
 
 .titleWrapper h3 {
-    font-size: 5.3vw;
+    font-size: clamp(40px, 6vw, 84px);
     font-family: "Raleway", sans-serif;
-    color: var(--azulOscuro);
+    color: var(--color-fondo-oscuro);
     margin: 0;
     line-height: 1;
+    font-weight: 900;
 }
 
 /* ----- Grid central: 3 columnas ----- */
@@ -135,10 +134,12 @@
 }
 
 .downloadSection h5 {
-    font-size: 1vw;
+    font-size: clamp(14px, 1.1vw, 18px);
     font-family: "Raleway", sans-serif;
-    color: var(--azulOscuro);
-    margin-top: 0.5vh;
+    color: var(--color-fondo-oscuro);
+    margin-top: 1vh;
+    font-weight: 600;
+    text-transform: uppercase;
 }
 
 .introSection {
@@ -146,7 +147,7 @@
 }
 
 .introSection h5 {
-    font-size: 1.2vw;
+    font-size: clamp(13px, 1.2vw, 16px);
     font-family: "Noto Sans", sans-serif;
     font-weight: 300;
     color: var(--azulOscuro);
@@ -255,14 +256,37 @@
     /* Adapts to text content */
 }
 
-.dynamicText h5 {
-    font-size: 1.3vw;
+.cartillaTitle {
+    font-size: clamp(16px, 1.4vw, 22px);
+    font-family: "Raleway", sans-serif;
+    font-weight: 800;
+    color: var(--color-primario);
+    text-align: left;
+    line-height: 1.2;
+    margin: 0 0 12px 0;
+}
+
+.cartillaDescription {
+    font-size: clamp(13px, 1.15vw, 16px);
     font-family: "Noto Sans", sans-serif;
     font-weight: 300;
     color: var(--azulOscuro);
     text-align: justify;
     line-height: 1.5;
-    margin: 0;
+    margin: 0 0 10px 0;
+}
+
+.cartillaLink {
+    display: inline-block;
+    font-size: clamp(13px, 1.1vw, 16px);
+    font-family: "Raleway", sans-serif;
+    color: var(--azulMedio);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.cartillaLink:hover {
+    text-decoration: underline;
 }
 
 .starRight {
@@ -325,7 +349,9 @@
     }
 
     .introSection h5,
-    .dynamicText h5 {
+    .cartillaTitle,
+    .cartillaDescription,
+    .cartillaLink {
         font-size: 4vw;
     }
 

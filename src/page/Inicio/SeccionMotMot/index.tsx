@@ -2,10 +2,11 @@ import { useState, useEffect, useCallback } from 'react';
 import styles from './SeccionMotMot.module.css';
 import useBloqueoScroll from '@/hooks/useBloqueoScroll';
 import { slidesSemillero, imagenesGaleriaSemillero } from '@/data/semillero';
+import EstrellasFondo from '@/components/EstrellasFondo';
 
 /**
  * @módulo SeccionMotMot
- * @descripción Sección dedicada al Semillero de Investigación Amazonian Mot Mot. 
+ * @descripción Sección dedicada al Semillero de Investigación Amazonian Mot Mot.
  * Incluye un slider informativo y un modal de galería de proyectos.
  * @arquitectura src/page/Inicio/SeccionMotMot/index.tsx
  */
@@ -77,8 +78,10 @@ const SeccionMotMot = () => {
 
     return (
         <section className={styles.section2} id="motmot">
-            {/* Fondo decorativo */}
-            <img src="/static/img/fondo2.png" className={styles.imgFondo} alt="" />
+            {/* Estrellas dinámicas según el JS legacy */}
+            <EstrellasFondo cantidad={60} leftMin={20} leftMax={90} className={styles.estrellasFondo} />
+
+            {/* Decoración: dianas */}
             <div className={styles.dianas}>
                 <img src="/static/img/dianas_sect2.svg" alt="" />
             </div>
@@ -87,7 +90,7 @@ const SeccionMotMot = () => {
             <div className={styles.mainContent}>
 
                 {/* Encabezado: Logo y Títulos */}
-                <div className={styles.headerRegion}>
+                <div className={`${styles.headerRegion} reveal`}>
                     <div className={styles.estrellasHeader}>
                         <img src="/static/img/star-2_1.svg" className={styles.estrella1} alt="" />
                         <img src="/static/img/start-2_2.svg" className={styles.estrella2} alt="" />
@@ -138,7 +141,7 @@ const SeccionMotMot = () => {
                     </div>
 
                     {/* Texto descriptivo */}
-                    <div className={styles.textWrapper}>
+                    <div className={`${styles.textWrapper} reveal-right`}>
                         <h4 dangerouslySetInnerHTML={{ __html: slidesSemillero[indiceActivo].texto }} />
                     </div>
                 </div>

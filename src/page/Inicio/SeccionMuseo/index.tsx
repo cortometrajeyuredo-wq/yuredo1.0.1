@@ -3,6 +3,8 @@ import styles from './SeccionMuseo.module.css';
 import useDeslizadorSimple from '@/hooks/useDeslizadorSimple';
 import useBloqueoScroll from '@/hooks/useBloqueoScroll';
 import { aves, type Ave } from '@/data/aves';
+import EstrellasFondo from '@/components/EstrellasFondo';
+import VideoConPlay from '@/components/VideoConPlay';
 
 /**
  * @módulo SeccionMuseo
@@ -56,6 +58,10 @@ const SeccionMuseo = () => {
 
     return (
         <section className={styles.section5} id="museo">
+            {/* Animación de Estrellas de fondo */}
+            <EstrellasFondo cantidad={50} leftMin={10} leftMax={90} className={styles.estrellasFondo} />
+
+            {/* Decoración central de dianas */}
             <div className={styles.dianas}>
                 <img src="/static/img/dianas5.png" alt="" />
             </div>
@@ -64,7 +70,7 @@ const SeccionMuseo = () => {
             <div className={styles.mainContent}>
 
                 {/* Zona Superior: Logo y Título */}
-                <div className={styles.topRegion}>
+                <div className={`${styles.topRegion} reveal`}>
                     <div className={styles.logoWrapper}>
                         <img src="/static/img/yuredo-white.png" alt="Yuredo" />
                     </div>
@@ -75,22 +81,18 @@ const SeccionMuseo = () => {
                 </div>
 
                 {/* Zona Media: Podcast (Video + Texto) */}
-                <div className={styles.podcastRegion}>
+                <div className={`${styles.podcastRegion} reveal reveal-delay-1`}>
                     <div className={styles.decorativeLeft}>
                         <img src="/static/img/star-sect5-izq.svg" alt="" />
                     </div>
 
                     <div className={styles.podcastContent}>
                         <div className={styles.videoContainer}>
-                            <video
+                            <VideoConPlay
                                 id="videoPlayerMuseo"
-                                preload="auto"
-                                controls
-                                className={styles.videoElement}
-                            >
-                                <source src="/static/video/Colombia Nativa.mp4" type="video/mp4" />
-                                Tu navegador no soporta la reproducción de videos.
-                            </video>
+                                src="/static/video/Colombia Nativa.mp4"
+                                claseVideo={styles.videoElement}
+                            />
                         </div>
                         <div className={styles.podcastText}>
                             <h5>"Cantos y Cuentos del Vaupés" es una serie de podcast que explora la relación entre las aves y las culturas indígenas del Vaupés.</h5>

@@ -1,6 +1,7 @@
 import styles from './SeccionEtno.module.css';
 import useDeslizadorSimple from '@/hooks/useDeslizadorSimple';
 import { cartillasEtno } from '@/data/etno';
+import EstrellasFondo from '@/components/EstrellasFondo';
 
 /**
  * @módulo SeccionEtno
@@ -29,6 +30,9 @@ const SeccionEtno = () => {
 
     return (
         <section className={styles.section4} id="etno">
+            {/* Estrellas dinámicas de fondo */}
+            <EstrellasFondo cantidad={40} leftMin={20} leftMax={90} className={styles.estrellasFondo} />
+
             {/* Fondo via CSS background-image en .section4 */}
             <div className={styles.dianas}>
                 <img src="/static/img/dianas4.svg" alt="" />
@@ -38,7 +42,7 @@ const SeccionEtno = () => {
             <div className={styles.mainContent}>
 
                 {/* Cabecera: Decoración y Título */}
-                <div className={styles.headerRegion}>
+                <div className={`${styles.headerRegion} reveal`}>
                     <img src="/static/img/start-sect4-arriba.svg" className={styles.topDecor} alt="" />
                     <div className={styles.titleWrapper}>
                         <h3>Etno-ornitologia</h3>
@@ -49,7 +53,7 @@ const SeccionEtno = () => {
                 <div className={styles.contentGrid}>
 
                     {/* Columna Izquierda: Descargas e Intro */}
-                    <div className={styles.leftColumn}>
+                    <div className={`${styles.leftColumn} reveal-left`}>
                         <div className={styles.downloadSection}>
                             <a href="https://yuredo.com/Cartillas%20Etno.zip" target="_blank" rel="noopener noreferrer">
                                 <img src="/static/img/btn-mas-svg.svg" alt="Descargar" />
@@ -90,15 +94,11 @@ const SeccionEtno = () => {
                     {/* Columna Derecha: Texto dinámico tipado (sin dangerouslySetInnerHTML) */}
                     <div className={styles.rightColumn}>
                         <div className={styles.dynamicText}>
-                            <h5>
-                                <strong>{cartillaActiva.titulo}</strong>
-                                <br />
-                                <p>{cartillaActiva.descripcion}</p>
-                                <br />
-                                <a href={cartillaActiva.enlace} target="_blank" rel="noopener noreferrer">
-                                    mas...
-                                </a>
-                            </h5>
+                            <h5 className={styles.cartillaTitle}>{cartillaActiva.titulo}</h5>
+                            <p className={styles.cartillaDescription}>{cartillaActiva.descripcion}</p>
+                            <a className={styles.cartillaLink} href={cartillaActiva.enlace} target="_blank" rel="noopener noreferrer">
+                                más...
+                            </a>
                         </div>
                         <img src="/static/img/start4_2.svg" className={styles.starRight} alt="" />
                     </div>

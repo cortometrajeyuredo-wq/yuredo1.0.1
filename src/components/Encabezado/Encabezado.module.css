@@ -22,8 +22,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 3vw;
-    height: 3vw;
+    width: clamp(44px, 3vw, 56px);
+    height: clamp(44px, 3vw, 56px);
 }
 
 .hamburger {
@@ -37,7 +37,7 @@
     border-radius: 3px;
     background-color: var(--verdeSena);
     color: white;
-    font-size: 2vw;
+    font-size: clamp(18px, 2vw, 26px);
     /* Ajustado */
     font-weight: 900;
     transition: background-color 0.3s;
@@ -48,7 +48,7 @@
 }
 
 .hamburger span {
-    font-size: 1.5vw;
+    font-size: clamp(16px, 1.5vw, 22px);
 }
 
 
@@ -67,15 +67,17 @@
 
 /* Left Menu */
 .left-menu {
-    top: 55%;
+    top: 0;
     left: 0;
     background-color: var(--verdeSena);
-    width: 11.60vw;
-    height: 19vw;
-    border-top-right-radius: 1.5vw;
+    width: 13vw;
+    height: auto;
+    padding-bottom: 2vh;
+    border-top-right-radius: 0;
     border-bottom-right-radius: 1.5vw;
     transform: translateX(-100%);
-    /* Oculto por defecto */
+    display: flex;
+    flex-direction: column;
 }
 
 .left-menu.active {
@@ -86,7 +88,8 @@
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 15%;
+    height: 6vw;
+    min-height: 50px;
     position: relative;
 }
 
@@ -94,29 +97,32 @@
     position: absolute;
     top: 10%;
     /* Ajuste visual */
-    font-size: 2vw;
+    font-size: clamp(22px, 2vw, 32px);
     background: none;
     border: none;
     cursor: pointer;
     color: var(--blanco);
     font-weight: bold;
+    z-index: 2010;
 }
 
 .left-menu .close-btn {
     left: 10%;
+    top: 12px;
 }
 
 .cerrar-logo img {
-    width: 2.1vw;
+    width: clamp(22px, 2.1vw, 32px);
     position: absolute;
-    top: 10%;
+    top: 15px;
     right: 15%;
 }
 
 .contendor-menu-left {
     display: flex;
     width: 100%;
-    height: 80%;
+    height: auto;
+    padding: 0 1vw;
     align-items: center;
     justify-content: center;
 }
@@ -128,22 +134,25 @@
 
 .contendor-menu-left ul li {
     text-align: left;
-    padding: 5px;
+    padding: 2px 5px;
 }
 
 .contendor-menu-left ul li a {
     text-decoration: none;
     color: var(--blanco);
-    font-size: 1.1vw;
+    font-size: clamp(14px, 1.4vw, 22px);
     font-family: 'Raleway', sans-serif;
+    font-weight: bold;
 }
 
 .contendor-menu-left ul li p {
-    color: black;
-    margin-top: -3%;
-    text-align: start;
-    font-size: 0.9vw;
-    margin-bottom: 0;
+    color: #16142f;
+    /* Azul oscuro del proyecto */
+    margin-top: -1%;
+    text-align: left;
+    font-size: clamp(11px, 1vw, 15px);
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 0.5vh;
 }
 
 
@@ -157,7 +166,8 @@
     border-top-left-radius: 1.5vw;
     border-bottom-left-radius: 1.5vw;
     transform: translateX(100%);
-    /* Oculto por defecto */
+    display: flex;
+    flex-direction: column;
 }
 
 .right-menu.active {
@@ -175,7 +185,7 @@
 
 .right-menu .close-btn {
     right: 15%;
-    font-size: 3vw;
+    font-size: clamp(28px, 3vw, 42px);
 }
 
 .right-menu .close-btn:hover {
@@ -208,7 +218,7 @@
 .contenedor-menu-right ul li a {
     text-decoration: none;
     color: var(--blanco);
-    font-size: 1.8vw;
+    font-size: clamp(16px, 1.8vw, 22px);
     font-weight: 500;
     font-family: 'Raleway', sans-serif;
 }
@@ -222,6 +232,25 @@
     cursor: pointer;
 }
 
+.audioButton {
+    appearance: none;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    color: var(--blanco);
+    font-size: clamp(16px, 1.8vw, 22px);
+    font-weight: 500;
+    font-family: 'Raleway', sans-serif;
+    cursor: pointer;
+}
+
+.audioButton:hover {
+    color: var(--gris);
+    text-decoration: underline;
+}
+
 .logo-sena-menu {
     display: flex;
     align-items: center;
@@ -230,8 +259,97 @@
 }
 
 .logo-sena-menu img {
-    width: 5.9vw;
-    height: 5.8vw;
+    width: clamp(56px, 5.9vw, 96px);
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .btn-hamburger-container {
+        top: 12px;
+        right: 12px;
+    }
+
+    /* Fullscreen Mobile Overrides */
+    .left-menu {
+        top: 0;
+        bottom: 0;
+        width: 100vw;
+        height: 100vh;
+        max-height: 100vh;
+        border-radius: 0;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .left-menu .close-btn {
+        right: 5%;
+        top: 3%;
+        left: auto;
+        font-size: clamp(32px, 5vw, 42px);
+    }
+
+    .cerrar-logo img {
+        width: clamp(80px, 15vw, 150px);
+        bottom: 5%;
+        left: 5%;
+        top: auto;
+        right: auto;
+    }
+
+    .contendor-menu-left {
+        width: 90%;
+    }
+
+    .contendor-menu-left ul li a {
+        font-size: clamp(18px, 4vw, 24px);
+        font-weight: bold;
+    }
+
+    .contendor-menu-left ul li p {
+        color: #16142f;
+        /* Azul oscuro */
+        font-size: clamp(14px, 3vw, 18px);
+        margin-top: -5px;
+        margin-bottom: 2vh;
+    }
+
+    .right-menu {
+        width: 100vw;
+        border-radius: 0;
+        padding-top: 10vh;
+        align-items: center;
+    }
+
+    .right-menu .close-btn {
+        right: 5%;
+        top: 3%;
+    }
+
+    .contenedor-menu-right {
+        height: auto;
+        padding: 5vh 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contenedor-menu-right ul {
+        gap: 24px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contenedor-menu-right ul li {
+        margin: 0;
+    }
+
+    .logo-sena-menu {
+        padding-bottom: 5vh;
+        height: auto;
+    }
+
+    .logo-sena-menu img {
+        width: clamp(80px, 20vw, 150px);
+    }
 }
 
 /* Logo Yuredo Header (Opcional, si se quiere incluir aquí o se queda en Section 1) */

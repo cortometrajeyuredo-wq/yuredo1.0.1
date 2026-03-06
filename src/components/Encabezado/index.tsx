@@ -4,7 +4,8 @@
  * @arquitectura src/components/Encabezado/index.tsx
  */
 
-import React, { useState } from 'react';
+import { useState, useEffect } from 'react';
+import type { MouseEvent } from 'react';
 import styles from './Encabezado.module.css';
 import useInterfazStore from '@/store/useInterfazStore';
 import useAudioStore from '@/store/useAudioStore';
@@ -23,21 +24,59 @@ const Encabezado = () => {
 
     // --- Acciones de Interfaz ---
     const alternarMenus = () => {
-        setIsMenuIzquierdoOpen(!isMenuIzquierdoOpen);
-        setIsMenuDerechoOpen(!isMenuDerechoOpen);
+        const newState = !isMenuDerechoOpen;
+        setIsMenuDerechoOpen(newState);
+
+        const isMobile = window.innerWidth <= 768;
+        if (!isMobile) {
+            // En vista web, el menú verde (izquierdo) se abre al presionar la hamburguesa
+            setIsMenuIzquierdoOpen(newState);
+        }
     };
 
     const cerrarMenuIzquierdo = () => setIsMenuIzquierdoOpen(false);
     const cerrarMenuDerecho = () => setIsMenuDerechoOpen(false);
+
+    // --- Efectos de Detección del Final de Página (Solo para Móvil) ---
+    useEffect(() => {
+        const handleIntersect = (entries: IntersectionObserverEntry[]) => {
+            const isMobile = window.innerWidth <= 768;
+            if (!isMobile) return;
+
+            // Si el elemento #fin-pagina entra en el viewport y estamos en móvil
+            if (entries[0].isIntersecting) {
+                setIsMenuIzquierdoOpen(true);
+            }
+        };
+
+        const observer = new IntersectionObserver(handleIntersect, {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1 // Se dispara apenas el centinela es visible
+        });
+
+        const sentinel = document.getElementById('fin-pagina');
+        if (sentinel) {
+            observer.observe(sentinel);
+        }
+
+        return () => {
+            if (sentinel) {
+                observer.unobserve(sentinel);
+            }
+            observer.disconnect();
+        };
+    }, []);
 
     /**
      * Realiza un desplazamiento suave hacia la sección seleccionada.
      * @param e Evento de clic
      * @param id ID del elemento destino
      */
-    const scrollHaciaSeccion = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    const scrollHaciaSeccion = (e: MouseEvent<HTMLAnchorElement>, id: string) => {
         e.preventDefault();
         cerrarMenuDerecho();
+        cerrarMenuIzquierdo();
 
         const elemento = document.getElementById(id);
         if (elemento) {
@@ -52,7 +91,12 @@ const Encabezado = () => {
         <header className={styles.headerContainer}>
             {/* Botón Hamburguesa Fijo */}
             <div className={styles['btn-hamburger-container']}>
-                <button className={styles.hamburger} onClick={alternarMenus} aria-label="Abrir menú">
+                <button
+                    className={styles.hamburger}
+                    onClick={alternarMenus}
+                    aria-label="Abrir menú"
+                    aria-expanded={isMenuDerechoOpen}
+                >
                     <span>☰</span>
                 </button>
             </div>
@@ -152,13 +196,13 @@ const Encabezado = () => {
                             </a>
                         </li>
                         <li className={styles['audio-controls']}>
-                            <a
-                                id="openAudioModal"
-                                onClick={(e) => { e.preventDefault(); abrirAudio(); cerrarMenuDerecho(); }}
-                                style={{ cursor: 'pointer' }}
+                            <button
+                                type="button"
+                                className={styles.audioButton}
+                                onClick={() => { abrirAudio(); cerrarMenuDerecho(); cerrarMenuIzquierdo(); }}
                             >
                                 Reproducir
-                            </a>
+                            </button>
                         </li>
                     </ul>
                 </div>
