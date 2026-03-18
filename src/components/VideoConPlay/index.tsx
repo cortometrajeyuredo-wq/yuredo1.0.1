@@ -73,7 +73,7 @@ const VideoConPlay = ({
                     aria-label="Reproducir video"
                 >
                     <img
-                        src="/static/img/Recurso 3.svg"
+                        src="/static/img/globales/play.svg"
                         alt="Play"
                         className={styles.iconoPlay}
                     />

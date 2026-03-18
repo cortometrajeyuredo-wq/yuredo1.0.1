@@ -5,7 +5,7 @@
  * @arquitectura src/page/Inicio/index.tsx
  */
 
-import useScrollReveal from '@/hooks/useScrollReveal';
+import useScrollReveal from '@/hooks/useReveladoScroll';
 
 import SeccionInicio from './SeccionInicio';
 import SeccionMotMot from './SeccionMotMot';

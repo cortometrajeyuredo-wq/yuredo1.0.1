@@ -6,7 +6,7 @@
  */
 
 import { useEffect, useRef } from 'react';
-import useInterfazStore from '@/store/useInterfazStore';
+import useInterfazStore from '@/store/useAlmacenInterfaz';
 
 /** Identificadores de las secciones del DOM que se deben rastrear */
 const SECCIONES_OBSERVADAS = ['inicio', 'motmot', 'yuredo', 'etno', 'museo', 'equipo'];

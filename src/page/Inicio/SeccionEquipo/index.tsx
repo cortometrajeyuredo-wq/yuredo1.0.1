@@ -3,17 +3,7 @@ import useDeslizadorSimple from '@/hooks/useDeslizadorSimple';
 import { equipoYuredo } from '@/data/equipo';
 import EstrellasFondo from '@/components/EstrellasFondo';
 
-/**
- * @módulo SeccionEquipo
- * @descripción Presentación de los integrantes del equipo Yuredo mediante un slider 3D
- * que destaca al miembro central y desplaza lateralmente a los demás.
- * @arquitectura src/page/Inicio/SeccionEquipo/index.tsx
- */
-
 const SeccionEquipo = () => {
-    // --- Lógica del Slider 3D ---
-
-    // El deslizador usa un índice central para determinar quién está en foco.
     const { indice: indiceActivo, siguiente, anterior } = useDeslizadorSimple({
         totalDiapositivas: equipoYuredo.length,
         diapositivasVisibles: 1,
@@ -22,75 +12,91 @@ const SeccionEquipo = () => {
 
     return (
         <section className={styles.section6} id="equipo">
-            {/* Animación de Estrellas de fondo */}
-            <EstrellasFondo cantidad={50} leftMin={10} leftMax={90} className={styles.estrellasFondo} />
+            <EstrellasFondo cantidad={50} className={styles.estrellasFondo} />
 
-            {/* Decoración: dianas */}
             <div className={styles.dianas}>
-                <img src="/static/img/dianas6.svg" alt="" />
+                <img src="/static/img/seccion6_equipo/dianas6.svg" alt="" />
             </div>
 
-            {/* Contenido Principal */}
-            <div className={styles.mainContent}>
+            <div className={styles.palmaAbajo}>
+                <img src="/static/img/seccion6_equipo/palmaResponsiveAbajo.svg" alt="" />
+            </div>
 
-                {/* Zona Superior: Título y Decoración */}
-                <div className={`${styles.titleRegion} reveal`}>
-                    <img className={styles.starTop} src="/static/img/star-sect6-ariba.svg" alt="" />
-                    <div className={styles.titleWrapper}>
+            <div className={styles.palmaIzquierda}>
+                <img src="/static/img/seccion6_equipo/palmaResponsiveIzquierda.svg" alt="" />
+            </div>
+
+            <div className={styles.starTopMobile}>
+                <img src="/static/img/seccion6_equipo/star-sect6-ariba.svg" alt="" />
+            </div>
+
+            <div className={styles.starBottomMobile}>
+                <img src="/static/img/seccion6_equipo/star-sect6-bajo-izd.svg" alt="" />
+            </div>
+
+            <div className={styles.starTopRightMobile}>
+                <img src="/static/img/seccion6_equipo/star-sect6-arriba-der.svg" alt="" />
+            </div>
+
+            <div className={styles.contenedor_section6_1}>
+                {/* Vacío en HTML legacy, pero con img del botón hamburger (omitida para nav en React) */}
+            </div>
+
+            <div className={styles.contenedor_section6_2}>
+                <button className={styles.prevSect6} onClick={anterior}>&#10094;</button>
+
+                <div className={styles.izquierdo}>
+                    <div className={styles.start_sect6}>
+                        <img src="/static/img/seccion6_equipo/star-sect6-bajo-izd.svg" alt="" />
+                    </div>
+                </div>
+
+                <div className={styles.contenedor_slider}>
+                    <div className={styles.slider}>
+                        {equipoYuredo.map((miembro, idx) => {
+                            const total = equipoYuredo.length;
+                            
+                            // Calcular distancia del elemento activo
+                            let diff = idx - indiceActivo;
+                            
+                            // Normalizar la distancia para manejar el bucle infinito circular (loop)
+                            if (diff > total / 2) diff -= total;
+                            else if (diff < -total / 2) diff += total;
+
+                            let clasesPosicion = styles.hiddenRight; // Default
+                            if (diff === 0) clasesPosicion = styles.active;
+                            else if (diff === 1) clasesPosicion = styles.next;
+                            else if (diff === -1) clasesPosicion = styles.prev;
+                            else if (diff < -1) clasesPosicion = styles.hiddenLeft;
+
+                            return (
+                                <div key={miembro.id} className={`${styles.slider_item} ${clasesPosicion}`}>
+                                    <div className={styles.slider_img}>
+                                        <img src={`/static/avatares/${miembro.avatar}`} alt={miembro.nombre} />
+                                    </div>
+                                    <div className={styles.text_slider_img}>
+                                        <strong>{miembro.nombre}</strong>
+                                        <p>{miembro.rol}</p>
+                                        <span style={{ fontSize: '0.9vw', color: 'var(--azulMedio, #236476)', fontWeight: 800 }}>Portafolio</span>
+                                    </div>
+                                </div>
+                            );
+                        })}
+                    </div>
+
+                    <div className={styles.titulo_sect6}>
                         <h3>Equipo</h3>
                     </div>
                 </div>
 
-                {/* Zona Central: Slider 3D del equipo */}
-                <div className={`${styles.sliderRegion} reveal reveal-delay-2`}>
-
-                    {/* Lateral Izquierdo */}
-                    <div className={styles.decorLeft}>
-                        <div className={styles.logoWrapper}>
-                            <img src="/static/img/logo-yuredo.webp" alt="Yuredo Logo" />
-                        </div>
-                        <img className={styles.starLeft} src="/static/img/star-sect6-bajo-izd.svg" alt="" />
+                <div className={styles.derecho}>
+                    <div className={styles.start_derecho_sect6}>
+                        <img src="/static/img/seccion6_equipo/star1.svg" alt="" />
                     </div>
-
-                    {/* Central: Slider 3D */}
-                    <div className={styles.sliderCentral}>
-                        <button className={styles.navPrev} onClick={anterior}>&#10094;</button>
-
-                        <div className={styles.sliderTrack3D}>
-                            {equipoYuredo.map((miembro, idx) => {
-                                const total = equipoYuredo.length;
-                                const idxAnterior = (indiceActivo - 1 + total) % total;
-                                const idxSiguiente = (indiceActivo + 1) % total;
-
-                                let clasesPosicion = styles.hidden;
-                                if (idx === indiceActivo) clasesPosicion = styles.active;
-                                else if (idx === idxAnterior) clasesPosicion = styles.prev;
-                                else if (idx === idxSiguiente) clasesPosicion = styles.next;
-
-                                return (
-                                    <div key={miembro.id} className={`${styles.sliderItem} ${clasesPosicion}`}>
-                                        <div className={styles.memberImg}>
-                                            <img src={`/static/avatares/${miembro.avatar}`} alt={miembro.nombre} />
-                                        </div>
-                                        <div className={styles.memberInfo}>
-                                            <strong>{miembro.nombre}</strong>
-                                            <p>{miembro.rol}</p>
-                                            <span className={styles.portafolioPlaceholder}>Portafolio</span>
-                                        </div>
-                                    </div>
-                                );
-                            })}
-                        </div>
-
-                        <button className={styles.navNext} onClick={siguiente}>&#10095;</button>
-                    </div>
-
-                    {/* Lateral Derecho */}
-                    <div className={styles.decorRight}>
-                        <img className={styles.starRight} src="/static/img/star1.svg" alt="" />
-                    </div>
-
+                    <div className={styles.vacio_derecho_sect6}></div>
                 </div>
+
+                <button className={styles.nextSect6} onClick={siguiente}>&#10095;</button>
             </div>
         </section>
     );

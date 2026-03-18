@@ -6,7 +6,7 @@
 
 import { useEffect, useRef, useCallback } from 'react';
 import styles from './AudioModal.module.css';
-import useAudioStore from '@/store/useAudioStore';
+import useAudioStore from '@/store/useAlmacenAudio';
 import useBloqueoScroll from '@/hooks/useBloqueoScroll';
 
 const AudioModal = () => {

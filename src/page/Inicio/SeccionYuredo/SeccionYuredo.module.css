@@ -1,18 +1,19 @@
-/* Variables migrads (Reference) */
+/* SeccionYuredo.module.css */
+/* Layout Legacy Original - Posicionamiento Absoluto Estricto */
+
 .section3 {
     position: relative;
     width: 100%;
-    min-height: 100vh;
+    height: 56.19vw;
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    margin: -2px 0 0 0;
+    padding: 0;
+    background-image: url('/static/img/seccion3_yuredo/fondo3.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-/* bgImage eliminada — sin imagen de fondo */
-
-/* Estrella generadas por JS - enviadas al fondo absoluto */
 .estrellasFondo {
     z-index: 0;
 }
@@ -21,178 +22,294 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    top: 0;
+    z-index: -5;
+    top: 3%;
     left: 0;
     pointer-events: none;
-    z-index: 1;
 }
 
 .dianas img {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
 }
 
-/* Main Flex Overlay */
-.mainContent {
-    position: relative;
+/* Contenedores base del Legacy */
+.contenedor_section3_1,
+.contenedor_section3_2,
+.contenedor_section3_3 {
     width: 100%;
-    height: 100%;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    /* Upper, Video, Bottom */
+    position: absolute;
     z-index: 1;
-    padding: 2vh 0;
 }
 
-/* Upper Region (Stars) */
-.upperDecor {
-    width: 100%;
-    height: 15vh;
-    position: relative;
+/* --- Zona 1: Estrellas Superiores --- */
+.contenedor_section3_1 {
+    top: 0;
+    height: 20%;
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+}
+
+.estrellas3_1,
+.estrellas3_2 {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    position: relative;
     pointer-events: none;
 }
 
-.starTopLeft {
-    width: 35vw;
-    position: absolute;
-    top: -5vh;
-    left: 5vw;
+.estrellas3_1 img {
+    width: 85vw;
+    margin-left: 35%;
 }
 
-.starTopRight {
-    width: 30vw;
-    position: absolute;
-    top: -5vh;
-    right: 5vw;
+.estrellas3_2 img {
+    margin-left: 45%;
 }
 
-/* Middle Region (Video) */
-.videoRegion {
-    flex: 1;
+/* --- Zona 2: Video, Flor y Colibrí --- */
+.contenedor_section3_2 {
+    top: 15%;
+    height: 65%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    position: relative;
-    width: 100%;
-    gap: 2vw;
 }
 
-.decorLeft,
-.decorRight {
-    width: 15vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.decorLeft img {
-    width: 12vw;
-}
-
-.decorRight img {
-    width: 14vw;
-}
-
-.videoWrapper {
-    width: min(900px, 60vw);
-    aspect-ratio: 16 / 9;
-    height: auto;
-    border-radius: 32px;
-    overflow: hidden;
-    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
-    background-color: #000;
-    z-index: 10;
-    border: 3px solid rgba(255, 255, 255, 0.1);
-    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.videoWrapper:hover {
-    transform: scale(1.03);
-    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.5);
-}
-
-.videoElement {
+/* centro ahora ocupa todo el ancho disponible para centrar el wrapper */
+.centro {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    cursor: pointer;
-}
-
-/* Bottom Region (Controls) */
-.bottomControl {
-    width: 100%;
-    height: 15vh;
     display: flex;
-    justify-content: center;
     align-items: center;
-    position: relative;
+    justify-content: center;
 }
 
-.btnContainer {
-    z-index: 20;
+/* videoWrapper: ancla relativa para flor y colibrí Y marco visual del video */
+.videoWrapper {
+    position: relative;
+    width: 55vw;
+    height: 31vw;
+    overflow: visible; /* visible para que flor/colibrí sobresalgan */
+}
+
+/* El video en sí ocupa todo el wrapper */
+.videoYoutube {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Solo esquinas redondeadas y sombra profunda */
+    border-radius: 2.5vw;
+    overflow: hidden;
+    border: none;
+    transition: box-shadow 0.5s ease;
+}
+
+/* Solo dimensiones para que el componente interno llene el contenedor */
+.videoYoutube :global(.contenedorVideo),
+.videoYoutube :global(.contenedorVideo) video {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 0 !important; /* el radio lo aplica .videoYoutube */
+    background-color: black;
+    object-fit: cover;
+    display: block;
+}
+
+/* Flor: esquina superior-izquierda, superpuesta sobre el video */
+.florCorner {
+    position: absolute;
+    width: 16vw;
+    height: auto;
+    top: -6vw;
+    left: -6vw;
+    z-index: 10;
+    filter: drop-shadow(2px 4px 8px rgba(0, 0, 0, 0.3));
     transition: transform 0.3s ease;
 }
 
-.btnContainer:hover {
+.florCorner:hover {
     transform: scale(1.1);
 }
 
-.btnContainer img {
-    width: 4vw;
-    min-width: 50px;
+/* Colibrí: esquina superior-derecha, superpuesto sobre el video */
+.colibriCorner {
+    position: absolute;
+    width: 17vw;
+    height: auto;
+    top: -7vw;
+    right: -10vw;
+    z-index: 10;
+    filter: drop-shadow(2px 4px 8px rgba(0, 0, 0, 0.3));
+    transition: transform 0.3s ease;
+}
+
+.colibriCorner:hover {
+    transform: scale(1.1);
+}
+
+
+/* --- Zona 3: Inferior (Estrellas + Botón) --- */
+.contenedor_section3_3 {
+    top: 80%;
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+}
+
+.contenedor_logo_yuredo {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.estrellas_izq {
+    position: absolute;
+    width: 45vw;
+    height: auto;
+    left: 2%;
+    top: -30%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.boton_saber_mas {
+    position: relative;
+    width: 20%;
+    height: 100%;
+    display: flex;
+}
+
+.boton_saber_mas a img {
+    position: relative;
+    display: flex;
+    width: 4.5vw;
+    height: auto;
     cursor: pointer;
+    z-index: 20;
+    margin-top: -110%;
+    margin-left: 20%;
+    transition: transform 0.3s ease;
 }
 
-.starBottomLeft {
+.boton_saber_mas a img:hover {
+    transform: scale(1.15) rotate(5deg);
+}
+
+.estrellas_der {
     position: absolute;
-    left: 20%;
-    bottom: 20%;
-    width: 20vw;
+    width: 55vw;
+    height: auto;
+    right: -20%;
+    top: -60%;
+    z-index: 1;
     pointer-events: none;
 }
 
-.starBottomLeft img {
-    width: 100%;
-}
-
-.starBottomRight {
-    position: absolute;
-    right: 20%;
-    bottom: 20%;
-    width: 20vw;
-    pointer-events: none;
-}
-
-.starBottomRight img {
-    width: 100%;
-}
-
-/* Mobile Logic */
+/* --- Responsividad (Móvil) --- */
 @media (max-width: 768px) {
-    .videoRegion {
+    .dianas img {
+        content: normal !important;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+    .section3 {
+        height: auto;
+        min-height: 100vh;
+        background-position: center top;
+        background-size: cover;
+        display: flex;
         flex-direction: column;
-        gap: 2vh;
+        align-items: center;
+        padding-bottom: 20vw;
+    }
+
+    /* Reset absolute containers for mobile flow */
+    .contenedor_section3_1,
+    .contenedor_section3_2,
+    .contenedor_section3_3 {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 100%;
+        height: auto;
+    }
+
+    /* Stars Upper */
+    .contenedor_section3_1 {
+        margin-top: 5vh;
+        height: 10vw;
+        pointer-events: none;
+    }
+
+    /* Video and decorations */
+    .contenedor_section3_2 {
+        margin-top: 15vh;
+        height: auto;
     }
 
     .videoWrapper {
-        width: 80vw;
-        height: 45vw;
+        width: 90vw;
+        height: 51vw;
     }
 
-    .decorLeft,
-    .decorRight {
-        display: none;
-        /* Hide side decors on mobile to focus on video */
+    .florCorner {
+        width: 35vw;
+        top: -12vw;
+        left: -8vw;
     }
 
-    .starTopLeft,
-    .starTopRight {
-        width: 45vw;
+    .colibriCorner {
+        width: 38vw;
+        top: -14vw;
+        right: -12vw;
+    }
+
+    /* Bottom Section / Button */
+    .contenedor_section3_3 {
+        margin-top: 10vh;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contenedor_logo_yuredo {
+        width: 100%;
+        display: block;
+    }
+
+    .estrellas_izq {
+        position: absolute;
+        width: 100vw;
+        left: 0;
+        top: -20vw;
+    }
+
+    .boton_saber_mas {
+        width: 100%;
+        justify-content: center;
+        margin-top: 8vh;
+    }
+
+    .boton_saber_mas a img {
+        width: 15vw;
+        margin: 0;
+        position: relative;
+    }
+
+    .estrellas_der {
+        position: absolute;
+        width: 100vw;
+        right: -10%;
+        top: 0;
     }
 }

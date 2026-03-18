@@ -3,24 +3,13 @@ import useDeslizadorSimple from '@/hooks/useDeslizadorSimple';
 import { cartillasEtno } from '@/data/etno';
 import EstrellasFondo from '@/components/EstrellasFondo';
 
-/**
- * @módulo SeccionEtno
- * @descripción Módulo de Etno-Ornitología. Renderiza dinámicamente información de cartillas 
- * utilizando datos tipados y evita el uso de dangerouslySetInnerHTML.
- * @arquitectura src/page/Inicio/SeccionEtno/index.tsx
- */
-
 const SeccionEtno = () => {
-    // --- Lógica de Componente ---
-
-    // El deslizador gestiona la visibilidad de las imágenes representativas y el texto de las cartillas.
     const { indice: indiceActivo, siguiente, anterior } = useDeslizadorSimple({
         totalDiapositivas: cartillasEtno.length,
     });
 
     const cartillaActiva = cartillasEtno[indiceActivo];
 
-    // Imágenes del slider de cartillas (una por cartilla)
     const imagenesSlider = [
         '/static/imgTodas/Etno_Ornitologia_02.jpg',
         '/static/imgTodas/Etno_Ornitologia_03.jpg',
@@ -30,79 +19,100 @@ const SeccionEtno = () => {
 
     return (
         <section className={styles.section4} id="etno">
-            {/* Estrellas dinámicas de fondo */}
             <EstrellasFondo cantidad={40} leftMin={20} leftMax={90} className={styles.estrellasFondo} />
 
-            {/* Fondo via CSS background-image en .section4 */}
             <div className={styles.dianas}>
-                <img src="/static/img/dianas4.svg" alt="" />
+                <img src="/static/img/seccion4_etno/dianas4.svg" alt="" />
             </div>
 
-            {/* Contenido Principal */}
-            <div className={styles.mainContent}>
+            <div className={styles.contenedor_section4_1}>
+                <div className={styles.start_sect4_arriba}>
+                    <img src="/static/img/seccion4_etno/start-sect4-arriba.svg" alt="" />
+                </div>
+                <div className={styles.start_sect4_arriba}>
+                    <img src="/static/img/seccion4_etno/start-sect4-arriba.svg" alt="" />
+                </div>
+            </div>
 
-                {/* Cabecera: Decoración y Título */}
-                <div className={`${styles.headerRegion} reveal`}>
-                    <img src="/static/img/start-sect4-arriba.svg" className={styles.topDecor} alt="" />
-                    <div className={styles.titleWrapper}>
-                        <h3>Etno-ornitologia</h3>
+            <div className={styles.contenedor_section4_2}>
+              {  <div className={styles.yuredo_logo_black}>
+                    {/* Placeholder para yuredo-logo-black.png si fuera necesario */}
+                </div>}
+                <div className={styles.titulo_sect4}>
+                    <h3>Etno-ornitologia</h3>
+                </div>
+            </div>
+
+            <div className={styles.contenedor_section4_3}>
+                <div className={styles.uno}>
+                    <div className={styles.uno1}>
+                        <a href="https://yuredo.com/Cartillas%20Etno.zip" target="_blank" rel="noopener noreferrer">
+                            <img src="/static/img/globales/btn-mas-svg.svg" alt="Descarga" />
+                        </a>
+                        <h5>Descarga los libros aquí...</h5>
                     </div>
+                    <div className={styles.uno2}></div>
                 </div>
 
-                {/* Contenido Central: 3 Columnas */}
-                <div className={styles.contentGrid}>
-
-                    {/* Columna Izquierda: Descargas e Intro */}
-                    <div className={`${styles.leftColumn} reveal-left`}>
-                        <div className={styles.downloadSection}>
-                            <a href="https://yuredo.com/Cartillas%20Etno.zip" target="_blank" rel="noopener noreferrer">
-                                <img src="/static/img/btn-mas-svg.svg" alt="Descargar" />
-                                <h5>descarga los libros aqui.</h5>
-                            </a>
-                        </div>
-                        <div className={styles.introSection}>
+                <div className={styles.dos}>
+                    <div className={styles.dos1}></div>
+                    <div className={styles.dos2}></div>
+                    <div className={styles.dos3}>
+                        <div className={styles.texto}>
                             <h5>
                                 <b>Etno-Ornitología</b> <br />
                                 La Etno-Ornitología conecta el saber indígena con la investigación científica. En el
                                 Vaupés, las aves no son solo fauna, sino parte esencial de la vida cultural y
-                                espiritual.
+                                espiritual. Nuestro trabajo recupera este conocimiento y lo documenta, generando
+                                productos como guías, protocolos y eventos para su difusión.
                             </h5>
                         </div>
-                        <img src="/static/img/star4_1.svg" className={styles.starLeft} alt="" />
                     </div>
+                    <div className={styles.dos4}>
+                        <img src="/static/img/seccion4_etno/star4_1.svg" alt="" />
+                    </div>
+                </div>
 
-                    {/* Columna Central: Slider de imágenes */}
-                    <div className={styles.centerColumn}>
-                        <div className={styles.sliderWrapper}>
-                            <div
-                                className={styles.sliderTrack}
-                                style={{ transform: `translateX(-${indiceActivo * 100}%)` }}
-                            >
-                                {imagenesSlider.map((src, idx) => (
-                                    <div key={idx} className={styles.slide}>
+                <div className={styles.sect4_tres}>
+                    <div className={styles.sect4_tres_slider}>
+                        <div
+                            className={styles.sliderTrack}
+                            style={{
+                                display: 'flex',
+                                transition: 'transform 0.4s ease',
+                                transform: `translateX(-${indiceActivo * (100 / imagenesSlider.length)}%)`,
+                                width: `${imagenesSlider.length * 100}%`,
+                                height: '100%'
+                            }}
+                        >
+                            {imagenesSlider.map((src, idx) => (
+                                <div key={idx} className={styles.sect4_slide} style={{ width: `${100 / imagenesSlider.length}%` }}>
+                                    <div className={styles.sect4_item}>
                                         <img src={src} alt={`Slide ${idx + 1}`} />
                                     </div>
-                                ))}
-                            </div>
-
-                            <button className={styles.prevBtn} onClick={anterior}>&#10094;</button>
-                            <button className={styles.nextBtn} onClick={siguiente}>&#10095;</button>
+                                </div>
+                            ))}
                         </div>
-                        <img src="/static/img/start4.svg" className={styles.starSlider} alt="" />
                     </div>
+                    <div className={styles.star_sect4_centro}>
+                        <img src="/static/img/seccion4_etno/start4.svg" alt="" />
+                    </div>
+                    <button className={styles.sect4_prev} onClick={anterior}>&#10094;</button>
+                    <button className={styles.sect4_next} onClick={siguiente}>&#10095;</button>
+                </div>
 
-                    {/* Columna Derecha: Texto dinámico tipado (sin dangerouslySetInnerHTML) */}
-                    <div className={styles.rightColumn}>
-                        <div className={styles.dynamicText}>
-                            <h5 className={styles.cartillaTitle}>{cartillaActiva.titulo}</h5>
-                            <p className={styles.cartillaDescription}>{cartillaActiva.descripcion}</p>
-                            <a className={styles.cartillaLink} href={cartillaActiva.enlace} target="_blank" rel="noopener noreferrer">
-                                más...
+                <div className={styles.cuatro}>
+                    <div className={styles.sect4_txt}>
+                        <h5>
+                            <b>{cartillaActiva.titulo}:</b> {cartillaActiva.descripcion}{' '}
+                            <a href={cartillaActiva.enlace} target="_blank" rel="noopener noreferrer" className={styles.enlaceMas}>
+                                Más....
                             </a>
-                        </div>
-                        <img src="/static/img/start4_2.svg" className={styles.starRight} alt="" />
+                        </h5>
                     </div>
-
+                    <div className={styles.estrellas}>
+                        <img src="/static/img/seccion4_etno/start4_2.svg" alt="" />
+                    </div>
                 </div>
             </div>
         </section>

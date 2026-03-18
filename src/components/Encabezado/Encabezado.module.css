@@ -58,7 +58,7 @@
     top: 0;
     z-index: 2000;
     /* Mayor que el botón */
-    overflow-y: auto;
+    overflow: hidden; /* Removed scrollbar */
     transition: transform 0.3s ease-in-out;
     display: flex;
     /* Cambiado de 'display: none' para usar transform/visibilidad controlada por React si se desea, o 'display:flex' condicional */
@@ -88,9 +88,10 @@
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 6vw;
-    min-height: 50px;
+    height: 3vw; /* Compacted height for Desktop */
+    min-height: 40px;
     position: relative;
+    margin-bottom: 10px; /* Space before the list starts */
 }
 
 .close-btn {
@@ -108,13 +109,13 @@
 
 .left-menu .close-btn {
     left: 10%;
-    top: 12px;
+    top: 5px; /* Moved up */
 }
 
 .cerrar-logo img {
     width: clamp(22px, 2.1vw, 32px);
     position: absolute;
-    top: 15px;
+    top: 8px; /* Moved up */
     right: 15%;
 }
 
@@ -123,8 +124,8 @@
     width: 100%;
     height: auto;
     padding: 0 1vw;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start; /* Alignment to the top */
+    justify-content: flex-start;
 }
 
 .contendor-menu-left ul {
@@ -143,16 +144,24 @@
     font-size: clamp(14px, 1.4vw, 22px);
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
+    display: block; /* Full width */
+    padding: 2px 10px; /* Ultra-compact padding for Desktop */
+    border-radius: 8px;
+    transition: background-color 0.2s;
 }
 
-.contendor-menu-left ul li p {
-    color: #16142f;
-    /* Azul oscuro del proyecto */
-    margin-top: -1%;
+.contendor-menu-left ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.contendor-menu-left ul li a p {
+    color: #16142f; /* Azul oscuro del proyecto */
+    margin-top: -2px;
     text-align: left;
     font-size: clamp(11px, 1vw, 15px);
     font-family: 'Raleway', sans-serif;
-    margin-bottom: 0.5vh;
+    margin-bottom: 2px;
+    pointer-events: none;
 }
 
 
@@ -211,8 +220,9 @@
 }
 
 .contenedor-menu-right ul li {
-    margin-top: 12%;
-    margin-right: 15%;
+    margin-top: 4%; /* Drastically reduced to prevent overlap */
+    margin-right: 5%; /* Adjusted for better alignment */
+    padding: 0;
 }
 
 .contenedor-menu-right ul li a {
@@ -221,11 +231,18 @@
     font-size: clamp(16px, 1.8vw, 22px);
     font-weight: 500;
     font-family: 'Raleway', sans-serif;
+    display: block;
+    width: 100%; /* Full area */
+    padding: 8px 15% 8px 15%; /* Compacted vertical padding */
+    transition: background-color 0.2s, color 0.2s;
+    box-sizing: border-box;
 }
 
-.contenedor-menu-right ul li a:hover {
+.contenedor-menu-right ul li a:hover,
+.contenedor-menu-right ul li a.active {
+    background-color: rgba(255, 255, 255, 0.1);
     color: var(--gris);
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .audio-controls a {
@@ -236,7 +253,7 @@
     appearance: none;
     background: none;
     border: none;
-    padding: 0;
+    padding: 8px 15% 8px 15%; /* Matches anchor padding */
     margin: 0;
     text-decoration: none;
     color: var(--blanco);
@@ -244,11 +261,16 @@
     font-weight: 500;
     font-family: 'Raleway', sans-serif;
     cursor: pointer;
+    width: 100%;
+    text-align: right;
+    transition: background-color 0.2s, color 0.2s;
+    box-sizing: border-box;
 }
 
 .audioButton:hover {
+    background-color: rgba(255, 255, 255, 0.1);
     color: var(--gris);
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .logo-sena-menu {

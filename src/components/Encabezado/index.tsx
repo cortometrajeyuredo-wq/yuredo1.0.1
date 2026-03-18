@@ -7,8 +7,10 @@
 import { useState, useEffect } from 'react';
 import type { MouseEvent } from 'react';
 import styles from './Encabezado.module.css';
-import useInterfazStore from '@/store/useInterfazStore';
-import useAudioStore from '@/store/useAudioStore';
+import useInterfazStore from '@/store/useAlmacenInterfaz';
+import type { InterfazState } from '@/store/useAlmacenInterfaz';
+import useAudioStore from '@/store/useAlmacenAudio';
+import type { AudioState } from '@/store/useAlmacenAudio';
 
 const Encabezado = () => {
     // --- Estado Local ---
@@ -18,9 +20,9 @@ const Encabezado = () => {
 
     // --- Estado Global (Zustand) ---
     // Sección activa detectada por el ScrollSpy
-    const seccionActiva = useInterfazStore((state) => state.seccionActiva);
+    const seccionActiva = useInterfazStore((state: InterfazState) => state.seccionActiva);
     // Función para abrir el modal del reproductor de audio
-    const abrirAudio = useAudioStore((state) => state.openAudio);
+    const abrirAudio = useAudioStore((state: AudioState) => state.openAudio);
 
     // --- Acciones de Interfaz ---
     const alternarMenus = () => {
@@ -105,30 +107,40 @@ const Encabezado = () => {
             <div className={`${styles['vertical-menu']} ${styles['left-menu']} ${isMenuIzquierdoOpen ? styles.active : ''}`}>
                 <div className={styles['cerrar-logo']}>
                     <button className={styles['close-btn']} onClick={cerrarMenuIzquierdo}>&times;</button>
-                    <img src="/static/img/logo-sena.webp" alt="Logo SENA" />
+                    <img src="/static/img/globales/logo-sena.webp" alt="Logo SENA" />
                 </div>
                 <div className={styles['contendor-menu-left']}>
                     <ul>
                         <li><a href="https://www.sena.edu.co/es-co/Paginas/default.aspx" target="_blank" rel="noopener noreferrer">SENA</a></li>
                         <li>
-                            <a href="https://senavaupes.blogspot.com/" target="_blank" rel="noopener noreferrer">JIRIJIRIMO</a>
-                            <p>Vaupés</p>
+                            <a href="https://senavaupes.blogspot.com/" target="_blank" rel="noopener noreferrer">
+                                JIRIJIRIMO
+                                <p>Vaupés</p>
+                            </a>
                         </li>
                         <li>
-                            <a href="https://comunicaciongraficasena.blogspot.com/" target="_blank" rel="noopener noreferrer">CENIGRAF</a>
-                            <p>Bogotá</p>
+                            <a href="https://comunicaciongraficasena.blogspot.com/" target="_blank" rel="noopener noreferrer">
+                                CENIGRAF
+                                <p>Bogotá</p>
+                            </a>
                         </li>
                         <li>
-                            <a href="https://actividadfisicaycultura.blogspot.com/" target="_blank" rel="noopener noreferrer">CEFAFC</a>
-                            <p>Bogotá</p>
+                            <a href="https://actividadfisicaycultura.blogspot.com/" target="_blank" rel="noopener noreferrer">
+                                CEFAFC
+                                <p>Bogotá</p>
+                            </a>
                         </li>
                         <li>
-                            <a href="https://mercadoslogisticaytecnologia.blogspot.com/" target="_blank" rel="noopener noreferrer">CGMLTI</a>
-                            <p>Bogotá</p>
+                            <a href="https://mercadoslogisticaytecnologia.blogspot.com/" target="_blank" rel="noopener noreferrer">
+                                CGMLTI
+                                <p>Bogotá</p>
+                            </a>
                         </li>
                         <li>
-                            <a href="https://www.sena.edu.co/es-co/formacion/Paginas/tecnoparques.aspx" target="_blank" rel="noopener noreferrer">TECNOPARQUE</a>
-                            <p>Bogotá</p>
+                            <a href="https://www.sena.edu.co/es-co/formacion/Paginas/tecnoparques.aspx" target="_blank" rel="noopener noreferrer">
+                                TECNOPARQUE
+                                <p>Bogotá</p>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -207,7 +219,7 @@ const Encabezado = () => {
                     </ul>
                 </div>
                 <div className={styles['logo-sena-menu']}>
-                    <img src="/static/img/logo-sena.webp" alt="Logo SENA" />
+                    <img src="/static/img/globales/logo-sena.webp" alt="Logo SENA" />
                 </div>
             </div>
         </header>

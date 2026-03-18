@@ -1,18 +1,17 @@
+/* SeccionMotMot.module.css */
+/* Layout Legacy Original - Posicionamiento Absoluto Estricto */
+
 .section2 {
     position: relative;
     width: 100%;
-    min-height: 100vh;
+    height: 56.57vw;
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    margin: 0;
+    margin: -2px 0 0 0;
     padding: 0;
-}
-
-/* imgFondo eliminada — sin imagen de fondo */
-
-.estrellasFondo {
-    z-index: 0;
+    background-image: url('/static/img/seccion2_motmot/fondo2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .dianas {
@@ -20,383 +19,582 @@
     width: 100%;
     height: 100%;
     z-index: -3;
+    top: 1%;
+    left: 0;
     pointer-events: none;
 }
 
 .dianas img {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
-    position: relative;
-    top: -3%;
 }
 
-/* Main Content — flujo normal, dicta la altura de .section2 */
-.mainContent {
-    position: relative;
+.estrellasFondo {
+    z-index: 0;
+}
+
+/* Contenedores base del Legacy */
+.contenedor_section2_1,
+.contenedor_section2_2,
+.contenedor_section2_3,
+.contenedor_section2_4,
+.contenedor_section2_5 {
     width: 100%;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    position: absolute;
     z-index: 1;
-    padding: 4vh 0;
 }
 
-.mainContent>* {
-    pointer-events: auto;
-}
-
-/* Header Region */
-.headerRegion {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    margin-bottom: 2vh;
-}
-
-/* Decoraciones del Título */
-.estrellasHeader {
+/* --- Zona 1: Logo y Estrellas --- */
+.contenedor_section2_1 {
+    top: 0;
+    height: 15%;
     display: flex;
     flex-direction: row;
-    gap: 3vw;
-    justify-content: space-between;
-    width: 80%;
-    max-width: 400px;
-    margin-bottom: -1vh;
+    z-index: 0;
 }
 
-.estrella1 {
-    width: clamp(18px, 4vw, 44px);
-    height: auto;
+.contenedor_section2_1 .logo {
+    width: 20%;
+    height: 100%;
+    z-index: 0;
 }
 
-.estrella2 {
-    width: clamp(22px, 5vw, 52px);
-    height: auto;
-    margin-top: -2vw;
+.contenedor_section2_1 .logo img {
+    width: 20.3vw;
+    height: 5.1vw;
+    margin-top: 3vw;
+    margin-left: 3vw;
+    z-index: 0;
 }
 
-.estrella3 {
-    width: min(520px, 38vw);
-    position: absolute;
-    top: -15%;
-    left: 65%;
+.estrella2_1,
+.estrella2_2,
+.estrella2_3 {
+    display: flex;
+    width: 20%;
+    height: 100%;
+    z-index: 0;
 }
 
-.titlesContainer {
-    text-align: center;
-    position: relative;
+.estrella2_1 img {
+    width: 42vw;
+    height: 18vw;
+    margin-top: -10%;
+    z-index: 0;
+}
+
+.estrella2_2 img {
+    width: 18vw;
+    height: 10vw;
+    margin-top: -15%;
+    margin-left: 55%;
+    z-index: 0;
+}
+
+.estrella2_3 img {
+    width: 38vw;
+    height: 15vw;
+    margin-top: -15%;
+    margin-left: 65%;
+    z-index: 0;
+}
+/* --- Zona 2: Título Principal --- */
+.contenedor_section2_2 {
+    top: 20%;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
+}
+
+.contenedor_section2_2 h3 {
+    font-size: 4.8vw;
+    font-family: 'Raleway', sans-serif;
+    margin-left: 9.5%;
+    margin-top: -5%;
+    color: #16142f;
+    font-weight: 900;
+    font-style: italic; /* Sincronizado con Museo, Etno y Equipo */
+    text-transform: none;
+    letter-spacing: normal;
+    z-index: -1;
+}
+
+
+/* --- Zona 3: Subtítulo "Semillero" --- */
+.contenedor_section2_3 {
+    top: 30%;
+    height: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     z-index: 2;
 }
 
-.subtitle {
-    font-size: clamp(18px, 2.5vw, 28px);
-    font-family: 'Raleway', sans-serif;
-    font-weight: 600;
-    color: var(--color-primario);
-    margin: 0;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-}
-
-.title {
-    font-size: clamp(40px, 6vw, 84px);
-    font-family: 'Raleway', sans-serif;
-    color: var(--color-fondo-oscuro);
+.contenedor_section2_3 h5 {
+    margin-left: 6%;
+    margin-top: -20%;
+    font-size: 2.2vw;
+    font-family: "Raleway", sans-serif;
     font-weight: 900;
-    margin: -0.5vw 0 0 0;
-    line-height: 1;
+    color: #16142f;
+    font-style: italic;
+    text-transform: none;
+    letter-spacing: normal;
+    z-index: -1;
 }
 
-/* Interactive Region */
-.interactiveRegion {
-    width: 100%;
+/* --- Zona 4: Contenido Central (Boton + Slider + Texto) --- */
+.contenedor_section2_4 {
+    top: 30%;
+    height: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    z-index: 2; /* Corregido: era -1, bloqueaba los clicks en los botones */
+}
+
+.sect2_uno {
+    width: 8%;
+    height: 12%;
+    position: relative;
+    left: 0;
+    top: -40%;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+}
+
+.sect2_uno img {
+    position: absolute;
+    right: 0;
+    top: -40%;
+    width: 4vw;
+    height: 3vw;
+    cursor: pointer;
+    z-index: 3;
+    left: 120%;
+    transition: transform 0.3s ease;
+}
+
+.sect2_uno img:hover {
+    transform: scale(1.1);
+}
+
+.contenedor_slider_sect2 {
+    width: 45%;
+    height: 25vw; /* Reducido de 35vw para ajustarse al formato landscape */
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 2vw;
-    padding: 0 5vw;
-    flex-wrap: wrap;
-}
-
-.btnWrapper {
-    flex: 0 0 auto;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.btnWrapper img {
-    width: clamp(44px, 4vw, 64px);
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.btnWrapper img:hover {
-    transform: scale(1.1);
-}
-
-.sliderWrapper {
-    flex: 0 1 min(520px, 45vw);
-    width: min(520px, 45vw);
-    aspect-ratio: 1 / 1;
-    height: auto;
+    margin-left: 12vw; /* Rebalanceado hacia el centro según solicitud */
     position: relative;
+}
+
+.slider_sect2 {
     display: flex;
-    align-items: center;
     justify-content: center;
-}
-
-.textWrapper {
-    flex: 1 1 320px;
-    width: auto;
-    max-width: 520px;
-    text-align: justify;
-}
-
-.textWrapper h4 {
-    font-size: clamp(15px, 1.5vw, 19px);
-    font-family: 'Noto Sans', sans-serif;
-    font-weight: 400;
-    color: var(--color-fondo-oscuro);
-    line-height: 1.6;
-    margin: 0;
-    border-left: 3px solid var(--color-secundario);
-    padding-left: 20px;
-}
-
-/* Slider Structure */
-.slider-container {
+    align-items: center;
     position: relative;
-    width: 100%;
+    width: 83%;
     height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
-.slider-item {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-    border-radius: clamp(10px, 1vw, 16px);
+    margin: auto;
     overflow: hidden;
-    cursor: pointer;
+    top: 0%;
+    left: 0%;
+}
+
+.slider_item_sect2 {
+    position: absolute;
+    text-align: center;
+    flex-direction: column;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease;
+    border-radius: 2.5vw; /* Sincronizado con la curva exterior del modal */
+    width: 33vw;
+    height: 23vw;
+    overflow: hidden;
+    box-shadow: none;
+}
+
+.slider_img {
+    margin-top: 0%;
+    width: 100%;
+    height: 100%;
+    border-radius: 2.5vw; /* Radio prominente idéntico al modal */
+    background-color: #fff; /* Fondo blanco en el contenedor */
+    overflow: hidden; /* Efecto máscara para la imagen */
     display: flex;
     align-items: center;
     justify-content: center;
-    /* Elimino transform-style: preserve-3d */
-    background-color: transparent;
-    /* Asegurar que no haya fondo blanco */
+    text-align: center;
+    cursor: pointer;
 }
 
-
-.slider-item img {
+.slider_img img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    border-radius: 24px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease;
+    object-fit: contain; /* Sincronizado con el modal: sin recortes */
+    z-index: 1;
 }
 
-.slider-item:hover img {
-    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.3);
-}
-
-/* Efectos del Slider 2D (Legacy) */
-/* Efectos del Slider 2D (Single View) */
+/* Efectos Slider Minimalistas Legacy */
 .active {
-    transform: translateX(0) scale(1);
+    transform: translateX(0);
     opacity: 1;
     z-index: 5;
-    /* Sin box-shadow excesivo 3D */
 }
 
 .prev {
-    transform: translateX(-100%) scale(0.8);
+    transform: translateX(-100%);
     opacity: 0;
-    /* Ocultar prev */
     pointer-events: none;
     z-index: 0;
 }
 
 .next {
-    transform: translateX(100%) scale(0.8);
+    transform: translateX(100%);
     opacity: 0;
-    /* Ocultar next */
     pointer-events: none;
     z-index: 0;
 }
 
 .hidden {
-    transform: translateX(200%) scale(0);
+    transform: translateX(200%);
     opacity: 0;
     z-index: 0;
 }
 
-
-.control-prev,
-.control-next {
+.control_prev,
+.control_next {
     position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     background: none;
     border: none;
     color: #16142f;
-    font-size: clamp(28px, 3vw, 44px);
-    font-weight: bold;
+    font-size: 2.8vw;
+    font-weight: 900; /* Más grueso como en SeccionEtno */
+    padding: 10px;
     cursor: pointer;
-    z-index: 10;
-    padding: 8px;
+    z-index: 2000; /* Asegurar que esté al frente */
+    filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.9)); /* Efecto Halo */
+    transition: transform 0.2s;
 }
 
-.control-prev {
-    left: 6px;
+.control_prev { left: -0.5vw; } /* Posicionado al borde exterior para evitar solapamiento */
+.control_next { right: -0.5vw; }
+
+.control_prev:hover,
+.control_next:hover { 
+    color: var(--gris);
+    transform: translateY(-50%) scale(1.1);
 }
 
-.control-next {
-    right: 6px;
+.sect2_texto {
+    width: 23%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin: 2%;
+    position: relative;
+}
+
+.sect2_texto h4 {
+    width: 22vw;
+    position: absolute;
+    font-size: 1.3vw; /* Ajustado para legibilidad */
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #444; /* Sincronizado con el estilo del modal */
+    margin: 0;
+}
+
+.sect2_vacio {
+    width: 17%;
+    height: 100%;
 }
 
 
-
-/* Modal */
-.modal-overlay {
+/* Modal original style recovery */
+.modal_overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.85);
+    background: rgba(0, 0, 0, 0.4); /* Fondo más claro para dejar ver el blur */
+    backdrop-filter: blur(15px); /* Efecto Glassmorphism */
+    -webkit-backdrop-filter: blur(15px);
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: var(--z-modal-capa);
+    z-index: 5000;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.3s ease;
-    backdrop-filter: blur(8px);
+    transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-active {
+.modal_active {
     opacity: 1;
     pointer-events: auto;
 }
 
-.modal-content {
+.modal_content {
     position: relative;
-    width: min(960px, 92vw);
-    height: min(820px, 85vh);
-    background: #fff;
-    border-radius: 20px;
-    padding: 20px;
+    width: min(1000px, 92vw);
+    height: auto;
+    max-height: 90vh;
+    background: rgba(255, 255, 255, 0.98);
+    border-radius: 2.5vw;
+    padding: 2vw;
     display: flex;
     flex-direction: column;
-    z-index: var(--z-modal-contenido);
+    z-index: 5001;
+    transform: scale(0.9) translateY(20px);
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
 }
 
-.close-btn {
+.modal_active .modal_content {
+    transform: scale(1) translateY(0);
+}
+
+.close_btn {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    background: rgba(0, 0, 0, 0.55);
+    top: 1.5vw;
+    right: 1.5vw;
+    background: #16142f;
     border: none;
     color: white;
-    font-size: 35px;
+    font-size: 2vw;
     cursor: pointer;
-    border-radius: 10px;
-    width: 44px;
-    height: 44px;
+    border-radius: 50%;
+    width: 3.5vw;
+    height: 3.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 10;
 }
 
-/* Modal Slider Styles */
-.modal-slider-container {
+.close_btn:hover {
+    background: #ff4757;
+    transform: rotate(90deg);
+}
+
+.modal_slider_container {
     width: 100%;
     height: 100%;
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: center;
-    overflow: hidden;
 }
 
-.modal-slider-item {
-    width: 85%;
-    height: 90%;
-    display: none;
-    /* Por defecto oculto, JS activa */
-    justify-content: center;
-    align-items: center;
-}
-
-.modal-slider-item.active {
+.modal_body {
     display: flex;
-}
-
-.modal-slider-item img {
+    flex-direction: column;
+    gap: 0;
     width: 100%;
-    height: 100%;
-    object-fit: contain;
-    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
 }
 
-.modal-prev,
-.modal-next {
+.modal_image_wrapper {
+    width: 100%;
+    max-height: 80vh;
+    overflow: hidden;
+    border-radius: 1.5vw;
+}
+
+.modal_image {
+    width: 100%;
+    max-height: 80vh;
+    object-fit: contain; /* Asegura que se vea toda la imagen */
+}
+
+/* Modal info removed from CSS as it's no longer in JSX */
+
+.modal_prev, .modal_next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: none;
+    background: #16142f;
     color: white;
     border: none;
-    padding: 10px;
-    font-size: clamp(28px, 2.5vw, 44px);
+    width: 4vw;
+    height: 4vw;
+    border-radius: 50%;
+    font-size: 1.5vw;
     font-weight: bold;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     z-index: 1001;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-.modal-prev {
-    left: 2%;
-}
+.modal_prev { left: -5vw; }
+.modal_next { right: -5vw; }
 
-.modal-next {
-    right: 2%;
-}
-
-
-@media (max-width: 1024px) {
-    .interactiveRegion {
-        flex-direction: column;
-        gap: 18px;
-    }
-
-    .btnWrapper {
-        justify-content: center;
-    }
-
-    .sliderWrapper {
-        width: min(520px, 86vw);
-    }
-
-    .textWrapper {
-        max-width: min(720px, 92vw);
-        text-align: left;
-    }
+.modal_prev:hover, .modal_next:hover {
+    background: #34ace0;
+    transform: translateY(-50%) scale(1.1);
 }
 
 @media (max-width: 768px) {
-    .estrella3 {
-        display: none;
+    .dianas img {
+        content: normal !important;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+    .section2 {
+        height: auto;
+        min-height: 100vh;
+        background-position: center top;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 20vw;
     }
 
-    .control-prev,
-    .control-next {
-        font-size: 40px;
+    /* Reset absolute containers for mobile flow */
+    .contenedor_section2_1,
+    .contenedor_section2_2,
+    .contenedor_section2_3,
+    .contenedor_section2_4,
+    .contenedor_section2_5 {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 100%;
+        height: auto;
+    }
+
+    /* Logo and stars */
+    .contenedor_section2_1 {
+        margin-top: 5vh;
+        justify-content: center;
+    }
+
+    .contenedor_section2_1 .logo img {
+        width: 50vw;
+        height: auto;
+        margin: 0;
+    }
+
+    /* Título */
+    .contenedor_section2_2 {
+        margin-top: 4vh;
+    }
+
+    .contenedor_section2_2 h3 {
+        font-size: 10vw;
+        margin: 0;
+        text-align: center;
+    }
+
+    /* Subtítulo */
+    .contenedor_section2_3 {
+        margin-top: 1vh;
+    }
+
+    .contenedor_section2_3 h5 {
+        font-size: 5vw;
+        margin: 0;
+        text-align: center;
+    }
+
+    /* Content Area (Slider + Text) */
+    .contenedor_section2_4 {
+        flex-direction: column;
+        margin-top: 5vh;
+        gap: 5vh;
+    }
+
+    .contenedor_slider_sect2 {
+        width: 100%;
+        height: 70vw;
+        margin: 0;
+    }
+
+    .slider_item_sect2 {
+        width: 85vw;
+        height: 60vw;
+        border-radius: 4vw;
+    }
+
+    .slider_img {
+        border-radius: 4vw;
+    }
+
+    /* Description Text - MOVED BELOW SLIDER */
+    .sect2_texto {
+        width: 90%;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .sect2_texto h4 {
+        width: 100%;
+        position: relative;
+        font-size: 4.5vw;
+        text-align: center;
+        line-height: 1.5;
+    }
+
+    /* Buttons */
+    .sect2_uno {
+        position: absolute;
+        top: -12vw;
+        left: 5vw;
+        width: 15vw;
+    }
+
+    .sect2_uno img {
+        width: 12vw;
+        height: auto;
+        left: 0;
+        top: 0;
+    }
+
+    .control_prev,
+    .control_next {
+        font-size: 10vw;
+    }
+
+    .control_prev { left: 2vw; }
+    .control_next { right: 2vw; }
+
+    /* Modal Mobile */
+    .modal_content {
+        width: 95vw;
+        padding: 5vw;
+    }
+
+    .modal_prev, .modal_next {
+        width: 12vw;
+        height: 12vw;
+        font-size: 5vw;
+    }
+
+    .modal_prev { left: 2vw; }
+    .modal_next { right: 2vw; }
+
+    .close_btn {
+        width: 10vw;
+        height: 10vw;
+        font-size: 6vw;
     }
 }

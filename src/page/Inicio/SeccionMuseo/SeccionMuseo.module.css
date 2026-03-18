@@ -1,294 +1,310 @@
-/* =====================================================
-   SECCIÓN 5: MUSEO / PODCAST AVES VAUPÉS
-   Layout: Flexbox column, fondo via CSS background
-   Historia: Podcasts + video + colección de aves
-   ===================================================== */
+/* SeccionMuseo.module.css */
+/* Layout Legacy Original - Posicionamiento Absoluto Estricto */
 
 .section5 {
     position: relative;
     width: 100%;
-    min-height: auto;
+    height: 56.26vw;
     overflow: hidden;
-
-    font-family: 'Noto Sans', sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    margin: -2px 0 0 0;
+    padding: 0;
+    background-image: url('/static/img/seccion5_museo/fondo5.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-/* ----- Dianas decorativas absolutas ----- */
+.estrellasFondo {
+    z-index: 0;
+}
+
 .dianas {
     position: absolute;
     width: 100%;
     height: 100%;
+    z-index: -3;
     top: 5vh;
     left: 0;
     pointer-events: none;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1;
-}
-
-/* Estrella generadas por JS - enviadas al fondo absoluto */
-.estrellasFondo {
-    z-index: 0;
 }
 
 .dianas img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* ----- Contenedor principal ----- */
-.mainContent {
-    position: relative;
-    width: 100%;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    padding: 5vh 0 5vh 0;
-    gap: 3vh;
-}
-
-/* ----- Zona Superior: Logo + Título ----- */
-.topRegion {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 5vw;
-}
-
-.logoWrapper {
-    width: 12vw;
-    flex-shrink: 0;
-}
-
-.logoWrapper img {
-    width: 100%;
     height: auto;
-    display: block;
+    object-fit: cover;
 }
 
-.titleWrapper {
-    flex: 1;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-
-.titleWrapper h2 {
-    font-size: clamp(40px, 6vw, 84px);
-    font-family: 'Raleway', sans-serif;
-    color: var(--color-fondo-oscuro);
-    margin: 0;
-    z-index: 2;
-    text-align: center;
-    font-weight: 900;
-}
-
-.starTop {
+/* Contenedores base del Legacy */
+.contenedor_section5_1,
+.contenedor_section5_2,
+.contenedor_section5_3,
+.contenedor_section5_4 {
+    width: 100%;
     position: absolute;
-    width: 50vw;
-    top: -5vh;
-    right: -10vw;
     z-index: 1;
-    pointer-events: none;
 }
 
-/* ----- Zona Media: Podcast (Video + Texto) ----- */
-.podcastRegion {
+/* --- Zona 1: Logo Yuredo y Estrellas --- */
+.contenedor_section5_1 {
+    top: 0;
+    height: 15%;
     display: flex;
-    flex-direction: row;
-    align-items: center;
     justify-content: center;
-    position: relative;
-    width: 100%;
-    padding: 2vh 5vw;
-    gap: 5vw;
 }
 
-.decorativeLeft {
+.contenedor_section5_1 .estrellas_arriba_sect5 {
+    margin-right: -33%;
+    width: 65vw;
+    height: 12vw;
     position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 18%;
     pointer-events: none;
-    z-index: 0;
 }
 
-.decorativeLeft img {
-    width: 100%;
-    margin-left: -40%;
+.yuredo_logo_sect5 {
+    width: 50%;
 }
 
-.podcastContent {
+.yuredo_logo_sect5 img {
+    width: 13.7vw;
+    height: 4vw;
+    position: relative;
+    margin-left: 6%;
+    margin-top: 8%;
+}
+
+.vacio_logo_sect5 {
+    width: 50%;
+}
+
+/* --- Zona 2: Título --- */
+.contenedor_section5_2 {
+    top: 13%;
+    height: 10%;
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: center;
-    width: 80%;
-    gap: 5vw;
-    z-index: 10;
+    flex-direction: row;
 }
 
-.videoContainer {
-    width: 45%;
-    max-width: 560px;
-    aspect-ratio: 16/9;
-    background: black;
-    border-radius: 24px;
-    overflow: hidden;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-    flex-shrink: 0;
-    border: 3px solid rgba(255, 255, 255, 0.1);
-}
-
-.videoElement {
+.texto_sect5 {
     width: 100%;
     height: 100%;
+    display: flex;
+}
+
+.texto_sect5 h2 {
+    margin-top: 1%;
+    font-size: 4.8vw;
+    font-family: 'Raleway', sans-serif;
+    margin-left: 20%;
+    color: #16142f;
+    font-weight: 900;
+    font-style: italic;
+}
+
+/* --- Zona 3: Video y Texto Podcast --- */
+.contenedor_section5_3 {
+    top: 28%;
+    height: 45%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start; /* Alineado a la izquierda */
+    overflow: hidden;
+}
+
+.contenedor_vacio_sect5 {
+    display: none; /* Eliminamos el espacio vacío para usar margin-left directamente en el video */
+}
+
+.contenedor_vacio_sect5 img {
+    margin-top: -60%;
+    height: 35vw;
+    width: 40vw;
+    z-index: 1;
+}
+
+.contenedor_sect5_video {
+    width: 40%;
+    height: 100%;
+    margin-left: 20%; /* Alineado con el inicio del slider (central_sect5_4 left: 20%) */
+    position: relative;
+    border-radius: 2.5vw; /* Sincronizado con Yuredo */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: box-shadow 0.5s ease;
+}
+
+.contenedor_sect5_video :global(.contenedorVideo),
+.contenedor_sect5_video :global(.contenedorVideo) video {
+    width: 35vw;
+    height: 20vw;
+    border-radius: 0 !important; /* El contenedor padre se encarga del redondeo */
+    background: black;
     object-fit: cover;
-    display: block;
+    border: none;
 }
 
-.podcastText {
-    flex: 1;
-    min-width: 0;
+.txt_sect5 {
+    width: 25%;
+    height: 80%;
+    display: flex;
+    align-items: flex-start; /* Subir texto */
+    justify-content: center;
+    padding-left: 2%;
+    margin-top: 2%; /* Ajuste fino para nivelar con el video */
 }
 
-.podcastText h5 {
-    font-size: clamp(14px, 1.4vw, 18px);
-    color: var(--azulOscuro);
-    text-align: justify;
+.txt_sect5 h5 {
+    font-family: "Noto Sans", sans-serif;
     font-weight: 500;
-    line-height: 1.6;
+    font-size: 1.5vw;
+    text-align: justify;
+    padding: 2%;
+    color: #16142f;
     margin: 0;
 }
 
-/* ----- Zona Inferior: Colección de Aves (Swiper) ----- */
-.collectionRegion {
-    width: 100%;
+/* --- Zona 4: Colección Inferior (Aves) --- */
+.contenedor_section5_4 {
+    top: 75%;
+    height: 25%;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
-    position: relative;
-    padding: 2vh 0 4vh 0;
 }
 
-.decorLeftBottom {
+.izquierdo_sect5 {
+    width: 15%;
+    height: 100%;
     position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 14%;
-    display: flex;
-    align-items: flex-end;
-    pointer-events: none;
-    z-index: 0;
-}
-
-.svgDecor {
-    width: 100%;
-    transform: scaleX(-1);
-    opacity: 0.8;
-}
-
-.birdSwiperContainer {
-    width: 80%;
     display: flex;
     align-items: center;
-    justify-content: center;
-    position: relative;
-    z-index: 5;
+    justify-content: flex-start;
+    left: 0%;
 }
 
-.swiperTrackWrapper {
-    flex: 1;
-    overflow: hidden;
-    border-radius: 0.5vw;
+.nebulosa_sect5 {
+    width: 25vw; /* Aumentado para visibilidad */
+    height: auto;
+    position: absolute;
+    top: 15%;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.9;
 }
 
-.swiperTrack {
+.central_sect5_4 {
+    position: absolute;
+    width: 55%; /* Más compacto */
+    height: 100%;
+    left: 20%; /* Centrado relativo a las flechas */
     display: flex;
-    height: 25vh;
-    min-height: 180px;
-    width: 100%;
-    transition: transform 0.5s ease-in-out;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 10;
+    overflow: hidden; /* Corta las imágenes que no caben */
 }
 
-.birdSlide {
-    min-width: 25%;
-    /* 4 items visible at once */
-    height: 100%;
-    padding: 0 0.4vw;
-    box-sizing: border-box;
-    cursor: pointer;
-    transition: transform 0.2s;
-}
-
-.birdSlide:hover {
-    transform: scale(1.05);
-}
-
-.birdSlide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 20px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-    display: block;
-    border: 2px solid transparent;
-    transition: border-color 0.3s ease;
-}
-
-.birdSlide:hover img {
-    border-color: var(--color-secundario);
-}
-
-.swiperPrev,
-.swiperNext {
+.prev_central,
+.next_central { 
+    display: flex;
+    position: absolute;
     background: none;
     border: none;
-    font-size: clamp(28px, 2.5vw, 44px);
-    color: var(--azulOscuro);
+    color: rgb(10, 0, 0);
+    font-size: 3.3vw;
+    font-weight: 900;
     cursor: pointer;
-    padding: 0 1vw;
-    z-index: 20;
-    transition: color 0.2s;
-    flex-shrink: 0;
-}
-
-.swiperPrev:hover,
-.swiperNext:hover {
-    color: var(--verdeBiche);
-}
-
-.spotifyLink {
-    position: absolute;
-    right: 4vw;
-    bottom: 3vh;
-    width: 4.5vw;
-    min-width: 40px;
+    z-index: 50;
     transition: transform 0.2s;
-    z-index: 10;
+    filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.9)); /* Efecto Halo para visibilidad */
 }
 
-.spotifyLink:hover {
+.prev_central:hover,
+.next_central:hover {
+    transform: scale(1.2);
+}
+
+.prev_central { left: 16%; }
+.next_central { right: 21%; }
+
+.slider_circular_container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.bird_slide {
+    flex: 0 0 25%;
+    width: 25%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    cursor: pointer;
+    padding: 0 0.4vw;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s;
+}
+
+.bird_slide:hover img {
+    transform: scale(1.02);
+}
+
+.bird_slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1vw;
+    background-color: rgba(230, 235, 230, 0.9);
+    transition: transform 0.3s ease;
+}
+
+.derecho_sect5 {
+    width: 13%;
+    height: 30%;
+    right: 2%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+}
+
+.derecho_sect5 a {
+    margin-top: 15%;
+    width: 5vw;
+    height: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.derecho_sect5 a .btn_saber {
+    position: absolute;
+    text-align: center;
+    width: 3.3vw;
+    height: 3.3vw;
+    cursor: pointer;
+    z-index: 1;
+    transition: transform 0.3s ease;
+}
+
+.derecho_sect5 .btn_saber:hover {
     transform: scale(1.1);
 }
 
-.spotifyLink img {
-    width: 100%;
-    display: block;
-}
-
-/* ===================== MODAL ===================== */
-.modal-sect5 {
+/* Modal legacy exactly as it is */
+.modal_sect5 {
     display: none;
     position: fixed;
     z-index: 9999;
@@ -304,11 +320,11 @@
     align-items: center;
 }
 
-.modal-sect5.active {
+.modal_sect5.active {
     display: flex;
 }
 
-.modal-content-sect5 {
+.modal_content_sect5 {
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
@@ -318,20 +334,18 @@
     z-index: 10000;
 }
 
-.close-modal-sect5 {
+.close_modal_sect5 {
     position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
     top: 20px;
     right: 15px;
-    font-size: clamp(22px, 2.5vw, 44px);
+    font-size: 2vw;
     border-radius: 50%;
     width: 2.5vw;
     height: 2.5vw;
-    min-width: 32px;
-    min-height: 32px;
-    background-color: var(--verdeBiche);
+    background-color: #00bc00;
     font-weight: bold;
     color: white;
     cursor: pointer;
@@ -346,7 +360,6 @@
     z-index: 30;
 }
 
-/* ----- Modal Item & Content ----- */
 .item {
     width: 100%;
     height: 100%;
@@ -368,33 +381,14 @@
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 24px;
     padding: 2.5vw;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
 }
 
-.title {
-    font-size: 4vw;
-    font-weight: bold;
-    font-family: 'Raleway', sans-serif;
-    margin-bottom: 5px;
-}
-
-.topic {
-    font-size: 2vw;
-    color: var(--verdeBiche);
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.des {
-    font-size: 1.2vw;
-    line-height: 1.6;
-    margin-bottom: 30px;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
-    text-align: justify;
-}
+.title { font-size: 4vw; font-weight: bold; font-family: 'Raleway', sans-serif; margin-bottom: 5px; }
+.topic { font-size: 2vw; color: #7dad3f; font-weight: bold; margin-bottom: 20px; }
+.des { font-size: 1.2vw; line-height: 1.6; margin-bottom: 30px; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8); text-align: justify; }
 
 .btn button {
-    background-color: var(--verdeBiche);
+    background-color: #7dad3f;
     border: none;
     padding: 12px 30px;
     border-radius: 5px;
@@ -402,169 +396,176 @@
     transition: transform 0.3s;
 }
 
-.btn button:hover {
-    transform: scale(1.05);
-}
+.btn a { color: white; text-decoration: none; font-weight: bold; font-size: 1.1vw; }
 
-.btn a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.1vw;
-}
-
-/* ----- Animaciones de entrada al Modal ----- */
-.animate-content .title,
-.animate-content .topic,
-.animate-content .des,
-.animate-content .btn {
-    opacity: 0;
-    filter: blur(20px);
-    animation: animate_content_entry 0.8s ease-in-out forwards;
-}
-
-.animate-content .title {
-    animation-delay: 0.2s;
-}
-
-.animate-content .topic {
-    animation-delay: 0.4s;
-}
-
-.animate-content .des {
-    animation-delay: 0.6s;
-}
-
-.animate-content .btn {
-    animation-delay: 0.8s;
-}
-
-@keyframes animate_content_entry {
-    from {
-        opacity: 0;
-        filter: blur(33px);
-        transform: translate(0, 100px);
-    }
-
-    to {
-        opacity: 1;
-        filter: blur(0);
-        transform: translateY(0);
-    }
-}
-
-/* ===================== MOBILE ===================== */
-@media (max-width: 1024px) {
-    .titleWrapper h2 {
-        font-size: 6vw;
-    }
-
-    .podcastText h5 {
-        font-size: 2vw;
-    }
-}
-
+/* --- Responsividad (Móvil) --- */
 @media (max-width: 768px) {
-    .section5 {
-        margin-top: -4vh;
-        background-size: cover;
-    }
-
-    .mainContent {
-        padding: 4vh 0;
-    }
-
-    .topRegion {
-        flex-direction: column;
-        gap: 1vh;
-        padding: 0 5vw;
-    }
-
-    .logoWrapper {
-        width: 30vw;
-    }
-
-    .titleWrapper h2 {
-        font-size: 8vw;
-    }
-
-    .podcastRegion {
-        flex-direction: column;
-        gap: 3vh;
-        padding: 2vh 5vw;
-    }
-
-    .podcastContent {
-        flex-direction: column;
+    .dianas img {
+        content: normal !important;
         width: 100%;
-        gap: 3vh;
+        height: auto;
+        object-fit: contain;
+    }
+    .section5 {
+        height: auto;
+        min-height: 100vh;
+        background-position: center top;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 20vw;
     }
 
-    .videoContainer {
-        width: 95%;
-        max-width: unset;
+    /* Reset absolute containers for mobile flow */
+    .contenedor_section5_1,
+    .contenedor_section5_2,
+    .contenedor_section5_3,
+    .contenedor_section5_4 {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 100%;
+        height: auto;
     }
 
-    .podcastText {
-        width: 95%;
+    /* Logo and stars */
+    .contenedor_section5_1 {
+        margin-top: 5vh;
+        justify-content: center;
     }
 
-    .podcastText h5 {
-        font-size: 4vw;
-    }
-
-    .decorativeLeft {
+    .vacio_logo_sect5 {
         display: none;
     }
 
-    .birdSwiperContainer {
+    .contenedor_section5_1 .estrellas_arriba_sect5 {
+        width: 100vw;
+        height: auto;
+        margin: 0;
+        position: absolute;
+        top: 0;
+    }
+
+    /* Título */
+    .contenedor_section5_2 {
+        margin-top: 5vh;
+    }
+
+    .texto_sect5 h2 {
+        font-size: 10vw;
+        margin: 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    /* Podcast Content area -> Column flow */
+    .contenedor_section5_3 {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 5vh;
+        gap: 3vh;
+        overflow: visible;
+    }
+
+    .contenedor_sect5_video {
+        width: 90vw;
+        margin: 0;
+        height: 50vw;
+    }
+
+    .contenedor_sect5_video :global(.contenedorVideo) video {
+        width: 100%;
+        height: 100%;
+    }
+
+    .txt_sect5 {
+        width: 90%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .txt_sect5 h5 {
+        font-size: 4.5vw;
+        text-align: center;
+    }
+
+    /* Birds Slider & Spotify Area */
+    .contenedor_section5_4 {
+        flex-direction: column;
+        margin-top: 8vh;
+        height: auto;
+    }
+
+    .central_sect5_4 {
+        width: 100%;
+        left: 0;
+        height: 45vw;
+        position: relative;
+        margin: 5vh 0;
+    }
+
+    .bird_slide {
+        flex: 0 0 45%;
+        width: 45%;
+    }
+
+    .prev_central { left: 2vw; font-size: 8vw; }
+    .next_central { right: 2vw; font-size: 8vw; }
+
+    .derecho_sect5 {
+        position: relative;
+        width: 100%;
+        right: auto;
+        height: auto;
+        margin-top: 2vh;
+        display: flex;
+        justify-content: center;
+    }
+
+    .derecho_sect5 a {
+        width: 15vw;
+        height: 15vw;
+        margin: 0;
+    }
+
+    .derecho_sect5 a .btn_saber {
+        width: 12vw;
+        height: 12vw;
+    }
+
+    /* Nebulosa */
+    .izquierdo_sect5 {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        z-index: -1;
+    }
+
+    .nebulosa_sect5 {
+        width: 100vw;
+        opacity: 0.5;
+    }
+
+    /* Modal Mobile */
+    .modal_content_sect5 {
         width: 95%;
+        height: 90%;
     }
 
-    .swiperTrack {
-        height: 20vh;
-    }
-
-    .birdSlide {
-        min-width: 50%;
-        /* 2 visible on mobile */
-    }
-
-    .swiperPrev,
-    .swiperNext {
+    .close_modal_sect5 {
+        width: 10vw;
+        height: 10vw;
         font-size: 6vw;
     }
 
-    .spotifyLink {
-        right: 50%;
-        transform: translateX(50%);
-        bottom: 1vh;
-    }
-
-    .decorLeftBottom {
-        display: none;
-    }
-
-    /* Modal mobile */
     .content {
         max-width: 90%;
+        padding: 5vw;
     }
 
-    .title {
-        font-size: 6vw;
-    }
-
-    .topic {
-        font-size: 4vw;
-    }
-
-    .des {
-        font-size: 3.5vw;
-    }
-
-    .close-modal-sect5 {
-        font-size: 5vw;
-        width: 8vw;
-        height: 8vw;
-    }
+    .title { font-size: 8vw; }
+    .topic { font-size: 4vw; }
+    .des { font-size: 3.5vw; }
+    .btn a { font-size: 4vw; }
 }
