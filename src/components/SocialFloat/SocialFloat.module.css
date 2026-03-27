@@ -55,9 +55,39 @@
     }
 }
 
-/* Ocultar en móviles si así lo dicta el diseño original o dejar visible */
 @media screen and (max-width: 1023px) {
     .contenedor-social-fixed {
-        display: none;
+        display: flex;
+        flex-direction: row; /* En fila horizontal */
+        position: fixed;
+        bottom: 15px; /* Separado del borde inferior */
+        right: 0; /* Pegado a la derecha */
+        width: auto; /* Compacto, no ocupa todo el ancho */
+        min-width: 160px;
+        height: auto;
+        padding: 8px 15px;
+        align-items: center;
+        justify-content: space-around;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        background-color: rgba(150, 149, 149, 0.5);
+        backdrop-filter: blur(10px);
+        z-index: 2000;
+        gap: 15px; /* Espaciado entre iconos */
+        box-shadow: -2px 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .social-item {
+        width: 32px; /* Tamaño táctil equilibrado */
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .social-item img {
+        width: 100%;
+        height: auto;
+        filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
     }
 }

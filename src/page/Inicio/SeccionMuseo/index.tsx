@@ -9,6 +9,14 @@ import VideoConPlay from "@/components/VideoConPlay";
 const SeccionMuseo = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [aveSeleccionada, setAveSeleccionada] = useState<Ave | null>(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const manejarResize = () => setIsMobile(window.innerWidth <= 768);
+    manejarResize();
+    window.addEventListener("resize", manejarResize);
+    return () => window.removeEventListener("resize", manejarResize);
+  }, []);
 
   const deslizador = useDeslizadorSimple({
     totalDiapositivas: aves.length,
@@ -45,7 +53,21 @@ const SeccionMuseo = () => {
       />
 
       <div className={styles.dianas}>
-        <img src="/static/img/seccion5_museo/dianas5.png" alt="" />
+        <img 
+          src="/static/img/seccion5_museo/dianas5.png" 
+          className={styles.dianas_desktop} 
+          alt="" 
+        />
+        <img 
+          src="/static/img/seccion5_museo/lianaSect5.svg" 
+          className={styles.liana_mobile} 
+          alt="Liana decorative" 
+        />
+        <img 
+          src="/static/img/seccion5_museo/palmeraSect5Der.svg" 
+          className={styles.palmera_mobile} 
+          alt="Palmera decorative" 
+        />
       </div>
 
       <div className={styles.contenedor_section5_1}>
@@ -60,7 +82,7 @@ const SeccionMuseo = () => {
       <div className={styles.contenedor_section5_2}>
         <div className={styles.texto_sect5}>
           <h2>
-            Podcast <strong>Aves Vaupés</strong>
+            Podcast Aves <br /> <span className={styles.vaupesTexto}>Vaupés</span>
           </h2>
         </div>
       </div>
@@ -107,8 +129,9 @@ const SeccionMuseo = () => {
               if (diff > total / 2) diff -= total;
               else if (diff < -total / 2) diff += total;
 
-              // Slots visibles: 0, 1, 2, 3
-              const isVisible = diff >= 0 && diff <= 3;
+              // Slots visibles: 0, 1 en móvil; 0, 1, 2, 3 en desktop
+              const maxVisibles = isMobile ? 1 : 3;
+              const isVisible = diff >= 0 && diff <= maxVisibles;
               const style: React.CSSProperties = {
                 transform: `translateX(${diff * 100}%)`,
                 opacity: isVisible ? 1 : 0,

@@ -11,6 +11,10 @@ const SeccionYuredo = () => {
                 <img src="/static/img/seccion3_yuredo/dianas3.svg" alt="" />
             </div>
 
+            <div className={styles.lianasResponsivo}>
+                <img src="/static/img/seccion3_yuredo/lianasSec3.svg" alt="Lianas decorativas" />
+            </div>
+
             <div className={styles.contenedor_section3_1}>
                 <div className={styles.estrellas3_1}>
                     <img src="/static/img/seccion3_yuredo/start-3_1.svg" alt="" />
@@ -26,7 +30,7 @@ const SeccionYuredo = () => {
                     <div className={styles.videoWrapper}>
                         <img
                             className={styles.florCorner}
-                            src="/static/img/seccion1_inicio/flor_amarilla.svg"
+                            src="/static/img/seccion3_yuredo/flor_amarilla.svg"
                             alt=""
                         />
                         <img
@@ -41,6 +45,9 @@ const SeccionYuredo = () => {
                             />
                         </div>
                     </div>
+                </div>
+                <div className={styles.palmeraResponsivo}>
+                    <img src="/static/img/seccion3_yuredo/palmeraSec3.svg" alt="Palmera decorativa" />
                 </div>
             </div>
 

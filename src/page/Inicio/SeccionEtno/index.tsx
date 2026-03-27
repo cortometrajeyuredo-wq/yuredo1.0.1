@@ -21,8 +21,28 @@ const SeccionEtno = () => {
         <section className={styles.section4} id="etno">
             <EstrellasFondo cantidad={40} leftMin={20} leftMax={90} className={styles.estrellasFondo} />
 
+            {/* Estrellas en las esquinas */}
+            <img src="/static/img/seccion4_etno/starSect4SupIzq.svg" className={styles.starSupIzq} alt="" />
+            <img src="/static/img/seccion4_etno/starSect4SupDer.svg" className={styles.starSupDer} alt="" />
+            <img src="/static/img/seccion4_etno/starSect4InfIzq.svg" className={styles.starInfIzq} alt="" />
+            <img src="/static/img/seccion4_etno/starSect4InfDer.svg" className={styles.starInfDer} alt="" />
+
             <div className={styles.dianas}>
-                <img src="/static/img/seccion4_etno/dianas4.svg" alt="" />
+                <img 
+                    src="/static/img/seccion4_etno/dianas4.svg" 
+                    className={styles.dianas_desktop} 
+                    alt="" 
+                />
+                <img 
+                    src="/static/img/seccion4_etno/aveResponsiveSec4Izq.svg" 
+                    className={styles.ave_mobile} 
+                    alt="Ave decorativa" 
+                />
+                <img 
+                    src="/static/img/seccion4_etno/lianaResponsiveSec4.svg" 
+                    className={styles.liana_mobile} 
+                    alt="Liana decorativa" 
+                />
             </div>
 
             <div className={styles.contenedor_section4_1}>
@@ -109,6 +129,12 @@ const SeccionEtno = () => {
                                 Más....
                             </a>
                         </h5>
+                    </div>
+                    {/* Contenido para móvil: solo enlace que actúa como título */}
+                    <div className={styles.sect4_txt_mobile}>
+                        <a href={cartillaActiva.enlace} target="_blank" rel="noopener noreferrer" className={styles.enlaceTitulo}>
+                            {cartillaActiva.titulo}
+                        </a>
                     </div>
                     <div className={styles.estrellas}>
                         <img src="/static/img/seccion4_etno/start4_2.svg" alt="" />

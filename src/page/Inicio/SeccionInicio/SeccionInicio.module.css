@@ -258,7 +258,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding-bottom: 12vh; /* Reducido para elevar la ola hacia el video */
+        padding-bottom: 22vw; /* Reducido para elevar la ola hacia el video */
     }
 
     /* Usar dianas.svg de la vista web */
@@ -330,7 +330,7 @@
 
     /* Logo Yuredo */
     .contenedor_section1_2 {
-        margin-top: 4vh; /* Reducido para elevar contenido sobre fondo blanco */
+        margin-top: 8vw; /* Proporcional a 4vh de 1216px */
         display: flex;
         align-items: center;
         justify-content: center;
@@ -345,7 +345,7 @@
 
     /* Título */
     .contenedor_section1_3 {
-        margin-top: 1vh; 
+        margin-top: 2vw; 
         display: flex;
         align-items: center;
         justify-content: center;
@@ -363,7 +363,7 @@
     /* Video Section */
     .contenedor_section1_5 {
         flex-direction: column;
-        margin-top: 2vh; 
+        margin-top: 4vw; 
         z-index: 10;
         display: flex;
         align-items: center;
@@ -405,17 +405,7 @@
 
     /* Estrella Derecha (SVG) */
     .star_derecha {
-        position: absolute !important;
-        right: -2vw;
-        top: -24vw;
-        z-index: 1; 
-        pointer-events: none;
-    }
-
-    .star_derecha img {
-        width: 12vw; 
-        height: auto !important;
-        opacity: 0.7;
+        display: none !important;
     }
 
     /* Restore and position bottom elements */
@@ -437,24 +427,13 @@
 
     /* Estrella Bajo (SVG) */
     .star {
-        display: block !important;
-        position: absolute !important;
-        bottom: 5vh;
-        left: -5vw;
-        z-index: 1;
-        pointer-events: none;
-    }
-
-    .star img {
-        width: 16vw; /* Muy pequeña */
-        height: auto;
-        opacity: 0.7;
+        display: none !important;
     }
 
     .logoSena {
         display: flex !important;
         position: absolute;
-        bottom: 1vh;
+        bottom: 2vw;
         right: 5vw;
         width: 12vw;
         height: auto;

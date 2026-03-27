@@ -34,6 +34,11 @@
     object-fit: cover;
 }
 
+.lianasResponsivo,
+.palmeraResponsivo {
+    display: none;
+}
+
 /* Contenedores base del Legacy */
 .contenedor_section3_1,
 .contenedor_section3_2,
@@ -217,44 +222,94 @@
 
 /* --- Responsividad (Móvil) --- */
 @media (max-width: 768px) {
-    .dianas img {
-        content: normal !important;
-        width: 100%;
-        height: auto;
-        object-fit: contain;
+    .dianas {
+        display: none !important;
     }
-    .section3 {
+
+    .lianasResponsivo {
+        display: block;
+        position: absolute;
+        top: 8vw;
+        left: 0;
+        z-index: -2 !important;
+    }
+
+    .lianasResponsivo img {
+        width: 1000px; /* Natural scale to maintain 'original' drawn size */
         height: auto;
-        min-height: 100vh;
-        background-position: center top;
-        background-size: cover;
+    }
+
+    .palmeraResponsivo {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: auto;
+        bottom: -40vw;
+        z-index: 10 !important;
+    }
+
+    .palmeraResponsivo img {
+        width: 30vw;
+        height: auto;
+    }
+
+    .section3 {
+        height: auto !important; 
+        min-height: 160vw;
+        margin-top: -2px !important; 
+        z-index: 5 !important; 
+        background-color: #ffffff !important;
+        background-image: none !important;
+        position: relative;
+        isolation: isolate;
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding-bottom: 20vw;
+        justify-content: center;
+        padding-top: 25vw; 
+        padding-bottom: 0; 
+        overflow: hidden;
+    }
+
+    .section3::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image:
+            url('/static/img/seccion3_yuredo/fondoResponsive3Arriba.svg'),
+            url('/static/img/seccion3_yuredo/fondoResponsive3Abajo.svg');
+        background-size: 100% auto, 100% auto;
+        background-position: left top, left bottom;
+        background-repeat: no-repeat, no-repeat;
+        z-index: -1;
     }
 
     /* Reset absolute containers for mobile flow */
     .contenedor_section3_1,
     .contenedor_section3_2,
     .contenedor_section3_3 {
-        position: relative;
+        position: relative; 
         top: auto;
         left: auto;
+        transform: none;
         width: 100%;
         height: auto;
     }
 
     /* Stars Upper */
     .contenedor_section3_1 {
-        margin-top: 5vh;
-        height: 10vw;
-        pointer-events: none;
+        display: none !important;
     }
 
     /* Video and decorations */
     .contenedor_section3_2 {
-        margin-top: 15vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0;
+    }
+
+    .centro {
         height: auto;
     }
 
@@ -264,22 +319,25 @@
     }
 
     .florCorner {
-        width: 35vw;
-        top: -12vw;
-        left: -8vw;
+        width: 25vw;
+        bottom: -7vw;
+        top: auto;
+        left: -4.6vw;
     }
 
     .colibriCorner {
-        width: 38vw;
-        top: -14vw;
-        right: -12vw;
+        width: 28vw;
+        top: -15vw;
+        right: -4.5vw;
     }
 
     /* Bottom Section / Button */
     .contenedor_section3_3 {
-        margin-top: 10vh;
+        z-index: 99 !important;
+        display: flex;
         flex-direction: column;
         align-items: center;
+        margin-top: 6vw;
     }
 
     .contenedor_logo_yuredo {
@@ -288,16 +346,13 @@
     }
 
     .estrellas_izq {
-        position: absolute;
-        width: 100vw;
-        left: 0;
-        top: -20vw;
+        display: none !important;
     }
 
     .boton_saber_mas {
         width: 100%;
         justify-content: center;
-        margin-top: 8vh;
+        margin-top: 0;
     }
 
     .boton_saber_mas a img {
@@ -307,9 +362,6 @@
     }
 
     .estrellas_der {
-        position: absolute;
-        width: 100vw;
-        right: -10%;
-        top: 0;
+        display: none !important;
     }
 }

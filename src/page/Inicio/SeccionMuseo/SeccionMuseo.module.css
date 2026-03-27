@@ -31,10 +31,15 @@
     align-items: center;
 }
 
-.dianas img {
+.dianas_desktop {
     width: 100%;
     height: auto;
     object-fit: cover;
+}
+
+.liana_mobile,
+.palmera_mobile {
+    display: none;
 }
 
 /* Contenedores base del Legacy */
@@ -400,21 +405,75 @@
 
 /* --- Responsividad (Móvil) --- */
 @media (max-width: 768px) {
-    .dianas img {
-        content: normal !important;
+    .dianas_desktop {
+        display: none !important;
+    }
+    
+    .liana_mobile {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
         height: auto;
-        object-fit: contain;
+        z-index: -2;
+    }
+    
+    .palmera_mobile {
+        display: block;
+        position: absolute;
+        top: 45%;
+        right: 0;
+        width: 45%;
+        height: auto;
+        z-index: -2;
     }
     .section5 {
-        height: auto;
-        min-height: 100vh;
-        background-position: center top;
-        background-size: cover;
+        height: 177.5vw; /* Altura proporcional basada en aspect ratio del fondo (1922 / 1083) */
+        min-height: auto;
+        width: 100%;
+        margin-left: 0;
+        margin-top: -4px; /* Solapamiento de seguridad con la sección superior */
+        background-color: #ffffff !important;
+        background-image: none !important;
+        position: relative;
+        isolation: isolate;
+        margin-bottom: 0; /* Removido para evitar que la siguiente sección oculte el fondo */
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding-bottom: 20vw;
+        justify-content: flex-start; /* Se cambia a flex-start para controlar desde el top */
+        padding-top: 18vw; /* Empuja el título y video hacia abajo para evitar cortes */
+        padding-bottom: 0; 
+        overflow: hidden;
+    }
+
+    .section5::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image:
+            url('/static/img/seccion5_museo/fondoResponsive5Arriba.svg'),
+            url('/static/img/seccion5_museo/fondoResponsive5Abajo.svg');
+        background-size: 100% auto, 100% auto;
+        background-position: left top, left bottom;
+        background-repeat: no-repeat, no-repeat;
+        z-index: -1;
+    }
+
+    .dianas_desktop {
+        display: none !important;
+    }
+
+    .liana_mobile {
+        position: absolute;
+        left: 50%;
+        top: 30%; /* Subido aún más a 30% */
+        transform: translate(-50%, -50%);
+        width: 110vw; /* Aumentado tamaño de 80vw a 110vw */
+        height: auto;
+        display: block !important;
+        z-index: -10; /* En la capa más baja */
     }
 
     /* Reset absolute containers for mobile flow */
@@ -431,6 +490,8 @@
 
     /* Logo and stars */
     .contenedor_section5_1 {
+        position: absolute;
+        top: 0;
         margin-top: 5vh;
         justify-content: center;
     }
@@ -440,16 +501,12 @@
     }
 
     .contenedor_section5_1 .estrellas_arriba_sect5 {
-        width: 100vw;
-        height: auto;
-        margin: 0;
-        position: absolute;
-        top: 0;
+        display: none !important;
     }
 
     /* Título */
     .contenedor_section5_2 {
-        margin-top: 5vh;
+        margin-top: 5vw;
     }
 
     .texto_sect5 h2 {
@@ -457,21 +514,26 @@
         margin: 0;
         text-align: center;
         width: 100%;
+        line-height: 8.5vw; /* Reducido para juntar más los renglones */
+    }
+
+    .vaupesTexto {
+        font-size: 85%; /* Más pequeño que el 10vw de h2 */
     }
 
     /* Podcast Content area -> Column flow */
     .contenedor_section5_3 {
         flex-direction: column;
         align-items: center;
-        margin-top: 5vh;
-        gap: 3vh;
+        margin-top: 5vw;
+        gap: 4vw;
         overflow: visible;
     }
 
     .contenedor_sect5_video {
         width: 90vw;
         margin: 0;
-        height: 50vw;
+        height: 68vw; /* Largo incrementado para ser más alto proporcionalmente */
     }
 
     .contenedor_sect5_video :global(.contenedorVideo) video {
@@ -486,59 +548,103 @@
     }
 
     .txt_sect5 h5 {
-        font-size: 4.5vw;
+        font-size: 3.1vw; /* Reducido para ahorrar espacio vertical */
         text-align: center;
+        line-height: 3.8vw;
     }
 
     /* Birds Slider & Spotify Area */
     .contenedor_section5_4 {
         flex-direction: column;
-        margin-top: 8vh;
+        margin-top: -24vw; /* Subido un poco más para acercar al texto */
         height: auto;
     }
 
     .central_sect5_4 {
         width: 100%;
         left: 0;
-        height: 45vw;
+        height: 34vw; /* Altura ajustada: 38vw - 4vw de padding = 34vw */
         position: relative;
-        margin: 5vh 0;
+        margin: 0vw 0 10vw 0; 
     }
 
     .bird_slide {
-        flex: 0 0 45%;
-        width: 45%;
+        flex: 0 0 38vw;
+        width: 38vw;
+        height: 34vw; /* Ajusta alto para ser perfectamente cuadrada con padding */
+        left: 12vw;
+        padding: 0 2vw; 
     }
 
-    .prev_central { left: 2vw; font-size: 8vw; }
-    .next_central { right: 2vw; font-size: 8vw; }
+    .bird_slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; 
+        border-radius: 3vw; 
+    }
+
+    .prev_central { 
+        left: 2vw; 
+        font-size: 8vw; 
+        top: 17vw; /* Centrado vertical: altura 34vw / 2 = 17vw */
+        transform: translateY(-50%); 
+    }
+    
+    .next_central { 
+        right: 2vw; 
+        font-size: 8vw; 
+        top: 17vw; 
+        transform: translateY(-50%); 
+    }
+
+    .prev_central:hover,
+    .next_central:hover {
+        transform: translateY(-50%) scale(1); /* Cancela el agrandamiento en móvil */
+    }
+
+    .izquierdo_sect5 {
+        position: absolute;
+        bottom: 5vw; /* Altura de seguridad */
+        left: 4vw;
+        display: block;
+        z-index: 10;
+    }
+
+    .nebulosa_sect5 {
+        width: 25vw;
+        left: -42vw;
+        top: 20vw;
+        height: 15vw;
+        opacity: 0.8;
+    }
 
     .derecho_sect5 {
-        position: relative;
-        width: 100%;
-        right: auto;
-        height: auto;
-        margin-top: 2vh;
-        display: flex;
-        justify-content: center;
+        position: absolute;
+        bottom: -1vw; /* Más bajo aproximando al borde */
+        right: 2vw;
+        z-index: 10;
+        width: auto;
+        display: block !important;
+        margin: 0;
     }
 
     .derecho_sect5 a {
-        width: 15vw;
-        height: 15vw;
+        width: 10vw; /* Tamaño reducido de 12vw a 10vw */
+        height: 10vw;
+        display: flex;
         margin: 0;
     }
 
     .derecho_sect5 a .btn_saber {
-        width: 12vw;
-        height: 12vw;
+        width: 100%;
+        height: 100%;
     }
 
     /* Nebulosa */
     .izquierdo_sect5 {
         position: absolute;
         width: 100%;
-        top: 50%;
+        top: 58%; /* Bajada de 50% a 58% para que no solape arriba */
         z-index: -1;
     }
 

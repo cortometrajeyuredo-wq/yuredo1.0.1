@@ -15,15 +15,14 @@
 /* Contenedor fijo para el botón, para que flote sobre el contenido */
 .btn-hamburger-container {
     position: fixed;
-    top: 3%;
-    right: 3%;
+    top: clamp(10px, 3%, 20px);
+    right: clamp(10px, 3%, 20px);
     z-index: 1001;
-    /* Por encima de todo */
     display: flex;
     align-items: center;
     justify-content: center;
-    width: clamp(44px, 3vw, 56px);
-    height: clamp(44px, 3vw, 56px);
+    width: clamp(44px, 4.5vw, 64px);
+    height: clamp(44px, 4.5vw, 64px);
 }
 
 .hamburger {
@@ -34,11 +33,10 @@
     height: 100%;
     cursor: pointer;
     border: none;
-    border-radius: 3px;
+    border-radius: 4px;
     background-color: var(--verdeSena);
     color: white;
-    font-size: clamp(18px, 2vw, 26px);
-    /* Ajustado */
+    font-size: clamp(20px, 2.5vw, 30px);
     font-weight: 900;
     transition: background-color 0.3s;
 }
@@ -48,33 +46,33 @@
 }
 
 .hamburger span {
-    font-size: clamp(16px, 1.5vw, 22px);
+    font-size: clamp(18px, 2.2vw, 26px);
 }
 
 
-/* Menús Verticales (Adaptado de menu_vertical.css) */
-.vertical-menu {
-    position: fixed;
-    top: 0;
-    z-index: 2000;
-    /* Mayor que el botón */
-    overflow: hidden; /* Removed scrollbar */
-    transition: transform 0.3s ease-in-out;
-    display: flex;
-    /* Cambiado de 'display: none' para usar transform/visibilidad controlada por React si se desea, o 'display:flex' condicional */
-    flex-direction: column;
-}
+    /* Menús Verticales (Adaptado de menu_vertical.css) */
+    .vertical-menu {
+        position: fixed;
+        top: 0;
+        z-index: 2000;
+        /* Mayor que el botón */
+        overflow-y: auto; /* Permite scroll si hay muchos ítems */
+        overflow-x: hidden;
+        transition: transform 0.3s ease-in-out;
+        display: flex;
+        flex-direction: column;
+    }
 
 /* Left Menu */
 .left-menu {
     top: 0;
     left: 0;
     background-color: var(--verdeSena);
-    width: 13vw;
+    width: clamp(180px, 15vw, 280px);
     height: auto;
-    padding-bottom: 2vh;
+    padding-bottom: clamp(20px, 4vh, 60px);
     border-top-right-radius: 0;
-    border-bottom-right-radius: 1.5vw;
+    border-bottom-right-radius: clamp(10px, 1.5vw, 20px);
     transform: translateX(-100%);
     display: flex;
     flex-direction: column;
@@ -84,14 +82,13 @@
     transform: translateX(0);
 }
 
-.cerrar-logo {
-    display: flex;
-    flex-direction: row;
+.btn-cerrar-menu-left {
     width: 100%;
-    height: 3vw; /* Compacted height for Desktop */
-    min-height: 40px;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
     position: relative;
-    margin-bottom: 10px; /* Space before the list starts */
 }
 
 .close-btn {
@@ -108,46 +105,46 @@
 }
 
 .left-menu .close-btn {
-    left: 10%;
-    top: 5px; /* Moved up */
-}
-
-.cerrar-logo img {
-    width: clamp(22px, 2.1vw, 32px);
-    position: absolute;
-    top: 8px; /* Moved up */
-    right: 15%;
+    right: 12%; 
+    font-size: clamp(28px, 3.5vw, 42px);
 }
 
 .contendor-menu-left {
     display: flex;
+    flex-direction: column;
     width: 100%;
-    height: auto;
-    padding: 0 1vw;
-    align-items: flex-start; /* Alignment to the top */
-    justify-content: flex-start;
+    height: 70%;
+    padding: 0;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
 }
 
 .contendor-menu-left ul {
-    padding: 0;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
     list-style: none;
+    padding: 0;
 }
 
 .contendor-menu-left ul li {
-    text-align: left;
-    padding: 2px 5px;
+    text-align: center;
+    padding: 0;
+    width: 100%;
 }
 
 .contendor-menu-left ul li a {
     text-decoration: none;
     color: var(--blanco);
-    font-size: clamp(14px, 1.4vw, 22px);
+    font-size: clamp(16px, 1.8vw, 22px);
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
-    display: block; /* Full width */
-    padding: 2px 10px; /* Ultra-compact padding for Desktop */
+    display: block;
+    padding: clamp(8px, 1vh, 16px) 10%; 
     border-radius: 8px;
     transition: background-color 0.2s;
+    text-align: center;
 }
 
 .contendor-menu-left ul li a:hover {
@@ -155,10 +152,11 @@
 }
 
 .contendor-menu-left ul li a p {
-    color: #16142f; /* Azul oscuro del proyecto */
+    color: #16142f;
     margin-top: -2px;
-    text-align: left;
-    font-size: clamp(11px, 1vw, 15px);
+    text-align: center;
+    font-size: clamp(18px, 1.4vw, 24px);
+    font-weight: 600;
     font-family: 'Raleway', sans-serif;
     margin-bottom: 2px;
     pointer-events: none;
@@ -170,10 +168,10 @@
     top: 0;
     right: 0;
     background-color: var(--azul);
-    width: 17.2vw;
+    width: clamp(200px, 18vw, 320px);
     height: 100vh;
-    border-top-left-radius: 1.5vw;
-    border-bottom-left-radius: 1.5vw;
+    border-top-left-radius: clamp(10px, 1.5vw, 20px);
+    border-bottom-left-radius: clamp(10px, 1.5vw, 20px);
     transform: translateX(100%);
     display: flex;
     flex-direction: column;
@@ -206,7 +204,7 @@
     height: 70%;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center; /* Center horizontally */
     justify-content: center;
 }
 
@@ -214,15 +212,16 @@
     display: flex;
     width: 100%;
     flex-direction: column;
-    text-align: right;
+    text-align: center;
     list-style: none;
     padding: 0;
 }
 
 .contenedor-menu-right ul li {
-    margin-top: 4%; /* Drastically reduced to prevent overlap */
-    margin-right: 5%; /* Adjusted for better alignment */
+    margin-top: 2%; 
+    margin-right: 0; 
     padding: 0;
+    width: 100%;
 }
 
 .contenedor-menu-right ul li a {
@@ -232,10 +231,11 @@
     font-weight: 500;
     font-family: 'Raleway', sans-serif;
     display: block;
-    width: 100%; /* Full area */
-    padding: 8px 15% 8px 15%; /* Compacted vertical padding */
+    width: 100%;
+    padding: clamp(10px, 1.2vh, 20px) 10%; 
     transition: background-color 0.2s, color 0.2s;
     box-sizing: border-box;
+    text-align: center;
 }
 
 .contenedor-menu-right ul li a:hover,
@@ -253,7 +253,7 @@
     appearance: none;
     background: none;
     border: none;
-    padding: 8px 15% 8px 15%; /* Matches anchor padding */
+    padding: 12px 10%; 
     margin: 0;
     text-decoration: none;
     color: var(--blanco);
@@ -262,7 +262,7 @@
     font-family: 'Raleway', sans-serif;
     cursor: pointer;
     width: 100%;
-    text-align: right;
+    text-align: center;
     transition: background-color 0.2s, color 0.2s;
     box-sizing: border-box;
 }
@@ -281,7 +281,7 @@
 }
 
 .logo-sena-menu img {
-    width: clamp(56px, 5.9vw, 96px);
+    width: clamp(56px, 7vw, 120px);
     height: auto;
 }
 
@@ -289,6 +289,12 @@
     .btn-hamburger-container {
         top: 12px;
         right: 12px;
+        width: clamp(52px, 12vw, 64px);
+        height: clamp(52px, 12vw, 64px);
+    }
+
+    .hamburger span {
+        font-size: clamp(28px, 6.5vw, 42px);
     }
 
     /* Fullscreen Mobile Overrides */
@@ -304,73 +310,128 @@
     }
 
     .left-menu .close-btn {
-        right: 5%;
-        top: 3%;
+        position: fixed;
+        right: 4%;
+        top: 0;
         left: auto;
-        font-size: clamp(32px, 5vw, 42px);
-    }
-
-    .cerrar-logo img {
-        width: clamp(80px, 15vw, 150px);
-        bottom: 5%;
-        left: 5%;
-        top: auto;
-        right: auto;
+        font-size: clamp(32px, 8vw, 48px);
+        padding: 0 8px;
+        line-height: 1;
     }
 
     .contendor-menu-left {
-        width: 90%;
+        width: 100%;
+        height: auto;
+        padding: 4vw 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contendor-menu-left ul {
+        gap: 0;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contendor-menu-left ul li {
+        width: 100%;
+        margin: 0;
     }
 
     .contendor-menu-left ul li a {
-        font-size: clamp(18px, 4vw, 24px);
+        font-size: clamp(20px, 5.5vw, 28px);
         font-weight: bold;
+        padding: 12px 10%;
+        width: 100%;
+        text-align: center;
     }
 
     .contendor-menu-left ul li p {
         color: #16142f;
-        /* Azul oscuro */
-        font-size: clamp(14px, 3vw, 18px);
+        font-size: clamp(18px, 4.5vw, 26px);
+        font-weight: 600;
         margin-top: -5px;
-        margin-bottom: 2vh;
+        margin-bottom: 0;
+        text-align: center;
     }
 
     .right-menu {
         width: 100vw;
         border-radius: 0;
-        padding-top: 10vh;
+        padding-top: 8vw;
         align-items: center;
     }
 
     .right-menu .close-btn {
-        right: 5%;
-        top: 3%;
+        position: fixed;
+        right: 4%;
+        top: 0;
+        font-size: clamp(32px, 8vw, 48px);
+        padding: 0 8px;
+        line-height: 1;
     }
 
     .contenedor-menu-right {
         height: auto;
-        padding: 5vh 0;
+        padding: 4vw 0;
         justify-content: center;
         align-items: center;
     }
 
     .contenedor-menu-right ul {
-        gap: 24px;
+        gap: 0;
         align-items: center;
         text-align: center;
     }
 
     .contenedor-menu-right ul li {
         margin: 0;
+        width: 100%;
+    }
+
+    .contenedor-menu-right ul li a {
+        font-size: clamp(18px, 5vw, 26px);
+        padding: clamp(10px, 3vw, 18px) 10%; 
+        text-align: center;
+    }
+
+    .audioButton {
+        font-size: clamp(18px, 5vw, 26px);
+        padding: clamp(10px, 3vw, 18px) 10%; 
+        text-align: center;
     }
 
     .logo-sena-menu {
-        padding-bottom: 5vh;
+        padding-bottom: 4vw;
         height: auto;
     }
 
     .logo-sena-menu img {
         width: clamp(80px, 20vw, 150px);
+    }
+
+    /* OPTION 1: SCALE DOWN IF VIEWPORT IS SHORT (e.g. 100% zoom on mobile) */
+    @media (max-height: 650px) {
+        .contendor-menu-left, .contenedor-menu-right {
+            padding: 2vw 0;
+        }
+        
+        .contendor-menu-left ul li a, .contenedor-menu-right ul li a, .audioButton {
+            font-size: clamp(16px, 4.5vw, 22px);
+            padding: 8px 10%;
+        }
+
+        .contendor-menu-left ul li p {
+            font-size: clamp(14px, 4vw, 20px);
+        }
+
+        .left-menu .close-btn, .right-menu .close-btn {
+            font-size: clamp(28px, 8vw, 40px);
+        }
+
+        .logo-sena-menu img {
+            width: clamp(60px, 15vw, 100px);
+        }
     }
 }
 

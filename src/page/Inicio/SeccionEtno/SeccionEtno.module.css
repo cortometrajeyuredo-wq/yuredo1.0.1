@@ -18,6 +18,20 @@
     z-index: 0;
 }
 
+.starSupIzq, .starSupDer, .starInfIzq, .starInfDer {
+    position: absolute;
+    width: auto; 
+    height: auto;
+    z-index: 0; /* Detrás del contenido, delante del fondo */
+    pointer-events: none;
+    display: none; /* Ocultar en escritorio */
+}
+
+.starSupIzq { top: 0; left: 0; }
+.starSupDer { top: 0; right: 0; }
+.starInfIzq { bottom: 0; left: 0; }
+.starInfDer { bottom: 0; right: 0; }
+
 .dianas {
     position: absolute;
     width: 100%;
@@ -32,6 +46,11 @@
     width: 100%;
     height: auto;
     object-fit: cover;
+}
+
+.ave_mobile,
+.liana_mobile {
+    display: none;
 }
 
 /* Contenedores base del Legacy */
@@ -353,6 +372,10 @@
     z-index: 1500;
 }
 
+.sect4_txt_mobile {
+    display: none;
+}
+
 .sect4_txt h5 {
     padding: 5% 5% 5% 0; /* Sin padding-left para aprovechar todo el ancho */
     text-align: justify;
@@ -395,21 +418,71 @@
 
 /* --- Responsividad (Móvil) --- */
 @media (max-width: 768px) {
-    .dianas img {
-        content: normal !important;
+    .starSupIzq, .starSupDer, .starInfIzq, .starInfDer {
+        display: none !important;
+    }
+
+    .start_sect4_arriba,
+    .star_sect4_centro {
+        display: none !important;
+    }
+
+    .dianas {
+        position: relative !important;
+        width: 100%;
+        height: auto !important;
+        top: 0 !important;
+        margin-top: 14vw !important; /* Baja la liana y el ave */
+        z-index: auto !important; /* Removido para que los hijos puedan ir detrás del fondo */
+        pointer-events: none;
+        display: block !important;
+    }
+
+    .dianas_desktop {
+        display: none !important;
+    }
+
+    .liana_mobile {
+        display: block !important;
+        position: relative !important; /* Toma altura y empuja el contenido */
         width: 100%;
         height: auto;
-        object-fit: contain;
+        z-index: -1 !important; /* Detrás del background de .section4 */
+    }
+
+    .ave_mobile {
+        display: block !important;
+        position: absolute !important; /* Encima de la liana */
+        left: 0; /* Desplazado a la izquierda */
+        top: 5%; /* Ajustado para posarse en la liana */
+        width: 35vw;
+        height: auto;
+        z-index: 2; /* Mayor que liana_mobile */
     }
     .section4 {
         height: auto;
-        min-height: 100vh;
-        background-position: center top;
-        background-size: cover;
+        min-height: 177.72vw;
+        margin-top: -2px; /* Solo cierre sub-pixel sin solapamiento */
+        background: white;
+        position: relative;
+        isolation: isolate;
         display: flex;
         flex-direction: column;
         align-items: center;
         padding-bottom: 20vw;
+    }
+
+    .section4::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image:
+            url('/static/img/seccion4_etno/fondoResponsive4Arriba.svg'),
+            url('/static/img/seccion4_etno/fondoResponsive4Abajo.svg');
+        background-size: 100% auto, 100% auto;
+        background-position: left top, left bottom;
+        background-repeat: no-repeat, no-repeat;
+        z-index: -1;
     }
 
     /* Reset absolute containers for mobile flow */
@@ -432,7 +505,7 @@
     }
 
     .titulo_sect4 {
-        margin-top: 2vh;
+        margin-top: 0; /* Compactado */
         justify-content: center;
         width: 100%;
     }
@@ -443,13 +516,29 @@
         text-align: center;
     }
 
-    /* Main Grid Area -> Column Flow */
+    /* Main Grid Area -> Column Flow y Reordenamiento */
     .contenedor_section4_3 {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 5vh;
-        margin-top: 5vh;
+        gap: 0.5vh; /* Extremadamente compacto */
+        margin-top: 0; /* Extremadamente compacto */
+    }
+
+    .cuatro {
+        order: 1; /* Párrafo Dinámico */
+    }
+
+    .sect4_tres {
+        order: 2; /* Slider */
+    }
+
+    .uno {
+        order: 3; /* Botón Descarga */
+    }
+
+    .dos {
+        order: 4; /* Párrafo Introducción */
     }
 
     /* Introduction Text */
@@ -460,11 +549,15 @@
         top: auto;
     }
 
+    .dos1, .dos2, .uno2 {
+        display: none !important; /* Ocultar bloques vacíos en móvil */
+    }
+
     .dos3 .texto h5 {
-        font-size: 4.5vw;
-        padding: 0;
+        font-size: 4vw; /* Reducido de 4.5vw */
+        padding: 1;
         text-align: center;
-        line-height: 1.5;
+        line-height: 1.2; /* Reducido de 1.5 para juntar líneas */
     }
 
     /* Slider Area */
@@ -472,13 +565,19 @@
         position: relative;
         width: 100%;
         left: auto;
-        height: 70vw;
+        height: 82vw; /* Aumentado de 70vw para hacer la card más grande */
         margin: 0;
     }
 
     .sect4_tres_slider {
-        width: 85vw;
-        left: 7.5vw;
+        width: 90vw; 
+        left: 0 !important;
+        right: 0 !important;
+        margin: 0 auto !important; /* Forzar centrado exacto */
+        position: relative !important; 
+        top: auto !important; 
+        transform: none !important; 
+        height: 100% !important; 
     }
 
     .sect4_item {
@@ -495,15 +594,41 @@
     /* Active Cartilla Text */
     .cuatro {
         position: relative;
-        width: 90%;
+        width: 100%; 
         left: auto;
         top: auto;
     }
 
-    .sect4_txt h5 {
-        font-size: 4.5vw;
+    .cuatro .estrellas {
+        display: none !important; /* Quitar espacio de estrellas decorativas en móvil */
+    }
+
+    .sect4_txt {
+        display: none !important; 
+    }
+
+    .sect4_txt_mobile {
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-top: 0; /* Compacto */
+        padding: 0 5vw;
+    }
+
+    .enlaceTitulo {
+        font-size: 4vw; /* Reducido para que quepa en una sola línea */
+        font-weight: 800;
+        font-family: 'Raleway', sans-serif;
+        color: #16142f;
+        text-decoration: none;
         text-align: center;
-        padding: 0;
+        cursor: pointer;
+        transition: color 0.3s;
+    }
+
+    .enlaceTitulo:hover {
+        color: var(--naranja, #ff5d40);
     }
 
     /* Restore Download Button (uno) */
@@ -516,21 +641,26 @@
         left: auto;
         top: auto;
         height: auto;
-        margin-top: 5vh;
+        margin-top: 0; /* Removido para compactar */
+        padding-top: 0 !important; /* Eliminar espacio heredado de desktop */
     }
 
     .uno1 {
-        width: 100%;
-        gap: 2vh;
+        width: auto;
+        display: flex !important;
+        flex-direction: row !important; /* En fila según la imagen */
+        align-items: center;
+        gap: 3vw;
     }
 
     .uno1 img {
-        width: 12vw;
+        width: 10vw;
         height: auto;
     }
 
     .uno1 h5 {
-        font-size: 4vw;
-        white-space: normal;
+        font-size: 3.8vw; /* Un poco más compacto */
+        white-space: nowrap;
+        margin: 0;
     }
 }

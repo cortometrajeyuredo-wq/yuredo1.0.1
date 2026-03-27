@@ -105,9 +105,8 @@ const Encabezado = () => {
 
             {/* Menú Izquierdo: SENA / Enlaces Externos */}
             <div className={`${styles['vertical-menu']} ${styles['left-menu']} ${isMenuIzquierdoOpen ? styles.active : ''}`}>
-                <div className={styles['cerrar-logo']}>
+                <div className={styles['btn-cerrar-menu-left']}>
                     <button className={styles['close-btn']} onClick={cerrarMenuIzquierdo}>&times;</button>
-                    <img src="/static/img/globales/logo-sena.webp" alt="Logo SENA" />
                 </div>
                 <div className={styles['contendor-menu-left']}>
                     <ul>
@@ -143,6 +142,9 @@ const Encabezado = () => {
                             </a>
                         </li>
                     </ul>
+                </div>
+                <div className={styles['logo-sena-menu']}>
+                    <img src="/static/img/globales/logo-sena.webp" alt="Logo SENA" />
                 </div>
             </div>
 

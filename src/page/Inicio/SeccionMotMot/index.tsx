@@ -41,7 +41,8 @@ const SeccionMotMot = () => {
         <section className={styles.section2} id="motmot">
             <EstrellasFondo cantidad={60} leftMin={20} leftMax={90} className={styles.estrellasFondo} />
 
-            <div className={styles.dianas}>
+            {/* Ocultar en responsivo, mostrar dianas en desktop */}
+            <div className={`${styles.dianas} ${styles.dianas_desktop}`}>
                 <img src="/static/img/seccion2_motmot/dianas_sect2.svg" alt="" />
             </div>
 
@@ -57,20 +58,28 @@ const SeccionMotMot = () => {
                 </div>
             </div>
 
-            <div className={styles.contenedor_section2_2}>
-                <h3>Mot Mot</h3>
-            </div>
-
             <div className={styles.contenedor_section2_3}>
                 <h5>Semillero</h5>
             </div>
 
-            <div className={styles.contenedor_section2_4}>
+            <div className={styles.contenedor_section2_2}>
+                <h3>Mot Mot</h3>
+            </div>
+
+            {/* Fila con botón 'Saber más' y Ave decorativa */}
+            <div className={styles.fila_intermedia_mobile}>
                 <div className={styles.sect2_uno}>
                     <div onClick={() => abrirModal(indiceActivo)}>
                         <img src="/static/img/globales/btn-mas-svg.svg" alt="Saber más" />
                     </div>
                 </div>
+
+                <div className={styles.ave_mobile}>
+                    <img src="/static/img/seccion2_motmot/aveSec2Responsive.svg" alt="Ave decorativa" />
+                </div>
+            </div>
+
+            <div className={styles.contenedor_section2_4}>
 
                 <div className={styles.contenedor_slider_sect2}>
                         <div className={styles.slider_sect2}>
@@ -102,6 +111,10 @@ const SeccionMotMot = () => {
                 </div>
 
                 <div className={styles.sect2_vacio}></div>
+            </div>
+
+            <div className={styles.palmera_mobile}>
+                <img src="/static/img/seccion2_motmot/palmeraSec2Responsive.svg" alt="Palmera decorativa" />
             </div>
 
             {/* Modal */}
