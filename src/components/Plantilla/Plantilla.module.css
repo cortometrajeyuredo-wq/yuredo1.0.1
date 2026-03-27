@@ -1,0 +1,25 @@
+/* =============================================
+   Plantilla.module.css
+   Componente: src/components/Plantilla/index.tsx
+   Función: Layout principal que envuelve todas las páginas.
+   ============================================= */
+
+/**
+ * Contenedor principal del layout.
+ * Garantiza que el contenido ocupe al menos la altura completa del viewport.
+ */
+.plantilla {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/**
+ * Área de contenido principal.
+ * El Outlet de React Router renderiza aquí las páginas de navegación.
+ */
+.contenidoPrincipal {
+    flex: 1;
+    width: 100%;
+}

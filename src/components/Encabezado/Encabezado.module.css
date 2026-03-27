@@ -1,0 +1,441 @@
+/* Encabezado.module.css */
+/* Consolidación de menu_vertical.css y stilos_sect1.css (nav related) */
+
+/* Variables (deberían ser globales, pero las defino aquí por si acaso el aislamiento lo requiere) */
+.headerContainer {
+    --verdeSena: #39a900;
+    --azul: #00324d;
+    --blanco: #ffffff;
+    --gris: #f2f2f2;
+    --azulMedio: #004b85;
+    z-index: 1000;
+}
+
+/* Botón Hamburguesa (Adaptado de stilos_sect1.css y menu_vertical.css) */
+/* Contenedor fijo para el botón, para que flote sobre el contenido */
+.btn-hamburger-container {
+    position: fixed;
+    top: clamp(10px, 3%, 20px);
+    right: clamp(10px, 3%, 20px);
+    z-index: 1001;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: clamp(44px, 4.5vw, 64px);
+    height: clamp(44px, 4.5vw, 64px);
+}
+
+.hamburger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--verdeSena);
+    color: white;
+    font-size: clamp(20px, 2.5vw, 30px);
+    font-weight: 900;
+    transition: background-color 0.3s;
+}
+
+.hamburger:hover {
+    background-color: var(--azulMedio);
+}
+
+.hamburger span {
+    font-size: clamp(18px, 2.2vw, 26px);
+}
+
+
+    /* Menús Verticales (Adaptado de menu_vertical.css) */
+    .vertical-menu {
+        position: fixed;
+        top: 0;
+        z-index: 2000;
+        /* Mayor que el botón */
+        overflow-y: auto; /* Permite scroll si hay muchos ítems */
+        overflow-x: hidden;
+        transition: transform 0.3s ease-in-out;
+        display: flex;
+        flex-direction: column;
+    }
+
+/* Left Menu */
+.left-menu {
+    top: 0;
+    left: 0;
+    background-color: var(--verdeSena);
+    width: clamp(180px, 15vw, 280px);
+    height: auto;
+    padding-bottom: clamp(20px, 4vh, 60px);
+    border-top-right-radius: 0;
+    border-bottom-right-radius: clamp(10px, 1.5vw, 20px);
+    transform: translateX(-100%);
+    display: flex;
+    flex-direction: column;
+}
+
+.left-menu.active {
+    transform: translateX(0);
+}
+
+.btn-cerrar-menu-left {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10%;
+    /* Ajuste visual */
+    font-size: clamp(22px, 2vw, 32px);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--blanco);
+    font-weight: bold;
+    z-index: 2010;
+}
+
+.left-menu .close-btn {
+    right: 12%; 
+    font-size: clamp(28px, 3.5vw, 42px);
+}
+
+.contendor-menu-left {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 70%;
+    padding: 0;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+}
+
+.contendor-menu-left ul {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    list-style: none;
+    padding: 0;
+}
+
+.contendor-menu-left ul li {
+    text-align: center;
+    padding: 0;
+    width: 100%;
+}
+
+.contendor-menu-left ul li a {
+    text-decoration: none;
+    color: var(--blanco);
+    font-size: clamp(16px, 1.8vw, 22px);
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    display: block;
+    padding: clamp(8px, 1vh, 16px) 10%; 
+    border-radius: 8px;
+    transition: background-color 0.2s;
+    text-align: center;
+}
+
+.contendor-menu-left ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.contendor-menu-left ul li a p {
+    color: #16142f;
+    margin-top: -2px;
+    text-align: center;
+    font-size: clamp(18px, 1.4vw, 24px);
+    font-weight: 600;
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 2px;
+    pointer-events: none;
+}
+
+
+/* Right Menu */
+.right-menu {
+    top: 0;
+    right: 0;
+    background-color: var(--azul);
+    width: clamp(200px, 18vw, 320px);
+    height: 100vh;
+    border-top-left-radius: clamp(10px, 1.5vw, 20px);
+    border-bottom-left-radius: clamp(10px, 1.5vw, 20px);
+    transform: translateX(100%);
+    display: flex;
+    flex-direction: column;
+}
+
+.right-menu.active {
+    transform: translateX(0);
+}
+
+.btn-cerrar-menu-right {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.right-menu .close-btn {
+    right: 15%;
+    font-size: clamp(28px, 3vw, 42px);
+}
+
+.right-menu .close-btn:hover {
+    color: var(--gris);
+}
+
+.contenedor-menu-right {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: center;
+}
+
+.contenedor-menu-right ul {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    list-style: none;
+    padding: 0;
+}
+
+.contenedor-menu-right ul li {
+    margin-top: 2%; 
+    margin-right: 0; 
+    padding: 0;
+    width: 100%;
+}
+
+.contenedor-menu-right ul li a {
+    text-decoration: none;
+    color: var(--blanco);
+    font-size: clamp(16px, 1.8vw, 22px);
+    font-weight: 500;
+    font-family: 'Raleway', sans-serif;
+    display: block;
+    width: 100%;
+    padding: clamp(10px, 1.2vh, 20px) 10%; 
+    transition: background-color 0.2s, color 0.2s;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.contenedor-menu-right ul li a:hover,
+.contenedor-menu-right ul li a.active {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--gris);
+    text-decoration: none;
+}
+
+.audio-controls a {
+    cursor: pointer;
+}
+
+.audioButton {
+    appearance: none;
+    background: none;
+    border: none;
+    padding: 12px 10%; 
+    margin: 0;
+    text-decoration: none;
+    color: var(--blanco);
+    font-size: clamp(16px, 1.8vw, 22px);
+    font-weight: 500;
+    font-family: 'Raleway', sans-serif;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    transition: background-color 0.2s, color 0.2s;
+    box-sizing: border-box;
+}
+
+.audioButton:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--gris);
+    text-decoration: none;
+}
+
+.logo-sena-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20%;
+}
+
+.logo-sena-menu img {
+    width: clamp(56px, 7vw, 120px);
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .btn-hamburger-container {
+        top: 12px;
+        right: 12px;
+        width: clamp(52px, 12vw, 64px);
+        height: clamp(52px, 12vw, 64px);
+    }
+
+    .hamburger span {
+        font-size: clamp(28px, 6.5vw, 42px);
+    }
+
+    /* Fullscreen Mobile Overrides */
+    .left-menu {
+        top: 0;
+        bottom: 0;
+        width: 100vw;
+        height: 100vh;
+        max-height: 100vh;
+        border-radius: 0;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .left-menu .close-btn {
+        position: fixed;
+        right: 4%;
+        top: 0;
+        left: auto;
+        font-size: clamp(32px, 8vw, 48px);
+        padding: 0 8px;
+        line-height: 1;
+    }
+
+    .contendor-menu-left {
+        width: 100%;
+        height: auto;
+        padding: 4vw 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contendor-menu-left ul {
+        gap: 0;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contendor-menu-left ul li {
+        width: 100%;
+        margin: 0;
+    }
+
+    .contendor-menu-left ul li a {
+        font-size: clamp(20px, 5.5vw, 28px);
+        font-weight: bold;
+        padding: 12px 10%;
+        width: 100%;
+        text-align: center;
+    }
+
+    .contendor-menu-left ul li p {
+        color: #16142f;
+        font-size: clamp(18px, 4.5vw, 26px);
+        font-weight: 600;
+        margin-top: -5px;
+        margin-bottom: 0;
+        text-align: center;
+    }
+
+    .right-menu {
+        width: 100vw;
+        border-radius: 0;
+        padding-top: 8vw;
+        align-items: center;
+    }
+
+    .right-menu .close-btn {
+        position: fixed;
+        right: 4%;
+        top: 0;
+        font-size: clamp(32px, 8vw, 48px);
+        padding: 0 8px;
+        line-height: 1;
+    }
+
+    .contenedor-menu-right {
+        height: auto;
+        padding: 4vw 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contenedor-menu-right ul {
+        gap: 0;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contenedor-menu-right ul li {
+        margin: 0;
+        width: 100%;
+    }
+
+    .contenedor-menu-right ul li a {
+        font-size: clamp(18px, 5vw, 26px);
+        padding: clamp(10px, 3vw, 18px) 10%; 
+        text-align: center;
+    }
+
+    .audioButton {
+        font-size: clamp(18px, 5vw, 26px);
+        padding: clamp(10px, 3vw, 18px) 10%; 
+        text-align: center;
+    }
+
+    .logo-sena-menu {
+        padding-bottom: 4vw;
+        height: auto;
+    }
+
+    .logo-sena-menu img {
+        width: clamp(80px, 20vw, 150px);
+    }
+
+    /* OPTION 1: SCALE DOWN IF VIEWPORT IS SHORT (e.g. 100% zoom on mobile) */
+    @media (max-height: 650px) {
+        .contendor-menu-left, .contenedor-menu-right {
+            padding: 2vw 0;
+        }
+        
+        .contendor-menu-left ul li a, .contenedor-menu-right ul li a, .audioButton {
+            font-size: clamp(16px, 4.5vw, 22px);
+            padding: 8px 10%;
+        }
+
+        .contendor-menu-left ul li p {
+            font-size: clamp(14px, 4vw, 20px);
+        }
+
+        .left-menu .close-btn, .right-menu .close-btn {
+            font-size: clamp(28px, 8vw, 40px);
+        }
+
+        .logo-sena-menu img {
+            width: clamp(60px, 15vw, 100px);
+        }
+    }
+}
+
+/* Logo Yuredo Header (Opcional, si se quiere incluir aquí o se queda en Section 1) */
+/* En el diseño original, el logo Yuredo estaba absoluto en Section 1. 
+   Si queremos que sea parte del header global, deberíamos traerlo aquí.
+   Por ahora, mantengo solo los menús y la hamburguesa como pidió el usuario "Navegación principal". */

@@ -1,0 +1,677 @@
+/* SeccionMuseo.module.css */
+/* Layout Legacy Original - Posicionamiento Absoluto Estricto */
+
+.section5 {
+    position: relative;
+    width: 100%;
+    height: 56.26vw;
+    overflow: hidden;
+    margin: -2px 0 0 0;
+    padding: 0;
+    background-image: url('/static/img/seccion5_museo/fondo5.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.estrellasFondo {
+    z-index: 0;
+}
+
+.dianas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -3;
+    top: 5vh;
+    left: 0;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dianas_desktop {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.liana_mobile,
+.palmera_mobile {
+    display: none;
+}
+
+/* Contenedores base del Legacy */
+.contenedor_section5_1,
+.contenedor_section5_2,
+.contenedor_section5_3,
+.contenedor_section5_4 {
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+}
+
+/* --- Zona 1: Logo Yuredo y Estrellas --- */
+.contenedor_section5_1 {
+    top: 0;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor_section5_1 .estrellas_arriba_sect5 {
+    margin-right: -33%;
+    width: 65vw;
+    height: 12vw;
+    position: absolute;
+    pointer-events: none;
+}
+
+.yuredo_logo_sect5 {
+    width: 50%;
+}
+
+.yuredo_logo_sect5 img {
+    width: 13.7vw;
+    height: 4vw;
+    position: relative;
+    margin-left: 6%;
+    margin-top: 8%;
+}
+
+.vacio_logo_sect5 {
+    width: 50%;
+}
+
+/* --- Zona 2: Título --- */
+.contenedor_section5_2 {
+    top: 13%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.texto_sect5 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.texto_sect5 h2 {
+    margin-top: 1%;
+    font-size: 4.8vw;
+    font-family: 'Raleway', sans-serif;
+    margin-left: 20%;
+    color: #16142f;
+    font-weight: 900;
+    font-style: italic;
+}
+
+/* --- Zona 3: Video y Texto Podcast --- */
+.contenedor_section5_3 {
+    top: 28%;
+    height: 45%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start; /* Alineado a la izquierda */
+    overflow: hidden;
+}
+
+.contenedor_vacio_sect5 {
+    display: none; /* Eliminamos el espacio vacío para usar margin-left directamente en el video */
+}
+
+.contenedor_vacio_sect5 img {
+    margin-top: -60%;
+    height: 35vw;
+    width: 40vw;
+    z-index: 1;
+}
+
+.contenedor_sect5_video {
+    width: 40%;
+    height: 100%;
+    margin-left: 20%; /* Alineado con el inicio del slider (central_sect5_4 left: 20%) */
+    position: relative;
+    border-radius: 2.5vw; /* Sincronizado con Yuredo */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: box-shadow 0.5s ease;
+}
+
+.contenedor_sect5_video :global(.contenedorVideo),
+.contenedor_sect5_video :global(.contenedorVideo) video {
+    width: 35vw;
+    height: 20vw;
+    border-radius: 0 !important; /* El contenedor padre se encarga del redondeo */
+    background: black;
+    object-fit: cover;
+    border: none;
+}
+
+.txt_sect5 {
+    width: 25%;
+    height: 80%;
+    display: flex;
+    align-items: flex-start; /* Subir texto */
+    justify-content: center;
+    padding-left: 2%;
+    margin-top: 2%; /* Ajuste fino para nivelar con el video */
+}
+
+.txt_sect5 h5 {
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 500;
+    font-size: 1.5vw;
+    text-align: justify;
+    padding: 2%;
+    color: #16142f;
+    margin: 0;
+}
+
+/* --- Zona 4: Colección Inferior (Aves) --- */
+.contenedor_section5_4 {
+    top: 75%;
+    height: 25%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.izquierdo_sect5 {
+    width: 15%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    left: 0%;
+}
+
+.nebulosa_sect5 {
+    width: 25vw; /* Aumentado para visibilidad */
+    height: auto;
+    position: absolute;
+    top: 15%;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.9;
+}
+
+.central_sect5_4 {
+    position: absolute;
+    width: 55%; /* Más compacto */
+    height: 100%;
+    left: 20%; /* Centrado relativo a las flechas */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 10;
+    overflow: hidden; /* Corta las imágenes que no caben */
+}
+
+.prev_central,
+.next_central { 
+    display: flex;
+    position: absolute;
+    background: none;
+    border: none;
+    color: rgb(10, 0, 0);
+    font-size: 3.3vw;
+    font-weight: 900;
+    cursor: pointer;
+    z-index: 50;
+    transition: transform 0.2s;
+    filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.9)); /* Efecto Halo para visibilidad */
+}
+
+.prev_central:hover,
+.next_central:hover {
+    transform: scale(1.2);
+}
+
+.prev_central { left: 16%; }
+.next_central { right: 21%; }
+
+.slider_circular_container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.bird_slide {
+    flex: 0 0 25%;
+    width: 25%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    cursor: pointer;
+    padding: 0 0.4vw;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s;
+}
+
+.bird_slide:hover img {
+    transform: scale(1.02);
+}
+
+.bird_slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1vw;
+    background-color: rgba(230, 235, 230, 0.9);
+    transition: transform 0.3s ease;
+}
+
+.derecho_sect5 {
+    width: 13%;
+    height: 30%;
+    right: 2%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+}
+
+.derecho_sect5 a {
+    margin-top: 15%;
+    width: 5vw;
+    height: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.derecho_sect5 a .btn_saber {
+    position: absolute;
+    text-align: center;
+    width: 3.3vw;
+    height: 3.3vw;
+    cursor: pointer;
+    z-index: 1;
+    transition: transform 0.3s ease;
+}
+
+.derecho_sect5 .btn_saber:hover {
+    transform: scale(1.1);
+}
+
+/* Modal legacy exactly as it is */
+.modal_sect5 {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(17, 10, 124, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal_sect5.active {
+    display: flex;
+}
+
+.modal_content_sect5 {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    height: 90%;
+    text-align: center;
+    z-index: 10000;
+}
+
+.close_modal_sect5 {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 20px;
+    right: 15px;
+    font-size: 2vw;
+    border-radius: 50%;
+    width: 2.5vw;
+    height: 2.5vw;
+    background-color: #00bc00;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    z-index: 9999;
+}
+
+.list {
+    width: 95%;
+    height: 95%;
+    overflow: hidden;
+    position: relative;
+    z-index: 30;
+}
+
+.item {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 10%;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.content {
+    text-align: left;
+    max-width: 50%;
+    backdrop-filter: blur(12px);
+    background: rgba(10, 12, 11, 0.65);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 24px;
+    padding: 2.5vw;
+}
+
+.title { font-size: 4vw; font-weight: bold; font-family: 'Raleway', sans-serif; margin-bottom: 5px; }
+.topic { font-size: 2vw; color: #7dad3f; font-weight: bold; margin-bottom: 20px; }
+.des { font-size: 1.2vw; line-height: 1.6; margin-bottom: 30px; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8); text-align: justify; }
+
+.btn button {
+    background-color: #7dad3f;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.btn a { color: white; text-decoration: none; font-weight: bold; font-size: 1.1vw; }
+
+/* --- Responsividad (Móvil) --- */
+@media (max-width: 768px) {
+    .dianas_desktop {
+        display: none !important;
+    }
+    
+    .liana_mobile {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        z-index: -2;
+    }
+    
+    .palmera_mobile {
+        display: block;
+        position: absolute;
+        top: 45%;
+        right: 0;
+        width: 45%;
+        height: auto;
+        z-index: -2;
+    }
+    .section5 {
+        height: 177.5vw; /* Altura proporcional basada en aspect ratio del fondo (1922 / 1083) */
+        min-height: auto;
+        width: 100%;
+        margin-left: 0;
+        margin-top: -4px; /* Solapamiento de seguridad con la sección superior */
+        background-color: #ffffff !important;
+        background-image: none !important;
+        position: relative;
+        isolation: isolate;
+        margin-bottom: 0; /* Removido para evitar que la siguiente sección oculte el fondo */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start; /* Se cambia a flex-start para controlar desde el top */
+        padding-top: 18vw; /* Empuja el título y video hacia abajo para evitar cortes */
+        padding-bottom: 0; 
+        overflow: hidden;
+    }
+
+    .section5::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image:
+            url('/static/img/seccion5_museo/fondoResponsive5Arriba.svg'),
+            url('/static/img/seccion5_museo/fondoResponsive5Abajo.svg');
+        background-size: 100% auto, 100% auto;
+        background-position: left top, left bottom;
+        background-repeat: no-repeat, no-repeat;
+        z-index: -1;
+    }
+
+    .dianas_desktop {
+        display: none !important;
+    }
+
+    .liana_mobile {
+        position: absolute;
+        left: 50%;
+        top: 30%; /* Subido aún más a 30% */
+        transform: translate(-50%, -50%);
+        width: 110vw; /* Aumentado tamaño de 80vw a 110vw */
+        height: auto;
+        display: block !important;
+        z-index: -10; /* En la capa más baja */
+    }
+
+    /* Reset absolute containers for mobile flow */
+    .contenedor_section5_1,
+    .contenedor_section5_2,
+    .contenedor_section5_3,
+    .contenedor_section5_4 {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 100%;
+        height: auto;
+    }
+
+    /* Logo and stars */
+    .contenedor_section5_1 {
+        position: absolute;
+        top: 0;
+        margin-top: 5vh;
+        justify-content: center;
+    }
+
+    .vacio_logo_sect5 {
+        display: none;
+    }
+
+    .contenedor_section5_1 .estrellas_arriba_sect5 {
+        display: none !important;
+    }
+
+    /* Título */
+    .contenedor_section5_2 {
+        margin-top: 5vw;
+    }
+
+    .texto_sect5 h2 {
+        font-size: 10vw;
+        margin: 0;
+        text-align: center;
+        width: 100%;
+        line-height: 8.5vw; /* Reducido para juntar más los renglones */
+    }
+
+    .vaupesTexto {
+        font-size: 85%; /* Más pequeño que el 10vw de h2 */
+    }
+
+    /* Podcast Content area -> Column flow */
+    .contenedor_section5_3 {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 5vw;
+        gap: 4vw;
+        overflow: visible;
+    }
+
+    .contenedor_sect5_video {
+        width: 90vw;
+        margin: 0;
+        height: 68vw; /* Largo incrementado para ser más alto proporcionalmente */
+    }
+
+    .contenedor_sect5_video :global(.contenedorVideo) video {
+        width: 100%;
+        height: 100%;
+    }
+
+    .txt_sect5 {
+        width: 90%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .txt_sect5 h5 {
+        font-size: 3.1vw; /* Reducido para ahorrar espacio vertical */
+        text-align: center;
+        line-height: 3.8vw;
+    }
+
+    /* Birds Slider & Spotify Area */
+    .contenedor_section5_4 {
+        flex-direction: column;
+        margin-top: -24vw; /* Subido un poco más para acercar al texto */
+        height: auto;
+    }
+
+    .central_sect5_4 {
+        width: 100%;
+        left: 0;
+        height: 34vw; /* Altura ajustada: 38vw - 4vw de padding = 34vw */
+        position: relative;
+        margin: 0vw 0 10vw 0; 
+    }
+
+    .bird_slide {
+        flex: 0 0 38vw;
+        width: 38vw;
+        height: 34vw; /* Ajusta alto para ser perfectamente cuadrada con padding */
+        left: 12vw;
+        padding: 0 2vw; 
+    }
+
+    .bird_slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; 
+        border-radius: 3vw; 
+    }
+
+    .prev_central { 
+        left: 2vw; 
+        font-size: 8vw; 
+        top: 17vw; /* Centrado vertical: altura 34vw / 2 = 17vw */
+        transform: translateY(-50%); 
+    }
+    
+    .next_central { 
+        right: 2vw; 
+        font-size: 8vw; 
+        top: 17vw; 
+        transform: translateY(-50%); 
+    }
+
+    .prev_central:hover,
+    .next_central:hover {
+        transform: translateY(-50%) scale(1); /* Cancela el agrandamiento en móvil */
+    }
+
+    .izquierdo_sect5 {
+        position: absolute;
+        bottom: 5vw; /* Altura de seguridad */
+        left: 4vw;
+        display: block;
+        z-index: 10;
+    }
+
+    .nebulosa_sect5 {
+        width: 25vw;
+        left: -42vw;
+        top: 20vw;
+        height: 15vw;
+        opacity: 0.8;
+    }
+
+    .derecho_sect5 {
+        position: absolute;
+        bottom: -1vw; /* Más bajo aproximando al borde */
+        right: 2vw;
+        z-index: 10;
+        width: auto;
+        display: block !important;
+        margin: 0;
+    }
+
+    .derecho_sect5 a {
+        width: 10vw; /* Tamaño reducido de 12vw a 10vw */
+        height: 10vw;
+        display: flex;
+        margin: 0;
+    }
+
+    .derecho_sect5 a .btn_saber {
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Nebulosa */
+    .izquierdo_sect5 {
+        position: absolute;
+        width: 100%;
+        top: 58%; /* Bajada de 50% a 58% para que no solape arriba */
+        z-index: -1;
+    }
+
+    .nebulosa_sect5 {
+        width: 100vw;
+        opacity: 0.5;
+    }
+
+    /* Modal Mobile */
+    .modal_content_sect5 {
+        width: 95%;
+        height: 90%;
+    }
+
+    .close_modal_sect5 {
+        width: 10vw;
+        height: 10vw;
+        font-size: 6vw;
+    }
+
+    .content {
+        max-width: 90%;
+        padding: 5vw;
+    }
+
+    .title { font-size: 8vw; }
+    .topic { font-size: 4vw; }
+    .des { font-size: 3.5vw; }
+    .btn a { font-size: 4vw; }
+}
