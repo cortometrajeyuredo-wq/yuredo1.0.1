@@ -1,40 +1,35 @@
 import { useState, useEffect, useCallback } from "react";
+import { createPortal } from "react-dom";
 import styles from "./SeccionMuseo.module.css";
 import useDeslizadorSimple from "@/hooks/useDeslizadorSimple";
 import useBloqueoScroll from "@/hooks/useBloqueoScroll";
 import { aves, type Ave } from "@/data/aves";
 import EstrellasFondo from "@/components/EstrellasFondo";
 import VideoConPlay from "@/components/VideoConPlay";
-
 const SeccionMuseo = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [aveSeleccionada, setAveSeleccionada] = useState<Ave | null>(null);
   const [isMobile, setIsMobile] = useState(false);
-
   useEffect(() => {
     const manejarResize = () => setIsMobile(window.innerWidth <= 768);
     manejarResize();
     window.addEventListener("resize", manejarResize);
     return () => window.removeEventListener("resize", manejarResize);
   }, []);
-
   const deslizador = useDeslizadorSimple({
     totalDiapositivas: aves.length,
     diapositivasVisibles: 1,
     bucle: true,
   });
   useBloqueoScroll(isModalOpen);
-
   const abrirModal = useCallback((ave: Ave) => {
     setAveSeleccionada(ave);
     setIsModalOpen(true);
   }, []);
-
   const cerrarModal = useCallback(() => {
     setIsModalOpen(false);
     setAveSeleccionada(null);
   }, []);
-
   useEffect(() => {
     const manejarTecla = (e: KeyboardEvent) => {
       if (e.key === "Escape" && isModalOpen) cerrarModal();
@@ -42,7 +37,6 @@ const SeccionMuseo = () => {
     document.addEventListener("keydown", manejarTecla);
     return () => document.removeEventListener("keydown", manejarTecla);
   }, [isModalOpen, cerrarModal]);
-
   return (
     <section className={styles.section5} id="museo">
       <EstrellasFondo
@@ -51,7 +45,6 @@ const SeccionMuseo = () => {
         leftMax={90}
         className={styles.estrellasFondo}
       />
-
       <div className={styles.dianas}>
         <img 
           src="/static/img/seccion5_museo/dianas5.png" 
@@ -69,7 +62,6 @@ const SeccionMuseo = () => {
           alt="Palmera decorative" 
         />
       </div>
-
       <div className={styles.contenedor_section5_1}>
         <div className={styles.vacio_logo_sect5}></div>
         <img
@@ -78,15 +70,13 @@ const SeccionMuseo = () => {
           alt=""
         />
       </div>
-
       <div className={styles.contenedor_section5_2}>
         <div className={styles.texto_sect5}>
           <h2>
-            Podcast Aves <br /> <span className={styles.vaupesTexto}>Vaupés</span>
+            Podcast Aves <span className={styles.vaupesTexto}>Vaupés</span>
           </h2>
         </div>
       </div>
-
       <div className={styles.contenedor_section5_3}>
         <div className={styles.contenedor_vacio_sect5}>
           <img src="/static/img/seccion5_museo/star-sect5-izq.svg" alt="" />
@@ -106,7 +96,6 @@ const SeccionMuseo = () => {
           </h5>
         </div>
       </div>
-
       <div className={styles.contenedor_section5_4}>
         <div className={styles.izquierdo_sect5}>
           <img 
@@ -115,7 +104,6 @@ const SeccionMuseo = () => {
             className={styles.nebulosa_sect5}
           />
         </div>
-
         <button className={styles.prev_central} onClick={deslizador.anterior}>
           &#10094;
         </button>
@@ -124,11 +112,9 @@ const SeccionMuseo = () => {
             {aves.map((ave, idx) => {
               const total = aves.length;
               const activeIdx = deslizador.indice;
-
               let diff = idx - activeIdx;
               if (diff > total / 2) diff -= total;
               else if (diff < -total / 2) diff += total;
-
               // Slots visibles: 0, 1 en móvil; 0, 1, 2, 3 en desktop
               const maxVisibles = isMobile ? 1 : 3;
               const isVisible = diff >= 0 && diff <= maxVisibles;
@@ -139,7 +125,6 @@ const SeccionMuseo = () => {
                 pointerEvents: isVisible ? "auto" : "none",
                 position: "absolute",
               };
-
               return (
                 <div
                   key={ave.src}
@@ -156,7 +141,6 @@ const SeccionMuseo = () => {
         <button className={styles.next_central} onClick={deslizador.siguiente}>
           &#10095;
         </button>
-
         <div className={styles.derecho_sect5}>
           <a
             href="https://open.spotify.com/show/3XNk2BpPECiEQ7e1fE2I5E"
@@ -171,50 +155,50 @@ const SeccionMuseo = () => {
           </a>
         </div>
       </div>
-
-      {/* Modal */}
-      <div
-        className={`${styles.modal_sect5} ${isModalOpen ? styles.active : ""}`}
-        onClick={cerrarModal}
-      >
-        <span className={styles.close_modal_sect5} onClick={cerrarModal}>
-          &times;
-        </span>
+      {}
+      {isModalOpen && createPortal(
         <div
-          className={styles.modal_content_sect5}
-          onClick={(e) => e.stopPropagation()}
+          className={`${styles.modal_sect5} ${isModalOpen ? styles.active : ""}`}
+          onClick={cerrarModal}
         >
-          <div className={styles.list}>
-            {aveSeleccionada && (
-              <div
-                className={styles.item}
-                style={{ backgroundImage: `url(${aveSeleccionada.src})` }}
-              >
-                <div className={styles.content}>
-                  <div className={styles.title}>{aveSeleccionada.titulo}</div>
-                  <div className={styles.topic}>{aveSeleccionada.nombre}</div>
-                  <div className={styles.des}>
-                    {aveSeleccionada.descripcion}
+          <div
+            className={styles.modal_content_sect5}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <span className={styles.close_modal_sect5} onClick={cerrarModal}>
+              &times;
+            </span>
+            <div className={styles.list}>
+              {aveSeleccionada && (
+                <div className={styles.item}>
+                  <div className={styles.img_container}>
+                    <img src={aveSeleccionada.src} alt={aveSeleccionada.titulo} />
                   </div>
-                  <div className={styles.btn}>
-                    <button>
+                  <div className={styles.content}>
+                    <div className={styles.title}>{aveSeleccionada.titulo}</div>
+                    <div className={styles.topic}>{aveSeleccionada.nombre}</div>
+                    <div className={styles.des}>
+                      {aveSeleccionada.descripcion}
+                    </div>
+                    <div className={styles.btn}>
                       <a
                         href="https://repositorio.sena.edu.co/handle/11404/7547"
                         target="_blank"
                         rel="noreferrer"
+                        className={styles.btn_saber_mas}
                       >
                         Saber más
                       </a>
-                    </button>
+                    </div>
                   </div>
                 </div>
-              </div>
-            )}
+              )}
+            </div>
           </div>
-        </div>
-      </div>
+        </div>,
+        document.body
+      )}
     </section>
   );
 };
-
 export default SeccionMuseo;

@@ -1,20 +1,15 @@
 import styles from './SeccionYuredo.module.css';
 import EstrellasFondo from '@/components/EstrellasFondo';
-import VideoConPlay from '@/components/VideoConPlay';
-
 const SeccionYuredo = () => {
     return (
         <section className={styles.section3} id="yuredo">
             <EstrellasFondo cantidad={40} leftMin={20} leftMax={90} className={styles.estrellasFondo} />
-
             <div className={styles.dianas}>
                 <img src="/static/img/seccion3_yuredo/dianas3.svg" alt="" />
             </div>
-
             <div className={styles.lianasResponsivo}>
                 <img src="/static/img/seccion3_yuredo/lianasSec3.svg" alt="Lianas decorativas" />
             </div>
-
             <div className={styles.contenedor_section3_1}>
                 <div className={styles.estrellas3_1}>
                     <img src="/static/img/seccion3_yuredo/start-3_1.svg" alt="" />
@@ -23,10 +18,11 @@ const SeccionYuredo = () => {
                     <img src="/static/img/seccion3_yuredo/start3_2.svg" alt="" />
                 </div>
             </div>
-
+            <div className={styles.contenedor_titulo}>
+                <img src="/static/img/globales/logotipoYuredo.webp" alt="Título Yuredo" />
+            </div>
             <div className={styles.contenedor_section3_2}>
                 <div className={styles.centro}>
-                    {/* videoWrapper es el ancla de posicionamiento para los decorativos */}
                     <div className={styles.videoWrapper}>
                         <img
                             className={styles.florCorner}
@@ -39,10 +35,13 @@ const SeccionYuredo = () => {
                             alt=""
                         />
                         <div className={styles.videoYoutube}>
-                            <VideoConPlay
-                                id="videoPlayerYuredo"
-                                src="/static/video/Teaser Yuredo 2024.mp4"
-                            />
+                            <iframe
+                                src="https://www.youtube.com/embed/lhQnR2HUOKQ?rel=0"
+                                title="Teaser Yuredo 2024"
+                                frameBorder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowFullScreen
+                            ></iframe>
                         </div>
                     </div>
                 </div>
@@ -50,7 +49,6 @@ const SeccionYuredo = () => {
                     <img src="/static/img/seccion3_yuredo/palmeraSec3.svg" alt="Palmera decorativa" />
                 </div>
             </div>
-
             <div className={styles.contenedor_section3_3}>
                 <div className={styles.contenedor_logo_yuredo}>
                     <img className={styles.estrellas_izq} src="/static/img/seccion3_yuredo/start-sect3-bajo-izq.svg" alt="" />
@@ -65,5 +63,4 @@ const SeccionYuredo = () => {
         </section>
     );
 };
-
 export default SeccionYuredo;

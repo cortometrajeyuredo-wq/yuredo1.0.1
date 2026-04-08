@@ -1,6 +1,3 @@
-/* SeccionInicio.module.css */
-/* Layout Legacy Original - Posicionamiento Absoluto Estricto */
-
 .section1 {
     width: 100%;
     height: 56.97vw;
@@ -14,8 +11,6 @@
     background-position: center;
     background-repeat: no-repeat;
 }
-
-/* --- Decoración de fondo (dianas) --- */
 .dianas {
     position: absolute;
     width: 100%;
@@ -23,19 +18,14 @@
     top: 0;
     left: 0;
 }
-
 .dianas img {
     width: 100%;
     height: auto;
     object-fit: cover;
 }
-
-/* Estrella generadas por JS - enviadas al fondo absoluto */
 .estrellasFondo {
     z-index: 0;
 }
-
-/* Contenedores base del Legacy */
 .contenedor_section1_1,
 .contenedor_section1_2,
 .contenedor_section1_3,
@@ -45,14 +35,10 @@
     width: 100%;
     position: absolute;
 }
-
-/* --- Zona 1: Logo Yuredo --- */
 .contenedor_section1_1 {
     top: 0;
     height: 4%;
 }
-
-/* --- Zona 2: Logo Principal Yuredo --- */
 .contenedor_section1_2 {
     top: 4%;
     height: 10%;
@@ -60,16 +46,13 @@
     align-items: center;
     justify-content: center;
 }
-
 .contenedor_section1_2 img {
-    width: 16.4vw;
-    height: 4.2vw;
+    width: 42vw;
+    height: auto;
     text-align: center;
     position: absolute;
     z-index: 15;
 }
-
-/* --- Zona 3: Título --- */
 .contenedor_section1_3 {
     top: 14%;
     height: 6%;
@@ -77,7 +60,6 @@
     align-items: center;
     justify-content: center;
 }
-
 .contenedor_section1_3 h2 {
     font-size: 1.4vw;
     font-family: 'Raleway', sans-serif;
@@ -90,27 +72,22 @@
     text-transform: none;
     letter-spacing: normal;
 }
-
-/* --- Zona 4: Video --- */
 .contenedor_section1_4 {
     top: 20%;
     height: 2%;
 }
-
 .contenedor_section1_5 {
-    top: 18%;
-    height: 63%;
+    top: 23%;
+    height: 58%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
 }
-
 .contenedor_izquierdo_sect1 {
     width: 25%;
     height: 100%;
 }
-
 .contenedor_central_sect1 {
     width: 50%;
     height: 100%;
@@ -119,11 +96,11 @@
     justify-content: center;
     position: relative;
 }
-
 .contenedor_central_sect1 video,
+.contenedor_central_sect1 iframe,
 .contenedor_central_sect1 :global(.contenedorVideo) video {
     width: 48vw;
-    height: 30vw;
+    height: 27vw;
     border-radius: 1.5vw;
     overflow: hidden;
     object-fit: cover;
@@ -132,7 +109,6 @@
     box-shadow: none;
     backdrop-filter: none;
 }
-
 .contenedor_derecho_sect1 {
     width: 25%;
     height: 100%;
@@ -140,14 +116,12 @@
     flex-direction: column;
     position: relative;
 }
-
 .florSect1 {
     width: 100%;
     height: 100%;
     position: absolute;
     z-index: 0;
 }
-
 .florSect1 img {
     width: 11.7vw;
     height: 10.4vw;
@@ -157,20 +131,15 @@
     z-index: 0 !important;
     transition: transform 0.3s ease;
 }
-
 .florSect1 img:hover {
     transform: scale(1.15);
 }
-
 .star_derecha {
     z-index: 0;
 }
-
 .star_derecha img {
     z-index: 0;
 }
-
-/* --- Zona 6: Footer --- */
 .contenedor_section1_6 {
     top: 85%;
     height: 25%;
@@ -179,13 +148,11 @@
     display: flex;
     flex-direction: row;
 }
-
 .nebulosa {
     width: 15%;
     height: 100%;
     z-index: 0;
 }
-
 .nebulosa_img {
     width: 15vw;
     height: 12vw;
@@ -193,12 +160,10 @@
     margin-top: -40%;
     z-index: 0;
 }
-
 .purple, .yellow, .red, .blue {
     fill: #2db1ee;
     animation: colorGroup 5s infinite;
 }
-
 @keyframes colorGroup {
     0%   { fill: #51bbec; }
     25%  { fill: #2db1ee; }
@@ -206,7 +171,6 @@
     75%  { fill: #77eeda; }
     100% { fill: #51bbec; }
 }
-
 .star {
     width: 70%;
     height: 100%;
@@ -216,7 +180,6 @@
     justify-content: center;
     z-index: 0;
 }
-
 .star img {
     top: -55%;
     left: -20%;
@@ -226,7 +189,6 @@
     position: absolute;
     z-index: 0;
 }
-
 .logoSena {
     width: 15%;
     height: 100%;
@@ -237,7 +199,6 @@
     z-index: 0;
     top: -30%;
 }
-
 .logoSena img {
     position: absolute;
     width: 5.9vw;
@@ -245,23 +206,19 @@
     margin-left: 35%;
     z-index: 0;
 }
-
-/* --- Responsividad (Móvil) --- */
 @media (max-width: 768px) {
     .section1 {
-        height: auto; /* Altura automática según contenido para cerrar hueco inferior */
-        background-color: #ffffff; /* Blanco para cabecera superior */
-        background-image: url('/static/img/seccion1_inicio/fondo1.png'); /* Vista Web */
-        background-position: center bottom; /* Anclar olas al pie del contenido */
-        background-size: 100% auto; /* Ajuste proporcional sin distorsión */
+        height: auto;
+        background-color: #ffffff;
+        background-image: url('/static/img/seccion1_inicio/fondo1.png');
+        background-position: center bottom;
+        background-size: 100% auto;
         background-repeat: no-repeat;
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding-bottom: 22vw; /* Reducido para elevar la ola hacia el video */
+        padding-bottom: 22vw;
     }
-
-    /* Usar dianas.svg de la vista web */
     .dianas {
         position: absolute;
         width: 100%;
@@ -269,14 +226,11 @@
         left: 0;
         z-index: -1;
     }
-
     .dianas img {
-        content: normal !important; /* Reset LianaResponsivo replacement */
+        content: normal !important;
         width: 100%;
         height: auto;
     }
-
-    /* Mostrar y Reducir Estrellas que titilan */
     .estrellasFondo {
         display: block !important;
         position: absolute;
@@ -284,17 +238,14 @@
         left: 0;
         width: 100%;
         height: 100%;
-        z-index: 0; /* Por debajo de todos los contenedores con z-index: 10 */
+        z-index: 0;
         pointer-events: none;
     }
-
     .estrellasFondo [class*="estrella"] {
         width: 1.5px !important;
         height: 1.5px !important;
         box-shadow: 0 0 3px 1px rgba(255, 255, 255, 0.4) !important;
     }
-
-    /* Reset absolute containers for mobile flow */
     .contenedor_section1_2,
     .contenedor_section1_3,
     .contenedor_section1_4,
@@ -305,8 +256,6 @@
         width: 100%;
         height: auto;
     }
-
-    /* Capa Absoluta para Adornos Inferiores (Nebulosa, Logo Sena) */
     .contenedor_section1_6 {
         position: absolute !important;
         top: 0;
@@ -316,8 +265,6 @@
         z-index: 5;
         pointer-events: none;
     }
-
-    /* Capa Absoluta para Decoraciones (Capa Intermedia) */
     .contenedor_section1_1 {
         position: absolute !important;
         top: 0;
@@ -327,88 +274,73 @@
         z-index: 1; 
         pointer-events: none;
     }
-
-    /* Logo Yuredo */
     .contenedor_section1_2 {
-        margin-top: 8vw; /* Proporcional a 4vh de 1216px */
+        margin-top: -28vw;
         display: flex;
         align-items: center;
         justify-content: center;
     }
-
     .contenedor_section1_2 img {
-        width: 45vw;
+        width: 80vw;
         height: auto;
         position: relative;
         filter: none; 
     }
-
-    /* Título */
     .contenedor_section1_3 {
         margin-top: 2vw; 
         display: flex;
         align-items: center;
         justify-content: center;
     }
-
     .contenedor_section1_3 h2 {
         font-size: 5.5vw;
         width: 85%;
-        color: #16142f; /* Oscuro */
+        color: #16142f;
         text-align: center;
         margin-top: 0;
         text-shadow: none; 
     }
-
-    /* Video Section */
     .contenedor_section1_5 {
         flex-direction: column;
-        margin-top: 4vw; 
+        margin-top: -23vw;
         z-index: 10;
         display: flex;
         align-items: center;
         justify-content: center;
     }
-
     .contenedor_central_sect1 {
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
     }
-
     .contenedor_central_sect1 video,
+    .contenedor_central_sect1 iframe,
     .contenedor_central_sect1 :global(.contenedorVideo) video {
         width: 90vw;
-        height: 50vw; 
+        height: 50.625vw;
         border-radius: 4vw;
         box-shadow: 0 10px 30px rgba(0,0,0,0.15); 
     }
-
-    /* Decorations in flow / floating */
     .contenedor_derecho_sect1 {
         width: 100%;
         height: auto;
         position: relative;
         margin-top: 0;
+        pointer-events: none;
     }
-
     .florSect1 img {
         width: 20vw; 
-        height: auto; /* Prevenir que se aplaste por herencia */
+        height: auto;
         position: absolute;
         right: -3vw;
-        top: -58vw; /* Negative top rigth corner over video frame */
+        top: -58vw;
         z-index: 15;
         margin: 0;
     }
-
-    /* Estrella Derecha (SVG) */
     .star_derecha {
         display: none !important;
     }
-
-    /* Restore and position bottom elements */
     .nebulosa {
         display: block !important;
         position: absolute;
@@ -418,18 +350,14 @@
         opacity: 0.7;
         z-index: -1;
     }
-
     .nebulosa_img {
         width: 100%;
         height: auto;
         margin: 0;
     }
-
-    /* Estrella Bajo (SVG) */
     .star {
         display: none !important;
     }
-
     .logoSena {
         display: flex !important;
         position: absolute;
@@ -439,7 +367,6 @@
         height: auto;
         top: auto; 
     }
-
     .logoSena img {
         width: 100%;
         height: auto;

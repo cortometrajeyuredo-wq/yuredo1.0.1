@@ -44,11 +44,4 @@ export const slidesSemillero: ElementoSemillero[] = [
     },
 ];
 
-export const imagenesGaleriaSemillero: string[] = [
-    '/static/img/seccion2_motmot/MotMot_Semillero_01.png',
-    '/static/img/seccion2_motmot/MotMot_Semillero_02.png',
-    '/static/img/seccion2_motmot/MotMot_Semillero_03.png',
-    '/static/img/seccion2_motmot/MotMot_Semillero_04.png',
-    '/static/img/seccion2_motmot/MotMot_Semillero_05.png',
-    '/static/img/seccion2_motmot/semlleroPrincipal.jpeg',
-];
+

@@ -12,7 +12,6 @@ import useEspiaScroll from '@/hooks/useEspiaScroll';
 import styles from './Plantilla.module.css';
 
 const Plantilla = () => {
-    // Activar el espía de scroll globalmente para detectar la sección activa
     useEspiaScroll();
 
     return (

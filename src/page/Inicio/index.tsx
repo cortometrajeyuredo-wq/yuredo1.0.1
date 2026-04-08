@@ -15,19 +15,16 @@ import SeccionMuseo from './SeccionMuseo';
 import SeccionEquipo from './SeccionEquipo';
 
 const Inicio = () => {
-    // Activa el IntersectionObserver que añade .visible a los elementos .reveal
     useScrollReveal();
 
     return (
         <div>
-            {/* Secciones del Landing Page */}
             <SeccionInicio />
             <SeccionMotMot />
             <SeccionYuredo />
             <SeccionEtno />
             <SeccionMuseo />
             <SeccionEquipo />
-            {/* Elemento centinela para detectar el final exacto de la página en móviles */}
             <div id="fin-pagina" style={{ height: '1px', width: '100%' }} />
         </div>
     );
