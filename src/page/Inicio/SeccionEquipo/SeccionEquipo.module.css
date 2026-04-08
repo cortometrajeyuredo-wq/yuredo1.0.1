@@ -1,5 +1,3 @@
-/* SeccionEquipo.module.css */
-/* Layout Legacy Original - Posicionamiento Absoluto Estricto */
 .section6 {
     position: relative;
     width: 100%;
@@ -15,14 +13,13 @@
 }
 
 .estrellasFondo {
-    z-index: 2; /* Encima de decoración (z-1) y debajo de sliders (z-4) */
+    z-index: 2;
 }
 
 .palmaAbajo, .palmaIzquierda {
     display: none;
 }
 
-/* Estrellas para Vista Web (Escritorio) */
 .starTopMobile {
     display: block;
     position: absolute;
@@ -38,7 +35,7 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 25vw; /* Ajustado proporcionalmente a la altura de escritorio (56vw) */
+    width: 25vw;
     z-index: 1;
     pointer-events: none;
 }
@@ -48,7 +45,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    width: 32vw; /* Ajustado proporcionalmente a la altura de escritorio (56vw) */
+    width: 32vw;
     z-index: 1;
     pointer-events: none;
 }
@@ -76,7 +73,6 @@
     object-fit: cover;
 }
 
-/* Contenedores base del Legacy */
 .contenedor_section6_1,
 .contenedor_section6_2 {
     width: 100%;
@@ -84,7 +80,6 @@
     z-index: 1;
 }
 
-/* --- Zona 1: Título superior --- */
 .contenedor_section6_1 {
     top: 0;
     height: 15%;
@@ -97,7 +92,6 @@
     z-index: 0;
 }
 
-/* --- Zona 2: Contenido (Logo, Slider, Estrellas) --- */
 .contenedor_section6_2 {
     top: 15%;
     height: 85%;
@@ -319,13 +313,12 @@
     padding: 10px;
     cursor: pointer;
     z-index: 50;
-    filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.9)); /* Efecto Halo para visibilidad */
+    filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.9));
 }
 
 .prevSect6 { left: 16%; }
 .nextSect6 { right: 14%; }
 
-/* Logic for slider positioning */
 .active {
     transform: translateX(0) scale(1.1);
     z-index: 5 !important;
@@ -351,7 +344,6 @@
     pointer-events: none;
 }
 
-/* --- Responsividad (Móvil) --- */
 @media (max-width: 768px) {
     .dianas img {
         content: normal !important;
@@ -391,7 +383,7 @@
     .contenedor_section6_2 {
         flex-direction: column;
         align-items: center;
-        margin-top: 28vw; /* Subido desde 38vw */
+        margin-top: 28vw;
         gap: 2vw;
     }
 
@@ -414,7 +406,7 @@
     }
 
     .contenedor_slider .slider {
-        margin-top: 5vw; /* Acerca al título */
+        margin-top: 5vw;
     }
 
     .contenedor_slider .slider_item {
@@ -479,14 +471,13 @@
         display: block !important;
         position: absolute;
         left: 0;
-        top: 45vw; /* De tu edición manual */
+        top: 45vw;
         transform: translateY(-50%);
-        width: 58vw; /* De tu edición manual */
+        width: 58vw;
         z-index: 1;
         pointer-events: none;
     }
 
-    /* Estrellas para Móvil */
     .starTopMobile,
     .starBottomMobile,
     .starTopRightMobile {

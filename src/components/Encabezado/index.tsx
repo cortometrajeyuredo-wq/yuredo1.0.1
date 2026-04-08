@@ -13,18 +13,12 @@ import useAudioStore from '@/store/useAlmacenAudio';
 import type { AudioState } from '@/store/useAlmacenAudio';
 
 const Encabezado = () => {
-    // --- Estado Local ---
-    // Visibilidad de los menús laterales (izquierdo para SENA, derecho para navegación)
     const [isMenuIzquierdoOpen, setIsMenuIzquierdoOpen] = useState(false);
     const [isMenuDerechoOpen, setIsMenuDerechoOpen] = useState(false);
 
-    // --- Estado Global (Zustand) ---
-    // Sección activa detectada por el ScrollSpy
     const seccionActiva = useInterfazStore((state: InterfazState) => state.seccionActiva);
-    // Función para abrir el modal del reproductor de audio
     const abrirAudio = useAudioStore((state: AudioState) => state.openAudio);
 
-    // --- Acciones de Interfaz ---
     const alternarMenus = () => {
         const newState = !isMenuDerechoOpen;
         setIsMenuDerechoOpen(newState);
@@ -39,7 +33,6 @@ const Encabezado = () => {
     const cerrarMenuIzquierdo = () => setIsMenuIzquierdoOpen(false);
     const cerrarMenuDerecho = () => setIsMenuDerechoOpen(false);
 
-    // --- Efectos de Detección del Final de Página (Solo para Móvil) ---
     useEffect(() => {
         const handleIntersect = (entries: IntersectionObserverEntry[]) => {
             const isMobile = window.innerWidth <= 768;
@@ -91,7 +84,6 @@ const Encabezado = () => {
 
     return (
         <header className={styles.headerContainer}>
-            {/* Botón Hamburguesa Fijo */}
             <div className={styles['btn-hamburger-container']}>
                 <button
                     className={styles.hamburger}
@@ -103,7 +95,6 @@ const Encabezado = () => {
                 </button>
             </div>
 
-            {/* Menú Izquierdo: SENA / Enlaces Externos */}
             <div className={`${styles['vertical-menu']} ${styles['left-menu']} ${isMenuIzquierdoOpen ? styles.active : ''}`}>
                 <div className={styles['btn-cerrar-menu-left']}>
                     <button className={styles['close-btn']} onClick={cerrarMenuIzquierdo}>&times;</button>
@@ -148,7 +139,6 @@ const Encabezado = () => {
                 </div>
             </div>
 
-            {/* Menú Derecho: Navegación Interna */}
             <div className={`${styles['vertical-menu']} ${styles['right-menu']} ${isMenuDerechoOpen ? styles.active : ''}`}>
                 <div className={styles['btn-cerrar-menu-right']}>
                     <button className={styles['close-btn']} onClick={cerrarMenuDerecho}>&times;</button>

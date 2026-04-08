@@ -1,6 +1,3 @@
-/* SeccionMotMot.module.css */
-/* Layout Legacy Original - Posicionamiento Absoluto Estricto */
-
 .section2 {
     position: relative;
     width: 100%;
@@ -13,7 +10,6 @@
     background-position: center;
     background-repeat: no-repeat;
 }
-
 .dianas {
     position: absolute;
     width: 100%;
@@ -23,24 +19,18 @@
     left: 0;
     pointer-events: none;
 }
-
 .dianas img {
     width: 100%;
     height: auto;
     object-fit: cover;
 }
-
-/* Ocultar elementos móviles en desktop por defecto */
 .ave_mobile,
 .palmera_mobile {
     display: none;
 }
-
 .estrellasFondo {
     z-index: 0;
 }
-
-/* Contenedores base del Legacy */
 .contenedor_section2_1,
 .contenedor_section2_2,
 .contenedor_section2_3,
@@ -50,8 +40,6 @@
     position: absolute;
     z-index: 1;
 }
-
-/* --- Zona 1: Logo y Estrellas --- */
 .contenedor_section2_1 {
     top: 0;
     height: 15%;
@@ -59,13 +47,11 @@
     flex-direction: row;
     z-index: 0;
 }
-
 .contenedor_section2_1 .logo {
     width: 20%;
     height: 100%;
     z-index: 0;
 }
-
 .contenedor_section2_1 .logo img {
     width: 20.3vw;
     height: 5.1vw;
@@ -73,7 +59,6 @@
     margin-left: 3vw;
     z-index: 0;
 }
-
 .estrella2_1,
 .estrella2_2,
 .estrella2_3 {
@@ -82,14 +67,12 @@
     height: 100%;
     z-index: 0;
 }
-
 .estrella2_1 img {
     width: 42vw;
     height: 18vw;
     margin-top: -10%;
     z-index: 0;
 }
-
 .estrella2_2 img {
     width: 18vw;
     height: 10vw;
@@ -97,7 +80,6 @@
     margin-left: 55%;
     z-index: 0;
 }
-
 .estrella2_3 img {
     width: 38vw;
     height: 15vw;
@@ -105,7 +87,6 @@
     margin-left: 65%;
     z-index: 0;
 }
-/* --- Zona 2: Título Principal --- */
 .contenedor_section2_2 {
     top: 20%;
     height: 10%;
@@ -115,7 +96,6 @@
     justify-content: center;
     z-index: 0;
 }
-
 .contenedor_section2_2 h3 {
     font-size: 4.8vw;
     font-family: 'Raleway', sans-serif;
@@ -123,14 +103,11 @@
     margin-top: -5%;
     color: #16142f;
     font-weight: 900;
-    font-style: italic; /* Sincronizado con Museo, Etno y Equipo */
+    font-style: italic;
     text-transform: none;
     letter-spacing: normal;
     z-index: -1;
 }
-
-
-/* --- Zona 3: Subtítulo "Semillero" --- */
 .contenedor_section2_3 {
     top: 30%;
     height: 5%;
@@ -139,7 +116,6 @@
     justify-content: center;
     z-index: 2;
 }
-
 .contenedor_section2_3 h5 {
     margin-left: 6%;
     margin-top: -20%;
@@ -152,8 +128,6 @@
     letter-spacing: normal;
     z-index: -1;
 }
-
-/* --- Zona 4: Contenido Central (Boton + Slider + Texto) --- */
 .contenedor_section2_4 {
     top: 30%;
     height: 45%;
@@ -161,47 +135,36 @@
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    z-index: 2; /* Corregido: era -1, bloqueaba los clicks en los botones */
+    z-index: 2;
 }
-
 .sect2_uno {
-    width: 8%;
-    height: 12%;
-    position: relative;
-    left: 0;
-    top: -40%;
+    position: absolute;
+    left: 0vw;
+    top: -1.5vw;
     display: flex;
     justify-content: center;
-    z-index: 1;
+    z-index: 50;
 }
-
 .sect2_uno img {
-    position: absolute;
-    right: 0;
-    top: -40%;
-    width: 4vw;
-    height: 3vw;
+    position: relative;
+    width: 4.5vw;
+    height: 4.5vw;
     cursor: pointer;
-    z-index: 3;
-    left: 120%;
     transition: transform 0.3s ease;
 }
-
 .sect2_uno img:hover {
     transform: scale(1.1);
 }
-
 .contenedor_slider_sect2 {
     width: 45%;
-    height: 25vw; /* Reducido de 35vw para ajustarse al formato landscape */
+    height: 25vw;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin-left: 12vw; /* Rebalanceado hacia el centro según solicitud */
+    margin-left: 12vw;
     position: relative;
 }
-
 .slider_sect2 {
     display: flex;
     justify-content: center;
@@ -214,67 +177,58 @@
     top: 0%;
     left: 0%;
 }
-
 .slider_item_sect2 {
     position: absolute;
     text-align: center;
     flex-direction: column;
     transition: transform 0.5s ease-in-out, opacity 0.5s ease;
-    border-radius: 2.5vw; /* Sincronizado con la curva exterior del modal */
+    border-radius: 2.5vw;
     width: 33vw;
     height: 23vw;
     overflow: hidden;
     box-shadow: none;
 }
-
 .slider_img {
     margin-top: 0%;
     width: 100%;
     height: 100%;
-    border-radius: 2.5vw; /* Radio prominente idéntico al modal */
-    background-color: #fff; /* Fondo blanco en el contenedor */
-    overflow: hidden; /* Efecto máscara para la imagen */
+    border-radius: 2.5vw;
+    background-color: #fff;
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     cursor: pointer;
 }
-
 .slider_img img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Cambiado de contain para cubrir toda la card */
+    object-fit: cover;
     z-index: 1;
 }
-
-/* Efectos Slider Minimalistas Legacy */
 .active {
     transform: translateX(0);
     opacity: 1;
     z-index: 5;
 }
-
 .prev {
     transform: translateX(-100%);
     opacity: 0;
     pointer-events: none;
     z-index: 0;
 }
-
 .next {
     transform: translateX(100%);
     opacity: 0;
     pointer-events: none;
     z-index: 0;
 }
-
 .hidden {
     transform: translateX(200%);
     opacity: 0;
     z-index: 0;
 }
-
 .control_prev,
 .control_next {
     position: absolute;
@@ -284,23 +238,20 @@
     border: none;
     color: #16142f;
     font-size: 2.8vw;
-    font-weight: 900; /* Más grueso como en SeccionEtno */
+    font-weight: 900;
     padding: 10px;
     cursor: pointer;
-    z-index: 2000; /* Asegurar que esté al frente */
-    filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.9)); /* Efecto Halo */
+    z-index: 2000;
+    filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.9));
     transition: transform 0.2s;
 }
-
-.control_prev { left: -0.5vw; } /* Posicionado al borde exterior para evitar solapamiento */
+.control_prev { left: -0.5vw; }
 .control_next { right: -0.5vw; }
-
 .control_prev:hover,
 .control_next:hover { 
     color: var(--gris);
     transform: translateY(-50%) scale(1.1);
 }
-
 .sect2_texto {
     width: 23%;
     height: 100%;
@@ -309,48 +260,42 @@
     margin: 2%;
     position: relative;
 }
-
 .sect2_texto h4 {
     width: 22vw;
     position: absolute;
-    font-size: 1.3vw; /* Ajustado para legibilidad */
+    font-size: 1.3vw;
     font-family: 'Noto Sans', sans-serif;
     font-weight: 400;
     line-height: 1.6;
-    color: #444; /* Sincronizado con el estilo del modal */
+    color: #444;
     margin: 0;
 }
-
 .sect2_vacio {
     width: 17%;
     height: 100%;
 }
-
-
-/* Modal original style recovery */
 .modal_overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.4); /* Fondo más claro para dejar ver el blur */
-    backdrop-filter: blur(15px); /* Efecto Glassmorphism */
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    z-index: 5000;
+    z-index: 99999;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .modal_active {
     opacity: 1;
     pointer-events: auto;
 }
-
 .modal_content {
     position: relative;
     width: min(1000px, 92vw);
@@ -366,11 +311,9 @@
     transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
 }
-
 .modal_active .modal_content {
     transform: scale(1) translateY(0);
 }
-
 .close_btn {
     position: absolute;
     top: 1.5vw;
@@ -389,20 +332,22 @@
     transition: all 0.3s ease;
     z-index: 10;
 }
-
 .close_btn:hover {
     background: #ff4757;
     transform: rotate(90deg);
 }
-
-.modal_slider_container {
+.modal_controls_container {
+    position: absolute;
+    top: 50%;
+    left: 0;
     width: 100%;
-    height: 100%;
-    position: relative;
+    transform: translateY(-50%);
     display: flex;
-    align-items: center;
+    justify-content: space-between;
+    padding: 0 4vw;
+    pointer-events: none;
+    z-index: 5005;
 }
-
 .modal_body {
     display: flex;
     flex-direction: column;
@@ -411,26 +356,19 @@
     align-items: center;
     justify-content: center;
 }
-
 .modal_image_wrapper {
     width: 100%;
     max-height: 80vh;
     overflow: hidden;
     border-radius: 1.5vw;
 }
-
 .modal_image {
     width: 100%;
     max-height: 80vh;
-    object-fit: contain; /* Asegura que se vea toda la imagen */
+    object-fit: contain;
 }
-
-/* Modal info removed from CSS as it's no longer in JSX */
-
 .modal_prev, .modal_next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    position: relative;
     background: #16142f;
     color: white;
     border: none;
@@ -444,32 +382,26 @@
     align-items: center;
     justify-content: center;
     z-index: 1001;
+    pointer-events: auto;
     transition: all 0.3s ease;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
 }
-
-.modal_prev { left: -5vw; }
-.modal_next { right: -5vw; }
-
 .modal_prev:hover, .modal_next:hover {
     background: #34ace0;
-    transform: translateY(-50%) scale(1.1);
+    transform: scale(1.1);
 }
-
 @media (max-width: 768px) {
     .dianas_desktop {
         display: none !important;
     }
-
     .fila_intermedia_mobile {
         width: 100%;
         position: relative;
-        height: 35vw; /* Reducido para subir el contenido inferior */
+        height: 35vw;
         margin-top: 2vw;
         z-index: 10;
         pointer-events: none;
     }
-
     .ave_mobile {
         display: block;
         position: absolute;
@@ -479,43 +411,36 @@
         z-index: 10;
         pointer-events: none;
     }
-
     .sect2_uno {
         position: absolute;
-        top: 15vw;
-        left: 8vw;
+        top: -16vw;
+        left: 2vw;
         width: 16vw;
-        z-index: 20;
+        z-index: 50;
         pointer-events: auto;
     }
-
     .sect2_uno img {
         width: 100%;
         height: auto;
-        left: 0;
-        top: 0;
+        position: relative;
     }
-
     .ave_mobile img {
         width: 100%;
         height: auto;
     }
-
     .palmera_mobile {
         display: block;
         position: absolute;
-        bottom: 5vw; /* Colocada debajo del parrafo de texto */
+        bottom: 5vw;
         left: 0vw;
-        width: 30vw; /* Tamaño moderado para no romper la seccion */
+        width: 30vw;
         z-index: 1; 
         pointer-events: none;
     }
-
     .palmera_mobile img {
         width: 100%;
         height: auto;
     }
-
     .dianas img {
         content: normal !important;
         width: 100%;
@@ -532,9 +457,8 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding-bottom: 35vw; /* Acercado a la ola inferior */
+        padding-bottom: 35vw;
     }
-
     .section2::before {
         content: '';
         position: absolute;
@@ -547,8 +471,6 @@
         background-repeat: no-repeat, no-repeat;
         z-index: -1;
     }
-
-    /* Reset absolute containers for mobile flow */
     .contenedor_section2_1,
     .contenedor_section2_2,
     .contenedor_section2_3,
@@ -560,59 +482,46 @@
         width: 100%;
         height: auto;
     }
-
-    /* Logo and stars */
     .contenedor_section2_1 {
         margin-top: 8vw;
         justify-content: center;
     }
-
     .estrella2_1,
     .estrella2_2,
     .estrella2_3 {
         display: none !important;
     }
-
     .contenedor_section2_1 .logo img {
         width: 50vw;
         height: auto;
         margin: 0;
     }
-
-    /* Subtítulo (ahora arriba del título) */
     .contenedor_section2_3 {
-        margin-top: 8vw;
+        margin-top: 24vw;
         margin-bottom: 0;
     }
-
     .contenedor_section2_3 h5 {
         font-size: 5.5vw;
         margin: 0;
         text-align: center;
         opacity: 0.8;
     }
-
-    /* Título (abajo del subtítulo) */
     .contenedor_section2_2 {
         margin-top: 1vw;
         margin-bottom: 3vw;
     }
-
     .contenedor_section2_2 h3 {
         font-size: 11vw;
         margin: 0;
         text-align: center;
         line-height: 1.1;
     }
-
-    /* Content Area (Slider + Text) */
     .contenedor_section2_4 {
         flex-direction: column;
-        align-items: flex-start; /* Forzar alineación a la izquierda */
+        align-items: flex-start;
         margin-top: 3vw; 
         gap: 1vw; 
     }
-
     .contenedor_slider_sect2 {
         width: 100%;
         height: 60vw;
@@ -621,83 +530,92 @@
         display: flex;
         justify-content: flex-start;
         position: relative;
-        top: -6vw; /* Subido sin afectar otros elementos */
+        top: -6vw;
     }
-
     .slider_sect2 {
-        margin: 0 auto 0 0; /* move to the left */
+        margin: 0 auto 0 0;
         width: 85vw;
         justify-content: flex-start;
     }
-
     .slider_item_sect2 {
-        width: 70vw; /* Card más grande */
+        width: 70vw;
         height: 52vw; 
-        margin-left: 11vw; /* Distancia equilibrada para flechas */
+        margin-left: 11vw;
         border-radius: 4vw;
     }
-
     .slider_img {
         border-radius: 4vw;
     }
-
-    /* Description Text - MOVED BELOW SLIDER */
     .sect2_texto {
-        width: 65%; /* Ajustado para alineación derecha */
+        width: 65%;
         margin-left: auto;
         margin-right: 5%;
         display: flex;
         justify-content: flex-end;
-        min-height: 45vw; /* Altura de seguridad para evitar saltos de seccion */
+        min-height: 45vw;
         align-items: flex-start;
     }
-
     .sect2_texto h4 {
         width: 100%;
         position: relative;
-        font-size: 3.8vw; /* Tamaño reducido */
-        text-align: right; /* Alineado a la derecha */
-        line-height: 1.35; /* Espaciado reducido */
+        font-size: 3.8vw;
+        text-align: right;
+        line-height: 1.35;
         margin: 0; 
     }
-
-    /* Reset older button position if any (handled in .fila_intermedia_mobile) */
-    /* .sect2_uno is now inside .fila_intermedia_mobile */
-
     .control_prev,
     .control_next {
         font-size: 10vw;
     }
-
     .control_prev { 
-        left: 2vw; /* Equilibrado */
+        left: 2vw;
     }
-    
     .control_next { 
-        left: 82vw; /* Corregido para verdadera simetría con la card de 70vw finalizando en 81vw */
+        left: 82vw;
         right: auto;
     }
-
-    /* Modal Mobile */
     .modal_content {
-        width: 98vw; /* Más ancho para aprovechar espacio */
-        padding: 2vw; /* Menos relleno interno para que la imagen sea más grande */
+        width: 98vw; 
+        padding: 2vw; 
     }
-
+    .modal_overlay {
+        flex-direction: column;
+        justify-content: center;
+        gap: 3vw;
+    }
+    .close_btn {
+        position: relative;
+        top: auto;
+        right: auto;
+        align-self: flex-end;
+        margin-right: 5vw;
+        margin-bottom: -1vw;
+        width: 9vw;
+        height: 9vw;
+        font-size: 5vw;
+        z-index: 5005;
+    }
+    .modal_controls_container {
+        position: relative;
+        top: auto;
+        transform: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 15vw;
+        width: 100%;
+        margin-top: 2vw;
+        z-index: 5005;
+    }
     .modal_prev, .modal_next {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        transform: none;
         width: 12vw;
         height: 12vw;
-        font-size: 5vw;
-    }
-
-    .modal_prev { left: 1vw; }
-    .modal_next { right: 1vw; }
-
-    .close_btn {
-        width: 8vw;
-        height: 8vw;
-        font-size: 5vw;
-        top: 3vw;
-        right: 3vw;
+        font-size: 6vw;
     }
 }

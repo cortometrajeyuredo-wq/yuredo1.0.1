@@ -39,7 +39,6 @@ const SeccionEquipo = () => {
             </div>
 
             <div className={styles.contenedor_section6_1}>
-                {/* Vacío en HTML legacy, pero con img del botón hamburger (omitida para nav en React) */}
             </div>
 
             <div className={styles.contenedor_section6_2}>
@@ -59,11 +58,10 @@ const SeccionEquipo = () => {
                             // Calcular distancia del elemento activo
                             let diff = idx - indiceActivo;
                             
-                            // Normalizar la distancia para manejar el bucle infinito circular (loop)
                             if (diff > total / 2) diff -= total;
                             else if (diff < -total / 2) diff += total;
 
-                            let clasesPosicion = styles.hiddenRight; // Default
+                            let clasesPosicion = styles.hiddenRight;
                             if (diff === 0) clasesPosicion = styles.active;
                             else if (diff === 1) clasesPosicion = styles.next;
                             else if (diff === -1) clasesPosicion = styles.prev;
