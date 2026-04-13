@@ -21,9 +21,9 @@ const Inicio = () => {
         <div>
             <SeccionInicio />
             <SeccionMotMot />
-            <SeccionYuredo />
             <SeccionEtno />
             <SeccionMuseo />
+            <SeccionYuredo />
             <SeccionEquipo />
             <div id="fin-pagina" style={{ height: '1px', width: '100%' }} />
         </div>

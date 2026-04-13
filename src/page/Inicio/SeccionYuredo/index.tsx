@@ -31,7 +31,7 @@ const SeccionYuredo = () => {
                         />
                         <img
                             className={styles.colibriCorner}
-                            src="/static/img/seccion3_yuredo/colibri-sect3.png"
+                            src="/static/img/seccion3_yuredo/colibri-sect3.webp"
                             alt=""
                         />
                         <div className={styles.videoYoutube}>

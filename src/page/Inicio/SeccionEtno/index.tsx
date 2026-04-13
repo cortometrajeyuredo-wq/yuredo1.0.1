@@ -8,10 +8,10 @@ const SeccionEtno = () => {
     });
     const cartillaActiva = cartillasEtno[indiceActivo];
     const imagenesSlider = [
-        '/static/img/seccion4_etno/Etno_Ornitologia_02.jpg',
-        '/static/img/seccion4_etno/Etno_Ornitologia_03.jpg',
-        '/static/img/seccion4_etno/Etno_Ornitologia_01.jpg',
-        '/static/img/seccion4_etno/Etno_Ornitologia_04.jpg',
+        '/static/img/seccion4_etno/Etno_Ornitologia_02.webp',
+        '/static/img/seccion4_etno/Etno_Ornitologia_03.webp',
+        '/static/img/seccion4_etno/Etno_Ornitologia_01.webp',
+        '/static/img/seccion4_etno/Etno_Ornitologia_04.webp',
     ];
     return (
         <section className={styles.section4} id="etno">

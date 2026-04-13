@@ -25,7 +25,7 @@ const SeccionInicio = () => {
                 </div>
                 <div className={styles.contenedor_derecho_sect1}>
                     <div className={styles.florSect1}>
-                        <img src="/static/img/seccion1_inicio/flower-amarilla.png" alt="" />
+                        <img src="/static/img/seccion1_inicio/flower-amarilla.webp" alt="" />
                     </div>
                     <div className={styles.star_derecha}>
                         <img src="/static/img/seccion1_inicio/star-sect-derecho.svg" alt="" />

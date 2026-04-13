@@ -47,7 +47,7 @@ const SeccionMuseo = () => {
       />
       <div className={styles.dianas}>
         <img 
-          src="/static/img/seccion5_museo/dianas5.png" 
+          src="/static/img/seccion5_museo/dianas5.webp" 
           className={styles.dianas_desktop} 
           alt="" 
         />
