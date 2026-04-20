@@ -1,7 +1,7 @@
 /**
  * @módulo Encabezado
  * @descripción Componente de cabecera que contiene el menú lateral y la navegación principal.
- * @arquitectura src/components/Encabezado/index.tsx
+ * @arquitectura src/components/encabezado/index.tsx
  */
 
 import { useState, useEffect } from 'react';
