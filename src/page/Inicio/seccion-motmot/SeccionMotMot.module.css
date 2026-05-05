@@ -5,7 +5,7 @@
     overflow: hidden;
     margin: -2px 0 0 0;
     padding: 0;
-    background-image: url('/static/img/seccion-motmot/fondo-motmot.webp');
+    background-image: url('/static/img/seccion-motmot/fondo-motmot.svg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -248,7 +248,7 @@
 .control_prev { left: -0.5vw; }
 .control_next { right: -0.5vw; }
 .control_prev:hover,
-.control_next:hover { 
+.control_next:hover {
     color: var(--gris);
     transform: translateY(-50%) scale(1.1);
 }
@@ -434,7 +434,7 @@
         bottom: 5vw;
         left: 0vw;
         width: 30vw;
-        z-index: 1; 
+        z-index: 1;
         pointer-events: none;
     }
     .palmera_mobile img {
@@ -519,8 +519,8 @@
     .contenedor_section2_4 {
         flex-direction: column;
         align-items: flex-start;
-        margin-top: 3vw; 
-        gap: 1vw; 
+        margin-top: 3vw;
+        gap: 1vw;
     }
     .contenedor_slider_sect2 {
         width: 100%;
@@ -539,7 +539,7 @@
     }
     .slider_item_sect2 {
         width: 70vw;
-        height: 52vw; 
+        height: 52vw;
         margin-left: 11vw;
         border-radius: 4vw;
     }
@@ -561,22 +561,22 @@
         font-size: 3.8vw;
         text-align: right;
         line-height: 1.35;
-        margin: 0; 
+        margin: 0;
     }
     .control_prev,
     .control_next {
         font-size: 10vw;
     }
-    .control_prev { 
+    .control_prev {
         left: 2vw;
     }
-    .control_next { 
+    .control_next {
         left: 82vw;
         right: auto;
     }
     .modal_content {
-        width: 98vw; 
-        padding: 2vw; 
+        width: 98vw;
+        padding: 2vw;
     }
     .modal_overlay {
         flex-direction: column;

@@ -1,40 +1,40 @@
 import { useState, useCallback } from 'react';
-import styles from './SeccionCasosExito.module.css';
+import styles from './SeccionRelatosMagicos.module.css';
 import EstrellasFondo from '@/components/estrellas-fondo';
 
-const casosExitoData = [
+const relatosMagicosData = [
     { src: '/static/img/globales/logotipoYuredo.webp', preview: 'Aprendiz Destacado' },
     { src: '/static/img/seccion-motmot/motmot-semillero-01.webp', preview: 'Experiencia Vanguardista' },
     { src: '/static/img/seccion-motmot/motmot-semillero-02.webp', preview: 'Emprendimiento Juvenil' }
 ];
 
-const SeccionCasosExito = () => {
+const SeccionRelatosMagicos = () => {
     const [indiceActivo, setIndiceActivo] = useState(0);
 
-    const avanzarSlide = useCallback(() => setIndiceActivo((prev) => (prev + 1) % casosExitoData.length), []);
-    const retrocederSlide = useCallback(() => setIndiceActivo((prev) => (prev - 1 + casosExitoData.length) % casosExitoData.length), []);
+    const avanzarSlide = useCallback(() => setIndiceActivo((prev) => (prev + 1) % relatosMagicosData.length), []);
+    const retrocederSlide = useCallback(() => setIndiceActivo((prev) => (prev - 1 + relatosMagicosData.length) % relatosMagicosData.length), []);
 
     return (
-        <section className={`${styles.sectionCasos} reveal`} id="casos-exito">
+        <section className={`${styles.sectionCasos} reveal`} id="relatos-magicos">
             <EstrellasFondo cantidad={30} leftMin={20} leftMax={90} className={styles.estrellasFondo} />
-            
+
             <div className={styles.contenedor_titulo_sup}>
                 <h5>Historias de Aprendices</h5>
             </div>
-            
+
             <div className={styles.contenedor_titulo_inf}>
-                <h3>Casos de Éxito</h3>
+                <h3>Relatos Mágicos</h3>
             </div>
 
             <div className={styles.contenedor_principal}>
-                {/* SLIDER IZQUIERDO */}
+
                 <div className={styles.contenedor_slider}>
                     <div className={styles.slider_carrusel}>
-                        {casosExitoData.map((elemento, indice) => {
+                        {relatosMagicosData.map((elemento, indice) => {
                             let claseElemento = styles.hidden;
                             if (indice === indiceActivo) claseElemento = styles.active;
-                            else if (indice === (indiceActivo - 1 + casosExitoData.length) % casosExitoData.length) claseElemento = styles.prev;
-                            else if (indice === (indiceActivo + 1) % casosExitoData.length) claseElemento = styles.next;
+                            else if (indice === (indiceActivo - 1 + relatosMagicosData.length) % relatosMagicosData.length) claseElemento = styles.prev;
+                            else if (indice === (indiceActivo + 1) % relatosMagicosData.length) claseElemento = styles.next;
 
                             return (
                                 <div
@@ -43,7 +43,7 @@ const SeccionCasosExito = () => {
                                     onClick={() => setIndiceActivo(indice)}
                                 >
                                     <div className={styles.slider_img}>
-                                        <img src={elemento.src} alt={`Caso éxito ${indice + 1}`} />
+                                        <img src={elemento.src} alt={`Relato Mágico ${indice + 1}`} />
                                     </div>
                                     <div className={styles.slider_caption}>
                                         <span>{elemento.preview}</span>
@@ -56,7 +56,6 @@ const SeccionCasosExito = () => {
                     <button className={styles.control_next} onClick={avanzarSlide}>&#10095;</button>
                 </div>
 
-                {/* TEXTO DERECHO */}
                 <div className={styles.contenedor_texto}>
                     <div className={styles.bloque_texto}>
                         <h4>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.”</h4>
@@ -68,4 +67,4 @@ const SeccionCasosExito = () => {
     );
 };
 
-export default SeccionCasosExito;
+export default SeccionRelatosMagicos;

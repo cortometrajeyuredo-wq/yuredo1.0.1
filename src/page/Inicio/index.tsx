@@ -11,8 +11,7 @@ import SeccionInicio from './seccion-inicio';
 import SeccionMotMot from './seccion-motmot';
 import SeccionYuredo from './seccion-yuredo';
 import SeccionEtno from './seccion-etno';
-import SeccionMuseo from './seccion-museo';
-import SeccionCasosExito from './seccion-casos-exito';
+import SeccionPodcast from './seccion-podcast';
 import SeccionEquipo from './seccion-equipo';
 
 const Inicio = () => {
@@ -23,9 +22,10 @@ const Inicio = () => {
             <SeccionInicio />
             <SeccionMotMot />
             <SeccionEtno />
-            <SeccionMuseo />
+            <SeccionPodcast />
             <SeccionYuredo />
-            <SeccionCasosExito />
+            <div id="relatos-magicos" style={{ position: 'relative' }}></div>
+
             <SeccionEquipo />
             <div id="fin-pagina" style={{ height: '1px', width: '100%' }} />
         </div>

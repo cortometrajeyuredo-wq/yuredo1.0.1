@@ -1,13 +1,13 @@
 /**
  * @módulo useBloqueoScroll
- * @descripción Inmoviliza el desplazamiento (scroll) del cuerpo de la página cuando existen 
+ * @descripción Inmoviliza el desplazamiento (scroll) del cuerpo de la página cuando existen
  * elementos superpuestos activos (ej: modales, menús).
  * @arquitectura src/hooks/useBloqueoScroll.ts
  */
 
 import { useEffect, useRef } from 'react';
 
-/** 
+/**
  * Contador global para administrar múltiples capas de bloqueo simultáneas.
  * Asegura que el scroll se restablezca solo cuando todos los elementos se cierren.
  */
@@ -22,22 +22,20 @@ const useBloqueoScroll = (estaBloqueado: boolean) => {
     const estabaBloqueado = useRef(false);
 
     useEffect(() => {
-        // --- Activar Bloqueo ---
+
         if (estaBloqueado && !estabaBloqueado.current) {
             conteoBloqueos++;
             estabaBloqueado.current = true;
 
-            // Si es el primer bloqueo activo, ocultamos el overflow del body
             if (conteoBloqueos === 1) {
                 document.body.style.overflow = 'hidden';
             }
         }
-        // --- Desactivar Bloqueo ---
+
         else if (!estaBloqueado && estabaBloqueado.current) {
             conteoBloqueos = Math.max(0, conteoBloqueos - 1);
             estabaBloqueado.current = false;
 
-            // Si ya no quedan bloqueos activos, restauramos el scroll original
             if (conteoBloqueos === 0) {
                 document.body.style.overflow = '';
             }

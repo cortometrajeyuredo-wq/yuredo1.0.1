@@ -5,7 +5,7 @@
     overflow: hidden;
     margin: -2px 0 0 0;
     padding: 0;
-    background-image: url('/static/img/seccion-etno/fondo-etno.webp');
+    background-image: url('/static/img/seccion-etno/fondo-etno.svg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -15,7 +15,7 @@
 }
 .starSupIzq, .starSupDer, .starInfIzq, .starInfDer {
     position: absolute;
-    width: auto; 
+    width: auto;
     height: auto;
     z-index: 0;
     pointer-events: none;
@@ -484,14 +484,14 @@
         margin: 0;
     }
     .sect4_tres_slider {
-        width: 90vw; 
+        width: 90vw;
         left: 0;
         right: 0;
         margin: 0 auto;
-        position: relative; 
-        top: auto; 
-        transform: none; 
-        height: 100%; 
+        position: relative;
+        top: auto;
+        transform: none;
+        height: 100%;
     }
     .sect4_item {
         border-radius: 4vw;
@@ -503,7 +503,7 @@
     .sect4_next { right: 2vw; }
     .cuatro {
         position: relative;
-        width: 100%; 
+        width: 100%;
         left: auto;
         top: auto;
     }
@@ -511,7 +511,7 @@
         display: none;
     }
     .sect4_txt {
-        display: none; 
+        display: none;
     }
     .sect4_txt_mobile {
         display: flex;

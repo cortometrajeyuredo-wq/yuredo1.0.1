@@ -54,10 +54,9 @@ const SeccionEquipo = () => {
                     <div className={styles.slider}>
                         {equipoYuredo.map((miembro, idx) => {
                             const total = equipoYuredo.length;
-                            
-                            // Calcular distancia del elemento activo
+
                             let diff = idx - indiceActivo;
-                            
+
                             if (diff > total / 2) diff -= total;
                             else if (diff < -total / 2) diff += total;
 

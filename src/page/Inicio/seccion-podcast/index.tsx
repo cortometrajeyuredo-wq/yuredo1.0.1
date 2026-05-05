@@ -1,12 +1,12 @@
 import { useState, useEffect, useCallback } from "react";
 import { createPortal } from "react-dom";
-import styles from "./SeccionMuseo.module.css";
+import styles from "./SeccionPodcast.module.css";
 import useDeslizadorSimple from "@/hooks/useDeslizadorSimple";
 import useBloqueoScroll from "@/hooks/useBloqueoScroll";
 import { aves, type Ave } from "@/data/aves";
 import EstrellasFondo from "@/components/estrellas-fondo";
 import VideoConPlay from "@/components/video-con-play";
-const SeccionMuseo = () => {
+const SeccionPodcast = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [aveSeleccionada, setAveSeleccionada] = useState<Ave | null>(null);
   const [isMobile, setIsMobile] = useState(false);
@@ -38,7 +38,7 @@ const SeccionMuseo = () => {
     return () => document.removeEventListener("keydown", manejarTecla);
   }, [isModalOpen, cerrarModal]);
   return (
-    <section className={styles.section5} id="museo">
+    <section className={styles.section5} id="podcast">
       <EstrellasFondo
         cantidad={50}
         leftMin={10}
@@ -46,27 +46,27 @@ const SeccionMuseo = () => {
         className={styles.estrellasFondo}
       />
       <div className={styles.dianas}>
-        <img 
-          src="/static/img/seccion-museo/dianas-museo.webp" 
-          className={styles.dianas_desktop} 
-          alt="" 
+        <img
+          src="/static/img/seccion-podcast/dianas-podcast.webp"
+          className={styles.dianas_desktop}
+          alt=""
         />
-        <img 
-          src="/static/img/seccion-museo/liana-sect-museo.svg" 
-          className={styles.liana_mobile} 
-          alt="Liana decorative" 
+        <img
+          src="/static/img/seccion-podcast/liana-sect-podcast.svg"
+          className={styles.liana_mobile}
+          alt="Liana decorative"
         />
-        <img 
-          src="/static/img/seccion-museo/palmera-sect-museo-der.svg" 
-          className={styles.palmera_mobile} 
-          alt="Palmera decorative" 
+        <img
+          src="/static/img/seccion-podcast/palmera-sect-podcast-der.svg"
+          className={styles.palmera_mobile}
+          alt="Palmera decorative"
         />
       </div>
       <div className={styles.contenedor_section5_1}>
         <div className={styles.vacio_logo_sect5}></div>
         <img
           className={styles.estrellas_arriba_sect5}
-          src="/static/img/seccion-museo/star-sect-museo-arriba.svg"
+          src="/static/img/seccion-podcast/star-sect-podcast-arriba.svg"
           alt=""
         />
       </div>
@@ -79,11 +79,11 @@ const SeccionMuseo = () => {
       </div>
       <div className={styles.contenedor_section5_3}>
         <div className={styles.contenedor_vacio_sect5}>
-          <img src="/static/img/seccion-museo/star-sect-museo-izq.svg" alt="" />
+          <img src="/static/img/seccion-podcast/star-sect-podcast-izq.svg" alt="" />
         </div>
         <div className={styles.contenedor_sect5_video}>
           <VideoConPlay
-            id="videoPlayerMuseo"
+            id="videoPlayerPodcast"
             src="/static/video/colombia-nativa.mp4"
           />
         </div>
@@ -98,9 +98,9 @@ const SeccionMuseo = () => {
       </div>
       <div className={styles.contenedor_section5_4}>
         <div className={styles.izquierdo_sect5}>
-          <img 
-            src="/static/img/seccion-museo/nebulosa.svg" 
-            alt="Nebulosa" 
+          <img
+            src="/static/img/seccion-podcast/nebulosa.svg"
+            alt="Nebulosa"
             className={styles.nebulosa_sect5}
           />
         </div>
@@ -115,7 +115,7 @@ const SeccionMuseo = () => {
               let diff = idx - activeIdx;
               if (diff > total / 2) diff -= total;
               else if (diff < -total / 2) diff += total;
-              // Slots visibles: 0, 1 en móvil; 0, 1, 2, 3 en desktop
+
               const maxVisibles = isMobile ? 1 : 3;
               const isVisible = diff >= 0 && diff <= maxVisibles;
               const style: React.CSSProperties = {
@@ -201,4 +201,4 @@ const SeccionMuseo = () => {
     </section>
   );
 };
-export default SeccionMuseo;
+export default SeccionPodcast;

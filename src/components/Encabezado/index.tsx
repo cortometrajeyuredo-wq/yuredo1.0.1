@@ -25,7 +25,7 @@ const Encabezado = () => {
 
         const isMobile = window.innerWidth <= 768;
         if (!isMobile) {
-            // En vista web, el menú verde (izquierdo) se abre al presionar la hamburguesa
+
             setIsMenuIzquierdoOpen(newState);
         }
     };
@@ -38,7 +38,6 @@ const Encabezado = () => {
             const isMobile = window.innerWidth <= 768;
             if (!isMobile) return;
 
-            // Si el elemento #fin-pagina entra en el viewport y estamos en móvil
             if (entries[0].isIntersecting) {
                 setIsMenuIzquierdoOpen(true);
             }
@@ -47,7 +46,7 @@ const Encabezado = () => {
         const observer = new IntersectionObserver(handleIntersect, {
             root: null,
             rootMargin: '0px',
-            threshold: 0.1 // Se dispara apenas el centinela es visible
+            threshold: 0.1
         });
 
         const sentinel = document.getElementById('fin-pagina');
@@ -156,20 +155,29 @@ const Encabezado = () => {
                         </li>
                         <li>
                             <a
+                                href="#teaser"
+                                className={seccionActiva === 'teaser' ? styles.active : ''}
+                                onClick={(e) => scrollHaciaSeccion(e, 'teaser')}
+                            >
+                                Teaser
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="#trailer"
+                                className={seccionActiva === 'trailer' ? styles.active : ''}
+                                onClick={(e) => scrollHaciaSeccion(e, 'trailer')}
+                            >
+                                Trailer
+                            </a>
+                        </li>
+                        <li>
+                            <a
                                 href="#motmot"
                                 className={seccionActiva === 'motmot' ? styles.active : ''}
                                 onClick={(e) => scrollHaciaSeccion(e, 'motmot')}
                             >
                                 Mot Mot
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                href="#yuredo"
-                                className={seccionActiva === 'yuredo' ? styles.active : ''}
-                                onClick={(e) => scrollHaciaSeccion(e, 'yuredo')}
-                            >
-                                Yuredo
                             </a>
                         </li>
                         <li>
@@ -183,11 +191,29 @@ const Encabezado = () => {
                         </li>
                         <li>
                             <a
-                                href="#museo"
-                                className={seccionActiva === 'museo' ? styles.active : ''}
-                                onClick={(e) => scrollHaciaSeccion(e, 'museo')}
+                                href="#podcast"
+                                className={seccionActiva === 'podcast' ? styles.active : ''}
+                                onClick={(e) => scrollHaciaSeccion(e, 'podcast')}
                             >
-                                Museo
+                                Podcast
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="#yuredo"
+                                className={seccionActiva === 'yuredo' ? styles.active : ''}
+                                onClick={(e) => scrollHaciaSeccion(e, 'yuredo')}
+                            >
+                                Yuredo
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="#relatos-magicos"
+                                className={seccionActiva === 'relatos-magicos' ? styles.active : ''}
+                                onClick={(e) => scrollHaciaSeccion(e, 'relatos-magicos')}
+                            >
+                                Relatos Mágicos
                             </a>
                         </li>
                         <li>

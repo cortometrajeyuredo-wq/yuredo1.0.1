@@ -1,14 +1,14 @@
 .section1 {
     width: 100%;
-    height: 56.97vw;
+    height: 95vw;
     position: relative;
     z-index: 0;
-    overflow: hidden;
+    overflow: visible;
     margin: 0;
     padding: 0;
-    background-image: url('/static/img/seccion-inicio/fondo-inicio.webp');
-    background-size: cover;
-    background-position: center;
+    background-image: url('/static/img/seccion-inicio/fondo-inicio.svg');
+    background-size: 100% auto;
+    background-position: center bottom;
     background-repeat: no-repeat;
 }
 .dianas {
@@ -40,7 +40,7 @@
     height: 4%;
 }
 .contenedor_section1_2 {
-    top: 4%;
+    top: 2.2vw;
     height: 10%;
     display: flex;
     align-items: center;
@@ -54,7 +54,7 @@
     z-index: 15;
 }
 .contenedor_section1_3 {
-    top: 14%;
+    top: 8vw;
     height: 6%;
     display: flex;
     align-items: center;
@@ -73,16 +73,17 @@
     letter-spacing: normal;
 }
 .contenedor_section1_4 {
-    top: 20%;
+    top: 11.4vw;
     height: 2%;
 }
 .contenedor_section1_5 {
-    top: 23%;
-    height: 58%;
+    top: 18vw;
+    height: auto;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
+    z-index: 20;
 }
 .contenedor_izquierdo_sect1 {
     width: 25%;
@@ -92,8 +93,10 @@
     width: 50%;
     height: 100%;
     display: flex;
+    flex-direction: column;
+    gap: 4vw;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     position: relative;
 }
 .contenedor_central_sect1 video,
@@ -108,64 +111,15 @@
     border: none;
     box-shadow: none;
     backdrop-filter: none;
+    display: block;
 }
 
-.pipContainer {
-    position: absolute;
-    bottom: 8.4vw;
-    right: -20vw;
-    width: 18vw;
-    height: 10.125vw;
-    border-radius: 1vw;
-    overflow: hidden;
-    cursor: pointer;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
-    border: 0.2vw solid #ffffff;
-    z-index: 20;
-    transition: transform 0.3s ease, border-color 0.3s ease;
-}
-
-.pipContainer:hover {
-    transform: scale(1.05);
-    border-color: #51bbec;
-}
-
-.contenedor_central_sect1 .pipContainer video,
-.contenedor_central_sect1 .pipContainer img {
-    width: 100%;
-    height: 100%;
-    border-radius: 0;
-    object-fit: cover;
-    margin: 0;
-    padding: 0;
-}
-
-.pipOverlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.5);
+.teaserWrapper {
+    position: relative;
+    width: 48vw;
+    height: 27vw;
     display: flex;
     justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    pointer-events: none;
-}
-
-.pipContainer:hover .pipOverlay {
-    opacity: 1;
-}
-
-.pipOverlay span {
-    color: white;
-    font-family: 'Raleway', sans-serif;
-    font-size: 1.2vw;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
 }
 
 .contenedor_derecho_sect1 {
@@ -176,18 +130,19 @@
     position: relative;
 }
 .florSect1 {
-    width: 100%;
-    height: 100%;
     position: absolute;
-    z-index: 0;
-}
-.florSect1 img {
+    top: -2vw;
+    right: -4vw;
     width: 11.7vw;
     height: 10.4vw;
-    margin-left: -25%;
-    margin-top: -7%;
-    position: absolute;
-    z-index: 0;
+    z-index: 10;
+}
+.florSect1 img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin: 0;
+    z-index: 10;
     transition: transform 0.3s ease;
 }
 .florSect1 img:hover {
@@ -200,23 +155,26 @@
     z-index: 0;
 }
 .contenedor_section1_6 {
-    top: 85%;
-    height: 25%;
-    z-index: -1;
+    position: absolute;
+    bottom: 0;
+    left: 0;
     width: 100%;
-    display: flex;
-    flex-direction: row;
+    height: 0;
+    z-index: 5;
 }
 .nebulosa {
-    width: 15%;
-    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 15vw;
+    height: 12vw;
     z-index: 0;
 }
 .nebulosa_img {
-    width: 15vw;
-    height: 12vw;
-    margin-left: 10%;
-    margin-top: -40%;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    margin: 0;
     z-index: 0;
 }
 .purple, .yellow, .red, .blue {
@@ -231,52 +189,34 @@
     100% { fill: #51bbec; }
 }
 .star {
-    width: 70%;
-    height: 100%;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 0;
-}
-.star img {
-    top: -55%;
-    left: -20%;
-    text-align: center;
-    width: 120%;
-    height: 160%;
-    position: absolute;
-    z-index: 0;
+    display: none;
 }
 .logoSena {
-    width: 15%;
-    height: 100%;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 0;
-    top: -30%;
+    position: absolute;
+    bottom: 2vw;
+    right: 2vw;
+    width: 6vw;
+    height: 6vw;
+    z-index: 10;
 }
 .logoSena img {
-    position: absolute;
-    width: 5.9vw;
-    height: 5.9vw;
-    margin-left: 35%;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    margin: 0;
     z-index: 0;
 }
 @media (max-width: 768px) {
     .section1 {
         height: auto;
-        background-color: #ffffff;
-        background-image: url('/static/img/seccion-inicio/fondo-inicio.webp');
+        background-image: url('/static/img/seccion-inicio/fondo-inicio.svg');
         background-position: center bottom;
         background-size: 100% auto;
         background-repeat: no-repeat;
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding-bottom: 48vw;
+        padding-bottom: 20vw;
     }
     .dianas {
         position: absolute;
@@ -330,7 +270,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        z-index: 1; 
+        z-index: 1;
         pointer-events: none;
     }
     .contenedor_section1_2 {
@@ -343,10 +283,10 @@
         width: 80vw;
         height: auto;
         position: relative;
-        filter: none; 
+        filter: none;
     }
     .contenedor_section1_3 {
-        margin-top: 2vw; 
+        margin-top: 2vw;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -357,7 +297,7 @@
         color: #16142f;
         text-align: center;
         margin-top: 0;
-        text-shadow: none; 
+        text-shadow: none;
     }
     .contenedor_section1_5 {
         flex-direction: column;
@@ -370,8 +310,14 @@
     .contenedor_central_sect1 {
         width: 100%;
         display: flex;
+        flex-direction: column;
+        gap: 6vw;
         align-items: center;
         justify-content: center;
+    }
+    .teaserWrapper {
+        width: 90vw;
+        height: 50.625vw;
     }
     .contenedor_central_sect1 video,
     .contenedor_central_sect1 iframe,
@@ -379,7 +325,7 @@
         width: 90vw;
         height: 50.625vw;
         border-radius: 4vw;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.15); 
+        box-shadow: 0 10px 30px rgba(0,0,0,0.15);
     }
     .contenedor_derecho_sect1 {
         width: 100%;
@@ -388,13 +334,18 @@
         margin-top: 0;
         pointer-events: none;
     }
-    .florSect1 img {
-        width: 20vw; 
-        height: auto;
+    .florSect1 {
         position: absolute;
+        top: -6vw;
         right: -3vw;
-        top: -58vw;
+        width: 20vw;
+        height: 20vw;
         z-index: 15;
+    }
+    .florSect1 img {
+        width: 100%;
+        height: auto;
+        position: relative;
         margin: 0;
     }
     .star_derecha {
@@ -424,29 +375,13 @@
         right: 5vw;
         width: 12vw;
         height: auto;
-        top: auto; 
+        top: auto;
     }
     .logoSena img {
         width: 100%;
         height: auto;
         margin: 0;
-        position: relative; 
+        position: relative;
     }
-    
-    .pipContainer {
-        bottom: -25vw;
-        right: 0;
-        left: 0;
-        margin: auto;
-        width: 40vw;
-        height: 22.5vw;
-        border-radius: 2vw;
-        border-width: 0.5vw;
-    }
-    .pipOverlay {
-        opacity: 1;
-    }
-    .pipOverlay span {
-        font-size: 3.5vw;
-    }
+
 }

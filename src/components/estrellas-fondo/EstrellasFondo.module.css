@@ -1,4 +1,4 @@
-/* EstrellasFondo.module.css */
+
 
 .contenedorEstrellas {
     position: absolute;
@@ -22,7 +22,6 @@
     animation: titilar 4s infinite alternate ease-in-out;
 }
 
-/* Tamaños variados aleatorios simulados con nth-child (opcional) */
 .estrella:nth-child(even) {
     width: 2px;
     height: 2px;
@@ -36,7 +35,7 @@
 
 .estrella:nth-child(5n) {
     background-color: #d4f0ff;
-    /* tono azulado tenue */
+
 }
 
 @keyframes titilar {

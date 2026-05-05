@@ -24,7 +24,7 @@ const AudioModal = () => {
 
         if (isPlaying) {
             audio.play().catch(() => {
-                // Autoplay bloqueado por el navegador (requiere interacción previa)
+
             });
         } else {
             audio.pause();
@@ -61,7 +61,6 @@ const AudioModal = () => {
         <>
             <audio ref={audioRef} preload="none" />
 
-            {/* Modal de audio */}
             <div
                 id="audioModal"
                 className={`${styles['audio-modal']} ${isOpen ? styles.active : ''}`}

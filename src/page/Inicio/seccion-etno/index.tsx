@@ -21,20 +21,20 @@ const SeccionEtno = () => {
             <img src="/static/img/seccion-etno/star-sect-etno-inf-izq.svg" className={styles.starInfIzq} alt="" />
             <img src="/static/img/seccion-etno/star-sect-etno-inf-der.svg" className={styles.starInfDer} alt="" />
             <div className={styles.dianas}>
-                <img 
-                    src="/static/img/seccion-etno/dianas-etno.svg" 
-                    className={styles.dianas_desktop} 
-                    alt="" 
+                <img
+                    src="/static/img/seccion-etno/dianas-etno.svg"
+                    className={styles.dianas_desktop}
+                    alt=""
                 />
-                <img 
-                    src="/static/img/seccion-etno/ave-responsive-sec-etno-izq.svg" 
-                    className={styles.ave_mobile} 
-                    alt="Ave decorativa" 
+                <img
+                    src="/static/img/seccion-etno/ave-responsive-sec-etno-izq.svg"
+                    className={styles.ave_mobile}
+                    alt="Ave decorativa"
                 />
-                <img 
-                    src="/static/img/seccion-etno/liana-responsive-sec-etno.svg" 
-                    className={styles.liana_mobile} 
-                    alt="Liana decorativa" 
+                <img
+                    src="/static/img/seccion-etno/liana-responsive-sec-etno.svg"
+                    className={styles.liana_mobile}
+                    alt="Liana decorativa"
                 />
             </div>
             <div className={styles.contenedor_section4_1}>

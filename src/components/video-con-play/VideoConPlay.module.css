@@ -1,4 +1,4 @@
-/* VideoConPlay.module.css */
+
 
 .contenedorVideo {
     position: relative;
@@ -16,7 +16,6 @@
     object-fit: cover;
 }
 
-/* Botón play centrado sobre el video */
 .botonPlay {
     position: absolute;
     top: 50%;

@@ -5,7 +5,7 @@
     overflow: hidden;
     margin: -2px 0 0 0;
     padding: 0;
-    background-image: url('/static/img/seccion-yuredo/fondo-yuredo.webp');
+    background-image: url('/static/img/seccion-yuredo/fondo-yuredo.svg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -226,11 +226,11 @@
         height: auto;
     }
     .section3 {
-        height: auto; 
+        height: auto;
         min-height: 160vw;
-        margin-top: -2px; 
+        margin-top: -2px;
         margin-bottom: -3px;
-        z-index: 5; 
+        z-index: 5;
         background-color: transparent;
         background-image: none;
         position: relative;
@@ -258,7 +258,7 @@
     .contenedor_section3_1,
     .contenedor_section3_2,
     .contenedor_section3_3 {
-        position: relative; 
+        position: relative;
         top: auto;
         left: auto;
         transform: none;
