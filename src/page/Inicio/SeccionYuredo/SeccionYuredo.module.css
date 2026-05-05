@@ -1,0 +1,338 @@
+.section3 {
+    position: relative;
+    width: 100%;
+    height: 56.19vw;
+    overflow: hidden;
+    margin: -2px 0 0 0;
+    padding: 0;
+    background-image: url('/static/img/seccion3_yuredo/fondo3.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.estrellasFondo {
+    z-index: 0;
+}
+.dianas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -5;
+    top: 3%;
+    left: 0;
+    pointer-events: none;
+}
+.dianas img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.lianasResponsivo,
+.palmeraResponsivo {
+    display: none;
+}
+.contenedor_section3_1,
+.contenedor_section3_2,
+.contenedor_section3_3 {
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+}
+.contenedor_section3_1 {
+    top: 0;
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+}
+.estrellas3_1,
+.estrellas3_2 {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    position: relative;
+    pointer-events: none;
+}
+.contenedor_titulo {
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    top: -15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contenedor_titulo img {
+    width: 35vw;
+    height: auto;
+}
+.estrellas3_1 img {
+    width: 85vw;
+    margin-left: 35%;
+}
+.estrellas3_2 img {
+    margin-left: 45%;
+}
+.contenedor_section3_2 {
+    top: 29%;
+    height: 57%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.centro {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.videoWrapper {
+    position: relative;
+    width: 55vw;
+    height: 30.937vw;
+    overflow: visible;
+}
+.videoYoutube {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2.5vw;
+    overflow: hidden;
+    border: none;
+    transition: box-shadow 0.5s ease;
+}
+.videoYoutube :global(.contenedorVideo),
+.videoYoutube :global(.contenedorVideo) video,
+.videoYoutube iframe {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 0 !important;
+    background-color: black;
+    object-fit: cover;
+    display: block;
+}
+.florCorner {
+    position: absolute;
+    width: 16vw;
+    height: auto;
+    top: -6vw;
+    left: -6vw;
+    z-index: 10;
+    pointer-events: none;
+    filter: drop-shadow(2px 4px 8px rgba(0, 0, 0, 0.3));
+    transition: transform 0.3s ease;
+}
+.florCorner:hover {
+    transform: scale(1.1);
+}
+.colibriCorner {
+    position: absolute;
+    width: 17vw;
+    height: auto;
+    top: -7vw;
+    right: -10vw;
+    z-index: 10;
+    pointer-events: none;
+    filter: drop-shadow(2px 4px 8px rgba(0, 0, 0, 0.3));
+    transition: transform 0.3s ease;
+}
+.colibriCorner:hover {
+    transform: scale(1.1);
+}
+.contenedor_section3_3 {
+    top: 80%;
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+}
+.contenedor_logo_yuredo {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+}
+.estrellas_izq {
+    position: absolute;
+    width: 45vw;
+    height: auto;
+    left: 2%;
+    top: -30%;
+    pointer-events: none;
+    z-index: 1;
+}
+.boton_saber_mas {
+    position: relative;
+    width: 20%;
+    height: 100%;
+    display: flex;
+}
+.boton_saber_mas a img {
+    position: relative;
+    display: flex;
+    width: 4.5vw;
+    height: auto;
+    cursor: pointer;
+    z-index: 20;
+    margin-top: -110%;
+    margin-left: 20%;
+    transition: transform 0.3s ease;
+}
+.boton_saber_mas a img:hover {
+    transform: scale(1.15) rotate(5deg);
+}
+.estrellas_der {
+    position: absolute;
+    width: 55vw;
+    height: auto;
+    right: -20%;
+    top: -60%;
+    z-index: 1;
+    pointer-events: none;
+}
+@media (max-width: 768px) {
+    .dianas {
+        display: none !important;
+    }
+    .lianasResponsivo {
+        display: block;
+        position: absolute;
+        top: 8vw;
+        left: 0;
+        z-index: -2 !important;
+        pointer-events: none;
+    }
+    .lianasResponsivo img {
+        width: 1000px;
+        height: auto;
+    }
+    .palmeraResponsivo {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: auto;
+        bottom: -35vw;
+        z-index: 10 !important;
+        pointer-events: none;
+    }
+    .palmeraResponsivo img {
+        width: 30vw;
+        height: auto;
+    }
+    .section3 {
+        height: auto !important; 
+        min-height: 160vw;
+        margin-top: -2px !important; 
+        margin-bottom: -3px !important;
+        z-index: 5 !important; 
+        background-color: transparent !important;
+        background-image: none !important;
+        position: relative;
+        isolation: isolate;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 45vw;
+        padding-bottom: 25vw;
+        overflow: hidden;
+    }
+    .section3::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image:
+            url('/static/img/seccion3_yuredo/fondoResponsive3Arriba.svg'),
+            url('/static/img/seccion3_yuredo/fondoResponsive3Abajo.svg');
+        background-size: 100% auto, 100% auto;
+        background-position: left top, left bottom;
+        background-repeat: no-repeat, no-repeat;
+        z-index: -1;
+    }
+    .contenedor_section3_1,
+    .contenedor_section3_2,
+    .contenedor_section3_3 {
+        position: relative; 
+        top: auto;
+        left: auto;
+        transform: none;
+        width: 100%;
+        height: auto;
+    }
+    .contenedor_section3_1 {
+        display: none !important;
+    }
+    .contenedor_titulo {
+        position: absolute;
+        top: 5vw;
+        left: -5vw;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 15;
+        pointer-events: none;
+    }
+    .contenedor_titulo img {
+        width: 60vw;
+        height: auto;
+    }
+    .contenedor_section3_2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0;
+        z-index: 50;
+        position: relative;
+    }
+    .centro {
+        height: auto;
+    }
+    .videoWrapper {
+        width: 90vw;
+        height: 50.625vw;
+    }
+    .florCorner {
+        width: 25vw;
+        bottom: -7vw;
+        top: auto;
+        left: -4.6vw;
+    }
+    .colibriCorner {
+        width: 28vw;
+        top: -15vw;
+        right: -4.5vw;
+    }
+    .contenedor_section3_3 {
+        z-index: 99 !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 6vw;
+    }
+    .contenedor_logo_yuredo {
+        width: 100%;
+        display: block;
+    }
+    .estrellas_izq {
+        display: none !important;
+    }
+    .boton_saber_mas {
+        width: 100%;
+        justify-content: center;
+        margin-top: 0;
+    }
+    .boton_saber_mas a img {
+        width: 15vw;
+        margin: 0;
+        position: relative;
+    }
+    .estrellas_der {
+        display: none !important;
+    }
+}
