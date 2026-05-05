@@ -36,7 +36,7 @@ const useDeslizadorSimple = ({
     const indiceMaximo = Math.max(0, totalDiapositivas - diapositivasVisibles);
 
     /**
-     * Avanza a la siguiente diapositiva. 
+     * Avanza a la siguiente diapositiva.
      * Si está al final y el bucle está activo, regresa al inicio.
      */
     const siguiente = () => {
@@ -71,7 +71,7 @@ const useDeslizadorSimple = ({
         }
     };
 
-    /** 
+    /**
      * Cálculo del porcentaje de desplazamiento horizontal (CSS Transform Translate).
      * Se basa en el ancho relativo de una diapositiva según la cantidad visible.
      */

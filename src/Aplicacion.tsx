@@ -5,8 +5,8 @@
  */
 
 import { Routes, Route } from 'react-router-dom';
-import Plantilla from '@/components/Plantilla';
-import Inicio from '@/page/Inicio';
+import Plantilla from '@/components/plantilla';
+import Inicio from '@/page/inicio';
 
 const App = () => {
   return (
@@ -17,6 +17,5 @@ const App = () => {
     </Routes>
   );
 };
-
 
 export default App;

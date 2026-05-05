@@ -1,26 +1,7 @@
-/* =======================================================================================================
-   TOKENS GLOBALES Y SISTEMA DE ANIMACIONES — index.css
-   =======================================================================================================
-   EXCEPCIÓN ARQUITECTURAL JUSTIFICADA (ver docs/arquitectura.md §8):
-   Este archivo existe por las siguientes razones técnicas que no pueden resolverse con CSS Modules:
-
-   1. VARIABLES CSS (--color-*, --z-*, etc.): Deben ser globales para que todos los módulos las hereden.
-   2. RESET MÍNIMO: Se aplica a html/body/#root, no a componentes individuales.
-   3. @KEYFRAMES: Las animaciones declaradas aquí son referenciadas por múltiples módulos CSS.
-      CSS Modules aísla los nombres de clase, pero los @keyframes necesitan estar en un scope global
-      para ser accedidos entre módulos distintos sin duplicación.
-   4. SISTEMA SCROLL-REVEAL (.reveal, .visible): Las clases son inyectadas dinámicamente por el hook
-      `useScrollReveal` mediante JavaScript (classList.add). No pueden ser CSS Modules porque el hook
-      no conoce el hash generado por el bundler.
-   ======================================================================================================= */
 
 
-/* -----------------------------------------------------------------------
-   § 1 — VARIABLES CSS GLOBALES (Design Tokens)
-   Compartidas por todos los componentes vía var(--nombre-variable)
-   ----------------------------------------------------------------------- */
 :root {
-    /* Paleta de Colores */
+
     --color-primario: #51bbec;
     --color-secundario: #64eedc;
     --color-acento: #ff4d4d;
@@ -28,7 +9,6 @@
     --color-texto-principal: #16142f;
     --color-texto-claro: #ffffff;
 
-    /* Capas Z-Index — para mantener coherencia de apilamiento */
     --z-fondo: 0;
     --z-decoracion: 1;
     --z-contenido: 10;
@@ -36,16 +16,11 @@
     --z-modal-capa: 1000;
     --z-modal-contenido: 2000;
 
-    /* Glassmorphism — efecto de vidrio compartido */
     --glass-fondo: rgba(255, 255, 255, 0.1);
     --glass-borde: rgba(255, 255, 255, 0.2);
     --glass-desenfoque: blur(12px);
 }
 
-/* -----------------------------------------------------------------------
-   § 2 — CLASE UTILITARIA: Panel de vidrio (Glassmorphism)
-   Usada en múltiples componentes sin módulo propio
-   ----------------------------------------------------------------------- */
 .glass-panel {
     background: var(--glass-fondo);
     backdrop-filter: var(--glass-desenfoque);
@@ -53,10 +28,6 @@
     border-radius: 16px;
 }
 
-/* -----------------------------------------------------------------------
-   § 3 — RESET MÍNIMO
-   Normalización base para toda la aplicación
-   ----------------------------------------------------------------------- */
 html,
 body,
 #root {
@@ -83,13 +54,6 @@ svg {
 button {
     font: inherit;
 }
-
-/* -----------------------------------------------------------------------
-   § 4 — ANIMACIONES @KEYFRAMES GLOBALES
-   No pueden estar en CSS Modules porque son referenciadas entre múltiples
-   archivos .module.css (colorGroup, colorChange → SeccionInicio, EstrellasFondo;
-   animate → SeccionMuseo; runningTime → AudioModal).
-   ----------------------------------------------------------------------- */
 
 /** Animación de cambio de color para elementos SVG (Nebulosa) */
 @keyframes colorGroup {
@@ -137,7 +101,7 @@ button {
     }
 }
 
-/** Animación de entrada para contenidos de modales (SeccionMuseo) */
+/** Animación de entrada para contenidos de modales (SeccionPodcast) */
 @keyframes animate {
     from {
         opacity: 0;
@@ -163,10 +127,6 @@ button {
     }
 }
 
-/* -----------------------------------------------------------------------
-   § 5 — CLASES UTILITARIAS PARA ANIMACIONES
-   Aplicadas mediante JavaScript; no pueden ser CSS Modules.
-   ----------------------------------------------------------------------- */
 .animate-content {
     animation: animate 1s ease-in-out forwards;
 }
@@ -174,13 +134,6 @@ button {
 .running-time {
     animation: runningTime 4s linear 1 forwards;
 }
-
-/* -----------------------------------------------------------------------
-   § 6 — SISTEMA SCROLL-REVEAL
-   Las clases .reveal y .visible son inyectadas por el hook useScrollReveal
-   (src/hooks/useScrollReveal.ts) mediante classList.add() dinámicamente.
-   No pueden ser CSS Modules porque el hook no tiene acceso al hash del bundler.
-   ----------------------------------------------------------------------- */
 
 /** Estado inicial — elementos ocultos antes de entrar al viewport */
 .reveal,

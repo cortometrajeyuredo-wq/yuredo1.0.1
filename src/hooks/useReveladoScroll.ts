@@ -29,7 +29,7 @@ const useScrollReveal = () => {
             entradas.forEach((entrada) => {
                 if (entrada.isIntersecting) {
                     entrada.target.classList.add('visible');
-                    // Una vez revelado, dejamos de observar para optimizar rendimiento
+
                     observer.unobserve(entrada.target);
                 }
             });
@@ -37,7 +37,6 @@ const useScrollReveal = () => {
 
         const observer = new IntersectionObserver(manejadorInterseccion, OPCIONES_OBSERVER);
 
-        // Seleccionar todos los elementos marcados para revelar
         const elementos = document.querySelectorAll<HTMLElement>('.reveal, .reveal-left, .reveal-right, .reveal-scale');
         elementos.forEach((el) => observer.observe(el));
 

@@ -28,7 +28,7 @@ export interface AudioState {
     toggle: () => void;
 }
 
-const DEFAULT_TRACK = '/static/audio-player/cubeo.mp3'; // Track principal disponible
+const DEFAULT_TRACK = '/static/audio-player/cubeo.mp3';
 
 const useAudioStore = create<AudioState>((set) => ({
     isOpen: false,
